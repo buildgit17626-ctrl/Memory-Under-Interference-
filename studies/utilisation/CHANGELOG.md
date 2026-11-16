@@ -13,3 +13,10 @@ new dataset or waiving a failing reference. See HARNESS.md.
 tokenizers 0.21.4 and explicit Qwen chat-template rendering via raw=true to
 verify input counts on the exact submitted text. The scored-study config
 remains as approved. See prereg/pilot.json and docs/plans/UTILISATION_PILOT.md.
+
+2026-11-16 pilot completed: all 22 authorised responses saved. All prompt
+counts matched; both long inputs were exactly 4000 tokens. Long responses were
+empty on 0.5B and "0" on 1.5B. No output caps were hit. Energy coverage was
+22/22, including 9 post-load low-resolution windows. Resume produced zero
+new requests. Timing extrapolations in analysis/utilisation_pilot.py are
+unapproved scope scenarios, not confidence intervals or runtime guarantees.
