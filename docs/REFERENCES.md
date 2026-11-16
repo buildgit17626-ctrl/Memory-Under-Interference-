@@ -76,3 +76,10 @@ licence text and exact templates are retained in the local P2 manifest.
 - Hui et al. Qwen2.5-Coder Technical Report (2024), arXiv:2409.12186.
   https://arxiv.org/abs/2409.12186 . Model-family context; not an explanation of
   our observed prompt rankings or proof of benchmark independence.
+
+The follow-up evaluator uses HumanEval+ base and plus inputs. Its Windows
+comparison adapter follows the exact-match, numerical tolerance and find_zero
+polynomial checks inspected in EvalPlus 0.3.1. The implementation uses the
+registered Windows worker and deadline. Upstream source and release:
+https://github.com/evalplus/evalplus and
+https://github.com/evalplus/humanevalplus_release/releases/tag/v0.1.10.

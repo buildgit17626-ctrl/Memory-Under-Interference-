@@ -117,3 +117,14 @@ Code extraction prepends only the benchmark task's trusted prelude and then
 uses the existing P1 subprocess policy and limits. The import allowlist and
 its documented limitations are unchanged. Inference HTTP happens in the parent;
 candidate workers retain their existing Python-level socket/DNS denial.
+
+## Utilisation reference compatibility (2026-11-16)
+
+HumanEval+ references 22, 92 and 95 compare the exact type of a local variable
+with int or str. Only the follow-up evaluator enables this AST pattern
+(single equality/inequality comparison and one positional variable).
+The worker exposes a unary type predicate implementation for that mode.
+Bare type, dynamic class construction and private attributes remain blocked.
+No import allowlist entries were added. The trusted oracle comes only from a
+dataset verified against its pinned digest. Base and plus partitions run in
+separate Windows Jobs and share the candidate wall-time budget.

@@ -539,3 +539,10 @@ figures/text and source-review annotations accurately, without the phrase
 analysis implementation or implying independent human annotation. Add a two-page
 Times New Roman overview with why/hypotheses/observations/plots/conclusion.
 This is presentation only: existing data, H1-H5 and statistical rules unchanged.
+
+## Utilisation core harness (2026-11-16)
+
+The separately registered follow-up uses studies/utilisation/config.yaml. The
+CLI and journal contract are in studies/utilisation/HARNESS.md. Compilation and
+offline validation were authorised. Live generation requires the resolved
+benchmark pins, dated preregistrations and a frozen stimulus schedule.

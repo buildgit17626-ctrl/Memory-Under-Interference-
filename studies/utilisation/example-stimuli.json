@@ -1,0 +1,7 @@
+[
+  {
+    "experiment": "E0", "task_id": "fixture/identity", "condition": "P1",
+    "entries": ["identity"], "task": "def identity(x):\n    \"Return x.\"",
+    "prompt_tokens": {"qwen2.5-coder:0.5b": 30, "qwen2.5-coder:1.5b": 30}
+  }
+]
