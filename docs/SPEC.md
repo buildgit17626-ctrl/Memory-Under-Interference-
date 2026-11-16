@@ -582,3 +582,8 @@ in the last 20 calls, more than 3% exhausted logical API calls, registered
 baseline drift or less than 5 GiB available disk. The caller's explicit go
 does not supply missing stimulus choices. Known reference anomalies remain
 visible. See studies/utilisation/SUPERVISOR.md for commands and limits.
+
+2026-11-17 follow-up approvals: Focused M3 uses 1000/4000 complete input tokens,
+middle target position and all three filler types (240 calls).
+Keep HumanEval/32 with original scoring in the primary 164-task analysis and
+report a separate sensitivity excluding it. Held-out policy remains pending.

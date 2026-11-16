@@ -339,3 +339,18 @@ def test_e0_analysis_keeps_task_pairing(tmp_path):
     assert result["mean_pass_difference"] == pytest.approx(1 / 3)
     assert result["output_tokens_difference"]["mean"] == 10
     assert result["table"]["both_pass"]["task_ids"] == ["HumanEval/0"]
+
+
+def test_reference_sensitivity_keeps_primary_rows():
+    from prompt_energy.utilisation_e0_analysis import reference_sensitivity
+
+    rows = [
+        {"task_id": "HumanEval/32", "pass_count_difference": 3},
+        {"task_id": "HumanEval/0", "pass_count_difference": 0},
+    ]
+    result = reference_sensitivity(rows)
+    assert len(rows) == 2
+    assert result["retained_paired_tasks"] == 1
+    assert result["excluded_from_paired"] == 1
+    assert result["mean_pass_difference"] == 0
+    assert result["ci95"] == [0, 0]

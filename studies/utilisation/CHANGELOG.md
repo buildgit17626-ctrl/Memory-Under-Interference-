@@ -49,3 +49,10 @@ Resolved existing input pins from local validation files: HumanEval+
 v0.1.10 dataset SHA-256, Qwen tokenizer/template hashes and evaluator source
 hash. Generated 328 exact E0 stimuli expanding to 1968 calls offline.
 This is input preparation and has made no new model requests.
+
+2026-11-17 owner approved the Focused M3 grid: complete rendered input sizes
+1000 and 4000 tokens, middle target position, all three filler types,
+20 eligible tasks per model, 240 scheduled calls. Owner also approved keeping
+HumanEval/32 in all 164-task primary results under the original oracle and
+adding an explicitly labelled sensitivity excluding HumanEval/32.
+Independent held-out calibration policy remains pending.

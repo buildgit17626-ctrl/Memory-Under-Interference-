@@ -23,6 +23,27 @@ def exact_swap_p(differences: list[int]) -> float:
     return sum(v for k, v in distribution.items() if abs(k) >= threshold) / 2 ** len(differences)
 
 
+def reference_sensitivity(paired: list[dict]) -> dict:
+    """Describe the approved exclusion without altering primary outcomes."""
+    retained = [p for p in paired if p["task_id"] != "HumanEval/32"]
+    result = {
+        "excluded_task_id": "HumanEval/32",
+        "retained_paired_tasks": len(retained),
+        "excluded_from_paired": len(paired) - len(retained),
+        "mean_pass_difference": None,
+        "ci95": None,
+    }
+    if retained:
+        values = np.array([p["pass_count_difference"] / 3 for p in retained])
+        rng = np.random.default_rng(1732)
+        draws = values[rng.integers(0, len(values), size=(2000, len(values)))].mean(axis=1)
+        result.update(
+            mean_pass_difference=float(values.mean()),
+            ci95=np.quantile(draws, [0.025, 0.975]).tolist(),
+        )
+    return result
+
+
 def analyse(root: Path, output: Path, *, heldout_policy: dict) -> dict:
     calls = by_key(root / "calls.jsonl")
     scores = by_key(root / "scores.jsonl")
@@ -127,6 +148,7 @@ def analyse(root: Path, output: Path, *, heldout_policy: dict) -> dict:
                 }
             else:
                 model_results[model][field] = {"n_tasks": 0, "mean": None, "ci95": None}
+        model_results[model]["reference_sensitivity"] = reference_sensitivity(paired)
         labels[model] = {}
         if heldout_policy.get("name") == "approved_E0_P1_sample0_holdout":
             for tid in task_ids:

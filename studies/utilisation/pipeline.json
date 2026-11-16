@@ -3,7 +3,12 @@
   "e0_stimuli": "studies/utilisation/stimuli/E0.json",
   "m3_stimuli": null,
   "heldout_policy": null,
-  "benchmark_reference_decision": null,
+  "benchmark_reference_decision": {
+    "task_id": "HumanEval/32",
+    "decision": "retain_original_oracle",
+    "sensitivity": "exclude_HumanEval/32",
+    "approved": "2026-11-17"
+  },
   "dataset": "results/utilisation/validation/HumanEvalPlus.jsonl.gz",
   "m3_limit": 100,
   "remaining_main_by_length": null

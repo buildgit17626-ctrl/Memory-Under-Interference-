@@ -42,6 +42,11 @@ benchmark:
     adapter: utilisation_eval
     oracle_source: EvalPlus-0.3.1
     sha256: 1ef9ba184981e5fa71ea1c4357315613356c2eee9bfa034388809b5a3f7d800f
+  reference_anomaly:
+    task_id: HumanEval/32
+    decision: retain_original_oracle
+    sensitivity: exclude_HumanEval/32
+    approved: '2026-11-17'
 seeds:
   task_selection: 1729
   order: 1730
@@ -84,6 +89,18 @@ experiments:
   M3:
     num_ctx: 8192
     num_predict: 2048
+    focused_grid:
+      total_input_tokens:
+      - 1000
+      - 4000
+      target_position: middle
+      filler_types:
+      - irrelevant
+      - other_tasks
+      - near_duplicate
+      tasks_per_model: 20
+      calls: 240
+      approved: '2026-11-17'
   R1:
     num_ctx: 16384
     num_predict: 2048
