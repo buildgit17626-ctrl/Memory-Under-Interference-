@@ -1,0 +1,16 @@
+{
+  "benchmark_calls": 20,
+  "config_sha256": "af0e7179480a0ed29e0ef73d4e42234ca709cd4eafdd426df7cbfefef0344712",
+  "long_probes": 2,
+  "pilot_excluded_from_analysis": true,
+  "requests": 22,
+  "schedule_sha256": "90218ab3ff65f1e99a20a9eaec4377724c0ae9b3a03fdb52774e1c80be79965b",
+  "task_ids": [
+    "HumanEval/0",
+    "HumanEval/1",
+    "HumanEval/11",
+    "HumanEval/13",
+    "HumanEval/14"
+  ],
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+}

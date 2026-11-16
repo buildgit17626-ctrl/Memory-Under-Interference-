@@ -188,3 +188,18 @@ def test_e4_counter_required():
     assert len(jobs) == 20
     result, _ = outcome(jobs[0], Mock().exchange("", {}, timeout=10))
     assert {"cache_state_unverified", "short_fixed_workload"} <= set(result["flags"])
+
+
+def test_pilot_counts_and_context():
+    from experiments.utilisation_pilot import make_jobs
+
+    jobs, registration = make_jobs()
+    assert registration["requests"] == len(jobs) == 22
+    assert sum(j["experiment"] == "E0" for j in jobs) == 20
+    assert sum(j["expected_tokens"] == 4000 for j in jobs) == 2
+    assert all(j["request"]["raw"] for j in jobs)
+    assert all(
+        j["expected_tokens"] + j["request"]["options"]["num_predict"]
+        <= j["request"]["options"]["num_ctx"]
+        for j in jobs
+    )

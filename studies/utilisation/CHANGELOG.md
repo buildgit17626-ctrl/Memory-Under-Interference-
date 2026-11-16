@@ -8,3 +8,8 @@ The dated design record uses SHA-256 over Git blob contents, which permits verif
 6.0.2 reads the approved YAML. No settings or model outputs were changed.
 The reference audit used the v0.1.10 HumanEval+ release, without freezing a
 new dataset or waiving a failing reference. See HARNESS.md.
+
+2026-11-16 pilot: owner authorised 22 diagnostic requests. The pilot uses
+tokenizers 0.21.4 and explicit Qwen chat-template rendering via raw=true to
+verify input counts on the exact submitted text. The scored-study config
+remains as approved. See prereg/pilot.json and docs/plans/UTILISATION_PILOT.md.

@@ -546,3 +546,12 @@ The separately registered follow-up uses studies/utilisation/config.yaml. The
 CLI and journal contract are in studies/utilisation/HARNESS.md. Compilation and
 offline validation were authorised. Live generation requires the resolved
 benchmark pins, dated preregistrations and a frozen stimulus schedule.
+
+## Pilot authorisation, 2026-11-16
+
+The owner authorised a diagnostic 22-call pilot: five tasks, P1 and P3_1,
+one sample on each model, and one exactly 4000-input-token request per model.
+The plan is docs/plans/UTILISATION_PILOT.md and entry point is
+experiments/utilisation_pilot.py. The pilot uses explicit raw rendering of the
+inspected Qwen template and an independently hashed tokenizer. Measurements
+are excluded from later hypothesis tests. HWiNFO must be live before calls.
