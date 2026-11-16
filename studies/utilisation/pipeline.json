@@ -1,0 +1,10 @@
+{
+  "status": "awaiting_required_design_decisions",
+  "e0_stimuli": "studies/utilisation/stimuli/E0.json",
+  "m3_stimuli": null,
+  "heldout_policy": null,
+  "benchmark_reference_decision": null,
+  "dataset": "results/utilisation/validation/HumanEvalPlus.jsonl.gz",
+  "m3_limit": 100,
+  "remaining_main_by_length": null
+}
