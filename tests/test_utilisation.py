@@ -306,3 +306,36 @@ def test_supervisor_retry_budget_and_raw_preservation(tmp_path):
     assert len(read_jsonl(tmp_path / "responses.jsonl")) == 6
     assert len(read_jsonl(tmp_path / "calls.jsonl")) == 1
     assert read_jsonl(tmp_path / "calls.jsonl")[0]["call_failed"]
+
+
+def test_e0_analysis_keeps_task_pairing(tmp_path):
+    from prompt_energy.utilisation_e0_analysis import analyse
+    from prompt_energy.utilisation_journal import append_json
+
+    for arm, passes in [("P1", [True, False, False]), ("P3_1", [True, True, False])]:
+        for sample, passed in enumerate(passes):
+            key = f"{arm}/{sample}"
+            append_json(
+                tmp_path / "calls.jsonl",
+                {
+                    "key": key,
+                    "model": "model",
+                    "task_id": "HumanEval/0",
+                    "condition": arm,
+                    "sample_idx": sample,
+                    "input_valid": True,
+                    "output_tokens": 10 if arm == "P1" else 20,
+                    "energy": {"windows": {"post_load": {"adjusted_wh": 0.01}}},
+                },
+            )
+            append_json(
+                tmp_path / "scores.jsonl",
+                {"key": key, "status": "passed" if passed else "failed", "functions": {}},
+            )
+    result = analyse(
+        tmp_path, tmp_path / "analysis", heldout_policy={"name": "approved_E0_P1_sample0_holdout"}
+    )["models"]["model"]
+    assert result["complete_paired_tasks"] == 1
+    assert result["mean_pass_difference"] == pytest.approx(1 / 3)
+    assert result["output_tokens_difference"]["mean"] == 10
+    assert result["table"]["both_pass"]["task_ids"] == ["HumanEval/0"]
