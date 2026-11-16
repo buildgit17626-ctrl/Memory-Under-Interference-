@@ -1,8 +1,23 @@
 {
-  "status": "awaiting_required_design_decisions",
+  "status": "ready_after_frozen_preflight",
   "e0_stimuli": "studies/utilisation/stimuli/E0.json",
-  "m3_stimuli": null,
-  "heldout_policy": null,
+  "m3_stimuli": "studies/utilisation/stimuli/M3.json",
+  "heldout_policy": {
+    "name": "approved_E0_P1_sample0_holdout",
+    "delegated_decision_date": "2026-11-17",
+    "eligibility": "P1 sample_idx 0 passes both partitions",
+    "difficulty": "binary success estimate on P1 sample_idx 0",
+    "subsequent_outcome_comparator_samples": [
+      1,
+      2
+    ],
+    "primary_E0_samples": [
+      0,
+      1,
+      2
+    ],
+    "limitation": "single-sample labels are noisy; selected-population inference"
+  },
   "benchmark_reference_decision": {
     "task_id": "HumanEval/32",
     "decision": "retain_original_oracle",

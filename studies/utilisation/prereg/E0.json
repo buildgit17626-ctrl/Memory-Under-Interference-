@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "hypotheses": "Strategy comparison in E0.md",
+  "hypotheses": "E0.md",
   "competing_predictions": "E0.md",
   "conditions": [
     "P1",
@@ -9,7 +9,7 @@
   "outcomes": "E0.md",
   "analysis": "E0.md",
   "exclusions": "E0.md",
-  "config_hash": "d0d47ebaea4551b6152a85f37dca3af7fa57031d0b530e0a73a948b6288ce3d4",
+  "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
   "stimuli_hash": "7772aa07749e04589e17ced94022d83364698922cd4d3e31db2b486c60cbd289",
-  "schedule_hash": "3abf9d9ade16a26e9b2a97b7a7619566db8d660f339f0e145850bb54968c262d"
+  "schedule_hash": "68261c042503526dcbd0e73057fba1119c322f0cadfb99fd70a88d468e437cfe"
 }

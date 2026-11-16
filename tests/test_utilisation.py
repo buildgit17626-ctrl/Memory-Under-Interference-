@@ -354,3 +354,24 @@ def test_reference_sensitivity_keeps_primary_rows():
     assert result["excluded_from_paired"] == 1
     assert result["mean_pass_difference"] == 0
     assert result["ci95"] == [0, 0]
+
+
+def test_frozen_m3_counts_and_midpoints():
+    import json
+
+    from prompt_energy.utilisation_plan import ROOT, load_config, schedule
+
+    items = json.loads((ROOT / "studies/utilisation/stimuli/M3.json").read_text())
+    assert len(items) == 164 * 2 * 3
+    assert {i["condition"] for i in items} == {
+        f"{f}/{n}" for f in ["irrelevant", "other_tasks", "near_duplicate"] for n in [1000, 4000]
+    }
+    for item in items:
+        length = item["identity"]["context_length"]
+        audit = item["identity"]["audit"]
+        assert abs(audit["target_midpoint_token_approx"] - length / 2) <= 0.5
+        assert all(v == length for v in item["prompt_tokens"].values())
+    cfg, sha = load_config()
+    jobs = schedule(items, cfg, sha)
+    chosen = {f"HumanEval/{n}" for n in range(20)}
+    assert len([j for j in jobs if j["task_id"] in chosen]) == 240

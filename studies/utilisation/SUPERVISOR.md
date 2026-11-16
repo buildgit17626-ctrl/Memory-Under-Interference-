@@ -27,9 +27,8 @@ halt explicitly. Pending choices in pipeline.json are deliberate.
 
 Only the E0 and first-100-M3 pipeline is supported. Per-condition M3 stimuli
 must be frozen for all potentially eligible tasks, then filtered to the fixed
-eligible prefix. The current implementation expects a final filtered M3
-manifest and will halt on a mismatch. Automatic creation of that contingent
-manifest is pending the approved M3 grid.
+eligible prefix. The complete catalogue is committed before E0 generation. The implementation
+filters it after independent eligibility scoring and verifies 240 selected calls.
 
 Held-out difficulty needs a fixed policy disjoint from the generation
 outcomes against which it is compared. The analysis supports a specifically
@@ -54,7 +53,8 @@ prints denominators, exact task-triplet swap p-values, Holm-adjusted values,
 any-of-three task tables, exact McNemar p-values, paired bootstrap intervals,
 per-task output-token differences and covered net-energy differences.
 
-Before execution, resolve the HumanEval/32 reference anomaly, the held-out
-sample policy and exact M3 stimuli. The pipeline cannot complete these research
-choices from the current sparse manifest. No model generation occurred while
+The owner approved the reference anomaly decision and M3 grid, then delegated
+remaining choices. P1 sample 0 now defines the held-out label and the complete
+M3 catalogue is frozen. The supervisor filters that catalogue to the eligible
+prefix after E0 scoring. No model generation occurred while
 building or testing the supervisor.

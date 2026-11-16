@@ -56,3 +56,12 @@ This is input preparation and has made no new model requests.
 HumanEval/32 in all 164-task primary results under the original oracle and
 adding an explicitly labelled sensitivity excluding HumanEval/32.
 Independent held-out calibration policy remains pending.
+
+2026-11-17 delegated launch: owner requested launch and delegated remaining
+choices. Selected P1 sample 0 holdout with samples 1/2 for subsequent grouped
+generation comparisons, preserving the 1968-call primary E0 and 4808 budget.
+Defined M3 neutral, cyclic other-task and renamed-target duplicate fillers;
+precompute every possible target variant before E0 and filter the frozen
+catalogue by calibration-prefix selection. Duplicate fillers preserve target
+semantics, so their results cannot demonstrate contradictory interference.
+The target midpoint and filler boundary policy are recorded in each stimulus.

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "hypotheses": "M3.md",
+  "competing_predictions": "M3.md",
+  "conditions": [
+    "irrelevant/1000",
+    "irrelevant/4000",
+    "near_duplicate/1000",
+    "near_duplicate/4000",
+    "other_tasks/1000",
+    "other_tasks/4000"
+  ],
+  "outcomes": "M3.md",
+  "analysis": "M3.md",
+  "exclusions": "M3.md",
+  "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+  "stimuli_hash": "33e6e521a9f5fefba21fbff8d0c5b6c5768238bb145cfa37a87b7019ff4f254f",
+  "schedule_hash": "d9fcab2818e969a764b9113d156965896152372207f183072cc06178f2f73925"
+}

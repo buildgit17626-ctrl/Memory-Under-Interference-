@@ -101,6 +101,12 @@ experiments:
       tasks_per_model: 20
       calls: 240
       approved: '2026-11-17'
+    filler_construction:
+      irrelevant: repeated neutral notebook text
+      other_tasks: next ten benchmark task prompts cyclically; target excluded
+      near_duplicate: target specification with renamed alternate entry points
+      target_position: token midpoint; report achieved approximate midpoint
+      boundary_policy: filler may end mid-specification to match total length
   R1:
     num_ctx: 16384
     num_predict: 2048
@@ -178,6 +184,19 @@ analysis:
   confirmatory_family_correction: Holm
   zero_correct_energy_ratio: undefined
   report_denominators_and_missingness: true
+  heldout_policy:
+    name: approved_E0_P1_sample0_holdout
+    delegated_decision_date: '2026-11-17'
+    eligibility: P1 sample_idx 0 passes both partitions
+    difficulty: binary success estimate on P1 sample_idx 0
+    subsequent_outcome_comparator_samples:
+    - 1
+    - 2
+    primary_E0_samples:
+    - 0
+    - 1
+    - 2
+    limitation: single-sample labels are noisy; selected-population inference
 scope:
   main: focused
   main_call_budget: 4808

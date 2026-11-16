@@ -49,6 +49,14 @@ def timing_checkpoint(root: Path, e0: list, m3: list, pipeline: dict) -> dict:
         }
     budget = pipeline.get("remaining_main_by_length")
     estimates = None
+    remaining_calls = max(
+        0,
+        4808 - len(by_key(root / "E0" / "calls.jsonl")) - len(by_key(root / "M3" / "calls.jsonl")),
+    )
+    service = [r["mean_seconds"] + 5 for r in rates.values()]
+    timing_scenarios = (
+        [remaining_calls * min(service), remaining_calls * max(service)] if service else None
+    )
     if budget and all(str(length) in {str(k) for k in rates} for length in budget):
         estimates = sum(
             count * (rates[next(k for k in rates if str(k) == str(length))]["mean_seconds"] + 5)
@@ -60,6 +68,9 @@ def timing_checkpoint(root: Path, e0: list, m3: list, pipeline: dict) -> dict:
         "m3_finished": sum(r["calls"] for r in rates.values()),
         "by_context_length": rates,
         "remaining_main_service_seconds": estimates,
+        "remaining_MAIN_call_budget": remaining_calls,
+        "remaining_MAIN_service_scenarios_seconds": timing_scenarios,
+        "scenario_warning": "Rate extrapolations; future output lengths and overhead are unknown",
         "runtime_note": "Requires frozen pending counts; excludes unmeasured overhead",
         "pending_main_by_length": budget,
     }
@@ -73,6 +84,11 @@ def execute(root: Path, pipeline: dict, log: Path, cfg: dict, sha: str) -> None:
     tasks = load_dataset(ROOT / pipeline["dataset"], cfg["benchmark"]["dataset_sha256"])
     client = Client()
     tags = decode_response(client.exchange("/api/tags"))["models"]
+    version = decode_response(client.exchange("/api/version"))
+    append_json(
+        root / "supervisor.jsonl",
+        {"event": "runtime_preflight", "ollama": version, "models": tags, "time": time.time()},
+    )
     for model in cfg["models"]:
         if not any(
             m["name"] == model["tag"] and m["digest"] == model["expected_digest"] for m in tags
@@ -92,11 +108,18 @@ def execute(root: Path, pipeline: dict, log: Path, cfg: dict, sha: str) -> None:
     orders = json.loads((ROOT / cfg["scope"]["task_orders"]).read_text())["sweeps"]["M3"][
         "task_order"
     ]
+    eligible_jobs = []
     for model in cfg["models"]:
         selected = [tid for tid in orders if labels[model["tag"]].get(tid, {}).get("solvable")][:20]
-        actual = {j["task_id"] for j in m3 if j["model"] == model["tag"]}
+        subset = [j for j in m3 if j["model"] == model["tag"] and j["task_id"] in selected]
+        eligible_jobs.extend(subset)
+        actual = {j["task_id"] for j in subset}
         if actual != set(selected) or len(selected) != 20:
             raise Halt("M3 roster must equal first 20 independently eligible frozen IDs")
+    keep = {j["key"] for j in eligible_jobs}
+    m3 = [j for j in m3 if j["key"] in keep]
+    if len(m3) != 240:
+        raise Halt("Focused M3 must have 240 calls")
     if any(j["experiment"] != "M3" or "context_length" not in j["identity"] for j in m3):
         raise Halt("M3 stimulus requires experiment and context_length identity")
     folder = root / "M3"

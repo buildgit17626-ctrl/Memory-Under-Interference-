@@ -587,3 +587,10 @@ visible. See studies/utilisation/SUPERVISOR.md for commands and limits.
 middle target position and all three filler types (240 calls).
 Keep HumanEval/32 with original scoring in the primary 164-task analysis and
 report a separate sensitivity excluding it. Held-out policy remains pending.
+
+2026-11-17 delegated launch amendment: P1 sample 0 is the held-out label;
+samples 1/2 form subsequent independent generation comparisons. E0 primary
+analysis retains samples 0/1/2. M3 texts for every task are frozen before E0,
+then filtered using the previously registered eligible prefix rule.
+M3 duplicate filler uses renamed copies of the target specification. Report
+this operationalisation and its redundancy/confusion limitations explicitly.
