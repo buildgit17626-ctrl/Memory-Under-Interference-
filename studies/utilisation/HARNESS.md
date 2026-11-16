@@ -85,3 +85,13 @@ partitions. HumanEval/32 passed base and failed plus. The reference audit
 counts task IDs once; the implementation is audit_references() in
 src/prompt_energy/utilisation_eval.py. The data and machine-specific validation
 journal are local results, excluded from Git.
+
+## M3 review checkpoint
+
+The runner stops before request 101 of M3 in its frozen session and writes
+m3-checkpoint.json. Its forecasts stratify measured wall seconds by model and
+include the configured gap. Ending baselines are collected on exit. After the
+owner sees the report and approves continuing, record m3-review.json with the
+checkpoint schedule_hash, checkpoint_calls=100 and owner_approved=true. The
+runner checks this receipt on every resume. Keep all M3 requests in the same
+frozen session to maintain the cumulative checkpoint count.

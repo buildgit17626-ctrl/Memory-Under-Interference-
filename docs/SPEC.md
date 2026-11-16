@@ -555,3 +555,30 @@ The plan is docs/plans/UTILISATION_PILOT.md and entry point is
 experiments/utilisation_pilot.py. The pilot uses explicit raw rendering of the
 inspected Qwen template and an independently hashed tokenizer. Measurements
 are excluded from later hypothesis tests. HWiNFO must be live before calls.
+
+## Focused amendment · 2026-11-16
+
+Owner chose MAIN Focused and deferred APPENDIX. The fixed sweep permutations,
+prefix extension rule, energy aggregation and E0 preregistration are recorded
+in studies/utilisation/task-orders.json and studies/utilisation/prereg/.
+The first 100 completed M3 calls require a timing report and owner review
+before continuation. Owner approved width threshold 0.20 on 2026-11-17. Freeze is
+2026-11-22 23:59 IST; all pending work plus extension must fit within 70%
+of remaining wall-clock hours. This timing gate applies to every extension. Task-only extension retains
+the Focused factors; it does not use the earlier expanded-grid Balanced count.
+E4 remains primary energy evidence and remains deferred with APPENDIX.
+
+## Terminal supervisor (2026-11-17)
+
+experiments/supervise.py launches the terminal worker, retries unexpected
+worker exits and preserves per-call retry budgets across recovery. It runs
+generation in batches followed by offline evaluation. The pipeline stops after
+100 M3 calls and writes CHECKPOINT.md. The pipeline manifest must include
+approved M3 stimuli, held-out policy and benchmark-reference decision before
+live execution. Missing decisions produce a checkpoint with no generation.
+
+Hard stops are input-count mismatch, fewer than 18 energy-covered observations
+in the last 20 calls, more than 3% exhausted logical API calls, registered
+baseline drift or less than 5 GiB available disk. The caller's explicit go
+does not supply missing stimulus choices. Known reference anomalies remain
+visible. See studies/utilisation/SUPERVISOR.md for commands and limits.

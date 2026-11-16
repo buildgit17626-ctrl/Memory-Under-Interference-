@@ -203,3 +203,106 @@ def test_pilot_counts_and_context():
         <= j["request"]["options"]["num_ctx"]
         for j in jobs
     )
+
+
+def test_m3_review_stops_before_101_and_survives_resume(tmp_path):
+    import json
+
+    from prompt_energy.utilisation_checkpoint import checkpoint
+    from prompt_energy.utilisation_plan import digest
+
+    jobs = [{"key": str(i), "experiment": "M3", "model": "model"} for i in range(101)]
+    rows = {j["key"]: j | {"wall_seconds": 10, "input_valid": True} for j in jobs[:99]}
+    assert not checkpoint(tmp_path, jobs, rows, 5)
+    rows["99"] = jobs[99] | {"wall_seconds": 10, "input_valid": False}
+    assert checkpoint(tmp_path, jobs, rows, 5)
+    assert checkpoint(tmp_path, jobs, rows, 5)
+    report = json.loads((tmp_path / "m3-checkpoint.json").read_text())
+    assert report["by_model"][0]["remaining_service_seconds"] == 15
+    assert report["by_model"][0]["invalid_inputs"] == 1
+    (tmp_path / "m3-review.json").write_text(
+        json.dumps({"schedule_hash": digest(jobs), "checkpoint_calls": 100, "owner_approved": True})
+    )
+    assert not checkpoint(tmp_path, jobs, rows, 5)
+
+
+def test_sweep_orders_are_fixed_complete_prefixes():
+    import json
+
+    from prompt_energy.utilisation_plan import ROOT
+
+    orders = json.loads((ROOT / "studies/utilisation/task-orders.json").read_text())
+    for sweep in orders["sweeps"].values():
+        ids = sweep["task_order"]
+        assert len(ids) == len(set(ids)) == 164
+        assert set(ids) == {f"HumanEval/{i}" for i in range(164)}
+        # Filtering a fixed independent eligibility mask preserves nesting.
+        eligible = [tid for tid in ids if int(tid.split("/")[1]) % 2]
+        assert eligible[:20] == eligible[:40][:20]
+
+
+def test_extension_budget_is_a_hard_gate():
+    from datetime import datetime, timedelta
+
+    from prompt_energy.utilisation_extension import FREEZE, extension_gate
+
+    now = FREEZE - timedelta(hours=10)
+    assert extension_gate(now, 6 * 3600, 3600, [0.21])["timing_gate_passed"]
+    rejected = extension_gate(now, 6 * 3600, 3601, [0.9])
+    assert rejected["precision_trigger"] and not rejected["timing_gate_passed"]
+    assert not extension_gate(now, 1, 1, [0.20])["precision_trigger"]
+    assert not extension_gate(FREEZE, 0, 0, [0.9])["timing_gate_passed"]
+    with pytest.raises(ValueError):
+        extension_gate(datetime(2026, 11, 20), 0, 0, [])
+
+
+def test_supervisor_hard_stops():
+    from prompt_energy.utilisation_supervisor import hard_stop
+
+    ok = {"flags": [], "call_failed": False, "energy_valid": True}
+    assert hard_stop([ok] * 20, 6 * 1024**3) is None
+    assert "disk" in hard_stop([], 4 * 1024**3)
+    assert "90%" in hard_stop([ok] * 17 + [ok | {"energy_valid": False}] * 3, 6 * 1024**3)
+    assert "3%" in hard_stop([ok] * 19 + [ok | {"call_failed": True}], 6 * 1024**3)
+    assert "prompt" in hard_stop([ok | {"flags": ["input_count_mismatch"]}], 6 * 1024**3)
+
+
+def test_exact_e0_swap_p():
+    from prompt_energy.utilisation_e0_analysis import exact_swap_p
+
+    assert exact_swap_p([0, 0]) == 1
+    assert exact_swap_p([1, 1, 1]) == 0.25
+    assert exact_swap_p([1, -1]) == 1
+
+
+def test_supervisor_retry_budget_and_raw_preservation(tmp_path):
+    import base64
+    from types import SimpleNamespace
+
+    from prompt_energy.utilisation_journal import read_jsonl
+    from prompt_energy.utilisation_supervisor import Halt, generate_batch
+
+    item, cfg, h = fixture()
+    job = schedule([item], cfg, h)[:1]
+
+    class Broken(Mock):
+        def exchange(self, *args, **kwargs):
+            envelope = super().exchange(*args, **kwargs)
+            envelope["body_base64"] = base64.b64encode(b'{"error":"offline"}').decode()
+            return envelope
+
+    client = Broken()
+    with pytest.raises(Halt, match="3%"):
+        generate_batch(
+            tmp_path,
+            job,
+            client,
+            MockSensor(),
+            5,
+            sleep=lambda _: None,
+            disk=lambda _: SimpleNamespace(free=10 * 1024**3),
+        )
+    assert client.calls == 6
+    assert len(read_jsonl(tmp_path / "responses.jsonl")) == 6
+    assert len(read_jsonl(tmp_path / "calls.jsonl")) == 1
+    assert read_jsonl(tmp_path / "calls.jsonl")[0]["call_failed"]

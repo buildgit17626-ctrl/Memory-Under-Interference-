@@ -17,6 +17,7 @@ from prompt_energy.hwinfo import LogFormat, capture_log, check_recent, parse_log
 from prompt_energy.metadata import host_metadata
 from prompt_energy.ollama import decode_response
 from prompt_energy.records import directory_lock, write_once
+from prompt_energy.utilisation_checkpoint import checkpoint
 from prompt_energy.utilisation_journal import append_json, read_jsonl
 from prompt_energy.utilisation_plan import digest
 
@@ -168,6 +169,9 @@ def run(root: Path, jobs: list, client, sensor, gap: float, *, sleep=time.sleep)
         pending = [j for j in jobs if j["key"] not in complete]
         if not pending:
             return
+        if checkpoint(root, jobs, complete, gap):
+            print("M3 checkpoint awaits owner review; see m3-checkpoint.json", flush=True)
+            return
         # ES_SYSTEM_REQUIRED prevents idle sleep during the measured block.
         power = ctypes.windll.kernel32.SetThreadExecutionState
         if not power(0x80000001):
@@ -179,6 +183,9 @@ def run(root: Path, jobs: list, client, sensor, gap: float, *, sleep=time.sleep)
             raise
         try:
             for j in pending:
+                if checkpoint(root, jobs, complete, gap):
+                    print("M3 checkpoint reached; ending baseline and awaiting review", flush=True)
+                    break
                 key = j["key"]
                 if key in saved:
                     record = saved[key]
@@ -216,6 +223,7 @@ def run(root: Path, jobs: list, client, sensor, gap: float, *, sleep=time.sleep)
                 )
                 if response is None or "missing_energy" in energy["flags"]:
                     raise RuntimeError("Recorded invalid request or energy; inspect before resume")
+                complete[key] = by_key(root / "calls.jsonl")[key]
                 sleep(gap)
         finally:
             try:

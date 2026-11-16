@@ -20,3 +20,32 @@ empty on 0.5B and "0" on 1.5B. No output caps were hit. Energy coverage was
 22/22, including 9 post-load low-resolution windows. Resume produced zero
 new requests. Timing extrapolations in analysis/utilisation_pilot.py are
 unapproved scope scenarios, not confidence intervals or runtime guarantees.
+
+2026-11-16 Focused selected by owner: MAIN initial planning budget 4808,
+APPENDIX deferred. Added fixed sweep permutations with prefix task selection,
+a task-only extension to 40, proposed interval width threshold 0.20 awaiting
+approval and time trigger awaiting owner deadline. Decision uses timing or
+precision, independent of direction and significance. Recorded aggregate
+energy rules, deferred E4 energy evidence, M3 100-call review and E0 draft.
+Final stimulus grids, eligible rosters and evaluator pins remain to freeze.
+
+2026-11-17 owner approval: full primary 95% CI width threshold >0.20.
+Experiments freeze 2026-11-22 23:59 IST. All pending work plus an extension
+must fit in at most 70% of the hours left, using measured seconds per call.
+The latest "extend only if" instruction is applied as a hard timing gate
+even when precision triggers extension. Preserve the rest of November for
+writing, applications, statements and recommenders.
+
+2026-11-17 supervisor requested by owner: up to five retries per logical call,
+separate offline scoring, E0 paired analysis, independent labels and stop after
+100 M3 calls. Prepared terminal entry point and explicit hard-stop checks.
+Call failure means exhausted API/infrastructure attempts, not wrong generated
+code. The energy threshold is interpreted as fewer than 18 valid windows in
+a rolling 20-call population. These operational interpretations are disclosed
+for review. Execution remains gated by the pending calibration policy, exact
+Focused M3 selection and HumanEval/32 reference decision.
+
+Resolved existing input pins from local validation files: HumanEval+
+v0.1.10 dataset SHA-256, Qwen tokenizer/template hashes and evaluator source
+hash. Generated 328 exact E0 stimuli expanding to 1968 calls offline.
+This is input preparation and has made no new model requests.

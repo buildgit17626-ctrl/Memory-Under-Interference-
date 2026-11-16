@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-17",
+  "hypotheses": "Strategy comparison in E0.md",
+  "competing_predictions": "E0.md",
+  "conditions": [
+    "P1",
+    "P3_1"
+  ],
+  "outcomes": "E0.md",
+  "analysis": "E0.md",
+  "exclusions": "E0.md",
+  "config_hash": "3cd8ae3526271311efc1249bfa26eb6cacde7e325bfb39cf3d09dfcc480a4067",
+  "stimuli_hash": "7772aa07749e04589e17ced94022d83364698922cd4d3e31db2b486c60cbd289",
+  "schedule_hash": "3f42701f99099b5b0488241b2d11fb2e038279343b2d16f72027db856d6ea2ba"
+}
