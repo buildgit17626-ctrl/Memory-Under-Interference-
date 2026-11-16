@@ -107,6 +107,8 @@ def main() -> int:
         "ZeroDivisionError AssertionError StopIteration RuntimeError NotImplementedError"
     )
     safe_builtins = {name: getattr(builtins, name) for name in names.split()}
+    if payload.get("exact_types"):
+        safe_builtins["type"] = lambda value: type(value)
     safe_builtins["__import__"] = limited_import
     safe_builtins["eval"] = arithmetic_only
     candidate_scope = {"__builtins__": safe_builtins, "__name__": "candidate"}

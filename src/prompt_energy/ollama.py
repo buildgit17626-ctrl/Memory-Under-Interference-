@@ -46,13 +46,20 @@ class Client:
         self.host = url.hostname
         self.port = url.port or 80
 
-    def exchange(self, path: str, payload: dict | None = None) -> dict:
+    def exchange(
+        self,
+        path: str,
+        payload: dict | None = None,
+        *,
+        timeout: float = OLLAMA["request_timeout_seconds"],
+    ) -> dict:
         """Return an auditable envelope even for HTTP errors or partial transfers."""
         if not path.startswith("/api/"):
             raise ValueError("Expected an Ollama API path")
         started = utc_now()
         start = time.perf_counter()
-        timeout = OLLAMA["request_timeout_seconds"]
+        if timeout <= 0:
+            raise ValueError("Expected positive deadline")
         connection = http.client.HTTPConnection(self.host, self.port, timeout=timeout)
         body = bytearray()
         status = None

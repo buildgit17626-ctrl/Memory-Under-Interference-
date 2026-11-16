@@ -69,6 +69,7 @@ def run_solution(
     timeout_seconds: float = SANDBOX["timeout_seconds"],
     memory_mb: int = SANDBOX["memory_mb"],
     seed: int = EXECUTION_SEED,
+    exact_types: bool = False,
 ) -> TestResult:
     """Test a complete function module; report every rejection or execution failure."""
     if not math.isfinite(timeout_seconds) or timeout_seconds <= 0 or memory_mb < 32:
@@ -82,7 +83,7 @@ def run_solution(
         return TestResult(status, reason, time.monotonic() - start, peak, seed)
 
     try:
-        check_source(source, SANDBOX["max_source_bytes"])
+        check_source(source, SANDBOX["max_source_bytes"], exact_types=exact_types)
     except ValueError as exc:
         return result("rejected", str(exc))
     process = None
@@ -92,6 +93,7 @@ def run_solution(
             root = Path(directory)
             payload = {
                 "source": source,
+                "exact_types": exact_types,
                 "test": task.test,
                 "entry_point": task.entry_point,
                 "seed": seed,

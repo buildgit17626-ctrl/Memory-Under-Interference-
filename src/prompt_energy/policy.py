@@ -50,7 +50,7 @@ BLOCKED_NAMES = frozenset(
 )
 
 
-def check_source(source: str, max_bytes: int = 100_000) -> None:
+def check_source(source: str, max_bytes: int = 100_000, *, exact_types: bool = False) -> None:
     """Raise ValueError for code outside the supported computation-only subset."""
     if len(source.encode("utf-8")) > max_bytes:
         raise ValueError("source_size_limit")
@@ -58,7 +58,22 @@ def check_source(source: str, max_bytes: int = 100_000) -> None:
         tree = ast.parse(source)
     except (SyntaxError, RecursionError) as exc:
         raise ValueError("invalid_syntax") from exc
+    # Permit only the predicate syntax used by HumanEval+ references. A bare
+    # type object, dynamic type construction, or arbitrary operand stays blocked.
+    predicates = set()
+    if exact_types:
+        for expr in ast.walk(tree):
+            match expr:
+                case ast.Compare(
+                    left=ast.Call(func=ast.Name(id="type") as name, args=[ast.Name()], keywords=[]),
+                    ops=[ast.Eq() | ast.NotEq()],
+                    comparators=[ast.Name(id=target)],
+                ):
+                    if target in {"int", "str"}:
+                        predicates.add(name)
     for node in ast.walk(tree):
+        if node in predicates:
+            continue
         if isinstance(node, ast.ClassDef | ast.Global | ast.Nonlocal | ast.AsyncFunctionDef):
             raise ValueError(f"blocked_syntax:{type(node).__name__}")
         if isinstance(node, ast.Name) and (node.id.startswith("__") or node.id in BLOCKED_NAMES):
