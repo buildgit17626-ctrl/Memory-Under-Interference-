@@ -65,3 +65,7 @@ precompute every possible target variant before E0 and filter the frozen
 catalogue by calibration-prefix selection. Duplicate fillers preserve target
 semantics, so their results cannot demonstrate contradictory interference.
 The target midpoint and filler boundary policy are recorded in each stimulus.
+
+Launch preflight caught stimulus hashes taken over Windows checkout newlines
+instead of committed LF bytes. Normalised both E0 and M3 registration hashes
+to the documented Git-blob convention before any generation.
