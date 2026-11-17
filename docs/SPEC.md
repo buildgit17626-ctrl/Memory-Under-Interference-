@@ -594,3 +594,14 @@ analysis retains samples 0/1/2. M3 texts for every task are frozen before E0,
 then filtered using the previously registered eligible prefix rule.
 M3 duplicate filler uses renamed copies of the target specification. Report
 this operationalisation and its redundancy/confusion limitations explicitly.
+
+## Measurement reliability amendment approved 2026-11-17
+
+Use at most 25 calls per measurement block and require two consecutive
+60-second idle windows within the unchanged max(1 W,10%) stability criterion
+before the first scored call. See the dated reliability preregistration.
+The 40-isolated/100-loaded final checkpoint and outcome embargo remain.
+The drift hard stop remains active. Preparation waits up to six idle windows
+without generation. Explicit Ollama repeat-limit aborts are future terminal
+runtime failures, preserving unavailable counts; completed old attempts are
+never rewritten. Report checkpoint baseline details and any initiating error.

@@ -78,7 +78,11 @@ def main() -> None:
                 root, pipeline, cfg, config_hash, client, json.loads(baseline_file.read_text())
             )
     except Halt as exc:
-        write_checkpoint(root, str(exc), {"entrypoint": "supervise_v2", "order": "draft-v2"})
+        write_checkpoint(
+            root,
+            str(exc),
+            {"entrypoint": "supervise_v2", "order": "approved-v2", "details": exc.details},
+        )
         raise SystemExit(2) from exc
 
 

@@ -159,3 +159,29 @@ Updated order-v2-review.json to approved, awaiting the owner's manual launch.
 No requests will be repeated; the threshold is unchanged. No recovery,
 generation or scoring of actual study responses was performed in this task.
 Added offline tests of embargo before/after checkpoint and hash validation.
+
+## Reliability diagnosis and approved repair recorded 2026-11-17T23:40:03+05:30
+
+Second block c454e492249a474c97e04c3eb9db80f9 started at 10.363669410243912 W,
+ended at 11.645168659877706 W and drifted +1.2814992496337947 W.
+Its unchanged threshold is 1.0363669410243912 W. There are now 200 saved E0
+calls and one invalid logical call. Process snapshots identify about 1487
+CPU-seconds from OneDrive in this interval; diagnosis is reproducible in
+analysis/utilisation_reliability_diagnosis.py. This supports a competing-load
+concern, not a proven sole cause. OneDrive has not been paused automatically.
+
+The invalid call received the identical Ollama token-repeat-limit abort on
+six attempts. Added a terminal classification for future such responses,
+preserving unavailable token measurements and all raw envelopes. Existing
+six attempts and the invalid row remain untouched. Other transient errors
+retain their original retry policy.
+
+Owner approved 25-call measurement blocks and two adjacent stable 60-second
+idle windows under the existing max(1 W,10%) criterion. Preparation is bounded
+to six idle windows, each logged; no generation occurs during it.
+New code maintains 40 isolated and 100 loaded M3 calls using smaller blocks
+and preserves the outcome embargo. Richer drift checkpoints record actual
+baselines, time windows, threshold, affected keys and any prior error.
+No hard-stop override or drift-threshold change was introduced.
+No recovery, model requests or rescoring occurred during these changes.
+Extra baseline overhead invalidates the earlier 8–11-hour checkpoint estimate.

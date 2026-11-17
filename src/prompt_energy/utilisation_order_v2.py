@@ -18,8 +18,9 @@ from prompt_energy.utilisation_outcome_access import (
     publish_checkpoint,
 )
 from prompt_energy.utilisation_plan import ROOT, digest
-from prompt_energy.utilisation_run import Sensor, by_key
-from prompt_energy.utilisation_supervisor import Halt, generate_batch
+from prompt_energy.utilisation_reliability import SettledSensor, generate_short_block
+from prompt_energy.utilisation_run import by_key
+from prompt_energy.utilisation_supervisor import Halt
 
 STAGES = (
     "E0",
@@ -103,8 +104,8 @@ def execute_v2(
     client,
     baseline_jobs: list,
     *,
-    sensor_factory=Sensor,
-    generator=generate_batch,
+    sensor_factory=SettledSensor,
+    generator=generate_short_block,
     scorer=evaluate,
     analysis=analyse,
     checkpoint_writer=None,
@@ -154,14 +155,14 @@ def execute_v2(
             raise Halt("Expected 40 fresh isolated baseline calls")
         folder = root / "M3-isolated"
         folder.mkdir(parents=True, exist_ok=True)
-        if len(by_key(folder / "calls.jsonl")) < 40:
+        while len(by_key(folder / "calls.jsonl")) < 40:
             generator(
                 folder,
                 selected,
                 client,
                 sensor_factory(log, folder, LogFormat(encoding="cp1252")),
                 5,
-                limit=40,
+                limit=40 - len(by_key(folder / "calls.jsonl")),
             )
         if len(by_key(folder / "calls.jsonl")) != 40:
             raise Halt("Isolated baseline stage incomplete")
@@ -176,7 +177,7 @@ def execute_v2(
         done = len(by_key(folder / "calls.jsonl"))
         if done > 100:
             raise Halt("Existing M3 calls exceed checkpoint budget")
-        if done < 100:
+        while done < 100:
             generator(
                 folder,
                 state["m3"],
@@ -185,6 +186,10 @@ def execute_v2(
                 5,
                 limit=100 - done,
             )
+            updated = len(by_key(folder / "calls.jsonl"))
+            if updated <= done:
+                raise Halt("No progress in loaded M3 block")
+            done = updated
         if len(by_key(folder / "calls.jsonl")) != 100:
             raise Halt("M3 100-call stage incomplete")
 

@@ -118,7 +118,7 @@ def test_full_revised_workflow_scores_only_e0(tmp_path, monkeypatch):
 
     def generate(folder, jobs, *args, limit=100, **kwargs):
         done = {r["key"] for r in read_jsonl(folder / "calls.jsonl")}
-        selected = [j for j in jobs if j["key"] not in done][:limit]
+        selected = [j for j in jobs if j["key"] not in done][: min(limit, 25)]
         events.append((folder.name, "generate", len(selected)))
         for job in selected:
             append_json(
@@ -169,9 +169,11 @@ def test_full_revised_workflow_scores_only_e0(tmp_path, monkeypatch):
         analysis=analysis,
         checkpoint_writer=stop,
     )
-    assert ("M3-isolated", "generate", 40) in events
-    assert ("M3", "generate", 100) in events
-    assert events.index(("M3-isolated", "generate", 40)) < events.index(("M3", "generate", 100))
+    isolated_events = [e for e in events if e[:2] == ("M3-isolated", "generate")]
+    loaded_events = [e for e in events if e[:2] == ("M3", "generate")]
+    assert [e[2] for e in isolated_events] == [25, 15]
+    assert [e[2] for e in loaded_events] == [25, 25, 25, 25]
+    assert max(events.index(e) for e in isolated_events) < events.index(loaded_events[0])
     assert events[-1] == ("checkpoint", 100)
     assert all(event[0] == "E0" for event in events if event[1] == "score")
     assert len(read_jsonl(tmp_path / "M3/calls.jsonl")) == 100
@@ -217,3 +219,43 @@ def test_outcome_embargo_blocks_both_populations_until_checkpoint(tmp_path, monk
     (tmp_path / "CHECKPOINT.md").write_text("replaced checkpoint")
     with pytest.raises(PermissionError):
         inspect_outputs(tmp_path / "M3")
+
+
+def test_short_blocks_do_not_change_requested_total(monkeypatch):
+    from prompt_energy import utilisation_reliability as module
+
+    seen = []
+    monkeypatch.setattr(
+        module, "generate_batch", lambda *args, **kwargs: seen.append(kwargs["limit"])
+    )
+    module.generate_short_block(None, [], None, None, 5, limit=100)
+    module.generate_short_block(None, [], None, None, 5, limit=15)
+    assert seen == [25, 15]
+
+
+def test_idle_stability_uses_unchanged_threshold():
+    from prompt_energy.utilisation_reliability import stable_pair
+
+    assert stable_pair(10, 11) == (True, 1)
+    assert stable_pair(10, 11.01) == (False, 1)
+    assert stable_pair(20, 22) == (True, 2)
+    assert stable_pair(20, 22.01) == (False, 2)
+
+
+def test_idle_check_retries_windows_without_model_calls(tmp_path, monkeypatch):
+    from prompt_energy import utilisation_reliability as module
+    from prompt_energy.utilisation_journal import read_jsonl
+
+    windows = iter([{"watts": 10}, {"watts": 13}, {"watts": 13.5}])
+    monkeypatch.setattr(module, "host_metadata", lambda: {})
+    monkeypatch.setattr(module, "check_host", lambda _: None)
+    monkeypatch.setattr(module, "preflight_log", lambda *_: {})
+    monkeypatch.setattr(module, "baseline", lambda *args, **kwargs: next(windows))
+    monkeypatch.setattr(module, "snapshot", lambda: [])
+    sensor = module.SettledSensor(tmp_path / "sensor.csv", tmp_path, None)
+    sensor.start()
+    assert sensor.opening["watts"] == 13.5
+    records = read_jsonl(tmp_path / "idle-checks.jsonl")
+    assert len(records) == 3
+    assert [r["stable_pair"] for r in records] == [False, False, True]
+    assert not (tmp_path / "calls.jsonl").exists()

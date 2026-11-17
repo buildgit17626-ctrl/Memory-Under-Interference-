@@ -1,0 +1,115 @@
+{
+  "logical_calls": 200,
+  "invalid_calls": 1,
+  "block": "c454e492249a474c97e04c3eb9db80f9",
+  "start_W": 10.363669410243912,
+  "end_W": 11.645168659877706,
+  "signed_drift_W": 1.2814992496337947,
+  "process_cpu_deltas": [
+    {
+      "process": "OneDrive.exe",
+      "pid": 5212,
+      "cpu_seconds": 1487.09375
+    },
+    {
+      "process": "HWiNFO64.EXE",
+      "pid": 2212,
+      "cpu_seconds": 275.171875
+    },
+    {
+      "process": "System",
+      "pid": 4,
+      "cpu_seconds": 253.40625
+    },
+    {
+      "process": "MsMpEng.exe",
+      "pid": 6604,
+      "cpu_seconds": 83.609375
+    },
+    {
+      "process": "dwm.exe",
+      "pid": 2012,
+      "cpu_seconds": 60.375
+    },
+    {
+      "process": "chrome.exe",
+      "pid": 16100,
+      "cpu_seconds": 55.40625
+    },
+    {
+      "process": "svchost.exe",
+      "pid": 2660,
+      "cpu_seconds": 53.90625
+    },
+    {
+      "process": "svchost.exe",
+      "pid": 5072,
+      "cpu_seconds": 50.578125
+    },
+    {
+      "process": "Grammarly.Desktop.exe",
+      "pid": 12544,
+      "cpu_seconds": 27.265625
+    },
+    {
+      "process": "python.exe",
+      "pid": 6220,
+      "cpu_seconds": 24.828125
+    },
+    {
+      "process": "ollama.exe",
+      "pid": 22192,
+      "cpu_seconds": 21.375
+    },
+    {
+      "process": "ipf_helper.exe",
+      "pid": 9372,
+      "cpu_seconds": 17.71875
+    }
+  ],
+  "failed_attempts": [
+    {
+      "key": "1a51e26c9ad957b02f4730167e7209e73219a4ab545e1cf9d6ce408ecea4af1a",
+      "attempt": "e765e0471eb8466dade38fc6c99db69f",
+      "http_status": 500,
+      "error": "prediction aborted, token repeat limit reached",
+      "seconds": 7.414053999998941
+    },
+    {
+      "key": "1a51e26c9ad957b02f4730167e7209e73219a4ab545e1cf9d6ce408ecea4af1a",
+      "attempt": "cf45d7740d284c13b50c6ce660ccf91e",
+      "http_status": 500,
+      "error": "prediction aborted, token repeat limit reached",
+      "seconds": 7.385955100000501
+    },
+    {
+      "key": "1a51e26c9ad957b02f4730167e7209e73219a4ab545e1cf9d6ce408ecea4af1a",
+      "attempt": "2d57b6d625e84f93a023ec86b4a4ad5f",
+      "http_status": 500,
+      "error": "prediction aborted, token repeat limit reached",
+      "seconds": 7.559843099999853
+    },
+    {
+      "key": "1a51e26c9ad957b02f4730167e7209e73219a4ab545e1cf9d6ce408ecea4af1a",
+      "attempt": "b77ebb7cc3104b44bcdeb7fa3bc34551",
+      "http_status": 500,
+      "error": "prediction aborted, token repeat limit reached",
+      "seconds": 7.470862500000294
+    },
+    {
+      "key": "1a51e26c9ad957b02f4730167e7209e73219a4ab545e1cf9d6ce408ecea4af1a",
+      "attempt": "3ac94005175a4b5282634829308a3d96",
+      "http_status": 500,
+      "error": "prediction aborted, token repeat limit reached",
+      "seconds": 7.482978399999411
+    },
+    {
+      "key": "1a51e26c9ad957b02f4730167e7209e73219a4ab545e1cf9d6ce408ecea4af1a",
+      "attempt": "b44f30c4bb5f4498bcabb3d7e66ce7a6",
+      "http_status": 500,
+      "error": "prediction aborted, token repeat limit reached",
+      "seconds": 7.365244599999642
+    }
+  ],
+  "limits": "CPU deltas use surviving same-name PIDs; they identify competing work, not a sole cause."
+}

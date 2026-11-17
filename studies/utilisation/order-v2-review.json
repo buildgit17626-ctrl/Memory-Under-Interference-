@@ -13,5 +13,14 @@
   ],
   "outcome_embargo": "both_isolated_and_loaded_until_completed_checkpoint",
   "repeat_requests": false,
-  "drift_threshold_changed": false
+  "drift_threshold_changed": false,
+  "measurement_reliability": {
+    "approved_at": "2026-11-17T23:40:03+05:30",
+    "measurement_block_calls": 25,
+    "required_stable_idle_windows": 2,
+    "idle_window_seconds": 60,
+    "max_idle_windows": 6,
+    "threshold_policy": "unchanged",
+    "amendment": "studies/utilisation/prereg/MEASUREMENT-RELIABILITY-2026-11-17.md"
+  }
 }

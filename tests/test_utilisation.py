@@ -375,3 +375,83 @@ def test_frozen_m3_counts_and_midpoints():
     jobs = schedule(items, cfg, sha)
     chosen = {f"HumanEval/{n}" for n in range(20)}
     assert len([j for j in jobs if j["task_id"] in chosen]) == 240
+
+
+def test_explicit_repeat_abort_is_not_retried(tmp_path):
+    import base64
+    from types import SimpleNamespace
+
+    from prompt_energy.utilisation_journal import read_jsonl
+    from prompt_energy.utilisation_supervisor import Halt, generate_batch
+
+    item, cfg, h = fixture()
+    jobs = schedule([item], cfg, h)[:1]
+
+    class Aborted(Mock):
+        def exchange(self, *args, **kwargs):
+            r = super().exchange(*args, **kwargs)
+            r["http_status"] = 500
+            r["body_base64"] = base64.b64encode(
+                b'{"error":"prediction aborted, token repeat limit reached"}'
+            ).decode()
+            return r
+
+    client = Aborted()
+    with pytest.raises(Halt, match="3%"):
+        generate_batch(
+            tmp_path,
+            jobs,
+            client,
+            MockSensor(),
+            5,
+            sleep=lambda _: None,
+            disk=lambda _: SimpleNamespace(free=10 * 1024**3),
+        )
+    assert client.calls == 1
+    row = read_jsonl(tmp_path / "calls.jsonl")[0]
+    assert row["flags"] == ["generation_repeat_abort"] and row["input_valid"] is False
+    assert len(read_jsonl(tmp_path / "responses.jsonl")) == 1
+
+
+def test_drift_does_not_hide_original_hard_stop(tmp_path):
+    from types import SimpleNamespace
+
+    from prompt_energy.utilisation_journal import append_json
+    from prompt_energy.utilisation_supervisor import Halt, generate_batch
+
+    item, cfg, h = fixture()
+    jobs = schedule([item], cfg, h)[:1]
+    jobs[0]["expected_tokens"] = 31
+
+    class DriftSensor(MockSensor):
+        def start(self):
+            append_json(
+                tmp_path / "blocks.jsonl",
+                {"event": "start", "block": self.block, "baseline": {"watts": 10}},
+            )
+
+        def close(self):
+            append_json(
+                tmp_path / "blocks.jsonl",
+                {
+                    "event": "end",
+                    "block": self.block,
+                    "baseline": {"watts": 12},
+                    "drift_w": 2,
+                    "flags": ["baseline_drift"],
+                },
+            )
+
+    with pytest.raises(Halt, match="input-count mismatch") as result:
+        generate_batch(
+            tmp_path,
+            jobs,
+            Mock(),
+            DriftSensor(),
+            5,
+            sleep=lambda _: None,
+            disk=lambda _: SimpleNamespace(free=10 * 1024**3),
+        )
+    assert result.value.details["threshold_w"] == 1
+    assert result.value.details["signed_drift_w"] == 2
+    assert "input-count mismatch" in result.value.details["primary_error"]

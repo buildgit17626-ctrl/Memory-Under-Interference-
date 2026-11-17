@@ -1,8 +1,10 @@
 """Per-call durable retries, workload hard stops and separate batch evaluation."""
 
+import base64
 import ctypes
 import json
 import shutil
+import sys
 import time
 import uuid
 from pathlib import Path
@@ -16,6 +18,24 @@ FREEZE = "2026-11-22T23:59:00+05:30"
 
 class Halt(RuntimeError):
     """A stop requiring documented human inspection."""
+
+    def __init__(self, message: str, details: dict | None = None):
+        super().__init__(message)
+        self.details = details or {}
+
+
+def terminal_repeat_abort(raw: dict) -> bool:
+    """Identify a reported runtime abort without interpreting generated text."""
+    if raw.get("http_status") != 500:
+        return False
+    try:
+        body = json.loads(base64.b64decode(raw["body_base64"], validate=True))
+    except (ValueError, KeyError):
+        return False
+    return (
+        isinstance(body, dict)
+        and body.get("error") == "prediction aborted, token repeat limit reached"
+    )
 
 
 def write_checkpoint(root: Path, reason: str, details: dict) -> None:
@@ -87,6 +107,7 @@ def generate_batch(
             starts = [r for r in read_jsonl(root / "starts.jsonl") if r["key"] == job["key"]]
             saved = response_index(root / "responses.jsonl")
             successful = None
+            terminal_abort = False
             # Recover saved API output without sending it a second time.
             for previous in starts:
                 record = saved.get((job["key"], previous["attempt"]))
@@ -95,7 +116,10 @@ def generate_batch(
                     if response is not None:
                         successful = (record, parsed, response)
                         break
-            while successful is None and len(starts) < 6:
+                    if terminal_repeat_abort(record["raw"]):
+                        terminal_abort = True
+                        break
+            while successful is None and not terminal_abort and len(starts) < 6:
                 attempt = uuid.uuid4().hex
                 start = {"key": job["key"], "attempt": attempt, "block": sensor.block}
                 append_json(root / "starts.jsonl", start)
@@ -108,6 +132,9 @@ def generate_batch(
                     parsed, response = outcome(job, raw)
                     if response is not None:
                         successful = (record, parsed, response)
+                        break
+                    if terminal_repeat_abort(raw):
+                        terminal_abort = True
                         break
                     append_json(
                         root / "supervisor.jsonl",
@@ -135,7 +162,7 @@ def generate_batch(
                     "attempts": len(starts),
                     "input_valid": False,
                     "call_failed": True,
-                    "flags": ["retry_exhausted"],
+                    "flags": ["generation_repeat_abort" if terminal_abort else "retry_exhausted"],
                     "energy_valid": False,
                     "energy": {"windows": {}},
                     "raw_output": None,
@@ -181,12 +208,39 @@ def generate_batch(
                 raise Halt(reason)
             sleep(gap)
     finally:
+        primary_error = sys.exc_info()[1]
         try:
             if opened:
                 sensor.close()
                 endings = [b for b in read_jsonl(root / "blocks.jsonl") if b["event"] == "end"]
                 if endings and "baseline_drift" in endings[-1].get("flags", []):
-                    raise Halt("Baseline power drift beyond registered threshold")
+                    ending = endings[-1]
+                    events = read_jsonl(root / "blocks.jsonl")
+                    opening = next(
+                        e for e in events if e["event"] == "start" and e["block"] == ending["block"]
+                    )
+                    from experiments.config import P4
+
+                    start_w = opening["baseline"]["watts"]
+                    threshold = max(P4["drift_absolute_w"], P4["drift_fraction"] * start_w)
+                    details = {
+                        "block": ending["block"],
+                        "start_baseline": opening["baseline"],
+                        "end_baseline": ending["baseline"],
+                        "signed_drift_w": ending["drift_w"],
+                        "threshold_w": threshold,
+                        "affected_keys": [
+                            r["key"]
+                            for r in by_key(root / "calls.jsonl").values()
+                            if r.get("block") == ending["block"]
+                        ],
+                    }
+                    if primary_error:
+                        details["primary_error"] = str(primary_error)
+                        raise Halt(
+                            str(primary_error) + "; baseline drift also exceeded threshold", details
+                        ) from primary_error
+                    raise Halt("Baseline power drift beyond registered threshold", details)
         finally:
             power(0x80000000)
     return done
