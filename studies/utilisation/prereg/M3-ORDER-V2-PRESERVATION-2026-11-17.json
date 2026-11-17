@@ -1,0 +1,93 @@
+{
+  "unchanged_artifacts": [
+    {
+      "path": "studies/utilisation/config.yaml",
+      "sha256": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b"
+    },
+    {
+      "path": "studies/utilisation/task-orders.json",
+      "sha256": "1b3129f10bce540526bf8bc541963eb8128256f378fe0d39e6b3020f8f920e89"
+    },
+    {
+      "path": "studies/utilisation/stimuli/E0.json",
+      "sha256": "08c16ae5a058d71c1b9ff08efcc7a2a8aacfd8137702e5bad6cc9bfc615f696c"
+    },
+    {
+      "path": "studies/utilisation/prereg/E0.md",
+      "sha256": "d100416b9d58fde79f8e1a9632fa3a759430b3620c2b8389e0cfe5a57c176b08"
+    },
+    {
+      "path": "studies/utilisation/prereg/EXECUTION.md",
+      "sha256": "32dff3ae5ed5cbc854eae280417cabbcc4aecd600902a82e3c59312c2d3ca5b7"
+    },
+    {
+      "path": "studies/utilisation/prereg/M3.md",
+      "sha256": "1f73d2c0d18c2f2db1e23454d1ee1c3bdb123dde590e5b3bf1d54c03aa7573ba"
+    },
+    {
+      "path": "studies/utilisation/prereg/R1.md",
+      "sha256": "c34280fa8df89af759ff9e651c00c5bdfe4f0130587e726c57c28e42aae3f861"
+    },
+    {
+      "path": "studies/utilisation/prereg/R2.md",
+      "sha256": "f6ca271c5177dc8fb127f05d8c9ba66eb875e8b166f5052dd798fbb6c6bca724"
+    },
+    {
+      "path": "studies/utilisation/prereg/U1.md",
+      "sha256": "827a56db417160b0087a3b2f2c288009bb227798f0ee380d3800ce2b32cb8b19"
+    },
+    {
+      "path": "studies/utilisation/prereg/U2.md",
+      "sha256": "49be03ab6e906234bc7d770b5bde5f4913672d0f35a896051e2bf614369bcbee"
+    },
+    {
+      "path": "studies/utilisation/prereg/U3.md",
+      "sha256": "19f12e0b62aaa972e7b2b8b4851763b8184ce64fb5f296c5295a5d312a6674ef"
+    },
+    {
+      "path": "studies/utilisation/stimuli/M3.json",
+      "sha256": "142bedc84463a06266037eee5e9dae63cbd9d4147abf13693875e8790e074560"
+    },
+    {
+      "path": "studies/utilisation/prereg/E0.json",
+      "sha256": "8e1481633bbede1f089b4a12f04f08b0eb1a4e2e15a07ef32dd08df3f3e5f499"
+    },
+    {
+      "path": "studies/utilisation/prereg/M3.json",
+      "sha256": "2dda2b25b11371d8a040bc4cdfaf77f2e376f201fd72e216e51276d35e30209c"
+    },
+    {
+      "path": "studies/utilisation/pipeline.json",
+      "sha256": "1c64ffa1c97f19effb1b9a090eeecdb58a98ef95f903ec32c1175b04d9fc6440"
+    },
+    {
+      "path": "experiments/supervise.py",
+      "sha256": "c86fa579fa0757ca08c8435a4863f6268d160ca08c41615d6e43ced18e03b394"
+    },
+    {
+      "path": "src/prompt_energy/utilisation_supervisor.py",
+      "sha256": "7f5c02be1fd208947bcd25993de055b613095f536f363f1b92bb30d7771c6167"
+    },
+    {
+      "path": "src/prompt_energy/full_energy.py",
+      "sha256": "a83803269ce1d14ce6d2036f27c19b2bd77fc42b6310e973987f45f2c70a704d"
+    },
+    {
+      "path": "src/prompt_energy/energy.py",
+      "sha256": "793cdedaafb6ac3245c3bda25589a3670e6e5fb3c7d068dfc0c311d36e19a697"
+    },
+    {
+      "path": "experiments/config.py",
+      "sha256": "26c4a39f5e666a4a5ac27c094e88b850731e4c75a37aff381baa3a003bcefc02"
+    }
+  ],
+  "raw_source_hashes": {
+    "results\\utilisation\\supervised\\CHECKPOINT.md": "a2b013592fb6ef9edd83ceebd6b5c71937bf17c6e97868424ab35b9ef70c5218",
+    "results\\utilisation\\supervised\\E0\\blocks.jsonl": "355c1532e991e276c5683bc0f61440bf019bde02b9af7b37a720c32243a38991",
+    "results\\utilisation\\supervised\\E0\\calls.jsonl": "67df874eb19eec0ab72cd17e6ee0f4164b233413a8ed5bbc204201ac45a8b0d9",
+    "results\\utilisation\\supervised\\E0\\responses.jsonl": "39f907c65c5bd5f44aba639c6fb174d8ec1aece5a7054db39be9be8d10251121"
+  },
+  "changelog_sha256_LF": "7ee2bfa4739e413e32f8197d69005163a5b7b88fbfca625e28c5895ae2490761",
+  "new_order_active": false,
+  "energy_option_selected": null
+}

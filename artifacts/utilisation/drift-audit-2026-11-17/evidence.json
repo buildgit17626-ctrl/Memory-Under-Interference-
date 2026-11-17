@@ -1,0 +1,34 @@
+{
+  "checkpoint_text": "# Supervisor checkpoint\n\nBaseline power drift beyond registered threshold\n\n~~~json\n{\n  \"action\": \"recover\"\n}\n~~~\n",
+  "completed_E0": 100,
+  "drift_affected_calls": 100,
+  "blocks": [
+    {
+      "block": "6e81165862424391b79b69d0bfbc2dca",
+      "start_W": 11.26919846134594,
+      "end_W": 9.59877406792041,
+      "signed_drift_W": -1.670424393425531,
+      "registered_threshold_W": 1.1269198461345942,
+      "start_baseline_interval_IST": [
+        "2026-11-17T00:24:16.993846+05:30",
+        "2026-11-17T00:25:16.993846+05:30"
+      ],
+      "end_baseline_interval_IST": [
+        "2026-11-17T00:46:46.424836+05:30",
+        "2026-11-17T00:47:46.424836+05:30"
+      ],
+      "call_count": 100,
+      "finite_post_load_energy": 100
+    }
+  ],
+  "request_range_UTC": [
+    "2026-11-16T18:55:18.756054+00:00",
+    "2026-11-16T19:16:35.095100+00:00"
+  ],
+  "sources": {
+    "results\\utilisation\\supervised\\CHECKPOINT.md": "a2b013592fb6ef9edd83ceebd6b5c71937bf17c6e97868424ab35b9ef70c5218",
+    "results\\utilisation\\supervised\\E0\\blocks.jsonl": "355c1532e991e276c5683bc0f61440bf019bde02b9af7b37a720c32243a38991",
+    "results\\utilisation\\supervised\\E0\\calls.jsonl": "67df874eb19eec0ab72cd17e6ee0f4164b233413a8ed5bbc204201ac45a8b0d9",
+    "results\\utilisation\\supervised\\E0\\responses.jsonl": "39f907c65c5bd5f44aba639c6fb174d8ec1aece5a7054db39be9be8d10251121"
+  }
+}

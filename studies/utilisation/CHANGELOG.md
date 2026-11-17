@@ -100,3 +100,35 @@ requires a subsequent execution amendment. This change is documentation only.
 Read-only status check: supervisor halted on baseline drift after 100 E0
 calls; zero E0 scoring records and zero M3 calls/scoring records. No correctness
 outcomes were inspected. Existing frozen artifact hashes verified unchanged.
+
+## Drift evidence and proposed order revision recorded 2026-11-17T21:45:46+05:30
+
+Owner prohibited recovery/generation and any change to the drift threshold.
+Read CHECKPOINT.md, block events and request timing/energy metadata only.
+Halt text is "Baseline power drift beyond registered threshold".
+Start baseline 11.26919846134594 W over 00:24:16.993846–00:25:16.993846 IST;
+end 9.59877406792041 W over 00:46:46.424836–00:47:46.424836 IST on 2026-11-17.
+Signed drift -1.670424393425531 W exceeds unchanged max(1 W,10% of start)
+= 1.1269198461345942 W. All 100 completed E0 calls belong to this block and
+have finite post-load readings. Exact keys and timestamps were exported by
+analysis/utilisation_drift_audit.py, without reading correctness outcomes.
+Raw source hashes were recorded for preservation verification.
+
+Registration requires drift flags and retaining the starting-baseline primary
+calculation; the drift guard does not automatically delete finite windows.
+Listed registered retain-and-flag and amendment-dependent exclusion,
+end/midpoint sensitivity and repetition options. No option was selected.
+
+Drafted a new order: E0 with scoring, E0 analysis/eligibility, 40 matched
+temperature-zero isolated calls, 100 loaded M3 generations with all M3 scoring
+deferred, checkpoint. Built a separate inactive version-2 controller and
+pending review record. Added offline order/stop tests. Old supervisor,
+baseline-drift threshold, config, frozen stimuli, original preregistrations,
+old manifests and raw journals were preserved. New baseline catalogue and
+execution artifacts have new hashes; Git HEAD and this changelog change.
+
+Exact future recovery command after review is
+.\.venv313\Scripts\python.exe -u -m experiments.supervise_v2 recover.
+It is currently gated by a pending review and energy-disposition decision.
+No recovery, new generation, scoring of the existing E0 calls or M3 outcome
+inspection was performed in this task.
