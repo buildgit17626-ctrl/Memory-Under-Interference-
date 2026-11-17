@@ -137,3 +137,25 @@ Post-commit check found the new verifier normalised artifact bytes despite
 the existing artifacts/** -text Git attribute. Corrected only the new draft
 verifier to use exact artifact bytes and LF-normalised source text. The raw
 run, old frozen manifests and original baseline threshold remain unchanged.
+
+## Owner approvals recorded 2026-11-17T21:55:18+05:30
+
+Owner approved version-2 order with an application gate blocking both the
+40 isolated responses and 100 loaded M3 responses from scoring/inspection
+before the completed checkpoint. Added guard wrappers to public scoring and
+inspection entry points. Counts/timings remain visible. Neither a missing
+checkpoint nor a drift/error checkpoint releases outcomes. The raw journals
+retain ordinary local-file access; no claim of operating-system access
+isolation is made. The registered low-level evaluator remains unchanged.
+
+Owner selected primary retention of original gross/start-baseline net
+estimates, with baseline_drift joined to every call in block
+6e81165862424391b79b69d0bfbc2dca. Registered end-baseline, midpoint-baseline
+and exclude-that-block sensitivities as explicitly post hoc secondary
+analyses, with equations and matched-population denominators. The derived
+affected-calls.csv remains the flag index. Raw values are unchanged.
+
+Updated order-v2-review.json to approved, awaiting the owner's manual launch.
+No requests will be repeated; the threshold is unchanged. No recovery,
+generation or scoring of actual study responses was performed in this task.
+Added offline tests of embargo before/after checkpoint and hash validation.

@@ -41,3 +41,12 @@ They require 40 baseline calls before any loaded M3 call, prohibit M3 scoring,
 stop at exactly 100 loaded calls, block pending reviews and prevent proceeding
 after an isolated-baseline failure. All new source, baseline catalogue and
 amendment text have a separate manifest. Original frozen hashes stay unchanged.
+
+## Owner approval · 2026-11-17
+
+The owner approved this execution order and primary retain-and-flag
+disposition. The additional post hoc sensitivity registration is
+prereg/ENERGY-DISPOSITION-AND-EMBARGO-2026-11-17.md.
+Both M3-isolated and M3 public scoring/inspection routes require the completed
+generation-only checkpoint. The review gate is approved, pending the owner's
+manual recovery after idle. No recovery is performed by this update.

@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from prompt_energy.ollama import Client, decode_response
 from prompt_energy.records import directory_lock
 from prompt_energy.utilisation_order_v2 import execute_v2, require_review
+from prompt_energy.utilisation_outcome_access import inspect_outputs
 from prompt_energy.utilisation_plan import ROOT, load_config
 from prompt_energy.utilisation_supervisor import Halt, write_checkpoint
 
@@ -35,13 +36,14 @@ def verify_v2_artifacts() -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=["recover", "check"])
+    parser.add_argument("action", choices=["recover", "check", "inspect"])
     parser.add_argument("--review", type=Path, default=REVIEW)
     parser.add_argument(
         "--hwinfo-log",
         type=Path,
         default=Path("C:/Users/Dhruv Brahmbhatt/Downloads/New folder/ver1_hwf.CSV"),
     )
+    parser.add_argument("--phase", choices=["M3", "M3-isolated"], default="M3")
     args = parser.parse_args()
     verify_v2_artifacts()
     block = "6e81165862424391b79b69d0bfbc2dca"
@@ -51,6 +53,10 @@ def main() -> None:
     except (ValueError, RuntimeError) as exc:
         print(str(exc))
         raise SystemExit(2) from exc
+    if args.action == "inspect":
+        root = ROOT / "results/utilisation/supervised"
+        print(json.dumps(inspect_outputs(root / args.phase), indent=2))
+        return
     if args.action == "check":
         print("Order and drift review recorded. No generation requested.")
         return

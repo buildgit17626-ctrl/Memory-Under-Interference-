@@ -10,8 +10,13 @@ from experiments.supervise import load_jobs, timing_checkpoint
 from experiments.utilisation_pilot import template
 from prompt_energy.hwinfo import LogFormat
 from prompt_energy.utilisation_e0_analysis import analyse
-from prompt_energy.utilisation_eval import evaluate, load_dataset
+from prompt_energy.utilisation_eval import load_dataset
 from prompt_energy.utilisation_journal import append_json
+from prompt_energy.utilisation_outcome_access import (
+    evaluate,
+    initialise_embargo,
+    publish_checkpoint,
+)
 from prompt_energy.utilisation_plan import ROOT, digest
 from prompt_energy.utilisation_run import Sensor, by_key
 from prompt_energy.utilisation_supervisor import Halt, generate_batch
@@ -107,6 +112,7 @@ def execute_v2(
     from prompt_energy.utilisation_supervisor import validate_pipeline, write_checkpoint
 
     validate_pipeline(root, cfg, pipeline)
+    initialise_embargo(root)
     if by_key(root / "M3/scores.jsonl"):
         raise Halt("M3 scores already exist; cannot enforce unexamined-outcome order")
     if by_key(root / "M3/calls.jsonl") and len(by_key(root / "M3-isolated/calls.jsonl")) < 40:
@@ -193,6 +199,7 @@ def execute_v2(
         (checkpoint_writer or write_checkpoint)(
             root, "STOP: 40 isolated baselines and 100 M3 generations; scoring deferred", details
         )
+        publish_checkpoint(root)
 
     ordered_workflow(
         dict(

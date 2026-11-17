@@ -9,7 +9,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from prompt_energy.hwinfo import LogFormat
 from prompt_energy.ollama import Client, decode_response
 from prompt_energy.records import directory_lock
-from prompt_energy.utilisation_eval import evaluate, load_dataset
+from prompt_energy.utilisation_eval import load_dataset
+from prompt_energy.utilisation_outcome_access import evaluate
 from prompt_energy.utilisation_plan import ROOT, digest, load_config, schedule
 from prompt_energy.utilisation_run import Sensor, monitor, run
 

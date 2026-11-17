@@ -1,7 +1,17 @@
 {
-  "status": "pending_owner_review",
+  "status": "owner_approved_waiting_manual_recovery",
   "amendment_sha256": "fc935908d874b12aa4981308b42679a0988a303b106422a607bcd462e3a0ef26",
-  "order_approved": false,
+  "order_approved": true,
   "drift_block": "6e81165862424391b79b69d0bfbc2dca",
-  "energy_decision": null
+  "energy_decision": "retain_registered_start_baseline_and_flag",
+  "approved_at": "2026-11-17T21:55:18+05:30",
+  "approval_source": "owner explicitly approved order and primary retain/flag plus post hoc sensitivities",
+  "posthoc_secondary_analyses": [
+    "end_baseline",
+    "midpoint_baseline",
+    "exclude_named_block"
+  ],
+  "outcome_embargo": "both_isolated_and_loaded_until_completed_checkpoint",
+  "repeat_requests": false,
+  "drift_threshold_changed": false
 }

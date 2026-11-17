@@ -137,6 +137,14 @@ def test_full_revised_workflow_scores_only_e0(tmp_path, monkeypatch):
         (out / "heldout-labels.json").write_text(json.dumps(labels))
 
     def stop(root, reason, details):
+        from prompt_energy.utilisation_outcome_access import evaluate, inspect_outputs
+
+        for phase in ["M3", "M3-isolated"]:
+            with pytest.raises(PermissionError):
+                inspect_outputs(root / phase)
+            with pytest.raises(PermissionError):
+                evaluate(root / phase, {}, {})
+        (root / "CHECKPOINT.md").write_text(reason)
         events.append(("checkpoint", details["m3_finished"]))
         assert details["isolated_baseline_calls"] == 40
         assert details["M3_scoring"] == "deferred"
@@ -167,3 +175,45 @@ def test_full_revised_workflow_scores_only_e0(tmp_path, monkeypatch):
     assert events[-1] == ("checkpoint", 100)
     assert all(event[0] == "E0" for event in events if event[1] == "score")
     assert len(read_jsonl(tmp_path / "M3/calls.jsonl")) == 100
+
+
+def test_outcome_embargo_blocks_both_populations_until_checkpoint(tmp_path, monkeypatch):
+    from prompt_energy.utilisation_outcome_access import (
+        evaluate,
+        initialise_embargo,
+        inspect_outputs,
+        publish_checkpoint,
+    )
+
+    initialise_embargo(tmp_path)
+    scored = []
+    monkeypatch.setattr(
+        "prompt_energy.utilisation_eval.evaluate", lambda folder, *_: scored.append(folder.name)
+    )
+    for phase, n in [("M3-isolated", 40), ("M3", 100)]:
+        folder = tmp_path / phase
+        folder.mkdir()
+        for i in range(n):
+            append_json(folder / "calls.jsonl", {"key": str(i), "raw_output": "DO_NOT_REVEAL"})
+        with pytest.raises(PermissionError):
+            inspect_outputs(folder)
+        with pytest.raises(PermissionError):
+            evaluate(folder, {}, {})
+    assert scored == []
+    (tmp_path / "CHECKPOINT.md").write_text("Baseline power drift beyond registered threshold")
+    with pytest.raises(ValueError, match="not the completed"):
+        publish_checkpoint(tmp_path)
+    for phase in ["M3-isolated", "M3"]:
+        with pytest.raises(PermissionError):
+            inspect_outputs(tmp_path / phase)
+    (tmp_path / "CHECKPOINT.md").write_text(
+        "STOP: 40 isolated baselines and 100 M3 generations; scoring deferred"
+    )
+    publish_checkpoint(tmp_path)
+    assert len(inspect_outputs(tmp_path / "M3-isolated")) == 40
+    assert len(inspect_outputs(tmp_path / "M3")) == 100
+    evaluate(tmp_path / "M3", {}, {})
+    assert scored == ["M3"]
+    (tmp_path / "CHECKPOINT.md").write_text("replaced checkpoint")
+    with pytest.raises(PermissionError):
+        inspect_outputs(tmp_path / "M3")
