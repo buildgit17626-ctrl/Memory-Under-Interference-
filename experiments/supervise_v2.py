@@ -26,7 +26,9 @@ def verify_v2_artifacts() -> None:
         raise ValueError("Version-2 hash manifest differs from committed registration")
     for line in committed.decode().splitlines():
         expected, name = line.split("  ", 1)
-        actual = hashlib.sha256((ROOT / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+        raw = (ROOT / name).read_bytes()
+        canonical = raw if name.startswith("artifacts/") else raw.replace(b"\r\n", b"\n")
+        actual = hashlib.sha256(canonical).hexdigest()
         if actual != expected:
             raise ValueError("Version-2 artifact changed: " + name)
 
