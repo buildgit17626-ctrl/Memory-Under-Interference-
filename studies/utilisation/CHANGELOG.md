@@ -132,3 +132,8 @@ Exact future recovery command after review is
 It is currently gated by a pending review and energy-disposition decision.
 No recovery, new generation, scoring of the existing E0 calls or M3 outcome
 inspection was performed in this task.
+
+Post-commit check found the new verifier normalised artifact bytes despite
+the existing artifacts/** -text Git attribute. Corrected only the new draft
+verifier to use exact artifact bytes and LF-normalised source text. The raw
+run, old frozen manifests and original baseline threshold remain unchanged.
