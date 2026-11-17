@@ -69,3 +69,34 @@ The target midpoint and filler boundary policy are recorded in each stimulus.
 Launch preflight caught stimulus hashes taken over Windows checkout newlines
 instead of committed LF bytes. Normalised both E0 and M3 registration hashes
 to the documented Git-blob convention before any generation.
+
+## Retrospective delegated-decision log recorded 2026-11-17T21:21:35+05:30
+
+Original decision commit 442594e was committed at 2026-11-17T00:22:34+05:30.
+The following entries distinguish that original commit timestamp from this
+later documentation timestamp.
+
+- Recorded 2026-11-17T21:21:35+05:30; original decision timestamp 2026-11-17T00:22:34+05:30. Chose E0 P1
+  sample_idx=0 (seed 1729) for eligibility and binary difficulty; samples
+  1/2 supply subsequent independent generation outcomes. Primary E0 retains
+  all three samples. This saves the proposed additional 984 calibration calls
+  but produces noisy single-sample labels. Its sample-0 outcome must never be
+  reused as an isolated success comparator.
+- Recorded 2026-11-17T21:21:35+05:30; original decision timestamp 2026-11-17T00:22:34+05:30. Chose renamed
+  copies of the target specification as M3 near-duplicate filler. This is
+  redundant competing naming, not contradictory semantic interference.
+- Recorded 2026-11-17T21:21:35+05:30; original decision timestamp 2026-11-17T00:22:34+05:30. Froze all 164
+  tasks' M3 texts before E0, then selected each model's first 20 eligible IDs
+  in the already committed permutation. Selection depends on the sample-0
+  solvable label, never loaded or fresh-baseline outcomes.
+
+Amendment draft recorded 2026-11-17T21:21:35+05:30: propose 40 fresh temperature-zero no-filler
+M3 calls after the 100-call timing checkpoint and before M3 outcome access.
+The registered fallback comparator is E0 P1 samples 1/2 at temperature 0.2;
+a matched-temperature baseline is not currently scheduled. The running
+supervisor scores M3 before its checkpoint, so adopting the proposed sequence
+requires a subsequent execution amendment. This change is documentation only.
+
+Read-only status check: supervisor halted on baseline drift after 100 E0
+calls; zero E0 scoring records and zero M3 calls/scoring records. No correctness
+outcomes were inspected. Existing frozen artifact hashes verified unchanged.
