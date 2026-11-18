@@ -455,3 +455,71 @@ def test_drift_does_not_hide_original_hard_stop(tmp_path):
     assert result.value.details["threshold_w"] == 1
     assert result.value.details["signed_drift_w"] == 2
     assert "input-count mismatch" in result.value.details["primary_error"]
+
+
+def test_drift_flags_and_continues_with_fresh_blocks_without_repeating(tmp_path):
+    from types import SimpleNamespace
+
+    from prompt_energy.utilisation_journal import append_json
+    from prompt_energy.utilisation_supervisor import generate_batch
+
+    item, cfg, h = fixture()
+    jobs = schedule([item], cfg, h)[:2]
+    events = []
+
+    class DriftSensor(MockSensor):
+        def __init__(self, block, watts):
+            self.block = block
+            self.watts = watts
+
+        def start(self):
+            events.append((self.block, "fresh_baseline", self.watts))
+            append_json(
+                tmp_path / "blocks.jsonl",
+                {"event": "start", "block": self.block, "baseline": {"watts": self.watts}},
+            )
+
+        def measure(self, *args):
+            return {"flags": [], "windows": {"post_load": {"raw_wh": 0.25, "net_wh": 0.1}}}
+
+        def close(self):
+            events.append((self.block, "end"))
+            append_json(
+                tmp_path / "blocks.jsonl",
+                {
+                    "event": "end",
+                    "block": self.block,
+                    "baseline": {"watts": self.watts + 3},
+                    "drift_w": 3,
+                    "flags": ["baseline_drift"],
+                },
+            )
+
+    client = Mock()
+    kwargs = {
+        "sleep": lambda _: None,
+        "disk": lambda _: SimpleNamespace(free=10 * 1024**3),
+        "limit": 1,
+    }
+    assert generate_batch(tmp_path, jobs, client, DriftSensor("a", 10), 5, **kwargs) == 1
+    first_bytes = (tmp_path / "calls.jsonl").read_bytes()
+    assert generate_batch(tmp_path, jobs, client, DriftSensor("b", 20), 5, **kwargs) == 1
+    assert (tmp_path / "calls.jsonl").read_bytes().startswith(first_bytes)
+    before_resume = (tmp_path / "calls.jsonl").read_bytes()
+    assert generate_batch(tmp_path, jobs, client, DriftSensor("unused", 30), 5, **kwargs) == 0
+    assert (tmp_path / "calls.jsonl").read_bytes() == before_resume
+    assert client.calls == 2
+    assert events == [
+        ("a", "fresh_baseline", 10),
+        ("a", "end"),
+        ("b", "fresh_baseline", 20),
+        ("b", "end"),
+    ]
+    rows = read_jsonl(tmp_path / "calls.jsonl")
+    assert len({r["key"] for r in rows}) == 2
+    assert all(r["energy"]["windows"]["post_load"]["net_wh"] == 0.1 for r in rows)
+    flags = read_jsonl(tmp_path / "quality-events.jsonl")
+    assert [r["threshold_w"] for r in flags] == [1, 2]
+    assert [r["action"] for r in flags] == ["flag_and_continue"] * 2
+    assert [r["affected_keys"] for r in flags] == [[rows[0]["key"]], [rows[1]["key"]]]
+    assert not (tmp_path / "scores.jsonl").exists()

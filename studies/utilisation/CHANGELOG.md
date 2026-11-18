@@ -185,3 +185,25 @@ baselines, time windows, threshold, affected keys and any prior error.
 No hard-stop override or drift-threshold change was introduced.
 No recovery, model requests or rescoring occurred during these changes.
 Extra baseline overhead invalidates the earlier 8–11-hour checkpoint estimate.
+
+## Drift-as-flag approval recorded 2026-11-18T07:08:41+05:30
+
+Owner approved flagging drift and continuing with fresh baselines. The latest
+25-call block bfdaa8502c924436bbea9f6bb4d1661d went from 9.827067735632427 W to
+11.395041307714285 W (+1.5679735720818577 W), above the unchanged 1 W threshold.
+No claim is made that a single background process caused this drift.
+
+Implement quality-events.jsonl and terminal flags, preserving original estimates
+and block events. Continue after drift alone, preserving every other hard stop
+and the final checkpoint. Fresh stable baselines remain mandatory every block.
+Retain/flag is primary; extend explicitly post hoc end/midpoint/exclude-drifted
+block sensitivities to all flagged blocks. Original frozen registration files
+remain unchanged; the execution manifest and review record are refreshed.
+No requests repeated, no recovery launched and no actual outcomes inspected.
+Assumption: the existing next-block sensor factory supplies fresh idle windows;
+tests must verify this rather than reuse a previous block's opening baseline.
+
+Offline verification: 388 tests passed (14 existing dependency deprecation
+warnings), Ruff clean; 15 original study hashes unchanged. The execution
+manifest is refreshed to 21 entries, including the dated amendment and tests.
+Saved counts: E0 225 calls/200 scores; M3-isolated and M3 zero calls/scores.

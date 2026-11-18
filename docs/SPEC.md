@@ -605,3 +605,19 @@ The drift hard stop remains active. Preparation waits up to six idle windows
 without generation. Explicit Ollama repeat-limit aborts are future terminal
 runtime failures, preserving unavailable counts; completed old attempts are
 never rewritten. Report checkpoint baseline details and any initiating error.
+
+
+## Owner-approved drift quality-flag amendment (2026-11-18)
+
+For the utilisation supervisor, baseline drift is now a quality flag rather
+than a hard stop. This supersedes the historical drift-stop wording above.
+The threshold stays abs(end-start)>max(1 W,10% of start). Preserve gross and
+start-baseline net energy as primary; join baseline_drift by block and retain
+all raw data. End/midpoint baselines and excluding drifted blocks are explicitly
+post hoc secondary sensitivities, extending the earlier named-block rule.
+See studies/utilisation/prereg/DRIFT-AS-FLAG-2026-11-18.md.
+
+Continue after a drift-only close, then obtain a new stable pair of 60-second
+idle windows before the next at-most-25-call block. The six-window settling
+limit, all other hard stops, outcome embargo and 40-isolated/100-loaded
+checkpoint remain active. No generation or recovery is part of this change.

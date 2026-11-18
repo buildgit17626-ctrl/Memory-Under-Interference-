@@ -58,3 +58,16 @@ remaining choices. P1 sample 0 now defines the held-out label and the complete
 M3 catalogue is frozen. The supervisor filters that catalogue to the eligible
 prefix after E0 scoring. No model generation occurred while
 building or testing the supervisor.
+
+## Current approved recovery: 2026-11-18
+
+Use experiments.supervise_v2 recover with --hwinfo-log pointing to the live CSV.
+This supersedes the legacy launch commands above for this supervised session.
+Each at-most-25-call block requires a fresh stable pair of 60-second baselines.
+Drift exceeding the unchanged max(1 W,10%) threshold is printed and appended to
+quality-events.jsonl; the next block starts after fresh accepted baselines.
+Primary energy stays unchanged and flagged; post hoc sensitivities are required.
+All other stop conditions remain active. Idle-settling failure can still stop
+the session; uninterrupted overnight completion is not guaranteed.
+The pipeline stops after 40 isolated baselines and 100 loaded M3 calls, with
+M3 scoring deferred until that checkpoint. No automated continuation beyond it.

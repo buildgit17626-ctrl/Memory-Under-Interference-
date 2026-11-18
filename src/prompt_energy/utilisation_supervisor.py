@@ -235,12 +235,21 @@ def generate_batch(
                             if r.get("block") == ending["block"]
                         ],
                     }
+                    # Drift is a quality flag under the owner's dated amendment;
+                    # retain the original estimates and never hide another stop.
+                    append_json(
+                        root / "quality-events.jsonl",
+                        {"event": "baseline_drift", "action": "flag_and_continue", **details},
+                    )
+                    print(
+                        json.dumps({"quality_flag": "baseline_drift", **details}),
+                        flush=True,
+                    )
                     if primary_error:
                         details["primary_error"] = str(primary_error)
                         raise Halt(
                             str(primary_error) + "; baseline drift also exceeded threshold", details
                         ) from primary_error
-                    raise Halt("Baseline power drift beyond registered threshold", details)
         finally:
             power(0x80000000)
     return done

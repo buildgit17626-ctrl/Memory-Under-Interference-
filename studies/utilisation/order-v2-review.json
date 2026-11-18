@@ -22,5 +22,18 @@
     "max_idle_windows": 6,
     "threshold_policy": "unchanged",
     "amendment": "studies/utilisation/prereg/MEASUREMENT-RELIABILITY-2026-11-17.md"
+  },
+  "drift_policy": {
+    "approved": true,
+    "recorded_at": "2026-11-18T07:08:41+05:30",
+    "action": "flag_and_continue_with_fresh_baselines",
+    "threshold_policy": "unchanged",
+    "amendment": "studies/utilisation/prereg/DRIFT-AS-FLAG-2026-11-18.md",
+    "energy_primary": "retain_registered_start_baseline_and_flag",
+    "secondary_posthoc": [
+      "end_baseline",
+      "midpoint_baseline",
+      "exclude_drifted_blocks"
+    ]
   }
 }
