@@ -259,3 +259,55 @@ def test_idle_check_retries_windows_without_model_calls(tmp_path, monkeypatch):
     assert len(records) == 3
     assert [r["stable_pair"] for r in records] == [False, False, True]
     assert not (tmp_path / "calls.jsonl").exists()
+
+
+@pytest.mark.parametrize(
+    "error", [ValueError("Malformed CSV row 67426"), OSError("log unavailable")]
+)
+def test_recovery_records_preflight_error_without_traceback_or_generation(
+    tmp_path, monkeypatch, capsys, error
+):
+    from contextlib import nullcontext
+
+    from experiments import supervise_v2 as cli
+
+    study = tmp_path / "studies/utilisation"
+    (study / "stimuli").mkdir(parents=True)
+    (study / "pipeline.json").write_text("{}")
+    (study / "stimuli/M3-isolated-v2.json").write_text("[]")
+    amendment = tmp_path / "amendment.md"
+    amendment.write_text("unchanged")
+    monkeypatch.setattr(cli, "ROOT", tmp_path)
+    monkeypatch.setattr(cli, "AMENDMENT", amendment)
+    monkeypatch.setattr(cli, "verify_v2_artifacts", lambda: None)
+    monkeypatch.setattr(cli, "require_review", lambda *_: None)
+    monkeypatch.setattr(
+        cli, "load_config", lambda: ({"models": [], "paths": {"sessions": "lock"}}, "hash")
+    )
+    requests = []
+
+    class MockClient:
+        def exchange(self, path):
+            requests.append(path)
+            return {"models": []}
+
+    monkeypatch.setattr(cli, "Client", MockClient)
+    monkeypatch.setattr(cli, "decode_response", lambda x: x)
+    monkeypatch.setattr(cli, "directory_lock", lambda _: nullcontext())
+
+    def fail(*args):
+        raise error
+
+    monkeypatch.setattr(cli, "execute_v2", fail)
+    monkeypatch.setattr("sys.argv", ["supervise_v2", "recover", "--hwinfo-log", "ver3_hwf.CSV"])
+    with pytest.raises(SystemExit) as result:
+        cli.main()
+    assert result.value.code == 2
+    assert requests == ["/api/tags"]
+    root = tmp_path / "results/utilisation/supervised"
+    text = (root / "CHECKPOINT.md").read_text()
+    assert str(error) in text and "ver3_hwf.CSV" in text
+    assert type(error).__name__ in text
+    assert "reason saved to CHECKPOINT.md" in capsys.readouterr().out
+    assert len(read_jsonl(root / "supervisor.jsonl")) == 1
+    assert not (root / "E0/calls.jsonl").exists()

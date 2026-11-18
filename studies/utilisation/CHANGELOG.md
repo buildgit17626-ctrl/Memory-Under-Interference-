@@ -207,3 +207,20 @@ Offline verification: 388 tests passed (14 existing dependency deprecation
 warnings), Ruff clean; 15 original study hashes unchanged. The execution
 manifest is refreshed to 21 entries, including the dated amendment and tests.
 Saved counts: E0 225 calls/200 scores; M3-isolated and M3 zero calls/scores.
+
+## CSV layout diagnosis recorded 2026-11-18T08:59:42+05:30
+
+Read-only inspection of ver2_hwf.CSV found 328 header fields and persistent
+329-field rows starting at row 67426, 08:19:36.117. The snapshot contained
+4759 mismatched rows among 72183 data rows (72184 physical lines including
+header). Cause unknown; not a transient partial tail. No skipped rows or
+column-remapping workaround. Owner provided same folder/ver3_hwf.CSV.
+Read-only new-file preflight passed growth, fresh timestamps and observed
+median cadence 0.4985 seconds. No model API requests or generation launched.
+Improve schema error details and checkpoint workflow ValueError/OSError failures
+rather than leaving an unhandled traceback. This is an error-reporting repair,
+not a change to measurement validity, thresholds or research parameters.
+
+Verification: 392 tests passed (14 existing dependency warnings), Ruff clean.
+All 15 original study hashes unchanged; updated execution manifest has 23
+entries. Repair does not launch recovery or generate any study responses.

@@ -621,3 +621,15 @@ Continue after a drift-only close, then obtain a new stable pair of 60-second
 idle windows before the next at-most-25-call block. The six-window settling
 limit, all other hard stops, outcome embargo and 40-isolated/100-loaded
 checkpoint remain active. No generation or recovery is part of this change.
+
+
+## CSV preflight diagnostics repair (2026-11-18)
+
+Strict schema validation is unchanged: every complete row must match the CSV
+header. A persistent width change requires a new HWiNFO log with a fresh header;
+no malformed rows are skipped and no power-column mapping is inferred.
+The v2 workflow now records ValueError/OSError failures in CHECKPOINT.md with
+the active CSV path and prints the reason before exiting. Original sensor
+logs and saved generations remain unchanged. Owner supplied ver3_hwf.CSV as
+the new session source after ver2 developed 329-field rows under a 328-field
+header. New source still needs all normal live-log and baseline checks.

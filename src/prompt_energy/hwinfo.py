@@ -62,7 +62,12 @@ def parse_log(data: bytes, fmt: LogFormat, *, live: bool = False) -> list[Sample
         if not row:
             continue
         if len(row) != len(header):
-            raise ValueError(f"Malformed CSV row {line}")
+            raise ValueError(
+                f"Malformed CSV row {line}: expected {len(header)} columns from the header, "
+                f"found {len(row)}. Sensor layout may have changed; start a new HWiNFO "
+                "CSV with a fresh header and pass its path via --hwinfo-log. "
+                "Keep the old log unchanged."
+            )
         try:
             instant = (
                 datetime.strptime(

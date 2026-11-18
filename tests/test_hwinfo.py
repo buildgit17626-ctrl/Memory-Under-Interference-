@@ -98,3 +98,11 @@ def test_capture_preserves_bytes_and_rejects_replacement(tmp_path):
     source.write_bytes(log_text([row.replace(",10", ",11") for row in ROWS]))
     with pytest.raises(ValueError, match="replaced"):
         capture_log(source, mirror, FMT, end)
+
+
+@pytest.mark.parametrize("extra", [",99", ",99,100"])
+def test_schema_expansion_requires_new_log_without_skipping(extra):
+    data = log_text(ROWS + ["19.10.2026,12:00:01.000,25" + extra])
+    for live in [False, True]:
+        with pytest.raises(ValueError, match="expected 3 columns.*start a new HWiNFO"):
+            parse_log(data, FMT, live=live)

@@ -71,3 +71,9 @@ All other stop conditions remain active. Idle-settling failure can still stop
 the session; uninterrupted overnight completion is not guaranteed.
 The pipeline stops after 40 isolated baselines and 100 loaded M3 calls, with
 M3 scoring deferred until that checkpoint. No automated continuation beyond it.
+
+CSV layout errors still halt. If expected/actual column counts differ, start
+a new HWiNFO file rather than appending to the old one; pass its full path with
+--hwinfo-log. The owner supplied ver3_hwf.CSV in the same folder on 18 November.
+Do not delete the previous logs. Workflow input/measurement failures now save
+their reason and CSV path to CHECKPOINT.md before exiting.

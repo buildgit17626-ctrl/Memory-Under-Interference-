@@ -77,12 +77,19 @@ def main() -> None:
             execute_v2(
                 root, pipeline, cfg, config_hash, client, json.loads(baseline_file.read_text())
             )
-    except Halt as exc:
+    except (Halt, ValueError, OSError) as exc:
         write_checkpoint(
             root,
             str(exc),
-            {"entrypoint": "supervise_v2", "order": "approved-v2", "details": exc.details},
+            {
+                "entrypoint": "supervise_v2",
+                "order": "approved-v2",
+                "hwinfo_log": str(args.hwinfo_log),
+                "error_type": type(exc).__name__,
+                "details": getattr(exc, "details", {}),
+            },
         )
+        print("Stopped; reason saved to CHECKPOINT.md: " + str(exc), flush=True)
         raise SystemExit(2) from exc
 
 
