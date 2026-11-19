@@ -1,0 +1,7 @@
+{
+  "checks": 35,
+  "passed": 35,
+  "failed_keys": [],
+  "stimuli_hash": "f6a8adfb280da7024285b21624416103cb9b6ae9ebd69ad835bfe8b93a776a67",
+  "no_model_calls": true
+}

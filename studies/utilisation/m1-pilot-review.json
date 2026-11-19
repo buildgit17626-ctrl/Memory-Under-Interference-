@@ -1,0 +1,11 @@
+{
+  "owner_approved": true,
+  "approval_source": "Owner explicitly approved 70-call maximum diagnostic pilot in this chat (2026-11-20)",
+  "approval_scope": "Five named targets, K2/K4, three modes, two models and up to10 exact-setting controls",
+  "schedule_hash": "a63f1965ac3cf87155beb25378798cee607d470598b18b6667ffc2a59a70121f",
+  "pilot_excluded_from_hypothesis_tests": true,
+  "exact_texts_available": "docs/PROMPTS_M1_PILOT.md",
+  "individual_prompt_review_claimed": false,
+  "implementation_choices": "Seeded companions; same target slot across modes/models; partial first/last 3/2 order balance; published in preregistration",
+  "no_later_experiment": true
+}

@@ -656,3 +656,38 @@ using existing short blocks, fresh stable baselines and unchanged hard stops.
 Stop at 240 with a separate M3-CONTINUATION.md; preserve CHECKPOINT.md and its
 outcome-access hash. No scoring, task extension or later experiment is launched.
 This is execution of the remaining registered grid, not a design amendment.
+
+
+## Revised memory study preparation (2026-11-20; draft, not launched)
+
+Owner supplied revised architecture: Memory Under Interference in Small Code
+Language Models, task memory/interference, behavioural memory, selective
+retention and computational efficiency. Completed E0 and original M3 generation
+are skipped; raw data and original registrations stay immutable. Revised grids
+are separate prospective studies, never relabelled as old conditions.
+Owner approved the original fixed 40-task roster shared by both models, with
+independent baseline-solvable subset reporting, and reduced pilot-first M1.
+The five-policy R1 replaces the earlier pending three-cell question. Exact
+pilot factors, histories, summaries, preference rules, semantic distractors,
+feedback sets and cache verification still require separate review/freeze.
+
+Draft builders and an offline audit/matrix CLI do not invoke Ollama. The stated
+full M1 grid requires 960 calls plus missing compatible controls; revised reduced
+M3/R2 also 960; five-policy R1 400. These are calculated matrix sizes, not
+authorised execution budgets or measured results. The proposed five-task M1
+pilot with K=2/4 requires 60 plus up to 10 controls, pending approval.
+Reuse isolation calls only with exact full request, task and model-digest
+matches. E0 temperature 0.2 is not deterministic isolation; existing M3 T0
+controls use num_ctx=8192, unlike revised M1/R1 defaults. No automatic reuse
+across changed settings. Do not change the existing freeze without approval.
+E4 fixed output length cannot identify a separate generated-token slope;
+API timing regressions also do not directly measure separate phase energy.
+
+
+M1 pilot approval (2026-11-20): owner approved maximum70 diagnostic calls on
+HumanEval/89,94,105,144,39; K2/K4; passive/active/exact-token-matched filler;
+two models and10 missing same-setting isolated controls. Exclude pilot from
+main hypothesis tests. Seeded companion/partial3-first2-last position rules
+and exact prompts are published before inference. Do not claim individual
+owner review of every prompt; receipt records the actual grid approval.
+Use unchanged registered M1 settings and evaluate new reference bundles first.

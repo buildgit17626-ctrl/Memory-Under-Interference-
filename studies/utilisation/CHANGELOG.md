@@ -261,3 +261,45 @@ Verification: 399 tests passed (14 existing dependency warnings), Ruff clean.
 Fixed mock fixture directory creation before final suite. Read-only ver5
 preflight passed: cadence 0.5 s, age 0.1592927 s. Existing execution manifest
 verified; continuation adds a separate five-artifact committed manifest.
+
+## Revised structure and skip-completed instruction — 2026-11-20
+
+Owner supplied revised architecture and explicitly requested skipping completed
+experiments. Preserve completed E0/legacy M3 and all 40 isolation responses.
+Owner approved original fixed 40-task roster shared across models and reduced
+pilot-first M1. Supersede pending three-cell R1 proposal with five-policy R1;
+do not treat old M3 renamings as contradictory near-duplicate tasks. Exact
+revised generation factors and materials are still drafts.
+
+Run the existing sandboxed evaluator on saved M3/isolated responses only,
+separate from inference. Add offline audit and review matrices plus modular
+draft builders, without model calls or changing original config/hashes.
+Full M1 stated factors produce 960 calls rather than provisional 480. Other
+planner budgets remain provisional until exact matrices and validation exist.
+The eight-hour idle window is not a scientific design approval or a guarantee.
+
+## Approved reduced M1 pilot and completed offline evaluation — 2026-11-20
+
+Owner approved five named tasks/K2,K4/three modes/two models/max70 including
+up to10 controls. Prepare all70, since old isolation controls differ in context.
+Reuse original M1 config: context32768, T0, seed1729, threads8, per-function
+output2048, timeout3600s. Companions are seeded distinct-entry-point prefixes;
+target first for3 tasks, last for2, matched across modes/models. This is partial
+order balance, not a fully balanced design. Exact input counts131..897.
+Receipt records grid approval; no individual prompt-review claim. All exact
+texts published; no references/tests in prompts. Validate new reference bundles
+before generation; generation-only blocks followed by separate evaluation,
+then stop. No full run/later stage automatically starts.
+
+Completed offline scoring on40 isolated and240 loaded M3 responses. Reproducible
+audit CLI prints all counts/denominators/settings and call hashes; there are no
+missing score keys. E0 grid1968/1968, M3-isolated40/40, loadedM3 240/240,
+all unique. Raw calls are unchanged. No interpretation from aggregate counts.
+
+Preparation verified:406 tests passed,14 existing dependency warnings; Ruff
+clean. New reference bundles35/35 checks pass. Exact pilot schedule70 calls,
+hash a63f1965ac3cf87155beb25378798cee607d470598b18b6667ffc2a59a70121f.
+ver6 supplied by owner passes live-log checks. Initial host was battery/Balanced;
+owner subsequently confirmed plugged in/Best performance; recheck before launch.
+No completed E0/M3 requests repeated. Fresh pilot generation remains separate
+from all full-run studies and will stop at70 after offline evaluation.

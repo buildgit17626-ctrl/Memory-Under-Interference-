@@ -1,0 +1,1407 @@
+[
+  {
+    "experiment": "M1",
+    "condition": "isolated",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89"
+      ],
+      "k": 1,
+      "target_task_id": "HumanEval/89"
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only encrypt. Return only Python code.\n[TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 140,
+      "qwen2.5-coder:1.5b": 140
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K2",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89"
+      ],
+      "k": 2,
+      "mode": "passive",
+      "target_task_id": "HumanEval/89",
+      "bundle_task_ids": [
+        "HumanEval/89",
+        "HumanEval/94"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only encrypt. Return only Python code.\n[TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\n[BACKGROUND TASK]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 465,
+      "qwen2.5-coder:1.5b": 465
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K2",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt",
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89",
+        "HumanEval/94"
+      ],
+      "k": 2,
+      "mode": "active",
+      "target_task_id": "HumanEval/89",
+      "bundle_task_ids": [
+        "HumanEval/89",
+        "HumanEval/94"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 457,
+      "qwen2.5-coder:1.5b": 457
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K2",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89"
+      ],
+      "k": 2,
+      "mode": "filler",
+      "target_task_id": "HumanEval/89",
+      "bundle_task_ids": [
+        "HumanEval/89",
+        "HumanEval/94"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only encrypt. Return only Python code.\n[TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 465,
+      "qwen2.5-coder:1.5b": 465
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K4",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89"
+      ],
+      "k": 4,
+      "mode": "passive",
+      "target_task_id": "HumanEval/89",
+      "bundle_task_ids": [
+        "HumanEval/89",
+        "HumanEval/94",
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only encrypt. Return only Python code.\n[TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\n[BACKGROUND TASK]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 897,
+      "qwen2.5-coder:1.5b": 897
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K4",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt",
+      "skjkasdkd",
+      "by_length",
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89",
+        "HumanEval/94",
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "k": 4,
+      "mode": "active",
+      "target_task_id": "HumanEval/89",
+      "bundle_task_ids": [
+        "HumanEval/89",
+        "HumanEval/94",
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 883,
+      "qwen2.5-coder:1.5b": 883
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K4",
+    "task_id": "HumanEval/89",
+    "entries": [
+      "encrypt"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/89"
+      ],
+      "k": 4,
+      "mode": "filler",
+      "target_task_id": "HumanEval/89",
+      "bundle_task_ids": [
+        "HumanEval/89",
+        "HumanEval/94",
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only encrypt. Return only Python code.\n[TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 897,
+      "qwen2.5-coder:1.5b": 897
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "isolated",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/94"
+      ],
+      "k": 1,
+      "target_task_id": "HumanEval/94"
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only skjkasdkd. Return only Python code.\n[TARGET]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 361,
+      "qwen2.5-coder:1.5b": 361
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K2",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/94"
+      ],
+      "k": 2,
+      "mode": "passive",
+      "target_task_id": "HumanEval/94",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/94"
+      ],
+      "target_position": 1
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only skjkasdkd. Return only Python code.\n[BACKGROUND TASK]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n[TARGET]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 638,
+      "qwen2.5-coder:1.5b": 638
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K2",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "by_length",
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105",
+        "HumanEval/94"
+      ],
+      "k": 2,
+      "mode": "active",
+      "target_task_id": "HumanEval/94",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/94"
+      ],
+      "target_position": 1
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 626,
+      "qwen2.5-coder:1.5b": 626
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K2",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/94"
+      ],
+      "k": 2,
+      "mode": "filler",
+      "target_task_id": "HumanEval/94",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/94"
+      ],
+      "target_position": 1
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only skjkasdkd. Return only Python code.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and\n[TARGET]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 638,
+      "qwen2.5-coder:1.5b": 638
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K4",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/94"
+      ],
+      "k": 4,
+      "mode": "passive",
+      "target_task_id": "HumanEval/94",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/94"
+      ],
+      "target_position": 3
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only skjkasdkd. Return only Python code.\n[BACKGROUND TASK]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n\n[BACKGROUND TASK]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[TARGET]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 890,
+      "qwen2.5-coder:1.5b": 890
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K4",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "by_length",
+      "simplify",
+      "prime_fib",
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/94"
+      ],
+      "k": 4,
+      "mode": "active",
+      "target_task_id": "HumanEval/94",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/94"
+      ],
+      "target_position": 3
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 872,
+      "qwen2.5-coder:1.5b": 872
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K4",
+    "task_id": "HumanEval/94",
+    "entries": [
+      "skjkasdkd"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/94"
+      ],
+      "k": 4,
+      "mode": "filler",
+      "target_task_id": "HumanEval/94",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/94"
+      ],
+      "target_position": 3
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only skjkasdkd. Return only Python code.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and\n[TARGET]\n\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 890,
+      "qwen2.5-coder:1.5b": 890
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "isolated",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105"
+      ],
+      "k": 1,
+      "target_task_id": "HumanEval/105"
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only by_length. Return only Python code.\n[TARGET]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 310,
+      "qwen2.5-coder:1.5b": 310
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K2",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105"
+      ],
+      "k": 2,
+      "mode": "passive",
+      "target_task_id": "HumanEval/105",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only by_length. Return only Python code.\n[TARGET]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 465,
+      "qwen2.5-coder:1.5b": 465
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K2",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length",
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "k": 2,
+      "mode": "active",
+      "target_task_id": "HumanEval/105",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 456,
+      "qwen2.5-coder:1.5b": 456
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K2",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105"
+      ],
+      "k": 2,
+      "mode": "filler",
+      "target_task_id": "HumanEval/105",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only by_length. Return only Python code.\n[TARGET]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 465,
+      "qwen2.5-coder:1.5b": 465
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K4",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105"
+      ],
+      "k": 4,
+      "mode": "passive",
+      "target_task_id": "HumanEval/105",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only by_length. Return only Python code.\n[TARGET]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n\n[BACKGROUND TASK]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[BACKGROUND TASK]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 675,
+      "qwen2.5-coder:1.5b": 675
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K4",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length",
+      "simplify",
+      "prime_fib",
+      "separate_paren_groups"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "k": 4,
+      "mode": "active",
+      "target_task_id": "HumanEval/105",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 659,
+      "qwen2.5-coder:1.5b": 659
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K4",
+    "task_id": "HumanEval/105",
+    "entries": [
+      "by_length"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/105"
+      ],
+      "k": 4,
+      "mode": "filler",
+      "target_task_id": "HumanEval/105",
+      "bundle_task_ids": [
+        "HumanEval/105",
+        "HumanEval/144",
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only by_length. Return only Python code.\n[TARGET]\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 675,
+      "qwen2.5-coder:1.5b": 675
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "isolated",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/144"
+      ],
+      "k": 1,
+      "target_task_id": "HumanEval/144"
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only simplify. Return only Python code.\n[TARGET]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 187,
+      "qwen2.5-coder:1.5b": 187
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K2",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/144"
+      ],
+      "k": 2,
+      "mode": "passive",
+      "target_task_id": "HumanEval/144",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/144"
+      ],
+      "target_position": 1
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only simplify. Return only Python code.\n[BACKGROUND TASK]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[TARGET]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 284,
+      "qwen2.5-coder:1.5b": 284
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K2",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "prime_fib",
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39",
+        "HumanEval/144"
+      ],
+      "k": 2,
+      "mode": "active",
+      "target_task_id": "HumanEval/144",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/144"
+      ],
+      "target_position": 1
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 276,
+      "qwen2.5-coder:1.5b": 276
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K2",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/144"
+      ],
+      "k": 2,
+      "mode": "filler",
+      "target_task_id": "HumanEval/144",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/144"
+      ],
+      "target_position": 1
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only simplify. Return only Python code.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page\n[TARGET]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 284,
+      "qwen2.5-coder:1.5b": 284
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K4",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/144"
+      ],
+      "k": 4,
+      "mode": "passive",
+      "target_task_id": "HumanEval/144",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/144"
+      ],
+      "target_position": 3
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only simplify. Return only Python code.\n[BACKGROUND TASK]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[BACKGROUND TASK]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[TARGET]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 494,
+      "qwen2.5-coder:1.5b": 494
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K4",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "prime_fib",
+      "separate_paren_groups",
+      "choose_num",
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/144"
+      ],
+      "k": 4,
+      "mode": "active",
+      "target_task_id": "HumanEval/144",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/144"
+      ],
+      "target_position": 3
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 479,
+      "qwen2.5-coder:1.5b": 479
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K4",
+    "task_id": "HumanEval/144",
+    "entries": [
+      "simplify"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/144"
+      ],
+      "k": 4,
+      "mode": "filler",
+      "target_task_id": "HumanEval/144",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/144"
+      ],
+      "target_position": 3
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only simplify. Return only Python code.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page\n[TARGET]\n\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 494,
+      "qwen2.5-coder:1.5b": 494
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "isolated",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "k": 1,
+      "target_task_id": "HumanEval/39"
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only prime_fib. Return only Python code.\n[TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 131,
+      "qwen2.5-coder:1.5b": 131
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K2",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "k": 2,
+      "mode": "passive",
+      "target_task_id": "HumanEval/39",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only prime_fib. Return only Python code.\n[TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[BACKGROUND TASK]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 244,
+      "qwen2.5-coder:1.5b": 244
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K2",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib",
+      "separate_paren_groups"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "k": 2,
+      "mode": "active",
+      "target_task_id": "HumanEval/39",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 233,
+      "qwen2.5-coder:1.5b": 233
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K2",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "k": 2,
+      "mode": "filler",
+      "target_task_id": "HumanEval/39",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only prime_fib. Return only Python code.\n[TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 244,
+      "qwen2.5-coder:1.5b": 244
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "passive/K4",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "k": 4,
+      "mode": "passive",
+      "target_task_id": "HumanEval/39",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/0"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only prime_fib. Return only Python code.\n[TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[BACKGROUND TASK]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n\n[BACKGROUND TASK]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[BACKGROUND TASK]\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 463,
+      "qwen2.5-coder:1.5b": 463
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "active/K4",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib",
+      "separate_paren_groups",
+      "choose_num",
+      "has_close_elements"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/0"
+      ],
+      "k": 4,
+      "mode": "active",
+      "target_task_id": "HumanEval/39",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/0"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Implement every named function below. Return only Python code.\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 445,
+      "qwen2.5-coder:1.5b": 445
+    }
+  },
+  {
+    "experiment": "M1",
+    "condition": "filler/K4",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "models": [
+      "qwen2.5-coder:0.5b",
+      "qwen2.5-coder:1.5b"
+    ],
+    "identity": {
+      "pilot": true,
+      "include_in_main_analysis": false,
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "k": 4,
+      "mode": "filler",
+      "target_task_id": "HumanEval/39",
+      "bundle_task_ids": [
+        "HumanEval/39",
+        "HumanEval/1",
+        "HumanEval/102",
+        "HumanEval/0"
+      ],
+      "target_position": 0
+    },
+    "sections": {
+      "tasks": [
+        "Read the background. Complete only prime_fib. Return only Python code.\n[TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and notebook page numbers.\nBackground notes list weather observations, colours, dates and"
+      ]
+    },
+    "layout": [
+      "tasks"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 463,
+      "qwen2.5-coder:1.5b": 463
+    }
+  }
+]
