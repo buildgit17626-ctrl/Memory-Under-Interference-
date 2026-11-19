@@ -69,3 +69,29 @@ def test_report_keeps_target_success_separate_from_bundle(tmp_path):
     row = result["by_model_condition"][0]
     assert row["calls"] == row["scored"] == row["target_passed"] == 1
     assert row["all_requested_functions_passed"] == 0
+
+
+def test_manifest_keeps_artifact_crlf_bytes_but_normalises_source(tmp_path, monkeypatch):
+    import hashlib
+
+    from experiments.run_m1_pilot import verify_pilot_manifest
+
+    artifact, source = tmp_path / "artifacts/data.json", tmp_path / "src/example.txt"
+    artifact.parent.mkdir()
+    source.parent.mkdir()
+    artifact.write_bytes(b'{"check": true}\r\n')
+    source.write_bytes(b"source\r\n")
+    text = (
+        hashlib.sha256(artifact.read_bytes()).hexdigest()
+        + "  artifacts/data.json\n"
+        + hashlib.sha256(b"source\n").hexdigest()
+        + "  src/example.txt\n"
+    ).encode()
+    path = tmp_path / "studies/utilisation/prereg/M1-PILOT-2026-11-20.sha256"
+    path.parent.mkdir(parents=True)
+    path.write_bytes(text)
+    monkeypatch.setattr("subprocess.check_output", lambda *a, **k: text)
+    verify_pilot_manifest(tmp_path)
+    artifact.write_bytes(b'{"check": true}\n')
+    with pytest.raises(ValueError, match="artifact changed"):
+        verify_pilot_manifest(tmp_path)

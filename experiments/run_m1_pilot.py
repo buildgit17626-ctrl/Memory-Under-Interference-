@@ -11,10 +11,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from experiments.supervise_v2 import verify_v2_artifacts
 from prompt_energy.hwinfo import LogFormat
-from prompt_energy.ollama import Client, decode_response
+from prompt_energy.ollama import Client, decode_response, utc_now
 from prompt_energy.records import directory_lock
 from prompt_energy.utilisation_eval import evaluate, load_dataset
 from prompt_energy.utilisation_freeze import verify_registration
+from prompt_energy.utilisation_journal import append_json
 from prompt_energy.utilisation_plan import ROOT, digest, load_config, schedule
 from prompt_energy.utilisation_reliability import SettledSensor, generate_short_block
 from prompt_energy.utilisation_run import by_key
@@ -95,6 +96,22 @@ def report(root: Path) -> dict:
     }
 
 
+def verify_pilot_manifest(root: Path = ROOT) -> None:
+    """Respect Git binary artifact bytes and source LF canonicalisation."""
+    import subprocess
+
+    manifest = "studies/utilisation/prereg/M1-PILOT-2026-11-20.sha256"
+    committed = subprocess.check_output(["git", "show", "HEAD:" + manifest], cwd=root)
+    if (root / manifest).read_bytes().replace(b"\r\n", b"\n") != committed:
+        raise ValueError("Pilot manifest changed")
+    for line in committed.decode().splitlines():
+        expected, name = line.split("  ", 1)
+        raw = (root / name).read_bytes()
+        canonical = raw if name.startswith("artifacts/") else raw.replace(b"\r\n", b"\n")
+        if hashlib.sha256(canonical).hexdigest() != expected:
+            raise ValueError("Pilot artifact changed: " + name)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["check", "recover", "report"])
@@ -105,23 +122,11 @@ def main() -> None:
     from experiments.continue_m3 import verify_continuation
 
     verify_continuation()
-    import subprocess
-
-    manifest = "studies/utilisation/prereg/M1-PILOT-2026-11-20.sha256"
-    committed = subprocess.check_output(["git", "show", "HEAD:" + manifest], cwd=ROOT)
-    if (ROOT / manifest).read_bytes().replace(b"\r\n", b"\n") != committed:
-        raise ValueError("Pilot manifest changed")
-    for line in committed.decode().splitlines():
-        expected, name = line.split("  ", 1)
-        if (
-            hashlib.sha256((ROOT / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
-            != expected
-        ):
-            raise ValueError("Pilot artifact changed: " + name)
+    verify_pilot_manifest()
     cfg, sha = load_config()
     stimulus = ROOT / "studies/utilisation/stimuli/M1-pilot.json"
     jobs = schedule(json.loads(stimulus.read_text()), cfg, sha)
-    verify_registration(jobs, stimulus, cfg)
+    registration = verify_registration(jobs, stimulus, cfg)
     review = json.loads((ROOT / "studies/utilisation/m1-pilot-review.json").read_text())
     require_material_review(jobs, review)
     validation = json.loads(
@@ -147,6 +152,7 @@ def main() -> None:
     try:
         with directory_lock(ROOT / cfg["paths"]["sessions"]):
             client = Client()
+            runtime_version = decode_response(client.exchange("/api/version"))["version"]
             tags = decode_response(client.exchange("/api/tags"))["models"]
             for model in cfg["models"]:
                 if not any(
@@ -154,6 +160,17 @@ def main() -> None:
                     for m in tags
                 ):
                     raise ValueError("Model digest mismatch")
+            append_json(
+                root / "sessions.jsonl",
+                {
+                    "started_at": utc_now(),
+                    "ollama_version": runtime_version,
+                    "hwinfo_log": str(args.hwinfo_log),
+                    "registration": registration,
+                    "schedule_hash": digest(jobs),
+                    "diagnostic_pilot": True,
+                },
+            )
             pilot_generation(root, jobs, client, args.hwinfo_log)
             print("Pilot generation complete; beginning separate sandbox evaluation.", flush=True)
             tasks = load_dataset(

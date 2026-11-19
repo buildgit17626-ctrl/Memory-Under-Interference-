@@ -303,3 +303,13 @@ ver6 supplied by owner passes live-log checks. Initial host was battery/Balanced
 owner subsequently confirmed plugged in/Best performance; recheck before launch.
 No completed E0/M3 requests repeated. Fresh pilot generation remains separate
 from all full-run studies and will stop at70 after offline evaluation.
+
+Pre-launch check caught binary artifact CRLF vs source LF hashing difference.
+Correct verifier to preserve artifacts exact bytes as Git -text requires; add
+regression test. No generation preceded this correction. Owner-confirmed power
+state rechecked as AC/Best performance. Original scientific settings unchanged.
+
+Final verifier regression suite:407 tests passed (14 existing dependency
+warnings), Ruff clean. Pilot session journal records Ollama version, source
+registration and active sensor path before generation. All scientific settings
+unchanged by the hash-check correction; fresh host/sensor checks precede launch.
