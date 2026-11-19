@@ -109,16 +109,24 @@ def check_recent(samples: list[Sample], now: float) -> dict:
 def preflight_log(path: Path, fmt: LogFormat, *, sleep=time.sleep, now=time.time) -> dict:
     """Require more bytes AND advancing valid timestamps, not mere file existence."""
     first = path.read_bytes()
+    first_read_at = now()
     initial = parse_log(first, fmt, live=True)
-    check_recent(initial, now())
+    check_recent(initial, first_read_at)
     sleep(ENERGY["growth_check_seconds"])
     second = path.read_bytes()
+    second_read_at = now()
     final = parse_log(second, fmt, live=True)
     if len(second) <= len(first) or not second.startswith(first):
         raise ValueError("HWiNFO log is not growing append-only")
     if final[-1].timestamp <= initial[-1].timestamp:
         raise ValueError("HWiNFO samples did not advance")
-    return {"bytes_before": len(first), "bytes_after": len(second), **check_recent(final, now())}
+    return {
+        "bytes_before": len(first),
+        "bytes_after": len(second),
+        "snapshot_read_at": second_read_at,
+        "validation_delay_seconds": now() - second_read_at,
+        **check_recent(final, second_read_at),
+    }
 
 
 def capture_log(

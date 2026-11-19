@@ -633,3 +633,14 @@ the active CSV path and prints the reason before exiting. Original sensor
 logs and saved generations remain unchanged. Owner supplied ver3_hwf.CSV as
 the new session source after ver2 developed 329-field rows under a 328-field
 header. New source still needs all normal live-log and baseline checks.
+
+
+## Snapshot freshness clock correction (2026-11-19)
+
+Live CSV freshness is evaluated against wall time captured immediately after
+reading the byte snapshot, before parsing it. Parsing delay is not sensor age;
+preflight records snapshot_read_at and validation_delay_seconds separately.
+The same correction applies before a utilisation request. Full strict parsing,
+3-second freshness limit, cadence and append-growth checks remain unchanged.
+This verifies the snapshot at read time, not continuous logger availability
+during parsing. No energy window, raw data or research parameter changes.

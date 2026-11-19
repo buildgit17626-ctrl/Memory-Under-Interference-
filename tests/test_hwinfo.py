@@ -106,3 +106,40 @@ def test_schema_expansion_requires_new_log_without_skipping(extra):
     for live in [False, True]:
         with pytest.raises(ValueError, match="expected 3 columns.*start a new HWiNFO"):
             parse_log(data, FMT, live=live)
+
+
+@pytest.mark.parametrize("initial_age", [0.5, 10.0])
+def test_snapshot_freshness_does_not_include_slow_parsing(tmp_path, monkeypatch, initial_age):
+    from prompt_energy import hwinfo as module
+
+    path = tmp_path / "log.csv"
+    path.write_bytes(log_text(ROWS))
+    original = module.parse_log
+    last = original(path.read_bytes(), FMT)[-1].timestamp
+    clock = [last + initial_age]
+    reads = []
+
+    def slow_parse(*args, **kwargs):
+        reads.append(clock[0])
+        clock[0] += 4
+        return original(*args, **kwargs)
+
+    def advance(_):
+        # Simulate a logger which kept recording during the parsing delay.
+        path.write_bytes(
+            log_text(
+                ROWS
+                + [f"19.10.2026,12:00:{i // 2:02d}.{(i % 2) * 500:03d},25" for i in range(2, 10)]
+            )
+        )
+
+    monkeypatch.setattr(module, "parse_log", slow_parse)
+    if initial_age > 3:
+        with pytest.raises(ValueError, match="stale"):
+            module.preflight_log(path, FMT, now=lambda: clock[0], sleep=advance)
+        assert len(reads) == 1
+    else:
+        value = module.preflight_log(path, FMT, now=lambda: clock[0], sleep=advance)
+        assert value["age_seconds"] == initial_age
+        assert value["validation_delay_seconds"] == 4
+        assert value["snapshot_read_at"] == last + 4 + initial_age

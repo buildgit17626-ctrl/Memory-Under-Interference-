@@ -523,3 +523,26 @@ def test_drift_flags_and_continues_with_fresh_blocks_without_repeating(tmp_path)
     assert [r["action"] for r in flags] == ["flag_and_continue"] * 2
     assert [r["affected_keys"] for r in flags] == [[rows[0]["key"]], [rows[1]["key"]]]
     assert not (tmp_path / "scores.jsonl").exists()
+
+
+@pytest.mark.parametrize("initial_age", [0.5, 10.0])
+def test_before_request_checks_freshness_at_snapshot_read(tmp_path, monkeypatch, initial_age):
+    from prompt_energy import utilisation_run as module
+
+    path = tmp_path / "sensor.csv"
+    path.write_bytes(b"snapshot")
+    clock = [100.0 + initial_age]
+
+    def slow_parse(data, fmt, *, live):
+        assert data == b"snapshot" and live
+        clock[0] += 5
+        return [Sample(99.5, 10), Sample(100, 11)]
+
+    monkeypatch.setattr(module, "parse_log", slow_parse)
+    monkeypatch.setattr(module.time, "time", lambda: clock[0])
+    sensor = Sensor(path, tmp_path, None)
+    if initial_age > 3:
+        with pytest.raises(ValueError, match="stale"):
+            sensor.before_request()
+    else:
+        sensor.before_request()

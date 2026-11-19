@@ -224,3 +224,24 @@ not a change to measurement validity, thresholds or research parameters.
 Verification: 392 tests passed (14 existing dependency warnings), Ruff clean.
 All 15 original study hashes unchanged; updated execution manifest has 23
 entries. Repair does not launch recovery or generate any study responses.
+
+## Snapshot freshness diagnosis — 2026-11-19
+
+Owner screenshot shows stop after 1825/1968 E0 calls. Read-only journals confirm
+1825 unique calls and 1825 scores; isolated/loaded M3 have zero calls or scores.
+ver4_hwf.CSV grew from 120262667 to 120271619 bytes over two observations
+approximately three seconds apart, with current timestamps. A later snapshot
+had 120313758 bytes and 81749 samples; read 0.0457882 s, parse 2.3258841 s.
+Sample age was 0.1191952 s at read and 2.4450793 s after parsing. Full-history
+parsing can therefore consume the freshness margin; the exact historical
+cause is not established by the saved checkpoint.
+
+Correct clock reference to snapshot read time; retain strict parsing and all
+thresholds. Record validation delay separately. Synthetic tests exercise slow
+parsing of both fresh and already-stale data. No actual model outcomes inspected,
+no new generations or rescoring. Existing journals untouched.
+
+Validation: corrected synthetic logger fixture to maintain 500 ms cadence;
+final full suite 396 passed, 14 existing dependency warnings. Ruff clean.
+Read-only preflight on ver4 passed: age 0.5396245 s, cadence 0.504 s,
+validation delay 2.3703010 s. Original 15 study hashes unchanged.

@@ -59,8 +59,11 @@ class Sensor:
         )
 
     def before_request(self) -> None:
-        samples = parse_log(self.log.read_bytes(), self.fmt, live=True)
-        check_recent(samples, time.time())
+        data = self.log.read_bytes()
+        read_at = time.time()
+        samples = parse_log(data, self.fmt, live=True)
+        # Parsing a long history must not age the already-captured snapshot.
+        check_recent(samples, read_at)
 
     def measure(self, raw: dict, response: dict | None) -> dict:
         end = datetime.fromisoformat(raw["ended_at"]).timestamp()
