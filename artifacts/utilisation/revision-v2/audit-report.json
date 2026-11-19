@@ -1,0 +1,113 @@
+{
+  "E0": {
+    "calls": 1968,
+    "unique_keys": 1968,
+    "scores": 1968,
+    "unique_score_keys": 1968,
+    "missing_score_keys": [],
+    "input_invalid": 2,
+    "output_caps": 6,
+    "energy_available": 1966,
+    "score_status_counts": {
+      "passed": 1056,
+      "failed": 904,
+      "invalid_input": 2,
+      "truncated": 6
+    },
+    "settings": [
+      {
+        "num_ctx": 8192,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0.2
+      },
+      {
+        "num_ctx": 8192,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 2718,
+        "stop": [],
+        "temperature": 0.2
+      },
+      {
+        "num_ctx": 8192,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 3141,
+        "stop": [],
+        "temperature": 0.2
+      }
+    ],
+    "raw_calls_sha256": "077baa8ed0b145bd3b43a5512852fa7cabbebfd8017138eb1f8b2b7485ddf11c"
+  },
+  "M3-isolated": {
+    "calls": 40,
+    "unique_keys": 40,
+    "scores": 40,
+    "unique_score_keys": 40,
+    "missing_score_keys": [],
+    "input_invalid": 0,
+    "output_caps": 0,
+    "energy_available": 40,
+    "score_status_counts": {
+      "passed": 30,
+      "failed": 10
+    },
+    "settings": [
+      {
+        "num_ctx": 8192,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0
+      }
+    ],
+    "raw_calls_sha256": "a39e94f5013374d8efc2422c65ef84721406a87e1eee4cb17bc3a5ae95250cc5"
+  },
+  "M3": {
+    "calls": 240,
+    "unique_keys": 240,
+    "scores": 240,
+    "unique_score_keys": 240,
+    "missing_score_keys": [],
+    "input_invalid": 0,
+    "output_caps": 1,
+    "energy_available": 240,
+    "score_status_counts": {
+      "passed": 163,
+      "failed": 76,
+      "truncated": 1
+    },
+    "settings": [
+      {
+        "num_ctx": 8192,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0
+      }
+    ],
+    "raw_calls_sha256": "fe01dd668c1c02eca64d666dd0afeb45e124b9ca7ae742c7af5d90bb9f83178b"
+  },
+  "E0_grid": {
+    "expected_cells": 1968,
+    "observed_cells": 1968,
+    "unique_cells": 1968,
+    "missing_cells": [],
+    "unexpected_cells": []
+  },
+  "reuse_rule": "Reuse only exact task/full request/model-digest matches; no automatic T0 equivalence.",
+  "skip_generation": [
+    "E0",
+    "legacy_M3_240"
+  ]
+}

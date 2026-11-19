@@ -1,0 +1,14 @@
+{
+  "title": "Memory Under Interference in Small Code Language Models",
+  "completed_generation_to_skip": [
+    "E0",
+    "legacy_M3_240"
+  ],
+  "roster_approved": true,
+  "pilot_approved": "M1_maximum70",
+  "full_runs_authorised": false,
+  "R1_revised_five_policy_materials": "pending",
+  "new_R2_distractor_audits": "pending",
+  "appendix_previous_design": "superseded only by individually frozen revised stages",
+  "experiment_freeze_unchanged": "2026-11-22T23:59:00+05:30"
+}
