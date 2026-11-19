@@ -644,3 +644,15 @@ The same correction applies before a utilisation request. Full strict parsing,
 3-second freshness limit, cadence and append-growth checks remain unchanged.
 This verifies the snapshot at read time, not continuous logger availability
 during parsing. No energy window, raw data or research parameter changes.
+
+
+## Reviewed M3 continuation (2026-11-19)
+
+Owner reviewed the first-100 verification and requested continuation with ver5
+logging. A committed review receipt binds approval to the original selected
+240-call M3 schedule and published checkpoint hash. experiments.continue_m3
+finishes only the remaining 140 calls, resuming append-only without repeats,
+using existing short blocks, fresh stable baselines and unchanged hard stops.
+Stop at 240 with a separate M3-CONTINUATION.md; preserve CHECKPOINT.md and its
+outcome-access hash. No scoring, task extension or later experiment is launched.
+This is execution of the remaining registered grid, not a design amendment.

@@ -245,3 +245,19 @@ Validation: corrected synthetic logger fixture to maintain 500 ms cadence;
 final full suite 396 passed, 14 existing dependency warnings. Ruff clean.
 Read-only preflight on ver4 passed: age 0.5396245 s, cadence 0.504 s,
 validation delay 2.3703010 s. Original 15 study hashes unchanged.
+
+## M3 checkpoint reviewed; continuation prepared — 2026-11-19
+
+Owner requested begin now after counts/validity/timing review and supplied
+ver5_hwf. Freeze a selected-schedule-bound owner receipt; finish only original
+240 M3 calls (140 remaining). Preserve first-100 checkpoint and immutable call
+keys; no E0/isolated repeats, scoring, extension or later stages. New terminal
+entry point checks old manifests plus a committed continuation manifest and
+uses unchanged block/retry/energy rules. Later stimuli need their own readiness
+checks. Model/prompt/task/config files are unchanged. No generation in this
+implementation task; owner launches from terminal.
+
+Verification: 399 tests passed (14 existing dependency warnings), Ruff clean.
+Fixed mock fixture directory creation before final suite. Read-only ver5
+preflight passed: cadence 0.5 s, age 0.1592927 s. Existing execution manifest
+verified; continuation adds a separate five-artifact committed manifest.

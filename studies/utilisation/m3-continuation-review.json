@@ -1,0 +1,9 @@
+{
+  "owner_approved": true,
+  "approval_source": "Owner requested begin now after first-100 verification, supplied ver5_hwf (2026-11-19)",
+  "scope": "Finish original Focused M3 only; stop at 240; no scoring or later stages",
+  "checkpoint_sha256": "a09e2c3134e5366eb31e9afed0389b7b755df8cce15a9ab527f3ca64eec2e65f",
+  "schedule_hash": "9bf30c0586206dbe1e58f901787979fb3cd75d3c6c9ab4930d70d11a010c33de",
+  "task_extension": false,
+  "repeat_completed_requests": false
+}
