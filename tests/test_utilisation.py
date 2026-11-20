@@ -546,3 +546,57 @@ def test_before_request_checks_freshness_at_snapshot_read(tmp_path, monkeypatch,
             sensor.before_request()
     else:
         sensor.before_request()
+
+
+def test_launch_callback_stops_between_calls_preserving_resume(tmp_path):
+    from types import SimpleNamespace
+
+    from prompt_energy.utilisation_supervisor import generate_batch
+
+    item, cfg, h = fixture()
+    jobs = schedule([item], cfg, h)[:2]
+    allowed = iter([True, True, False])
+    client = Mock()
+    done = generate_batch(
+        tmp_path,
+        jobs,
+        client,
+        MockSensor(),
+        0,
+        may_launch=lambda: next(allowed),
+        sleep=lambda _: None,
+        disk=lambda _: SimpleNamespace(free=10 * 1024**3),
+    )
+    assert done == 1 and client.calls == 1
+    assert len(read_jsonl(tmp_path / "calls.jsonl")) == 1
+
+
+def test_budget_stops_retry_and_preserves_attempt_for_recovery(tmp_path):
+    from types import SimpleNamespace
+
+    from prompt_energy.utilisation_supervisor import generate_batch
+
+    item, cfg, h = fixture()
+    jobs = schedule([item], cfg, h)[:1]
+
+    class Retry(Mock):
+        def exchange(self, *args, **kwargs):
+            row = super().exchange(*args, **kwargs)
+            if self.calls == 1:
+                row["http_status"] = 500
+            return row
+
+    client = Retry()
+    allowed = iter([True, True, False])
+    kwargs = {"sleep": lambda _: None, "disk": lambda _: SimpleNamespace(free=10 * 1024**3)}
+    assert (
+        generate_batch(
+            tmp_path, jobs, client, MockSensor(), 0, may_launch=lambda: next(allowed), **kwargs
+        )
+        == 0
+    )
+    assert client.calls == 1 and not (tmp_path / "calls.jsonl").exists()
+    assert len(read_jsonl(tmp_path / "responses.jsonl")) == 1
+    assert generate_batch(tmp_path, jobs, client, MockSensor(), 0, **kwargs) == 1
+    assert client.calls == 2
+    assert read_jsonl(tmp_path / "calls.jsonl")[0]["attempts"] == 2

@@ -7,6 +7,7 @@ import shutil
 import sys
 import time
 import uuid
+from collections.abc import Callable
 from pathlib import Path
 
 from prompt_energy.utilisation_journal import append_json, read_jsonl
@@ -79,6 +80,7 @@ def generate_batch(
     *,
     sleep=time.sleep,
     disk=shutil.disk_usage,
+    may_launch: Callable[[], bool] | None = None,
 ) -> int:
     """Caller owns study lock; return after at most limit logical completions."""
     complete = by_key(root / "calls.jsonl")
@@ -104,6 +106,8 @@ def generate_batch(
 
             if datetime.now().astimezone() >= datetime.fromisoformat(FREEZE):
                 raise Halt("Experiment freeze reached")
+            if may_launch is not None and not may_launch():
+                break
             starts = [r for r in read_jsonl(root / "starts.jsonl") if r["key"] == job["key"]]
             saved = response_index(root / "responses.jsonl")
             successful = None
@@ -120,6 +124,18 @@ def generate_batch(
                         terminal_abort = True
                         break
             while successful is None and not terminal_abort and len(starts) < 6:
+                if may_launch is not None and not may_launch():
+                    # Retain retry journals; resume this logical call later.
+                    append_json(
+                        root / "supervisor.jsonl",
+                        {
+                            "event": "launch_budget_exhausted",
+                            "key": job["key"],
+                            "saved_attempts": len(starts),
+                            "time": time.time(),
+                        },
+                    )
+                    return done
                 attempt = uuid.uuid4().hex
                 start = {"key": job["key"], "attempt": attempt, "block": sensor.block}
                 append_json(root / "starts.jsonl", start)
