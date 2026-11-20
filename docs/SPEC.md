@@ -691,3 +691,25 @@ main hypothesis tests. Seeded companion/partial3-first2-last position rules
 and exact prompts are published before inference. Do not claim individual
 owner review of every prompt; receipt records the actual grid approval.
 Use unchanged registered M1 settings and evaluate new reference bundles first.
+
+
+## Owner-approved timed full M1 (2026-11-21)
+
+Owner approved1040 logical calls: original40 targets shared by both models;
+K2/3/4/6; passive/active/token-matched irrelevant conditions plus80 isolated
+controls. Diagnostic pilot stays excluded. New scoped config and output keep
+all old registrations/results unchanged. Companion prefixes follow the seeded
+fixed-roster order; target first/last balanced20/20, identical across modes and
+models. If neutral-prose prefixes cannot match full input count exactly, use
+repeated neutral x padding and disclose this construction. Reference bundles
+must pass before generation. Exploratory post-pilot paired analyses are labelled
+as such; no confirmation claim from selecting a design after pilot inspection.
+
+Run a registered queue with7.5-hour availability ceiling. Reserve the existing
+maximum request timeout3600s plus600s close allowance before every new attempt,
+including retries. Approximate latest launch is6h20m after queue start. Finish
+active requests, close baselines, and record incomplete pending work for resume.
+No time-based task replacement or raw-data change. Scoring deferred. Sequential
+25-call blocks and every original hard stop remain; drift remains a flag.
+Do not start unresolved R1/E5 or invent M4/M5 stages. No reuse of pilot rows in
+main estimates; M1 has a new output directory. Freeze at22Nov23:59IST remains.

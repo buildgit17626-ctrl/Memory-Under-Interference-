@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-21",
+  "hypotheses": "Owner: increasing task load may reduce per-task correctness; batching may improve overall efficiency",
+  "competing_predictions": "No degradation or improved correctness; active output work and order remain alternative explanations",
+  "conditions": [
+    "active/K2",
+    "active/K3",
+    "active/K4",
+    "active/K6",
+    "filler/K2",
+    "filler/K3",
+    "filler/K4",
+    "filler/K6",
+    "isolated",
+    "passive/K2",
+    "passive/K3",
+    "passive/K4",
+    "passive/K6"
+  ],
+  "outcomes": "Target pass, per-function pass, all-functions pass, latency, tokens, qualified gross/net energy and cost per correct",
+  "analysis": "Exploratory post-pilot task-paired comparisons, not confirmatory; 2000 task-bootstrap draws seed1732; Holm over passive-isolation and active-passive at K2/3/4/6 per model (16 contrasts); exploratory other contrasts; report all and independently E0-solvable subsets",
+  "exclusions": "Exclude pilot data; report invalid/API/cap/missing energy; capped bounded generations non-pass; no replacement; partial timed cells explicit; retain raw records",
+  "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+  "stimuli_hash": "d5abb736c6d95f5c5d1dfcae3b36e1ca49115bf883ab66aa5d16d17463a04dd3",
+  "schedule_hash": "6b000743a2ffa13d6e30514e31fc75627bc157eb11e5d4748ac99839ff1ddf0c"
+}

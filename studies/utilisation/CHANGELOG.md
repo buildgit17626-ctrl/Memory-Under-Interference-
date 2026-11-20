@@ -313,3 +313,29 @@ Final verifier regression suite:407 tests passed (14 existing dependency
 warnings), Ruff clean. Pilot session journal records Ollama version, source
 registration and active sensor path before generation. All scientific settings
 unchanged by the hash-check correction; fresh host/sensor checks precede launch.
+
+## Timed full-M1 approval - 2026-11-21
+
+Owner approved1040-call full-M1 queue and ver7 logging for7-8h availability.
+Freeze new scoped inputs/config before generation; skip completedE0/M3 and
+exclude pilot. Keep original decoding/oracle, nested seeded companion prefixes,
+20/20 first/last target position balance. Matched irrelevant filler uses neutral
+prose prefixes or repeated x padding when exact token count needs it; log exact
+texts/counts. This differs in filler construction for some full-grid items and
+is disclosed before new generation. Report all paired analyses exploratory
+post-pilot; don't choose tasks/cells by outcome.
+
+Add optional time callback to shared supervisor, default unchanged. Check before
+logical requests and retries; preserve incomplete attempt journals at cutoff.
+Window7.5h; reserve3600s HTTP and600s baseline close allowance. Later stages
+remain gated; user explicitly confirmed Best performance after host initially
+reported Better battery. Sensorver7 passes growing500ms checks.
+
+Final pre-launch validation:412 tests passed,14 existing dependency warnings;
+Ruff clean.640/640 new canonical reference checks passed.1040 unique jobs,
+520 stimulus items,40 target items per condition,160 exactly matched passive/
+filler pairs; all input+output reservations fit32768. Scoped config differs
+from original only in file/registration paths; original15 study hashes retained.
+Preparatory token matching was accelerated before freeze, without any model
+calls or outcome-guided selection; final frozen schedule hash
+6b000743a2ffa13d6e30514e31fc75627bc157eb11e5d4748ac99839ff1ddf0c.
