@@ -339,3 +339,19 @@ from original only in file/registration paths; original15 study hashes retained.
 Preparatory token matching was accelerated before freeze, without any model
 calls or outcome-guided selection; final frozen schedule hash
 6b000743a2ffa13d6e30514e31fc75627bc157eb11e5d4748ac99839ff1ddf0c.
+
+## Unattended finish sequence - 2026-11-22
+
+Owner unavailable7-8h requests continuation after269 remaining M1 calls.
+Prepare finish_m1_sprint driver: frozen M1 generation -> offline sandbox scoring
+-> count/hash-independent verification. No additional permission between ready
+phases. No unfrozen R1/E5 generation. Overall7.75h clock bound, owned-process
+termination at cutoff with retained journals; incomplete phase never success.
+No changes to frozen M1 settings/inputs or the scientific design. Active sensor
+path and AC/Best performance still required for launch.
+
+Sequence verification:415 tests passed (14 existing dependency warnings),
+Ruff clean. Current launch is blocked by physical host setup: AC0/Balanced
+and no fresh sensor file as of readiness check. No model requests made.
+Driver will proceed automatically through approved generation/evaluation/audit
+without another gate once the active sensor and power setup pass.

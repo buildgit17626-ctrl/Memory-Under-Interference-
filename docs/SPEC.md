@@ -713,3 +713,14 @@ No time-based task replacement or raw-data change. Scoring deferred. Sequential
 25-call blocks and every original hard stop remain; drift remains a flag.
 Do not start unresolved R1/E5 or invent M4/M5 stages. No reuse of pilot rows in
 main estimates; M1 has a new output directory. Freeze at22Nov23:59IST remains.
+
+
+## Unattended M1 completion sequence (2026-11-22)
+
+Owner requests continued work without another permission after remaining269
+M1 calls. A7.75h parent sequence invokes the unchanged frozen timed-M1 worker,
+then evaluates existing responses with the same oracle only if all1040 calls
+are saved, then writes verification counts/flags. No R1 or new model condition
+is authorised by this sequence. Existing generation hard stops prevent later
+phases. Parent time cutoff terminates only its owned subprocess tree, retains
+journals and reports incomplete scoring for resume. No raw-data repair.
