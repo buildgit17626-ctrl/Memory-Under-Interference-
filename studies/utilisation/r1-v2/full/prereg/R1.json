@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-22",
+  "hypotheses": "Owner: replay/selective retention may improve correctness or efficiency versus full history; compaction is not semantic summarization",
+  "competing_predictions": "No benefit; minimal-context advantage; length/recency/preference confounding; oracle advantage not practical retrieval",
+  "conditions": [
+    "full_history",
+    "lossless_compaction",
+    "no_history",
+    "oracle_selective",
+    "verbatim_replay"
+  ],
+  "outcomes": "Base-plus correctness, actual tokens, native API timing and qualified CPU package energy",
+  "analysis": "Pilot diagnostic only. Full: paired task-bootstrap2000/seed1732; replay-full, oracle-full, compact-full per model; Holm family6. Exact-token matched subset if any, otherwise unavailable; length-adjusted fits exploratory, not causal.",
+  "exclusions": "Pilot excluded from main analyses; bounded output caps non-pass; invalid/API observations disclosed; energy missing not imputed; drift and low-resolution sensitivities",
+  "config_hash": "e0b24cae76edf99f04bcccf2d842f35a1e741c6ec29c2303b78938016197a795",
+  "stimuli_hash": "2e6d68f6610627c083acbd068482e4c71bfc7dfa20dedaf9bd0e3b998b084d41",
+  "schedule_hash": "3206dadf2988c7988236d6d07a4fb47c7aa7d7790c6c353241dd0c6d8e35803c"
+}

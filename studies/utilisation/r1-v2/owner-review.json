@@ -1,0 +1,9 @@
+{
+  "owner_approved": true,
+  "source": "Owner approved five R1 policies with refinements and automatic pilot gate in chat 2026-11-22",
+  "pilot_calls": 50,
+  "full_calls": 400,
+  "pilot_excluded": true,
+  "semantic_summarization": "deferred until audited essential requirements and information loss are available",
+  "gate_uses_correctness": false
+}

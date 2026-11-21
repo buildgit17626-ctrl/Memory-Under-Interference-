@@ -1,0 +1,224 @@
+study: holding-is-not-using
+schema_version: 1
+host:
+  os: Windows 11
+  cpu: Intel Core i5-13420H
+  ram_gb: 16
+  runtime: Ollama
+  endpoint: http://127.0.0.1:11434/api/generate
+  num_thread: 8
+  num_gpu: 0
+  concurrent_generations: 1
+  system_sleep_during_run: disabled
+  score_during_generation: false
+paths:
+  base: repository_root
+  config: studies/utilisation/r1-v2/full/config.yaml
+  preregistrations: studies/utilisation/r1-v2/full/prereg
+  changelog: studies/utilisation/CHANGELOG.md
+  benchmark: data/evalplus/humaneval_plus/
+  stimuli: studies/utilisation/stimuli/
+  sessions: results/utilisation/sessions/
+  raw: results/utilisation/raw/
+  scores: results/utilisation/scores/
+  figures: artifacts/utilisation/figures/
+  sensor_csv: required_session_argument
+models:
+- tag: qwen2.5-coder:0.5b
+  quantisation: Q4_K_M
+  expected_digest: 4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09
+- tag: qwen2.5-coder:1.5b
+  quantisation: Q4_K_M
+  expected_digest: d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668
+benchmark:
+  name: EvalPlus HumanEval+
+  expected_tasks: 164
+  release_revision: HumanEvalPlus-v0.1.10
+  dataset_sha256: 272720b90ac375502c8ed23cd791c2a93dfb22a911641a494da74a426c09f101
+  tokenizer_and_template_hashes:
+    tokenizer_sha256: c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539
+    ollama_template_sha256: 1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320
+  evaluator_version:
+    adapter: utilisation_eval
+    oracle_source: EvalPlus-0.3.1
+    sha256: 1ef9ba184981e5fa71ea1c4357315613356c2eee9bfa034388809b5a3f7d800f
+  reference_anomaly:
+    task_id: HumanEval/32
+    decision: retain_original_oracle
+    sensitivity: exclude_HumanEval/32
+    approved: '2026-11-17'
+seeds:
+  task_selection: 1729
+  order: 1730
+  options_and_positions: 1731
+  bootstrap: 1732
+  structural_generation: 1729
+  sampled_generation:
+  - 1729
+  - 2718
+  - 3141
+  independent_calibration:
+  - 4101
+  - 4102
+  - 4103
+defaults:
+  temperature: 0
+  samples: 1
+  num_ctx: 8192
+  num_predict: 2048
+  http_deadline_s: 900
+  keep_alive: 0
+  stop_sequences: []
+  invalid_input: retain_attempt_exclude_from_scoring
+  output_cap: retain_and_label_censored
+  silent_context_or_budget_changes: forbidden
+experiments:
+  E0:
+    num_ctx: 8192
+    temperature: 0.2
+    samples: 3
+    num_predict: 2048
+  M1:
+    num_ctx: 32768
+    num_predict_per_subtask: 2048
+    num_predict_rule: 2048 * K
+    http_deadline_s: 3600
+  M2:
+    num_ctx: 16384
+    num_predict: 2048
+  M3:
+    num_ctx: 8192
+    num_predict: 2048
+    focused_grid:
+      total_input_tokens:
+      - 1000
+      - 4000
+      target_position: middle
+      filler_types:
+      - irrelevant
+      - other_tasks
+      - near_duplicate
+      tasks_per_model: 20
+      calls: 240
+      approved: '2026-11-17'
+    filler_construction:
+      irrelevant: repeated neutral notebook text
+      other_tasks: next ten benchmark task prompts cyclically; target excluded
+      near_duplicate: target specification with renamed alternate entry points
+      target_position: token midpoint; report achieved approximate midpoint
+      boundary_policy: filler may end mid-specification to match total length
+  R1:
+    num_ctx: 16384
+    num_predict: 2048
+  R2:
+    num_ctx: 16384
+    num_predict: 2048
+  E3:
+    num_ctx: 32768
+    temperature: 0.2
+    samples: 3
+    num_predict: 2048
+    http_deadline_s: 1200
+  E4:
+    num_ctx: 8192
+    num_predict: 64
+    repeats: 20
+    keep_alive: -1
+    require_verified_cache_state: true
+  E5:
+    num_ctx: 8192
+    temperature: 0.2
+    samples: 3
+    num_predict: 2048
+  U1:
+    num_ctx: 8192
+    num_predict: 2048
+  U2:
+    num_ctx: 16384
+    num_predict: 64
+    response_schema: single_choice
+  U3:
+    mode: offline_output_classification
+  U4:
+    mode: offline_repair_audit
+  U5:
+    num_ctx: 8192
+    num_predict: 2048
+evaluation:
+  isolation: restricted_windows_subprocess
+  candidate_memory_mb: 256
+  per_candidate_wall_timeout_s: 60
+  timeout_validation: all_canonical_solutions_and_runaway_fixture
+  keep_output_cap_separate_from_input_truncation: true
+energy:
+  tool: HWiNFO
+  sensor: CPU Package Power [W]
+  poll_ms: 500
+  max_sample_gap_s: 1
+  inter_request_gap_s: 5
+  baseline_start_s: 60
+  baseline_end_s: 60
+  net_baseline: block_start
+  primary_window: post_load
+  report:
+  - gross_wh
+  - net_wh
+  - latency
+  - tokens
+  - energy_per_correct
+  primary_low_resolution_below_s: 3
+  drift_threshold: abs(end_W - start_W) > max(1 W, 0.10 * start_W)
+  missing_energy: retain_row_no_imputation
+  phase_energy: disabled
+  codecarbon: disabled
+  process_snapshot:
+  - block_start
+  - block_end
+  - after_interruption
+analysis:
+  e0_primary: mean_within_task_pass_fraction_difference
+  independent_sampling_unit: task
+  bundle_analysis_unit: bundle_with_task_membership_recorded
+  bootstrap_draws: 2000
+  confidence_level: 0.95
+  confirmatory_family_correction: Holm
+  zero_correct_energy_ratio: undefined
+  report_denominators_and_missingness: true
+  heldout_policy:
+    name: approved_E0_P1_sample0_holdout
+    delegated_decision_date: '2026-11-17'
+    eligibility: P1 sample_idx 0 passes both partitions
+    difficulty: binary success estimate on P1 sample_idx 0
+    subsequent_outcome_comparator_samples:
+    - 1
+    - 2
+    primary_E0_samples:
+    - 0
+    - 1
+    - 2
+    limitation: single-sample labels are noisy; selected-population inference
+scope:
+  main: focused
+  main_call_budget: 4808
+  appendix: deferred
+  task_orders: studies/utilisation/task-orders.json
+  focused_sweep_tasks: 20
+  extended_sweep_tasks: 40
+  extension_factors: unchanged_from_focused
+  extension_freeze_ist: '2026-11-22T23:59:00+05:30'
+  extension_runtime_fraction: 0.7
+  timing_gate_required_for_all_extensions: true
+  precision_width_proposal: 0.2
+  precision_trigger_enabled: true
+  precision_approval: owner_approved_2026_11_17
+  m3_checkpoint_calls: 100
+  m3_checkpoint_resume: owner_review_receipt_required
+  energy_primary_unit: condition_total
+  short_call_energy: secondary
+  energy_sensitivity: exclude_primary_low_resolution
+  primary_energy_experiment: E4
+  primary_energy_experiment_status: deferred_with_appendix
+  current_experiment: R1_v2
+  current_stage: full
+  current_stage_call_budget: 400
+  current_shared_task_count: 40

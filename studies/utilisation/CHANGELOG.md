@@ -355,3 +355,29 @@ Ruff clean. Current launch is blocked by physical host setup: AC0/Balanced
 and no fresh sensor file as of readiness check. No model requests made.
 Driver will proceed automatically through approved generation/evaluation/audit
 without another gate once the active sensor and power setup pass.
+
+## R1 connection approved - 2026-11-22
+
+Owner approved five memory policies, lossless compaction, same40 roster and
+eight fixed seeded distractor specifications, automatic50-call pilot gate then
+400 full calls if validation/remaining time pass. All pilot data excluded.
+Semantic summaries requested if feasible: deferred because essential-requirement
+and loss audits are unavailable; no unaudited sixth arm launched. Exact token
+matching is reported where naturally possible; no causal length-isolation claim.
+Precomputed oracle selection/formatting do not measure realistic retrieval or
+preparation energy. Generation-only energy boundary explicit.
+
+Build exact policy inputs, scoped configs/registrations and one7.75h chain.
+Compaction first exposed adjacent closing quotes in a doctest; fixed with
+explicit newline boundaries before freezing inputs, no model outputs involved.
+All40 reference checks passed, reused only byte-matched code/oracle checks.
+Mechanically checked word/example preservation is not claimed as human summary
+review. Pilot gate uses validity/coverage/time, not task success.
+
+Chain verification:418 tests passed (14 existing dependency warnings), Ruff
+clean. R1 pilot50/full400 cells and all40 reference checks verified. There are
+zero naturally exact-token policy pairs in frozen materials; length-adjusted
+comparisons remain exploratory and cannot isolate pure memory effects. No new
+token-matching arm added silently to the approved five-policy budget.
+Machine prerequisites still unavailable: AC0/Balanced and last sensorver7 stopped
+yesterday. The chain is prepared, not launched; no R1 model request made.

@@ -724,3 +724,23 @@ are saved, then writes verification counts/flags. No R1 or new model condition
 is authorised by this sequence. Existing generation hard stops prevent later
 phases. Parent time cutoff terminates only its owned subprocess tree, retains
 journals and reports incomplete scoring for resume. No raw-data repair.
+
+
+## Approved M1-to-R1 unattended chain (2026-11-22)
+
+Owner approved five-policy R1 on the shared original40 tasks and an automatic
+50-call diagnostic pilot gate, followed by400 fresh full calls only when
+validation and remaining-time tests pass. Inputs/config/registrations are
+separate in studies/utilisation/r1-v2. Semantic sixth policy is deferred until
+essential requirements/information loss can be audited. Compaction preserves
+words and examples and is labelled lossless formatting; selective retention is
+oracle, not realistic retrieval. Natural exact token matches are listed; broad
+policy comparisons remain confounded by length, recency and preference. Energy
+measures generation only; unmeasured preprocessing cost precludes end-to-end
+energy claims. See PROTOCOL.md for definitions, outcomes and gate.
+
+One driver chains approved M1 completion/scoring/verification into R1 without
+another permission pause. Gate uses no correctness/effect direction. Original
+freeze and hard stops unchanged; partial stages/checkpoints remain resumable.
+Pilot rows never promote into full analysis. No new R1 generation until frozen
+manifest/reference/host/sensor checks pass. No unregistered later experiment.
