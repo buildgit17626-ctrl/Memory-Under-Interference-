@@ -428,3 +428,43 @@ Remaining revised stages lack reviewed exact materials/validation. Proposed
 E5 code-only-preference scope and automatic pilot gate sent for owner decision;
 no scope approval inferred. Fresh sensor path requested because ver8 stopped
 logging yesterday. Current-generation status: not launched.
+
+## E5 -> revised semantic M3/R2 preparation - 2026-11-23
+
+Owner requested both stages sequentially without an elapsed-time stop. He
+rejected the proposed output-contract distractor and required computational
+alternatives, hidden reference/tests, validated distinguishing inputs and
+pre-generation exclusion of unreliable constructions. Three examples were
+shown: strict/inclusive threshold, XOR/XNOR and empty-prefix inclusion.
+
+Prepared E5 pilot50/full400 and R2 pilot130/full1040 (960 loaded+80 compatible
+isolation calls). All40 original target references passed; all40 computational
+alternatives passed authored expected-output fixtures and modified-reference
+argument suites.80 authored fixtures include differing witnesses and shared
+controls, checked on both references. No task excluded. Refined validation to
+include distinguishing inputs in the modified scoring suite and key audits by
+the exact modified row before freezing. Earlier validation records remain
+append-only; the curated report selects the current40 construction hashes.
+
+Added separate continuation worker/queue, literal preference builder/adherence
+proxy, semantic alternative catalogue, pause-aware offline target/cross scoring,
+phase preparation/validation and a crash watcher. Historical frozen worker and
+completed raw data remain unchanged. AST parity test checks the worker differs
+only by removing the calendar-freeze check. User pause persists; pilot gates
+ignore correctness, retain output caps and stop on invalidity. No new inference
+has run during material preparation or reference validation.
+
+Pre-launch verification: full suite431 passed (14 existing dependency warnings),
+then15 continuation tests passed after adding the parent sleep-inhibition guard;
+Ruff clean. Six archived mock tests needed a test-only future execution window
+because the original production freeze has now expired. Their frozen source
+and the original worker remain untouched; a separate test confirms an expired
+legacy freeze still prevents all model calls. The new watcher inhibits idle
+sleep throughout generation and scoring, releasing it at exit.
+
+Host preflight observed AC1/Best performance,151.37GiB free, live ver9 sensor
+cadence0.501s and age0.242s; both model digests matched and Ollama0.40.17 was
+recorded. All four new schedules have unique keys and fit input+2048 output
+reservation. Largest inputs: E5 full1684, R2 full2390 tokens. These are preparation
+checks, not measured model-performance results. Materials and source hashes are
+committed before the first new inference request.

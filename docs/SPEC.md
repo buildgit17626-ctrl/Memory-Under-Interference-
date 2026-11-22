@@ -756,3 +756,24 @@ checks remain active. New exact designs still require the working agreement's
 review, dated registration, validation and commit before generation.
 See docs/plans/UTILISATION_CONTINUATION_2026_11_23.md for the verified inventory,
 remaining preparation and proposed next scope. Completed stages are skipped.
+
+## E5 and semantic M3/R2 continuation (2026-11-23)
+
+Owner requested E5 then revised M3/R2 in one sequential unattended chain, and
+required meaningful computational alternatives rather than output wrappers.
+Exact new configs/materials/registrations are in studies/utilisation/continuation-v3.
+E5 code-only preference: pilot50/full400. Revised M3/R2: pilot130, full960 loaded
+plus80 matched isolation controls; all40 authored alternatives validated, none
+excluded. Model sees description/signature only, never alternative reference or
+tests. Three boundary examples were shown before any generation.
+
+New stages use temperature0, one sample, fixed seeds and2048 output limit;
+E5 num_ctx8192, R2 num_ctx16384. The old E5 situation framing is superseded only
+for this separately scoped new preference study. No completed config is changed.
+The new execution worker forks the frozen supervisor only to remove its expired
+calendar stop under explicit owner authority; its hard stops/retries/measurement
+semantics stay unchanged. A user PAUSE persists, stops after active work/closing
+baseline, and never automatically clears. No elapsed-time queue cutoff remains.
+See PROTOCOL.md for outcome definitions, pilot gate, inference boundaries and
+energy caveats. Output-contract interference and other preference families remain
+deferred. No results or morning completion are promised by the call budget.

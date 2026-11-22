@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-23",
+  "hypotheses": "Owner: preferences may be lost in history and recovered by replay/correction.",
+  "competing_predictions": "No difference, opposite direction, length/recency/instruction effects; no inference about internal memory.",
+  "conditions": [
+    "buried",
+    "corrected",
+    "immediate",
+    "no_preference",
+    "replayed"
+  ],
+  "outcomes": "Target base-plus correctness, raw tokens/native timings, qualified generation-only CPU-package energy; E5 format adherence; R2 cross-pass.",
+  "analysis": "Pilot diagnostic only. Paired task-bootstrap2000/seed1732, 95% percentile intervals. Buried-immediate and replayed-buried plain-code adherence, each model; Holm family4. Correctness, corrected-immediate and no-preference comparisons secondary.",
+  "exclusions": "Pilot separate; invalid input/API/infrastructure disclosed; caps bounded nonpass, not giving up; missing energy no imputation; drift and low-resolution sensitivities. R2 material exclusions frozen before generation, never selected by model outcome.",
+  "interpretation_changers": "Oracle/reference or classifier errors, incomplete distinguishing cases, censoring, input length/position differences, drift and benchmark contamination.",
+  "inference_boundary": "Two small Q4_K_M models, one fixed benchmark roster, one sample per task-cell. Custom distractor suites are not a new validated benchmark.",
+  "config_hash": "e2aa4d8a5b59a9a88827f84ad9f0ba86fd64badd71a87f26b70dba940c2beadb",
+  "stimuli_hash": "d704a46e80a6668f280f2ab9ba8d9995ab1073ebb5394d6778438372adf76b9d",
+  "schedule_hash": "2e14ec43087044de0f2d4e54c9c10ce70df892104b6db4c4cf45005984baec63",
+  "call_count": 50,
+  "tasks": [
+    "HumanEval/96",
+    "HumanEval/101",
+    "HumanEval/105",
+    "HumanEval/143",
+    "HumanEval/140"
+  ]
+}

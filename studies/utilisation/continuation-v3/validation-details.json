@@ -1,0 +1,2311 @@
+[
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9818112,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1208690999992541
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10571776,
+        "reason": "",
+        "scheduled_cases": 9,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1537014999994426
+      },
+      "plus_input": {
+        "peak_memory_bytes": 21839872,
+        "reason": "",
+        "scheduled_cases": 999,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.18243550000261166
+      }
+    },
+    "key": "a23b74c291addf429d915d4ecaab879737ebcae8c4eb93552afed2bee7a711b4",
+    "passed": true,
+    "specification": "from typing import List\n\n\ndef has_close_elements_alternative(numbers: List[float], threshold: float) -> bool:\n    \"\"\"Return whether two distinct list positions have absolute difference less than OR EQUAL TO threshold. Equality is included.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9801728,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.10999459999948158
+    },
+    "task": "HumanEval/0",
+    "witnesses": [
+      {
+        "alternative_expected": "True",
+        "args": [
+          [
+            1.0,
+            2.0
+          ],
+          1.0
+        ],
+        "target_expected": "False"
+      },
+      {
+        "alternative_expected": "False",
+        "args": [
+          [
+            1.0,
+            3.0
+          ],
+          1.0
+        ],
+        "target_expected": "False"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10153984,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12002339999889955
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10518528,
+        "reason": "",
+        "scheduled_cases": 6,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16102820000014617
+      },
+      "plus_input": {
+        "peak_memory_bytes": 11493376,
+        "reason": "",
+        "scheduled_cases": 83,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.12958980000257725
+      }
+    },
+    "key": "1d4c3fa019df58dc31005d59aa563d044350b40f064434a9b4622f7867470751",
+    "passed": true,
+    "specification": "from typing import List\n\n\ndef separate_paren_groups_alternative(paren_string: str) -> List[str]:\n    \"\"\"Separate balanced top-level parenthesis groups, ignoring spaces. Return the groups in REVERSE occurrence order, preserving characters inside each group.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9732096,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13155769999866607
+    },
+    "task": "HumanEval/1",
+    "witnesses": [
+      {
+        "alternative_expected": "['()', '(())']",
+        "args": [
+          "(())()"
+        ],
+        "target_expected": "['(())', '()']"
+      },
+      {
+        "alternative_expected": "[]",
+        "args": [
+          ""
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9928704,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1189412000021548
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10502144,
+        "reason": "",
+        "scheduled_cases": 5,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1493095000005269
+      },
+      "plus_input": {
+        "peak_memory_bytes": 12726272,
+        "reason": "",
+        "scheduled_cases": 405,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16345260000161943
+      }
+    },
+    "key": "7db18b1709709379ce82ab363f2417f29de3c1ff8bf60a4add1644779a85fed2",
+    "passed": true,
+    "specification": "from typing import List\n\n\ndef string_xor_alternative(a: str, b: str) -> str:\n    \"\"\"For two equal-length binary strings return bitwise XNOR as a string: a position is 1 when its two input bits are equal, otherwise 0.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9928704,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13058559999990393
+    },
+    "task": "HumanEval/11",
+    "witnesses": [
+      {
+        "alternative_expected": "'011'",
+        "args": [
+          "010",
+          "110"
+        ],
+        "target_expected": "'100'"
+      },
+      {
+        "alternative_expected": "''",
+        "args": [
+          "",
+          ""
+        ],
+        "target_expected": "''"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9818112,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12074519999805489
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10592256,
+        "reason": "",
+        "scheduled_cases": 6,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15023619999919902
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14548992,
+        "reason": "",
+        "scheduled_cases": 987,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.17293470000004163
+      }
+    },
+    "key": "80447f45d55736f1c0d96442d178a147d6936954c56349f962084e7c8fe0d886",
+    "passed": true,
+    "specification": "\n\ndef greatest_common_divisor_alternative(a: int, b: int) -> int:\n    \"\"\"Return the nonnegative LEAST COMMON MULTIPLE of integers a and b. Return 0 if either input is zero.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9744384,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.131563200000528
+    },
+    "task": "HumanEval/13",
+    "witnesses": [
+      {
+        "alternative_expected": "24",
+        "args": [
+          6,
+          8
+        ],
+        "target_expected": "2"
+      },
+      {
+        "alternative_expected": "0",
+        "args": [
+          0,
+          5
+        ],
+        "target_expected": "5"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10113024,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1085784999995667
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10350592,
+        "reason": "",
+        "scheduled_cases": 5,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1520328000005975
+      },
+      "plus_input": {
+        "peak_memory_bytes": 13697024,
+        "reason": "",
+        "scheduled_cases": 903,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.19805519999863463
+      }
+    },
+    "key": "772ca9c46f825d1f973aec0d014cc65abb46084ed4ae38a071cd2b0fcebde74d",
+    "passed": true,
+    "specification": "from typing import List\n\n\ndef all_prefixes_alternative(string: str) -> List[str]:\n    \"\"\"Return all prefixes from shortest to longest, INCLUDING the empty prefix and the full input. Empty input therefore returns a list containing one empty string.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9998336,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13287420000051497
+    },
+    "task": "HumanEval/14",
+    "witnesses": [
+      {
+        "alternative_expected": "['', 'a', 'ab', 'abc']",
+        "args": [
+          "abc"
+        ],
+        "target_expected": "['a', 'ab', 'abc']"
+      },
+      {
+        "alternative_expected": "['']",
+        "args": [
+          ""
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9777152,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.10879840000052354
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10555392,
+        "reason": "",
+        "scheduled_cases": 7,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1523622000022442
+      },
+      "plus_input": {
+        "peak_memory_bytes": 11304960,
+        "reason": "",
+        "scheduled_cases": 168,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.21128479999970295
+      }
+    },
+    "key": "4c076dfd50362f14567c983b260fb4aa1c10bc4f537fac3ed4c4d4171319c6cb",
+    "passed": true,
+    "specification": "\n\ndef largest_divisor_alternative(n: int) -> int:\n    \"\"\"For integer n greater than 1, return its SMALLEST divisor greater than 1. Include n itself, so a prime input returns n.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9789440,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12020570000095177
+    },
+    "task": "HumanEval/24",
+    "witnesses": [
+      {
+        "alternative_expected": "3",
+        "args": [
+          15
+        ],
+        "target_expected": "5"
+      },
+      {
+        "alternative_expected": "2",
+        "args": [
+          2
+        ],
+        "target_expected": "1"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9994240,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14233279999825754
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10182656,
+        "reason": "",
+        "scheduled_cases": 4,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1631673999982013
+      },
+      "plus_input": {
+        "peak_memory_bytes": 17440768,
+        "reason": "",
+        "scheduled_cases": 996,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.18288680000114255
+      }
+    },
+    "key": "ea91c5e294a81ce54c9354af81ee8baf21a888369a5fcd61e0e0347350251383",
+    "passed": true,
+    "specification": "from typing import List\n\n\ndef filter_by_prefix_alternative(strings: List[str], prefix: str) -> List[str]:\n    \"\"\"Retain strings starting with prefix in input order, but EXCLUDE a string equal to prefix itself. Only strictly longer matches qualify.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9965568,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13067550000050687
+    },
+    "task": "HumanEval/29",
+    "witnesses": [
+      {
+        "alternative_expected": "['ab']",
+        "args": [
+          [
+            "a",
+            "ab",
+            "b"
+          ],
+          "a"
+        ],
+        "target_expected": "['a', 'ab']"
+      },
+      {
+        "alternative_expected": "[]",
+        "args": [
+          [],
+          "a"
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10211328,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1201705999992555
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10616832,
+        "reason": "",
+        "scheduled_cases": 12,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15166099999987637
+      },
+      "plus_input": {
+        "peak_memory_bytes": 10211328,
+        "reason": "",
+        "scheduled_cases": 2,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.11881820000053267
+      }
+    },
+    "key": "2ce0919e2a886210ce97bbe2c0c957fcb79ab877d6e7faafa07168e63ec9bb61",
+    "passed": true,
+    "specification": "\n\ndef prime_fib_alternative(n: int):\n    \"\"\"Return the prime Fibonacci number at ZERO-BASED index n: index 0 is 2, index 1 is 3. n is nonnegative; count prime Fibonacci values in increasing order.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10362880,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12051630000132718
+    },
+    "task": "HumanEval/39",
+    "witnesses": [
+      {
+        "alternative_expected": "3",
+        "args": [
+          1
+        ],
+        "target_expected": "2"
+      },
+      {
+        "alternative_expected": "5",
+        "args": [
+          2
+        ],
+        "target_expected": "3"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9994240,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.10832760000266717
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10199040,
+        "reason": "",
+        "scheduled_cases": 11,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15193939999880968
+      },
+      "plus_input": {
+        "peak_memory_bytes": 27496448,
+        "reason": "",
+        "scheduled_cases": 974,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.2137758999997459
+      }
+    },
+    "key": "ee50dff69796e15151bafb6265b98205074b4cbc8a870ef0f36a3fa77cb2dcf9",
+    "passed": true,
+    "specification": "\n\ndef pairs_sum_to_zero_alternative(l):\n    \"\"\"Return whether two list values sum to zero, ALLOWING reuse of the same list position for both values. Thus a single zero qualifies.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9781248,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12084679999679793
+    },
+    "task": "HumanEval/43",
+    "witnesses": [
+      {
+        "alternative_expected": "True",
+        "args": [
+          [
+            0
+          ]
+        ],
+        "target_expected": "False"
+      },
+      {
+        "alternative_expected": "True",
+        "args": [
+          [
+            1,
+            -1
+          ]
+        ],
+        "target_expected": "True"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10006528,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12012889999823528
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10620928,
+        "reason": "",
+        "scheduled_cases": 6,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.12917269999888958
+      },
+      "plus_input": {
+        "peak_memory_bytes": 11247616,
+        "reason": "",
+        "scheduled_cases": 132,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.12026500000138185
+      }
+    },
+    "key": "445bd5ddb1ca40b5430e01667bf0dcb551c2460470fdb9f2c960c4fb5b36c8ea",
+    "passed": true,
+    "specification": "\n\ndef fib4_alternative(n: int):\n    \"\"\"Compute the four-term recurrence without recursion, with initial values 0, 0, ONE, 0 at indices 0,1,2,3; later terms sum the preceding four values.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9793536,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13298800000120536
+    },
+    "task": "HumanEval/46",
+    "witnesses": [
+      {
+        "alternative_expected": "1",
+        "args": [
+          2
+        ],
+        "target_expected": "2"
+      },
+      {
+        "alternative_expected": "2",
+        "args": [
+          5
+        ],
+        "target_expected": "4"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9756672,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11870170000111102
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 11743232,
+        "reason": "",
+        "scheduled_cases": 107,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15011930000036955
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14647296,
+        "reason": "",
+        "scheduled_cases": 866,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.17020860000047833
+      }
+    },
+    "key": "2cb525a68706d5557b87db4f7c1e7d4558f294bd4167060e20874a4c7c611582",
+    "passed": true,
+    "specification": "\n\ndef add_alternative(x: int, y: int):\n    \"\"\"Return x MINUS y for the two integer inputs, preserving their argument order.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10158080,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11840419999862206
+    },
+    "task": "HumanEval/53",
+    "witnesses": [
+      {
+        "alternative_expected": "-1",
+        "args": [
+          2,
+          3
+        ],
+        "target_expected": "5"
+      },
+      {
+        "alternative_expected": "0",
+        "args": [
+          0,
+          0
+        ],
+        "target_expected": "0"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10076160,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.15207960000043386
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10190848,
+        "reason": "",
+        "scheduled_cases": 7,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15240689999700407
+      },
+      "plus_input": {
+        "peak_memory_bytes": 10174464,
+        "reason": "",
+        "scheduled_cases": 45,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.10821330000180751
+      }
+    },
+    "key": "c131028c3eea2a97d0acf7f52696156369f294aeb5ebf411f18c7541dedcc121",
+    "passed": true,
+    "specification": "\n\ndef fib_alternative(n: int):\n    \"\"\"Return Fibonacci(n+1) for nonnegative n, where Fibonacci(0)=0 and Fibonacci(1)=1. The indexing is shifted forward by one.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10141696,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11990209999930812
+    },
+    "task": "HumanEval/55",
+    "witnesses": [
+      {
+        "alternative_expected": "1",
+        "args": [
+          0
+        ],
+        "target_expected": "0"
+      },
+      {
+        "alternative_expected": "3",
+        "args": [
+          3
+        ],
+        "target_expected": "2"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9920512,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1202223000000231
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10162176,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.14898950000133482
+      },
+      "plus_input": {
+        "peak_memory_bytes": 22556672,
+        "reason": "",
+        "scheduled_cases": 971,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.18404730000111158
+      }
+    },
+    "key": "f6cdb63c09f60328b713fac363e9234f33bddb9f0f8221e214048b1d88eec377",
+    "passed": true,
+    "specification": "\n\ndef monotonic_alternative(l: list):\n    \"\"\"Return whether the list is STRICTLY increasing or STRICTLY decreasing. Equal adjacent values violate both directions. Lists of length zero or one qualify.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9998336,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.10863330000211135
+    },
+    "task": "HumanEval/57",
+    "witnesses": [
+      {
+        "alternative_expected": "False",
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "target_expected": "True"
+      },
+      {
+        "alternative_expected": "True",
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "target_expected": "True"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10031104,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11975490000259015
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10567680,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15064770000026328
+      },
+      "plus_input": {
+        "peak_memory_bytes": 34369536,
+        "reason": "",
+        "scheduled_cases": 962,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.20172570000067935
+      }
+    },
+    "key": "e79e195e1fb6788a024ed21599496dc1c482c9396f265fcc330d96ed4fe25265",
+    "passed": true,
+    "specification": "\ndef smallest_change_alternative(arr):\n    \"\"\"Count ALL indices i whose value differs from the mirrored value arr[len(arr)-1-i]. Count both members of every mismatched pair, rather than minimum edits.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10153984,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11915140000201063
+    },
+    "task": "HumanEval/73",
+    "witnesses": [
+      {
+        "alternative_expected": "2",
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "target_expected": "1"
+      },
+      {
+        "alternative_expected": "0",
+        "args": [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "target_expected": "0"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10092544,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.15180490000057034
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10559488,
+        "reason": "",
+        "scheduled_cases": 11,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16313090000039665
+      },
+      "plus_input": {
+        "peak_memory_bytes": 26869760,
+        "reason": "",
+        "scheduled_cases": 977,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.22609139999985928
+      }
+    },
+    "key": "14b91b8366ad33fafd37ae90d28ec0c0821ba9ac44ddc647f8de9f0e8e73673b",
+    "passed": true,
+    "specification": "\ndef total_match_alternative(lst1, lst2):\n    \"\"\"Return the list with fewer total characters across its strings. When character totals tie, return the SECOND list.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9748480,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.16376709999894956
+    },
+    "task": "HumanEval/74",
+    "witnesses": [
+      {
+        "alternative_expected": "['b']",
+        "args": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "target_expected": "['a']"
+      },
+      {
+        "alternative_expected": "[]",
+        "args": [
+          [],
+          [
+            "b"
+          ]
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9961472,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1304601999981969
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10170368,
+        "reason": "",
+        "scheduled_cases": 12,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16075270000146702
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14434304,
+        "reason": "",
+        "scheduled_cases": 897,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15202919999865117
+      }
+    },
+    "key": "30905db55edb28dee3ec305723b27ca6cc3b7f00f78c2cb1d8b95ba6aa893eac",
+    "passed": true,
+    "specification": "\ndef is_simple_power_alternative(x, n):\n    \"\"\"Return whether x equals n raised to a POSITIVE integer exponent. Exponent zero is forbidden. In particular 1 only qualifies for bases 1 and -1.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9846784,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13272730000244337
+    },
+    "task": "HumanEval/76",
+    "witnesses": [
+      {
+        "alternative_expected": "False",
+        "args": [
+          1,
+          4
+        ],
+        "target_expected": "True"
+      },
+      {
+        "alternative_expected": "True",
+        "args": [
+          8,
+          2
+        ],
+        "target_expected": "True"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9998336,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13260999999693013
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10186752,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1522445999980846
+      },
+      "plus_input": {
+        "peak_memory_bytes": 13619200,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.18250170000101207
+      }
+    },
+    "key": "4088c32cb443a41a7e289508361f05465f2ac7ccf30138fb9777fd26093b0525",
+    "passed": true,
+    "specification": "\ndef encrypt_alternative(s):\n    \"\"\"Rotate lowercase ASCII letters forward THREE places with wraparound. Leave all other characters unchanged.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9940992,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11071950000041397
+    },
+    "task": "HumanEval/89",
+    "witnesses": [
+      {
+        "alternative_expected": "'dc'",
+        "args": [
+          "az"
+        ],
+        "target_expected": "'ed'"
+      },
+      {
+        "alternative_expected": "'!'",
+        "args": [
+          "!"
+        ],
+        "target_expected": "'!'"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10153984,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12121109999861801
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10489856,
+        "reason": "",
+        "scheduled_cases": 9,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.13941519999934826
+      },
+      "plus_input": {
+        "peak_memory_bytes": 24272896,
+        "reason": "",
+        "scheduled_cases": 822,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.23613919999843347
+      }
+    },
+    "key": "5f9ae4200f96d26e17b98d97f249bd58b95ca4f05626986463167d9fe5689003",
+    "passed": true,
+    "specification": "\ndef next_smallest_alternative(lst):\n    \"\"\"Return the second element of the sorted integer list COUNTING DUPLICATES. Return None if the input has fewer than two elements.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10059776,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13139679999949294
+    },
+    "task": "HumanEval/90",
+    "witnesses": [
+      {
+        "alternative_expected": "1",
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "target_expected": "None"
+      },
+      {
+        "alternative_expected": "None",
+        "args": [
+          []
+        ],
+        "target_expected": "None"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9998336,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13093250000019907
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10395648,
+        "reason": "",
+        "scheduled_cases": 12,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1608319000006304
+      },
+      "plus_input": {
+        "peak_memory_bytes": 16392192,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.17095440000048256
+      }
+    },
+    "key": "8ed7f1c46e5a9c8f725b5e8cb37f6bd2ff789c2ff887c127a1e12c2d116546ac",
+    "passed": true,
+    "specification": "\ndef any_int_alternative(x, y, z):\n    \"\"\"Return whether any one of x,y,z equals the sum of the other two. Allow real-valued numeric inputs; do NOT require integer types. Use ordinary exact numeric equality.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9977856,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12982959999862942
+    },
+    "task": "HumanEval/92",
+    "witnesses": [
+      {
+        "alternative_expected": "True",
+        "args": [
+          2.0,
+          3.0,
+          5.0
+        ],
+        "target_expected": "False"
+      },
+      {
+        "alternative_expected": "False",
+        "args": [
+          1,
+          1,
+          3
+        ],
+        "target_expected": "False"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10166272,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14124350000201957
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 11644928,
+        "reason": "",
+        "scheduled_cases": 11,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1406046999982209
+      },
+      "plus_input": {
+        "peak_memory_bytes": 34660352,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.4615568999979587
+      }
+    },
+    "key": "f8ccb1691a030dfadd2c720f58de01f1c8846ee9d0d495f7d919e8d956a4c7cf",
+    "passed": true,
+    "specification": "\n\ndef skjkasdkd_alternative(lst):\n    \"\"\"Find the SMALLEST prime in the integer list and return the sum of its decimal digits. Return None if no prime is present.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9764864,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1313125000015134
+    },
+    "task": "HumanEval/94",
+    "witnesses": [
+      {
+        "alternative_expected": "2",
+        "args": [
+          [
+            2,
+            13
+          ]
+        ],
+        "target_expected": "4"
+      },
+      {
+        "alternative_expected": "None",
+        "args": [
+          [
+            4,
+            6
+          ]
+        ],
+        "target_expected": "None"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10055680,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11834079999971436
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10555392,
+        "reason": "",
+        "scheduled_cases": 12,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.12924840000050608
+      },
+      "plus_input": {
+        "peak_memory_bytes": 12410880,
+        "reason": "",
+        "scheduled_cases": 180,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.20402809999723104
+      }
+    },
+    "key": "34a2a83e1788f6a4d398a65151e22c38272849c8e880674f26dfc4ca9a6ea4a8",
+    "passed": true,
+    "specification": "\ndef count_up_to_alternative(n):\n    \"\"\"Return all prime integers LESS THAN OR EQUAL TO nonnegative n, in increasing order. Include n when n is prime.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9961472,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13066819999949075
+    },
+    "task": "HumanEval/96",
+    "witnesses": [
+      {
+        "alternative_expected": "[2]",
+        "args": [
+          2
+        ],
+        "target_expected": "[]"
+      },
+      {
+        "alternative_expected": "[2, 3, 5]",
+        "args": [
+          5
+        ],
+        "target_expected": "[2, 3]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9777152,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1403126000004704
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10190848,
+        "reason": "",
+        "scheduled_cases": 8,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1513133000007656
+      },
+      "plus_input": {
+        "peak_memory_bytes": 13164544,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.17172089999803575
+      }
+    },
+    "key": "1514c0d82d23c96b3bc3e81f2f46f1e001456ed9a0eeedce1a75ae20127bca79",
+    "passed": true,
+    "specification": "\ndef words_string_alternative(s):\n    \"\"\"Split the input string on whitespace ONLY. Commas remain literal characters inside words; do not treat commas as separators.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9752576,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13958289999936824
+    },
+    "task": "HumanEval/101",
+    "witnesses": [
+      {
+        "alternative_expected": "['a,b', 'c']",
+        "args": [
+          "a,b c"
+        ],
+        "target_expected": "['a', 'b', 'c']"
+      },
+      {
+        "alternative_expected": "[]",
+        "args": [
+          ""
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9842688,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11874620000162395
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10477568,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16291499999715597
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14057472,
+        "reason": "",
+        "scheduled_cases": 944,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1606662000012875
+      }
+    },
+    "key": "23e892b0679baa38a0889955eb3c121792368d1b4bb0e06a0284ecb138c1f422",
+    "passed": true,
+    "specification": "\ndef choose_num_alternative(x, y):\n    \"\"\"Return the largest even integer in [x,y), EXCLUDING upper endpoint y. Return -1 if this half-open interval contains no even integer.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9744384,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12126250000073924
+    },
+    "task": "HumanEval/102",
+    "witnesses": [
+      {
+        "alternative_expected": "-1",
+        "args": [
+          2,
+          2
+        ],
+        "target_expected": "2"
+      },
+      {
+        "alternative_expected": "2",
+        "args": [
+          2,
+          4
+        ],
+        "target_expected": "4"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9986048,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1309934000018984
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10178560,
+        "reason": "",
+        "scheduled_cases": 7,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1523845000010624
+      },
+      "plus_input": {
+        "peak_memory_bytes": 30928896,
+        "reason": "",
+        "scheduled_cases": 999,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.2130223999993177
+      }
+    },
+    "key": "1c9b19271e3b91273454f88b9a2185faad729000db53b9777f02eae6e28e894d",
+    "passed": true,
+    "specification": "\ndef by_length_alternative(arr):\n    \"\"\"Keep integers from 1 through 9 inclusive, sort in ASCENDING order counting duplicates, then replace each by its capitalized English digit name. Ignore all other integers.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10117120,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1480781999998726
+    },
+    "task": "HumanEval/105",
+    "witnesses": [
+      {
+        "alternative_expected": "['One', 'Two']",
+        "args": [
+          [
+            2,
+            1
+          ]
+        ],
+        "target_expected": "['Two', 'One']"
+      },
+      {
+        "alternative_expected": "[]",
+        "args": [
+          []
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9986048,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.10830100000021048
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10584064,
+        "reason": "",
+        "scheduled_cases": 7,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1508547000012186
+      },
+      "plus_input": {
+        "peak_memory_bytes": 28807168,
+        "reason": "",
+        "scheduled_cases": 801,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.19411309999850346
+      }
+    },
+    "key": "deeae2856e03f626ab5979d9e1836da3fd4188b2545b66d69357dc1629a2a9cd",
+    "passed": true,
+    "specification": "import math\n\ndef max_fill_alternative(grid, capacity):\n    \"\"\"Water may be pooled across all wells into shared buckets of the given positive capacity. Return the minimum number of bucket loads to remove the total water; partial loads can combine different rows.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10010624,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11845609999727458
+    },
+    "task": "HumanEval/115",
+    "witnesses": [
+      {
+        "alternative_expected": "1",
+        "args": [
+          [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          2
+        ],
+        "target_expected": "2"
+      },
+      {
+        "alternative_expected": "0",
+        "args": [
+          [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          2
+        ],
+        "target_expected": "0"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9945088,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12200389999998151
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10588160,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15303960000164807
+      },
+      "plus_input": {
+        "peak_memory_bytes": 19648512,
+        "reason": "",
+        "scheduled_cases": 722,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.21576039999854402
+      }
+    },
+    "key": "c7e2682c5636d78b9f97ba3847a4cee4ac5c0b1899f8bf8031ff56c2d59502ec",
+    "passed": true,
+    "specification": "\ndef sort_array_alternative(arr):\n    \"\"\"Sort integers by DESCENDING count of ones in bin(value). For equal counts, sort by ascending integer value. The minus sign in negative bin representations is not counted.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9965568,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14143509999848902
+    },
+    "task": "HumanEval/116",
+    "witnesses": [
+      {
+        "alternative_expected": "[7, 3, 1]",
+        "args": [
+          [
+            1,
+            3,
+            7
+          ]
+        ],
+        "target_expected": "[1, 3, 7]"
+      },
+      {
+        "alternative_expected": "[1, 2]",
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "target_expected": "[1, 2]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10268672,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.16235349999988102
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10551296,
+        "reason": "",
+        "scheduled_cases": 16,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15153129999816883
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14352384,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.17197540000051958
+      }
+    },
+    "key": "6ae899223c86bdd1afec7ef115b405764bf2cea8803ca0eefa8bb128152b5932",
+    "passed": true,
+    "specification": "\ndef select_words_alternative(s, n):\n    \"\"\"Return words containing AT LEAST n consonants, in occurrence order. Input contains letters and spaces, vowels are aeiou ignoring case, and an empty string yields an empty list.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10170368,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.10999639999863575
+    },
+    "task": "HumanEval/117",
+    "witnesses": [
+      {
+        "alternative_expected": "['cat', 'dogs']",
+        "args": [
+          "cat dogs",
+          2
+        ],
+        "target_expected": "['cat']"
+      },
+      {
+        "alternative_expected": "[]",
+        "args": [
+          "",
+          2
+        ],
+        "target_expected": "[]"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9940992,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14278949999788892
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10178560,
+        "reason": "",
+        "scheduled_cases": 7,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16102039999896078
+      },
+      "plus_input": {
+        "peak_memory_bytes": 26521600,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.22544610000113607
+      }
+    },
+    "key": "bda1da03cd7d1176f96bb92288a1d6a2143b555a8840590da60226593336f3fc",
+    "passed": true,
+    "specification": "\ndef add_elements_alternative(arr, k):\n    \"\"\"Among the first k array elements sum only integers with EXACTLY two decimal digits in their absolute value, from 10 through 99. Ignore the sign when counting digits.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9789440,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13005290000000969
+    },
+    "task": "HumanEval/122",
+    "witnesses": [
+      {
+        "alternative_expected": "12",
+        "args": [
+          [
+            1,
+            12,
+            100
+          ],
+          3
+        ],
+        "target_expected": "13"
+      },
+      {
+        "alternative_expected": "-12",
+        "args": [
+          [
+            -12,
+            3
+          ],
+          2
+        ],
+        "target_expected": "-9"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10027008,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12305150000247522
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10633216,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1529908999982581
+      },
+      "plus_input": {
+        "peak_memory_bytes": 16551936,
+        "reason": "",
+        "scheduled_cases": 580,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.19317249999949127
+      }
+    },
+    "key": "9f245fac3db6a1b6a35bc1b7bdb0040b882dd0ce8a0e647e1d416ce99f08e523",
+    "passed": true,
+    "specification": "\ndef intersection_alternative(interval1, interval2):\n    \"\"\"For two closed integer intervals, count INTEGER POINTS in their intersection, including endpoints. Return YES iff that count is prime, otherwise NO. Disjoint intervals have count zero.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10145792,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1202649000006204
+    },
+    "task": "HumanEval/127",
+    "witnesses": [
+      {
+        "alternative_expected": "'YES'",
+        "args": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "target_expected": "'NO'"
+      },
+      {
+        "alternative_expected": "'NO'",
+        "args": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "target_expected": "'YES'"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9781248,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12986129999990226
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10592256,
+        "reason": "",
+        "scheduled_cases": 10,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.14165019999927608
+      },
+      "plus_input": {
+        "peak_memory_bytes": 25473024,
+        "reason": "",
+        "scheduled_cases": 995,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.18268049999824143
+      }
+    },
+    "key": "815ae511d75a2cd27484bac2761be56e0422039898e06a60cdba338071f1f61e",
+    "passed": true,
+    "specification": "\ndef prod_signs_alternative(arr):\n    \"\"\"Return sum of absolute values multiplied by the product of signs of NONZERO elements. Ignore zero elements when determining the sign. Empty input returns None; an all-zero nonempty list returns 0.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9773056,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12163050000162912
+    },
+    "task": "HumanEval/128",
+    "witnesses": [
+      {
+        "alternative_expected": "-5",
+        "args": [
+          [
+            0,
+            -2,
+            3
+          ]
+        ],
+        "target_expected": "0"
+      },
+      {
+        "alternative_expected": "None",
+        "args": [
+          []
+        ],
+        "target_expected": "None"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9953280,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12954899999749614
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10534912,
+        "reason": "",
+        "scheduled_cases": 14,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15296940000189352
+      },
+      "plus_input": {
+        "peak_memory_bytes": 23662592,
+        "reason": "",
+        "scheduled_cases": 998,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.2179324999997334
+      }
+    },
+    "key": "cd97e2d5dee8baf34c778acb87b8bfc8590f9d46e2a0b5163ce5aaab373ee7f5",
+    "passed": true,
+    "specification": "\n\ndef sum_squares_alternative(lst):\n    \"\"\"Round each number DOWN to its floor integer, square that integer, and return the sum. Use floor rather than ceiling, including for negative numbers.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9998336,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1501471000010497
+    },
+    "task": "HumanEval/133",
+    "witnesses": [
+      {
+        "alternative_expected": "1",
+        "args": [
+          [
+            1.2
+          ]
+        ],
+        "target_expected": "4"
+      },
+      {
+        "alternative_expected": "4",
+        "args": [
+          [
+            -1.2
+          ]
+        ],
+        "target_expected": "1"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9961472,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11916249999922002
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10555392,
+        "reason": "",
+        "scheduled_cases": 7,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1504242000009981
+      },
+      "plus_input": {
+        "peak_memory_bytes": 12980224,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.17328599999746075
+      }
+    },
+    "key": "0ecfdddba436b3d278416cb67b2e856debece7fd8d2bdf2f9d487e9799c4971c",
+    "passed": true,
+    "specification": "\ndef fix_spaces_alternative(text):\n    \"\"\"Replace each run of TWO OR MORE ordinary spaces by one hyphen. Replace each isolated ordinary space by an underscore. Preserve all other characters.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9736192,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11975159999929019
+    },
+    "task": "HumanEval/140",
+    "witnesses": [
+      {
+        "alternative_expected": "'a-b'",
+        "args": [
+          "a  b"
+        ],
+        "target_expected": "'a__b'"
+      },
+      {
+        "alternative_expected": "'a_b'",
+        "args": [
+          "a b"
+        ],
+        "target_expected": "'a_b'"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10022912,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.13561180000033346
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10547200,
+        "reason": "",
+        "scheduled_cases": 9,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.16425779999917722
+      },
+      "plus_input": {
+        "peak_memory_bytes": 13864960,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1920968999984325
+      }
+    },
+    "key": "877fb65ffbfb8ef86b336a5ed2f744cfc4e1a40c02099f56ca83da7d6cff722b",
+    "passed": true,
+    "specification": "\ndef words_in_sentence_alternative(sentence):\n    \"\"\"Retain words whose lengths are COMPOSITE integers (greater than one and not prime), preserving order and joining with single spaces. Do not retain words of length zero or one.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9760768,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11062519999904907
+    },
+    "task": "HumanEval/143",
+    "witnesses": [
+      {
+        "alternative_expected": "'This test'",
+        "args": [
+          "This is a test"
+        ],
+        "target_expected": "'is'"
+      },
+      {
+        "alternative_expected": "''",
+        "args": [
+          "a is"
+        ],
+        "target_expected": "'is'"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9945088,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12003220000042347
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10145792,
+        "reason": "",
+        "scheduled_cases": 15,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.141356199997972
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14721024,
+        "reason": "",
+        "scheduled_cases": 998,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1728809000014735
+      }
+    },
+    "key": "6fe9eb5f90cc6c984d4ecbbf78d7e2692c4c9cd7ef44a9d61b4e4648d3fc7e77",
+    "passed": true,
+    "specification": "\ndef simplify_alternative(x, n):\n    \"\"\"Inputs x and n are valid positive fractions numerator/denominator. Return whether x DIVIDED BY n is a whole number, rather than multiplying the fractions.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10014720,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12087339999925462
+    },
+    "task": "HumanEval/144",
+    "witnesses": [
+      {
+        "alternative_expected": "True",
+        "args": [
+          "1/2",
+          "1/2"
+        ],
+        "target_expected": "False"
+      },
+      {
+        "alternative_expected": "False",
+        "args": [
+          "1/2",
+          "2/1"
+        ],
+        "target_expected": "True"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 10006528,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11943600000086008
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10207232,
+        "reason": "",
+        "scheduled_cases": 13,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15159339999809163
+      },
+      "plus_input": {
+        "peak_memory_bytes": 14446592,
+        "reason": "",
+        "scheduled_cases": 971,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1832241999982216
+      }
+    },
+    "key": "336378203f7656ae593e3c96a22b2b593f34954f331104fdc710803857e85949",
+    "passed": true,
+    "specification": "\ndef bf_alternative(planet1, planet2):\n    \"\"\"Return the tuple of planets from the closer endpoint to the farther endpoint in solar order, INCLUDING BOTH endpoint planets. Invalid names yield an empty tuple; identical valid names yield a one-element tuple.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9990144,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14143090000288794
+    },
+    "task": "HumanEval/148",
+    "witnesses": [
+      {
+        "alternative_expected": "('Mercury', 'Venus', 'Earth')",
+        "args": [
+          "Earth",
+          "Mercury"
+        ],
+        "target_expected": "('Venus',)"
+      },
+      {
+        "alternative_expected": "('Mars',)",
+        "args": [
+          "Mars",
+          "Mars"
+        ],
+        "target_expected": "()"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9940992,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.15143040000111796
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10211328,
+        "reason": "",
+        "scheduled_cases": 12,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.19495760000063456
+      },
+      "plus_input": {
+        "peak_memory_bytes": 15863808,
+        "reason": "",
+        "scheduled_cases": 998,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.19332730000314768
+      }
+    },
+    "key": "aa4350f69408449facfdbcdccfa7cc78b5ba844a0bb245f604cfabba2e09f551",
+    "passed": true,
+    "specification": "\ndef x_or_y_alternative(n, x, y):\n    \"\"\"Return y when n is prime, otherwise return x. Values below 2 are not prime. This reverses which branch selects each value.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9777152,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.141848300001584
+    },
+    "task": "HumanEval/150",
+    "witnesses": [
+      {
+        "alternative_expected": "5",
+        "args": [
+          7,
+          3,
+          5
+        ],
+        "target_expected": "3"
+      },
+      {
+        "alternative_expected": "3",
+        "args": [
+          4,
+          3,
+          5
+        ],
+        "target_expected": "5"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9969664,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1216534999985015
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10596352,
+        "reason": "",
+        "scheduled_cases": 16,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.13008809999882942
+      },
+      "plus_input": {
+        "peak_memory_bytes": 11968512,
+        "reason": "",
+        "scheduled_cases": 206,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1317802000012307
+      }
+    },
+    "key": "aec437503158e310d7f3bc5129ae0750f8809ff7412262a5c8ec5207dcf2c36a",
+    "passed": true,
+    "specification": "\ndef int_to_mini_roman_alternative(number):\n    \"\"\"Convert integer 1..1000 to lowercase ADDITIVE Roman numerals. Use descending m,d,c,l,x,v,i symbols repeatedly; never use subtractive pairs such as iv or ix.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9785344,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.15308660000300733
+    },
+    "task": "HumanEval/156",
+    "witnesses": [
+      {
+        "alternative_expected": "'iiii'",
+        "args": [
+          4
+        ],
+        "target_expected": "'iv'"
+      },
+      {
+        "alternative_expected": "'viiii'",
+        "args": [
+          9
+        ],
+        "target_expected": "'ix'"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9981952,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11974650000047404
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10407936,
+        "reason": "",
+        "scheduled_cases": 12,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.13971659999879193
+      },
+      "plus_input": {
+        "peak_memory_bytes": 20164608,
+        "reason": "",
+        "scheduled_cases": 897,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1789816000018618
+      }
+    },
+    "key": "c310697c9901068fbeb826496fb61e6e7370f783ae17cbbf6669ac072b5c0eb8",
+    "passed": true,
+    "specification": "\ndef find_max_alternative(words):\n    \"\"\"Return a word with the largest number of unique characters. Break ties by the LEXICOGRAPHICALLY LAST word. Empty input returns an empty string.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10190848,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.12130809999871417
+    },
+    "task": "HumanEval/158",
+    "witnesses": [
+      {
+        "alternative_expected": "'ba'",
+        "args": [
+          [
+            "ab",
+            "ba"
+          ]
+        ],
+        "target_expected": "'ab'"
+      },
+      {
+        "alternative_expected": "''",
+        "args": [
+          []
+        ],
+        "target_expected": "''"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9752576,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.1305415000024368
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10280960,
+        "reason": "",
+        "scheduled_cases": 5,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15084079999724054
+      },
+      "plus_input": {
+        "peak_memory_bytes": 17620992,
+        "reason": "",
+        "scheduled_cases": 449,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.15031589999853168
+      }
+    },
+    "key": "655074a265a1e0cf4d864c3524588b11fbd98d5d49147360aae511430684682f",
+    "passed": true,
+    "specification": "\ndef do_algebra_alternative(operator, operand):\n    \"\"\"Evaluate the supplied operators and nonnegative operands STRICTLY LEFT TO RIGHT, without ordinary precedence. Support +,-,*,//,**; assume valid operations and no division by zero.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 10137600,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14521650000096997
+    },
+    "task": "HumanEval/160",
+    "witnesses": [
+      {
+        "alternative_expected": "20",
+        "args": [
+          [
+            "+",
+            "*"
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "target_expected": "14"
+      },
+      {
+        "alternative_expected": "8",
+        "args": [
+          [
+            "-",
+            "*"
+          ],
+          [
+            6,
+            2,
+            2
+          ]
+        ],
+        "target_expected": "2"
+      }
+    ]
+  },
+  {
+    "alternative_witnesses": {
+      "peak_memory_bytes": 9756672,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.11800589999984368
+    },
+    "expanded_partitions": {
+      "base_input": {
+        "peak_memory_bytes": 10211328,
+        "reason": "",
+        "scheduled_cases": 6,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.13962479999827337
+      },
+      "plus_input": {
+        "peak_memory_bytes": 13717504,
+        "reason": "",
+        "scheduled_cases": 1000,
+        "seed": 1729,
+        "status": "passed",
+        "wall_seconds": 0.1620933000012883
+      }
+    },
+    "key": "e79ffb9a8c08eea5d1321cbbe252938fc3885ebb0d7fbde8a024bd9db8e38174",
+    "passed": true,
+    "specification": "\ndef string_to_md5_alternative(text):\n    \"\"\"Return the lowercase hexadecimal MD5 of UTF-8 text for EVERY string, INCLUDING the empty string. Do not return None for empty text.\"\"\"\n",
+    "target_witnesses": {
+      "peak_memory_bytes": 9814016,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "wall_seconds": 0.14424570000119274
+    },
+    "task": "HumanEval/162",
+    "witnesses": [
+      {
+        "alternative_expected": "'d41d8cd98f00b204e9800998ecf8427e'",
+        "args": [
+          ""
+        ],
+        "target_expected": "None"
+      },
+      {
+        "alternative_expected": "'0cc175b9c0f1b6a831c399e269772661'",
+        "args": [
+          "a"
+        ],
+        "target_expected": "'0cc175b9c0f1b6a831c399e269772661'"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-23",
+  "owner_authorized": true,
+  "elapsed_time_cutoff": null,
+  "until": "registered work completed, user pause or existing validity/safety stop",
+  "stages": [
+    "E5",
+    "R2"
+  ],
+  "source": "Owner requested both stages sequentially overnight; refined semantic alternatives with hidden references/tests and permitted material exclusions before generation.",
+  "scope": {
+    "E5_pilot": 50,
+    "E5_full": 400,
+    "R2_pilot": 130,
+    "R2_full_loaded": 960,
+    "R2_full_isolated": 80
+  },
+  "output_contract_arm": "deferred; excluded from main experiment",
+  "reuse_of_completed_experiments": "no new E0/M1/legacy M3/R1 requests"
+}
