@@ -24,3 +24,36 @@ Questions:
 Assumptions: fixed active sensor path, AC/Best performance and idle host; no
 unreviewed later stages; all definitions frozen before calls. A full run may
 not fit the window, in which case partial work remains explicitly incomplete.
+
+## Completion verification - 2026-11-22
+
+The chain has exited with reason `finished`. Full R1 contains 400 unique calls
+and 400 unique scores: 40 tasks in every model-policy cell (two models, five
+policies). The 50-call pilot has its own 50 scores and stays separate. No calls
+were missing or duplicated, no inputs were invalid, and no API calls failed.
+The full scoring ledger contains 199 passes, 196 failures and 5 output-capped
+responses; these are counts, not an interpretation of policy effects.
+
+HWiNFO CPU-package energy estimates are available for 400/400 full calls, but
+availability does not mean precise or unflagged measurement. There are 78
+post-load low-resolution flags and 21 total-window low-resolution flags. Two
+closed blocks containing 50 calls have baseline-drift flags. Preserve these
+records and apply the registered sensitivity analyses when interpreting energy.
+No estimates or thresholds were changed to obtain completion.
+
+Reproduce counts, schedule/hash checks and preservation of the previous 375
+raw records from the repository root:
+
+```powershell
+.\.venv313\Scripts\python.exe -m analysis.verify_r1_completion --prefix-bytes 2181300 --prefix-sha256 9e01126c4f9514bf042c8ef995400317da4645b0de45da54bf6c780da0ff1b71
+```
+
+The derived report is `results/utilisation/r1-v2/completion-audit.json`;
+`calls.jsonl`, `scores.jsonl` and `blocks.jsonl` remain the source records in
+each pilot/full directory. The script reads them without altering them. Frozen
+manifests still verify, and the pre-resume byte prefix is unchanged. There were
+no scoring infrastructure-error statuses. Test timeouts remain recorded outcomes.
+
+Completion assumptions: this audit establishes ledger completeness under the
+existing oracle, not general correctness or a causal memory effect. No semantic
+summarization arm or later experiment was added; no policy conclusion is drawn.

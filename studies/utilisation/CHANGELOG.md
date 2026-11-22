@@ -381,3 +381,34 @@ comparisons remain exploratory and cannot isolate pure memory effects. No new
 token-matching arm added silently to the approved five-policy budget.
 Machine prerequisites still unavailable: AC0/Balanced and last sensorver7 stopped
 yesterday. The chain is prepared, not launched; no R1 model request made.
+
+## R1 completion audit - 2026-11-22 12:41 IST
+
+Owner requested completion of R1. Rechecked AC/Best performance, growing ver8
+sensor log and frozen manifests, then resumed the existing approved chain.
+It skipped completed M1 and the 50-call R1 pilot, appended only the remaining
+25 full R1 requests, closed the measurement block and scored all 400 full rows.
+The chain exited successfully with reason `finished`; no further stage launched.
+
+Read-only verification: pilot 50 calls/50 scores; full 400 calls/400 scores;
+unique expected keys match, all ten model-policy cells have 40 full calls,
+zero missing/duplicate calls or scores, zero invalid inputs/API failures.
+Full scoring counts: 199 passed, 196 failed, 5 capped/truncated. No scoring
+infrastructure errors; original timeout and runtime-error outcomes retained.
+Energy estimates available 400/400, with 78 post-load and 21 total-window
+low-resolution flags. Two drift-flagged closed blocks contain 50 calls.
+The final block cd0ba0a5356d482f9722b0fa3df7793e measured start 9.7872128742009 W
+and end 11.926920165410593 W: signed drift +2.1397072912096924 W, above the
+unchanged 1 W threshold. Drift remains a flag under the approved rule.
+
+Added analysis/verify_r1_completion.py to reproduce all counts, frozen schedule
+verification and raw-prefix preservation, writing a derived JSON audit. The
+previous 2181300 bytes (375 calls) still hash to
+9e01126c4f9514bf042c8ef995400317da4645b0de45da54bf6c780da0ff1b71.
+No frozen artifact, raw record, generation setting or research definition changed.
+No effect interpretation or new hypothesis added. Semantic summaries remain
+deferred; pilot rows remain separate from the full experiment.
+
+Completion checks: 418 tests passed (14 existing dependency deprecation warnings),
+Ruff clean, formatting and diff checks passed. Completion audit exited zero;
+both frozen phase manifests and all recorded pre-resume bytes verified.
