@@ -468,3 +468,12 @@ recorded. All four new schedules have unique keys and fit input+2048 output
 reservation. Largest inputs: E5 full1684, R2 full2390 tokens. These are preparation
 checks, not measured model-performance results. Materials and source hashes are
 committed before the first new inference request.
+
+Launch receipt - 2026-11-23 00:46 IST: registration/source commit b2c0073
+verified all four schedules before launch. Started background watcher PID9568
+at00:38 IST using ver9, with no elapsed-time cutoff. Idle windows1..5 did not
+meet adjacent-pair stability; window6 passed at12.799997563301966W against
+window5 at12.439813688335967W. No threshold was relaxed and no model request
+preceded the accepted pair. First two E5 pilot calls are saved, both input-valid,
+with energy available, no API failure and no output cap. Queue remains running;
+this is a launch check, not a full-run completion or outcome interpretation.
