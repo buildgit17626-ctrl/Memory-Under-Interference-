@@ -412,3 +412,19 @@ deferred; pilot rows remain separate from the full experiment.
 Completion checks: 418 tests passed (14 existing dependency deprecation warnings),
 Ruff clean, formatting and diff checks passed. Completion audit exited zero;
 both frozen phase manifests and all recorded pre-resume bytes verified.
+
+## Continued-execution request - 2026-11-23
+
+Owner requests finishing planned work without an arbitrary seven/eight-hour
+stoppage, until he pauses. Record execution-window extension beyond the prior
+22 November freeze; do not change scientific definitions or completed frozen
+artifacts. No new model request made in this readiness audit. Per-request
+timeouts/retries and every safety/data-validity stop remain required.
+
+Verified completed call/score ledgers: E0 1968/1968, original M3 isolation
+40/40, original M3 240/240, full M1 1040/1040 and full R1 400/400; separate
+M1 pilot 70/70 and R1 pilot 50/50. Zero missing score keys in these sessions.
+Remaining revised stages lack reviewed exact materials/validation. Proposed
+E5 code-only-preference scope and automatic pilot gate sent for owner decision;
+no scope approval inferred. Fresh sensor path requested because ver8 stopped
+logging yesterday. Current-generation status: not launched.

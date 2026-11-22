@@ -744,3 +744,15 @@ another permission pause. Gate uses no correctness/effect direction. Original
 freeze and hard stops unchanged; partial stages/checkpoints remain resumable.
 Pilot rows never promote into full analysis. No new R1 generation until frozen
 manifest/reference/host/sensor checks pass. No unregistered later experiment.
+
+## Owner-requested continued execution (2026-11-23)
+
+Owner now requests finishing remaining planned stages without a seven/eight-hour
+automatic cutoff, until he pauses. This supersedes the historical execution
+freeze for separately prepared new stages; it does not modify frozen completed
+experiments, their data, settings, exclusion rules or effect-based extensions.
+Safety, per-request timeouts, retry limits, sequential measurement and quality
+checks remain active. New exact designs still require the working agreement's
+review, dated registration, validation and commit before generation.
+See docs/plans/UTILISATION_CONTINUATION_2026_11_23.md for the verified inventory,
+remaining preparation and proposed next scope. Completed stages are skipped.
