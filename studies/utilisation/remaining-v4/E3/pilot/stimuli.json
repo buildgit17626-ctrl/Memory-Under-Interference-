@@ -1,0 +1,152 @@
+[
+  {
+    "experiment": "E3",
+    "condition": "initial",
+    "task_id": "HumanEval/53",
+    "entries": [
+      "add"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/53"
+      ],
+      "round": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[TARGET]\n\n\ndef add(x: int, y: int):\n    \"\"\"Add two numbers x and y\n    >>> add(2, 3)\n    5\n    >>> add(5, 7)\n    12\n    \"\"\"\n\n[QUERY]\nComplete add. Return only Python code.\n"
+      ],
+      "history": [],
+      "feedback": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 82,
+      "qwen2.5-coder:1.5b": 82
+    }
+  },
+  {
+    "experiment": "E3",
+    "condition": "initial",
+    "task_id": "HumanEval/162",
+    "entries": [
+      "string_to_md5"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/162"
+      ],
+      "round": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[TARGET]\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n\n[QUERY]\nComplete string_to_md5. Return only Python code.\n"
+      ],
+      "history": [],
+      "feedback": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 117,
+      "qwen2.5-coder:1.5b": 117
+    }
+  },
+  {
+    "experiment": "E3",
+    "condition": "initial",
+    "task_id": "HumanEval/122",
+    "entries": [
+      "add_elements"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/122"
+      ],
+      "round": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[TARGET]\n\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Example:\n\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n        Output: 24 # sum of 21 + 3\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n\n[QUERY]\nComplete add_elements. Return only Python code.\n"
+      ],
+      "history": [],
+      "feedback": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 166,
+      "qwen2.5-coder:1.5b": 166
+    }
+  },
+  {
+    "experiment": "E3",
+    "condition": "initial",
+    "task_id": "HumanEval/0",
+    "entries": [
+      "has_close_elements"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/0"
+      ],
+      "round": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[TARGET]\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n\n[QUERY]\nComplete has_close_elements. Return only Python code.\n"
+      ],
+      "history": [],
+      "feedback": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 154,
+      "qwen2.5-coder:1.5b": 154
+    }
+  },
+  {
+    "experiment": "E3",
+    "condition": "initial",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "round": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[QUERY]\nComplete prime_fib. Return only Python code.\n"
+      ],
+      "history": [],
+      "feedback": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 129,
+      "qwen2.5-coder:1.5b": 129
+    }
+  }
+]

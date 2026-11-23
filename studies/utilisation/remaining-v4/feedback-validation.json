@@ -1,0 +1,102 @@
+[
+  {
+    "example": 0,
+    "key": "ca265de9c34475711d164d85b7c4da225507825c8d2b81803b7c6674c4af9ac9",
+    "peak_memory_bytes": 9732096,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/53",
+    "wall_seconds": 0.16938289999961853
+  },
+  {
+    "example": 1,
+    "key": "162bfac36d41cf5ac26e90897aab27b7ef031259218def8b5193357dae74c814",
+    "peak_memory_bytes": 9945088,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/53",
+    "wall_seconds": 0.17620009999882313
+  },
+  {
+    "example": 0,
+    "key": "cd3c926f8f032d56b4ffdf762dcdb46ae83937ea7bf1ddbd9c09c6b3565debd4",
+    "peak_memory_bytes": 10051584,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/162",
+    "wall_seconds": 0.17328400000042166
+  },
+  {
+    "example": 1,
+    "key": "014d41d59727e1fe8b2b99530d1fd94c26d8eaffba688f5f9065ff2a3881f091",
+    "peak_memory_bytes": 10035200,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/162",
+    "wall_seconds": 0.1825658999987354
+  },
+  {
+    "example": 0,
+    "key": "583834228b7d396e34d6cec30c394070a991dfdaeba603ef2b4db1d407064b9d",
+    "peak_memory_bytes": 10121216,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/122",
+    "wall_seconds": 0.154779000000417
+  },
+  {
+    "example": 1,
+    "key": "48985fa9c7ef01e8fa3629d405d14236e2d8c8f0620e10ff66b2130d5d922441",
+    "peak_memory_bytes": 10129408,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/122",
+    "wall_seconds": 0.15093960000012885
+  },
+  {
+    "example": 0,
+    "key": "8e33d4eb2c739199bbe5dbfe6c60272ab68e017935145485d3bf687bf3e13e27",
+    "peak_memory_bytes": 10133504,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/0",
+    "wall_seconds": 0.18428430000130902
+  },
+  {
+    "example": 1,
+    "key": "f2a718eaab9bdcdeb39ea21cc5264bfa65a6e29482a0b58bfcbed7dd56c65048",
+    "peak_memory_bytes": 9764864,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/0",
+    "wall_seconds": 0.15033100000073318
+  },
+  {
+    "example": 0,
+    "key": "b30ce11dc04d700c5dfe20471a1b151781c10563caea7234d1530f42c855cd2e",
+    "peak_memory_bytes": 10387456,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/39",
+    "wall_seconds": 0.16190199999982724
+  },
+  {
+    "example": 1,
+    "key": "8a65040b0960f281645d4042caae6051f6f78304702d56f476a9b5b631447fd2",
+    "peak_memory_bytes": 10440704,
+    "reason": "",
+    "seed": 1729,
+    "status": "passed",
+    "task": "HumanEval/39",
+    "wall_seconds": 0.1721720000023197
+  }
+]

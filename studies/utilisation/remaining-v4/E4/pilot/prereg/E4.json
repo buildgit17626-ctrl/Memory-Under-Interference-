@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-24",
+  "hypotheses": "Owner: prefix-cache reuse may change latency and CPU-package inference energy.",
+  "competing_predictions": "No improvement, reverse differences, or cost without benefit.",
+  "conditions": [
+    "cold",
+    "warm"
+  ],
+  "outcomes": "See committed PROTOCOL.md; native timings/tokens, qualified CPU energy.",
+  "analysis": "PROTOCOL.md defines task/pair denominators, pilot exclusion and uncertainty.",
+  "exclusions": "No outcome-based task replacement; missing energy never imputed; caps separate.",
+  "interpretation_changers": "Reference/feedback errors; confounding; input mismatch; cache invalidity; censoring, incomplete data, baseline drift and low-resolution windows.",
+  "inference_boundary": "Two small Q4_K_M CPU models, fixed benchmark and one machine.",
+  "config_hash": "eb635500c9b867755dc513ba74d9e16b035471dae0313dd56dbbc43034562e05",
+  "stimuli_hash": "8ea7d636e92df1e4f27b98d387573e0b3a9b9ee3e5cf0d2f8774242aea03b088",
+  "schedule_hash": "62d2b211d733e15f4d19ca6f511da8ec0bf675c33748d45ad099d314b503e43b",
+  "call_count": 20,
+  "task_ids": [],
+  "E3_maximum_calls": null,
+  "E3_dynamic_rounds": null
+}

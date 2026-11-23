@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-24",
+  "hypotheses": "Owner: repair feedback and retained history may change repair success and cost.",
+  "competing_predictions": "No improvement, reverse differences, or cost without benefit.",
+  "conditions": [
+    "initial"
+  ],
+  "outcomes": "See committed PROTOCOL.md; native timings/tokens, qualified CPU energy.",
+  "analysis": "PROTOCOL.md defines task/pair denominators, pilot exclusion and uncertainty.",
+  "exclusions": "No outcome-based task replacement; missing energy never imputed; caps separate.",
+  "interpretation_changers": "Reference/feedback errors; confounding; input mismatch; cache invalidity; censoring, incomplete data, baseline drift and low-resolution windows.",
+  "inference_boundary": "Two small Q4_K_M CPU models, fixed benchmark and one machine.",
+  "config_hash": "7d67ea82a92e6c5c12ee0778cd379a75df16b51788ab1052f37f1db15cd4abf3",
+  "stimuli_hash": "52816581654d25683178b7509c568aa410c6ebec65a6e1b62d7a8d9984c92164",
+  "schedule_hash": "5c23936157e69e7ac5b8f1fdd6c3318ae86c3fd44a988035049ad395c989d7cf",
+  "call_count": 10,
+  "task_ids": [
+    "HumanEval/53",
+    "HumanEval/162",
+    "HumanEval/122",
+    "HumanEval/0",
+    "HumanEval/39"
+  ],
+  "E3_maximum_calls": 130,
+  "E3_dynamic_rounds": "Round schedules follow committed deterministic algorithm; hash and raw parent provenance recorded before each round, never selected using final test results."
+}

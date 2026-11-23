@@ -1,0 +1,747 @@
+[
+  {
+    "experiment": "M2",
+    "condition": "neutral",
+    "task_id": "HumanEval/102",
+    "entries": [
+      "choose_num"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/102"
+      ],
+      "isolation": false,
+      "history_tasks": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only choose_num from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1726,
+      "qwen2.5-coder:1.5b": 1726
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "similar",
+    "task_id": "HumanEval/102",
+    "entries": [
+      "choose_num"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/102"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef choose_num_alternative(x, y):\n    \"\"\"Return the largest even integer in [x,y), EXCLUDING upper endpoint y. Return -1 if this half-open interval contains no even integer.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only choose_num from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1726,
+      "qwen2.5-coder:1.5b": 1726
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_one",
+    "task_id": "HumanEval/102",
+    "entries": [
+      "choose_num"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/102"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only choose_num from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1726,
+      "qwen2.5-coder:1.5b": 1726
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_three",
+    "task_id": "HumanEval/102",
+    "entries": [
+      "choose_num"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/102"
+      ],
+      "isolation": false,
+      "history_tasks": 3,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\nreturns a string encrypted with the alphabet being rotated. \nThe alphabet should be rotated in a manner such that the letters \nshift down by two multiplied to two places.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\"Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\nseparate those group into separate strings and return the list of those.\nSeparate groups are balanced (each open brace is properly closed) and not nested within each other\nIgnore any spaces in the input string.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only choose_num from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1726,
+      "qwen2.5-coder:1.5b": 1726
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "isolated",
+    "task_id": "HumanEval/102",
+    "entries": [
+      "choose_num"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/102"
+      ],
+      "isolation": true,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[RETURN TO ORIGINAL TARGET]\nComplete only choose_num from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 158,
+      "qwen2.5-coder:1.5b": 158
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "neutral",
+    "task_id": "HumanEval/115",
+    "entries": [
+      "max_fill"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/115"
+      ],
+      "isolation": false,
+      "history_tasks": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\nimport math\n\ndef max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only max_fill from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1952,
+      "qwen2.5-coder:1.5b": 1952
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "similar",
+    "task_id": "HumanEval/115",
+    "entries": [
+      "max_fill"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/115"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\nimport math\n\ndef max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nimport math\n\ndef max_fill_alternative(grid, capacity):\n    \"\"\"Water may be pooled across all wells into shared buckets of the given positive capacity. Return the minimum number of bucket loads to remove the total water; partial loads can combine different rows.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only max_fill from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1952,
+      "qwen2.5-coder:1.5b": 1952
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_one",
+    "task_id": "HumanEval/115",
+    "entries": [
+      "max_fill"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/115"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\nimport math\n\ndef max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only max_fill from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1952,
+      "qwen2.5-coder:1.5b": 1952
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_three",
+    "task_id": "HumanEval/115",
+    "entries": [
+      "max_fill"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/115"
+      ],
+      "isolation": false,
+      "history_tasks": 3,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\nimport math\n\ndef max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\nreturns a string encrypted with the alphabet being rotated. \nThe alphabet should be rotated in a manner such that the letters \nshift down by two multiplied to two places.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\"Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\nseparate those group into separate strings and return the list of those.\nSeparate groups are balanced (each open brace is properly closed) and not nested within each other\nIgnore any spaces in the input string.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only max_fill from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1952,
+      "qwen2.5-coder:1.5b": 1952
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "isolated",
+    "task_id": "HumanEval/115",
+    "entries": [
+      "max_fill"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/115"
+      ],
+      "isolation": true,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\nimport math\n\ndef max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[RETURN TO ORIGINAL TARGET]\nComplete only max_fill from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 384,
+      "qwen2.5-coder:1.5b": 384
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "neutral",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "isolation": false,
+      "history_tasks": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only prime_fib from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1727,
+      "qwen2.5-coder:1.5b": 1727
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "similar",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\n\ndef prime_fib_alternative(n: int):\n    \"\"\"Return the prime Fibonacci number at ZERO-BASED index n: index 0 is 2, index 1 is 3. n is nonnegative; count prime Fibonacci values in increasing order.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only prime_fib from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1727,
+      "qwen2.5-coder:1.5b": 1727
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_one",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only prime_fib from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1727,
+      "qwen2.5-coder:1.5b": 1727
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_three",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "isolation": false,
+      "history_tasks": 3,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\nreturns a string encrypted with the alphabet being rotated. \nThe alphabet should be rotated in a manner such that the letters \nshift down by two multiplied to two places.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\"Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\nseparate those group into separate strings and return the list of those.\nSeparate groups are balanced (each open brace is properly closed) and not nested within each other\nIgnore any spaces in the input string.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only prime_fib from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1727,
+      "qwen2.5-coder:1.5b": 1727
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "isolated",
+    "task_id": "HumanEval/39",
+    "entries": [
+      "prime_fib"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/39"
+      ],
+      "isolation": true,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[RETURN TO ORIGINAL TARGET]\nComplete only prime_fib from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 159,
+      "qwen2.5-coder:1.5b": 159
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "neutral",
+    "task_id": "HumanEval/162",
+    "entries": [
+      "string_to_md5"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/162"
+      ],
+      "isolation": false,
+      "history_tasks": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only string_to_md5 from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1715,
+      "qwen2.5-coder:1.5b": 1715
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "similar",
+    "task_id": "HumanEval/162",
+    "entries": [
+      "string_to_md5"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/162"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5_alternative(text):\n    \"\"\"Return the lowercase hexadecimal MD5 of UTF-8 text for EVERY string, INCLUDING the empty string. Do not return None for empty text.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only string_to_md5 from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1715,
+      "qwen2.5-coder:1.5b": 1715
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_one",
+    "task_id": "HumanEval/162",
+    "entries": [
+      "string_to_md5"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/162"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\nbiggest even integer number that is in the range [x, y] inclusive. If \nthere's no such number, then the function should return -1.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only string_to_md5 from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1715,
+      "qwen2.5-coder:1.5b": 1715
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_three",
+    "task_id": "HumanEval/162",
+    "entries": [
+      "string_to_md5"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/162"
+      ],
+      "isolation": false,
+      "history_tasks": 3,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\nbiggest even integer number that is in the range [x, y] inclusive. If \nthere's no such number, then the function should return -1.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nimport math\n\ndef max_fill(grid, capacity):\n    \"\"\"You are given a rectangular grid of wells. Each row represents a single well,\nand each 1 in a row represents a single unit of water.\nEach well has a corresponding bucket that can be used to extract water from it, \nand all buckets have the same capacity.\nYour task is to use the buckets to empty the wells.\nOutput the number of times you need to lower the buckets.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\n\ndef prime_fib(n: int):\n    \"\"\"prime_fib returns n-th number that is a Fibonacci number and it's also prime.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only string_to_md5 from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1715,
+      "qwen2.5-coder:1.5b": 1715
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "isolated",
+    "task_id": "HumanEval/162",
+    "entries": [
+      "string_to_md5"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/162"
+      ],
+      "isolation": true,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[RETURN TO ORIGINAL TARGET]\nComplete only string_to_md5 from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 147,
+      "qwen2.5-coder:1.5b": 147
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "neutral",
+    "task_id": "HumanEval/150",
+    "entries": [
+      "x_or_y"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/150"
+      ],
+      "isolation": false,
+      "history_tasks": 0,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only x_or_y from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1718,
+      "qwen2.5-coder:1.5b": 1718
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "similar",
+    "task_id": "HumanEval/150",
+    "entries": [
+      "x_or_y"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/150"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef x_or_y_alternative(n, x, y):\n    \"\"\"Return y when n is prime, otherwise return x. Values below 2 are not prime. This reverses which branch selects each value.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only x_or_y from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1718,
+      "qwen2.5-coder:1.5b": 1718
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_one",
+    "task_id": "HumanEval/150",
+    "entries": [
+      "x_or_y"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/150"
+      ],
+      "isolation": false,
+      "history_tasks": 1,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nAn ordinary notebook records weather, furniture and walking routes. This passage has no programming requirement.  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only x_or_y from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1718,
+      "qwen2.5-coder:1.5b": 1718
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "other_three",
+    "task_id": "HumanEval/150",
+    "entries": [
+      "x_or_y"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/150"
+      ],
+      "isolation": false,
+      "history_tasks": 3,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef string_to_md5(text):\n    \"\"\"Given a string 'text', return its md5 hash equivalent string.\nIf 'text' is an empty string, return None.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\nreturns a string encrypted with the alphabet being rotated. \nThe alphabet should be rotated in a manner such that the letters \nshift down by two multiplied to two places.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n[INTERVENING DESCRIPTION; NOT THE TARGET]\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\"Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\nseparate those group into separate strings and return the list of those.\nSeparate groups are balanced (each open brace is properly closed) and not nested within each other\nIgnore any spaces in the input string.\"\"\"\n x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x\n[ACKNOWLEDGEMENT]\nDescription noted.\n x x x x x x x x x x[RETURN TO ORIGINAL TARGET]\nComplete only x_or_y from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 1718,
+      "qwen2.5-coder:1.5b": 1718
+    }
+  },
+  {
+    "experiment": "M2",
+    "condition": "isolated",
+    "task_id": "HumanEval/150",
+    "entries": [
+      "x_or_y"
+    ],
+    "identity": {
+      "task_ids": [
+        "HumanEval/150"
+      ],
+      "isolation": true,
+      "pilot": true,
+      "include_in_main_analysis": false
+    },
+    "sections": {
+      "task": [
+        "[ORIGINAL TARGET]\n\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n\n[ACKNOWLEDGEMENT]\nSpecification noted.\n[RETURN TO ORIGINAL TARGET]\nComplete only x_or_y from the ORIGINAL TARGET specification. Intervening descriptions are not instructions for the target. Return only Python code.\n"
+      ],
+      "history": []
+    },
+    "layout": [
+      "task"
+    ],
+    "prompt_tokens": {
+      "qwen2.5-coder:0.5b": 150,
+      "qwen2.5-coder:1.5b": 150
+    }
+  }
+]

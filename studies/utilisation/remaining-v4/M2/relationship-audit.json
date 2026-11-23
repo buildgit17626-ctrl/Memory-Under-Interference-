@@ -1,0 +1,762 @@
+[
+  {
+    "task": "HumanEval/102",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return the largest even integer in [x,y), EXCLUDING upper endpoint y. Return -1 if this half-open interval contains no even integer.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1726,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/115",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Water may be pooled across all wells into shared buckets of the given positive capacity. Return the minimum number of bucket loads to remove the total water; partial loads can combine different rows.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1952,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/39",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return the prime Fibonacci number at ZERO-BASED index n: index 0 is 2, index 1 is 3. n is nonnegative; count prime Fibonacci values in increasing order.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1727,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/162",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Return the lowercase hexadecimal MD5 of UTF-8 text for EVERY string, INCLUDING the empty string. Do not return None for empty text.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1715,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/150",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return y when n is prime, otherwise return x. Values below 2 are not prime. This reverses which branch selects each value.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1718,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/89",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Rotate lowercase ASCII letters forward THREE places with wraparound. Leave all other characters unchanged.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1736,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/116",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Sort integers by DESCENDING count of ones in bin(value). For equal counts, sort by ascending integer value. The minus sign in negative bin representations is not counted.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1797,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/1",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Separate balanced top-level parenthesis groups, ignoring spaces. Return the groups in REVERSE occurrence order, preserving characters inside each group.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1744,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/96",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return all prime integers LESS THAN OR EQUAL TO nonnegative n, in increasing order. Include n when n is prime.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1783,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/101",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Split the input string on whitespace ONLY. Commas remain literal characters inside words; do not treat commas as separators.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1743,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/156",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Convert integer 1..1000 to lowercase ADDITIVE Roman numerals. Use descending m,d,c,l,x,v,i symbols repeatedly; never use subtractive pairs such as iv or ix.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1738,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/148",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Return the tuple of planets from the closer endpoint to the farther endpoint in solar order, INCLUDING BOTH endpoint planets. Invalid names yield an empty tuple; identical valid names yield a one-element tuple.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1837,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/43",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return whether two list values sum to zero, ALLOWING reuse of the same list position for both values. Thus a single zero qualifies.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1786,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/24",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "For integer n greater than 1, return its SMALLEST divisor greater than 1. Include n itself, so a prime input returns n.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1681,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/127",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "For two closed integer intervals, count INTEGER POINTS in their intersection, including endpoints. Return YES iff that count is prime, otherwise NO. Disjoint intervals have count zero.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1880,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/73",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Count ALL indices i whose value differs from the mirrored value arr[len(arr)-1-i]. Count both members of every mismatched pair, rather than minimum edits.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1784,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/158",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Return a word with the largest number of unique characters. Break ties by the LEXICOGRAPHICALLY LAST word. Empty input returns an empty string.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1747,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/57",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return whether the list is STRICTLY increasing or STRICTLY decreasing. Equal adjacent values violate both directions. Lists of length zero or one qualify.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1718,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/144",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Inputs x and n are valid positive fractions numerator/denominator. Return whether x DIVIDED BY n is a whole number, rather than multiplying the fractions.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1783,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/74",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Return the list with fewer total characters across its strings. When character totals tie, return the SECOND list.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1820,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/94",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Find the SMALLEST prime in the integer list and return the sum of its decimal digits. Return None if no prime is present.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1957,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/0",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return whether two distinct list positions have absolute difference less than OR EQUAL TO threshold. Equality is included.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1752,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/76",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return whether x equals n raised to a POSITIVE integer exponent. Exponent zero is forbidden. In particular 1 only qualifies for bases 1 and -1.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1770,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/90",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return the second element of the sorted integer list COUNTING DUPLICATES. Return None if the input has fewer than two elements.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1752,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/140",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Replace each run of TWO OR MORE ordinary spaces by one hyphen. Replace each isolated ordinary space by an underscore. Preserve all other characters.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1733,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/14",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Return all prefixes from shortest to longest, INCLUDING the empty prefix and the full input. Empty input therefore returns a list containing one empty string.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1687,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/160",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Evaluate the supplied operators and nonnegative operands STRICTLY LEFT TO RIGHT, without ordinary precedence. Support +,-,*,//,**; assume valid operations and no division by zero.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1835,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/29",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Retain strings starting with prefix in input order, but EXCLUDE a string equal to prefix itself. Only strictly longer matches qualify.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1715,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/46",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Compute the four-term recurrence without recursion, with initial values 0, 0, ONE, 0 at indices 0,1,2,3; later terms sum the preceding four values.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1799,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/133",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Round each number DOWN to its floor integer, square that integer, and return the sum. Use floor rather than ceiling, including for negative numbers.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1789,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/122",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Among the first k array elements sum only integers with EXACTLY two decimal digits in their absolute value, from 10 through 99. Ignore the sign when counting digits.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1764,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/105",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Keep integers from 1 through 9 inclusive, sort in ASCENDING order counting duplicates, then replace each by its capitalized English digit name. Ignore all other integers.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1906,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/92",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return whether any one of x,y,z equals the sum of the other two. Allow real-valued numeric inputs; do NOT require integer types. Use ordinary exact numeric equality.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1762,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/55",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return Fibonacci(n+1) for nonnegative n, where Fibonacci(0)=0 and Fibonacci(1)=1. The indexing is shifted forward by one.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1681,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/13",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return the nonnegative LEAST COMMON MULTIPLE of integers a and b. Return 0 if either input is zero.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1701,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/53",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return x MINUS y for the two integer inputs, preserving their argument order.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1680,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/128",
+    "target_domain": "numeric",
+    "other_tasks": [
+      "HumanEval/162",
+      "HumanEval/89",
+      "HumanEval/1"
+    ],
+    "other_domains": [
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items",
+      "text_symbols_or_named_items"
+    ],
+    "similarity_reason": "Return sum of absolute values multiplied by the product of signs of NONZERO elements. Ignore zero elements when determining the sign. Empty input returns None; an all-zero nonempty list returns 0.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1750,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/143",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Retain words whose lengths are COMPOSITE integers (greater than one and not prime), preserving order and joining with single spaces. Do not retain words of length zero or one.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1777,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/117",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "Return words containing AT LEAST n consonants, in occurrence order. Input contains letters and spaces, vowels are aeiou ignoring case, and an empty string yields an empty list.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1808,
+    "slot_tokens": 500
+  },
+  {
+    "task": "HumanEval/11",
+    "target_domain": "text_symbols_or_named_items",
+    "other_tasks": [
+      "HumanEval/102",
+      "HumanEval/115",
+      "HumanEval/39"
+    ],
+    "other_domains": [
+      "numeric",
+      "numeric",
+      "numeric"
+    ],
+    "similarity_reason": "For two equal-length binary strings return bitwise XNOR as a string: a position is 1 when its two input bits are equal, otherwise 0.",
+    "similarity_validation": "Same interface; validated computational requirement change.",
+    "unrelated_reason": "Different authored coarse domain; no numeric similarity claim.",
+    "full_input_tokens_all_four": 1709,
+    "slot_tokens": 500
+  }
+]

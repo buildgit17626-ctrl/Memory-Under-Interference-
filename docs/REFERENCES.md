@@ -83,3 +83,8 @@ polynomial checks inspected in EvalPlus 0.3.1. The implementation uses the
 registered Windows worker and deadline. Upstream source and release:
 https://github.com/evalplus/evalplus and
 https://github.com/evalplus/humanevalplus_release/releases/tag/v0.1.10.
+
+Ollama native usage metrics (verified for remaining-study design,2026-11-24):
+https://github.com/ollama/ollama/blob/main/docs/api/usage.mdx . Distinguish total
+input tokens, prompt_eval_cached_count and uncached prefill duration. Presence
+of the field alone is not cache verification; the E4 pilot validates states.

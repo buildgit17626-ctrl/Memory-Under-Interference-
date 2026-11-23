@@ -477,3 +477,45 @@ window5 at12.439813688335967W. No threshold was relaxed and no model request
 preceded the accepted pair. First two E5 pilot calls are saved, both input-valid,
 with energy available, no API failure and no output cap. Queue remains running;
 this is a launch check, not a full-run completion or outcome interpretation.
+
+## Remaining queue approvals and preparation - 2026-11-24, 00:52 IST
+
+Owner approved revised M2: four fixed return-to-task histories, complete input
+length matching, identical target/final query/settings, authored related versus
+other-domain audit, description-only distractors, matched isolation and50-call
+pilot before400 full calls. M2 does not identify a pure interruption-count
+effect because content diversity also changes. Controls are newly frozen:
+their full instructions differ from R2, so no approximate reuse is permitted.
+
+Owner approved E4 native cache verification, separate residency control,
+randomized cold/warm requests, metrics and energy;20-call pilot before400
+measured full calls. Setup/priming/residency/unload HTTP requests are additional.
+Both scored arms are resident; native cached count is required. The intentional
+64-token endpoint is separate from coding truncation. Raw templated inputs,
+common-prefix token counts and a cache/residency/workload gate are frozen.
+
+Owner also approved only a small E3 diagnostic: retry/example feedback crossed
+with last/full history, five seeded tasks, two models, maximum130 calls. Freeze
+10 independently checked feedback examples, remove overlapping final-test
+arguments, report per-partition removal counts. Shared initial outputs and
+costs have explicit provenance; no hidden test decides feedback or continuation.
+Dynamic round schedules use the committed algorithm and are hashed with parent
+keys before each batch. Full E3 still needs owner inspection and authorization.
+
+The new outer queue finishes existing R2 and its scoring, then the approved
+stages sequentially, with completed keys skipped, persistent user pause,
+unchanged safety/quality stops and no elapsed-time cutoff. Existing v3 source,
+config, registrations and raw data remain untouched. New scope/protocol and
+execution manifest are separate in studies/utilisation/remaining-v4.
+
+Preparation validation:10/10 feedback reference checks passed in restricted
+subprocesses; M2 full inputs matched within each target's four loaded arms.
+Largest prepared input counts: M2 full1957, E4 full4055, E3 initial166 tokens;
+input plus reserved output fits the frozen context in every initial schedule.
+Full suite453 passed with14 existing dependency warnings; Ruff and diff checks
+clean. These counts describe preparation, not new model-performance results.
+
+Owner supplied fresh ver11_hwf.CSV. Preflight00:49 IST observed AC1/Best
+performance,500ms cadence,0.202s sensor age and148.91GiB free. PAUSE remains
+active during preparation; first real request must follow commit/hash checks
+and the existing stable idle baseline gate. Never reuse changed-layout ver10.

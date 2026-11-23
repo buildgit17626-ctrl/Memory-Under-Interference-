@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-24",
+  "hypotheses": "Owner C1: competing task descriptions can reduce use of the original specification.",
+  "competing_predictions": "No improvement, reverse differences, or cost without benefit.",
+  "conditions": [
+    "isolated",
+    "neutral",
+    "other_one",
+    "other_three",
+    "similar"
+  ],
+  "outcomes": "See committed PROTOCOL.md; native timings/tokens, qualified CPU energy.",
+  "analysis": "PROTOCOL.md defines task/pair denominators, pilot exclusion and uncertainty.",
+  "exclusions": "No outcome-based task replacement; missing energy never imputed; caps separate.",
+  "interpretation_changers": "Reference/feedback errors; confounding; input mismatch; cache invalidity; censoring, incomplete data, baseline drift and low-resolution windows.",
+  "inference_boundary": "Two small Q4_K_M CPU models, fixed benchmark and one machine.",
+  "config_hash": "fb38bd232c17002d6df4f84a5b0de342569dcf0c1e21d17aaf37f6c801b03244",
+  "stimuli_hash": "88239fe8bf667f7b97985ea64ce2cdc3591744fe91c04735b96bd0a11248f0a9",
+  "schedule_hash": "0d5c3ea21c1f157169744361e1a6b8c294bfaa41abd6e99e3758b6b79796ae50",
+  "call_count": 50,
+  "task_ids": [
+    "HumanEval/102",
+    "HumanEval/115",
+    "HumanEval/39",
+    "HumanEval/162",
+    "HumanEval/150"
+  ],
+  "E3_maximum_calls": null,
+  "E3_dynamic_rounds": null
+}

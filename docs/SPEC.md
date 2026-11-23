@@ -777,3 +777,33 @@ baseline, and never automatically clears. No elapsed-time queue cutoff remains.
 See PROTOCOL.md for outcome definitions, pilot gate, inference boundaries and
 energy caveats. Output-contract interference and other preference families remain
 deferred. No results or morning completion are promised by the call budget.
+
+## Approved remaining M2/E4/E3 queue (2026-11-24)
+
+Owner approved M2 with four static return-to-task conditions and matched complete
+input counts: neutral, similar computational alternative, one other-domain task,
+three other-domain tasks. Same target/query, literal descriptions only, no
+distractor solutions/tests. Publish the authored relationship audit and limits
+of isolating similarity/count/length. Five-task50-call pilot, then400 full calls
+including80 new exact-setting isolation controls, only after validity gate.
+
+E4: prefix0/500/1000/2000/4000, cold/warm, both CPU models,20 repeats;400
+measured calls after a separate20-call pilot. Both measured arms model-resident;
+unload/preload and native cache counters distinguish residency from prefix reuse.
+Setup/priming requests are additional, logged and outside measured-request
+energy. Intentional64-token budget is a workload endpoint, not coding truncation.
+
+E3: approved diagnostic only; five seeded tasks, two models, generic retry or
+validated failing-example feedback, last or full history, maximum130 calls.
+Share initial generations across branches. Fixed feedback cases are removed
+from final scoring partitions; hidden outcomes do not drive repairs or stopping.
+Round materials are deterministically derived from raw parents, hashed before
+generation; algorithm/config/templates committed first. No automatic full E3.
+
+The new outer driver completes and scores saved R2 first, then these stages
+sequentially. Existing frozen v3 artifacts remain unchanged. New scoped configs,
+protocol, manifest and validation are in studies/utilisation/remaining-v4.
+Keep global PAUSE until explicit owner resume with live500ms sensor log, AC and
+Best performance. No elapsed-time cutoff; quality/safety stops and five retries
+remain. Maximum1000 new measured calls beyond340 currently remaining R2 calls;
+E4 setup/priming overhead is additional. Failed gates halt later stages.

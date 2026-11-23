@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-24",
+  "owner_authorized": true,
+  "scope": ["finish_saved_R2", "M2_pilot_then_gated_full", "E4_pilot_then_gated_full", "E3_diagnostic_pilot_only"],
+  "elapsed_time_cutoff": null,
+  "launch_state": "paused_until_fresh_sensor_log_and_explicit_resume",
+  "full_E3_authorized": false,
+  "completed_stages_skipped": true,
+  "frozen_v3_artifacts_modified": false
+}
