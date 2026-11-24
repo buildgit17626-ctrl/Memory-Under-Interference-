@@ -11,3 +11,14 @@ results/*
 !results/.gitkeep
 !results/samples/
 !results/samples/**
+
+# Unpacked release derivatives and bibliography caches are bundled in the versioned ZIP.
+releases/v1/code/
+releases/v1/data/raw/
+releases/v1/data/audit/
+releases/v1/literature/*.html
+releases/v1/manuscript/*.aux
+releases/v1/manuscript/*.out
+releases/v1/manuscript/*.xdv
+releases/v1/manuscript/*.blg
+releases/v1/manuscript/*.log

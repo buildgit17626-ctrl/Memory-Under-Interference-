@@ -107,5 +107,11 @@ Frozen validation records, raw-output provenance and explicit limitations
 support review; AI assistance is not independent scientific validation.
 No author affiliation, contribution allocation or publication acceptance is claimed.
 
-No new software licence is assigned to original project material by this
-publication. Third-party datasets and software retain their existing notices.
+For the Version 1 release candidate, the owner selected MIT for original code
+and CC BY 4.0 for original report/data. Third-party datasets and software retain
+their existing notices; see the release's THIRD_PARTY_NOTICES.md. HumanEval and
+HumanEval+/EvalPlus are not relicensed by that grant.
+
+Version 1 scientific preparation is on a local review branch. Its manuscript,
+public derivatives and archives require owner approval before upload or release;
+no Zenodo/TechRxiv deposit or DOI is implied by these files.

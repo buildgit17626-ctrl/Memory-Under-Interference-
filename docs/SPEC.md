@@ -1,5 +1,16 @@
 # SPEC: The cost of a correct answer
 
+## Authorized Version 1 scientific release preparation (2026-11-24)
+
+Owner requests offline research synthesis, primary-source literature review,
+MemoryGraph source/record audit at c569143ec6be1c767a2c56c59c936f85bd1fc1cb,
+a neutral scientific manuscript/PDF, figures and a redacted reproducibility
+archive. No new model/embedding inference, MemoryGraph features or external
+publication is authorized. Original/frozen evidence and prior audit artifacts
+remain unchanged. Release work is isolated under analysis/memory_release and
+releases/v1. Plan: docs/plans/MUI_V1_SCIENTIFIC_RELEASE.md. Interpretations
+are bounded by the recorded design, posthoc status and disclosed uncertainty.
+
 ## Authorized Memory Under Interference evidence audit (2026-11-24)
 
 Owner requests Phases 1–4 of a final empirical audit before interpreting or

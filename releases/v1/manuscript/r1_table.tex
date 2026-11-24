@@ -1,0 +1,18 @@
+\begin{tabular}{llrrrr}
+\toprule
+Model & Policy & Correct/40 & Input & Output & Net mWh/correct \\
+\midrule
+0.5B & Full history & 14/40 & 1327.8 & 448.4 & 325.38 \\
+0.5B & Target/query & 19/40 & 170.6 & 501.2 & 157.52 \\
+0.5B & Verbatim replay & 15/40 & 1467.8 & 225.2 & 226.92 \\
+0.5B & Lossless compaction & 16/40 & 177.0 & 193.7 & 79.29 \\
+0.5B & Oracle retention & 17/40 & 183.6 & 196.0 & 76.39 \\
+\midrule
+1.5B & Full history & 22/40 & 1327.8 & 69.1 & 154.16 \\
+1.5B & Target/query & 28/40 & 170.6 & 301.6 & 161.21 \\
+1.5B & Verbatim replay & 23/40 & 1467.8 & 75.2 & 163.53 \\
+1.5B & Lossless compaction & 22/40 & 177.0 & 64.6 & 53.00 \\
+1.5B & Oracle retention & 23/40 & 183.6 & 63.6 & 50.20 \\
+\midrule
+\bottomrule
+\end{tabular}
