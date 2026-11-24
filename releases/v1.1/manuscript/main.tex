@@ -1,12 +1,28 @@
 \documentclass[10pt,a4paper,twocolumn]{article}
 \usepackage[margin=19mm,columnsep=6mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{fontspec}
+% Require actual Microsoft Times New Roman; never substitute a metric equivalent.
+% Windows fonts stay installed locally and are not redistributed in the archive.
+\IfFileExists{local-fonts/times.ttf}{
+  \setmainfont{times.ttf}[Path=local-fonts/,
+    BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]
+}{\setmainfont{Times New Roman}}
+\setmonofont{lmmono10-regular.otf}[BoldFont=lmmonolt10-bold.otf,
+  ItalicFont=lmmono10-italic.otf,BoldItalicFont=lmmonolt10-boldoblique.otf]
 \usepackage{ragged2e,sectsty}
 \allsectionsfont{\raggedright}
 \usepackage{microtype,amsmath,amssymb,graphicx,booktabs,longtable,array}
+\usepackage{unicode-math}
+\setmathfont{texgyretermes-math.otf}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{
+  pdftitle={Memory Under Interference: Context Utilization, Specification Confusion, and Inference Efficiency in Small Code Language Models},
+  pdfauthor={Dhruv Brahmbhatt},
+  pdfsubject={Context utilization, specification interference, and inference efficiency},
+  pdfkeywords={code language models, context utilization, specification interference, context retention, inference efficiency, CPU-package energy, memory retrieval}
+}
+\urlstyle{same}
 \usepackage{caption,fancyhdr,float}
 \usepackage{dblfloatfix}
 \usepackage{listings}
@@ -43,20 +59,21 @@ Increasing a language model's context makes more information available, but also
 adds computational work and potentially competing instructions. When does that
 extra information help a model solve the intended task? I investigate this
 question through seven studies containing \MainRequests{} experimental requests
-to quantized Qwen2.5-Coder 0.5B and 1.5B models running on a CPU laptop.
+on HumanEval+-based coding tasks using Qwen2.5-Coder 0.5B and 1.5B models
+with mixed-precision four-bit weights, running on a CPU laptop.
 The experiments vary task descriptions, competing requirements, interruptions,
 retained context and the placement of a code-only preference. In addition to
 testing the requested solution, I test whether an incorrect answer satisfies a
-competing requirement. This posthoc comparison finds \LargeCross{} percentage
+competing requirement. This post-hoc analysis, formulated after data collection, finds \LargeCross{} percentage
 points more such failures under competing than irrelevant context on 1.5B
 (95\% task-bootstrap interval \LargeCrossCI{}). The 0.5B comparison is
 inconclusive, and conservative assumptions about incomplete generations weaken
-the 1.5B result. Retaining context using known relevance labels yields observed
-estimated net CPU-package energy-per-correct-solution reductions of
-\SmallEnergyReduction\% and \LargeEnergyReduction\% for 0.5B and 1.5B relative
-to full history. Accuracy preservation remains uncertain, and differences in
-prompt length, position, instructions and generated output confound attribution
-of these reductions to retention alone. The results motivate evaluating memory
+the 1.5B result. When only known relevant information was retained, the estimated net
+CPU-package energy per correct solution decreased by \SmallEnergyReduction\%
+for the 0.5B model and \LargeEnergyReduction\% for the 1.5B model, compared with
+retaining the full history. However, accuracy preservation remains uncertain,
+and differences in prompt length, position, instructions and generated output
+may also contribute to these savings. The results motivate evaluating memory
 management through the answers it produces and its total computational cost,
 alongside the relevance of the information it supplies.
 \end{abstract}
@@ -100,7 +117,7 @@ evaluation of cost per correct solution that includes failed attempts. The
 comparisons reveal a mixed picture: the larger model's error distribution
 changes in the complete cases, reduced context has lower observed estimated
 cost, and several accuracy and reminder comparisons remain uncertain. The
-posthoc analysis and its sensitivity to incomplete generations are reported
+post-hoc analysis and its sensitivity to incomplete generations are reported
 alongside the positive findings.
 
 These results lead naturally to selective context management. To explore that
@@ -181,7 +198,7 @@ the model's internal reasoning. Finite tests, extraction errors and ordinary
 algorithmic mistakes remain relevant to interpreting every cell.
 
 \begin{figure*}[t]
-\centering\includegraphics[width=\linewidth]{framework.pdf}
+\centering\includegraphics[width=\linewidth,trim=0 38 0 46,clip]{framework.pdf}
 \caption{Observed-data framework. Target and context text are frozen before
 generation. Scoring is separate and restricted. The additional alternative-suite
 analysis uses saved outputs; it does not generate new answers.}
@@ -204,8 +221,8 @@ covered attempts, so missing energy cannot silently change its denominator.
 \section{Experimental Methodology}
 \subsection{Models, tasks and execution}
 The models are \texttt{qwen2.5-coder:0.5b} and
-\texttt{qwen2.5-coder:1.5b}, both Q4\_K\_M quantizations, with exact model
-digests recorded in frozen jobs. Inference used Ollama on Windows 11, an Intel
+\texttt{qwen2.5-coder:1.5b}, both using Q4\_K\_M quantization, a mixed-precision format that stores most
+model weights at four bits. Exact model digests are recorded in frozen jobs. Inference used Ollama on Windows 11, an Intel
 i5-13420H CPU and approximately 16 GB RAM, with eight inference threads and
 \texttt{num\_gpu=0}. Generation was sequential, with randomized interleaved
 condition schedules. Recorded block-start checks observed AC power and Best
@@ -223,10 +240,12 @@ plus isolation, 400; and preference placement, 400. These sum directly to
 saved 76 of 400 planned full requests and is a partial appendix diagnostic.
 The detailed inventory and unfinished studies are documented in the appendix.
 
-The isolated strategy study covers all 164 HumanEval+ tasks, comparing P1 and
-P3\_1 with three temperature-0.2 samples per task/model, context 8,192 and output
-budget 2,048. The strategies differ in both instructions and an external
-example, so this is not a pure example-effect contrast. Initial context load
+The isolated strategy study covers all 164 HumanEval+ tasks, comparing a code-only instruction (P1) with an example-guided
+instruction (P3\_1) and three temperature-0.2 samples per task/model, context 8,192 and output
+budget 2,048. P1 asks, ``Complete the Python function. Return only code. P3\_1 asks,
+``Complete the Python function following the example, and includes one external
+example. They differ in both instruction and example content, so this is not
+a pure example-effect contrast. Initial context load
 uses 20 held-out-eligible tasks per model, with fresh temperature-0
 no-filler outcomes; the sample used for selection is never the isolation
 comparator. Its model-selected populations and weaker renamed-specification
@@ -235,7 +254,8 @@ distractors remain separate from the revised designs.
 In my later studies, I use the original fixed 40-task roster for both models. I
 use temperature 0 and one generation per task-condition-model. Context is
 32,768 for task bundles, 16,384 for retention/revised interference/interruptions,
-and 8,192 for preferences. Output budgets are 2,048 except that active bundles
+and 8,192 for preferences. Output caps---the maximum number of generated tokens allowed per call---are
+2,048 except that active bundles
 receive 2,048 per requested function. Explicit context reservations and native
 prompt counts detect mismatches; invalid calls are reported, not repaired by
 silent parameter changes.
@@ -284,10 +304,12 @@ code-only instructions while preserving the target/query and distractor history.
 \subsection{Statistics, exclusions and energy}
 Intervals use 2,000 paired task-bootstrap draws with seed 1732. Binary pairs use
 exact discordant-pair McNemar tests; task means over repeated cells use exact
-paired sign swaps. Holm correction is within specified families: two isolated
+paired sign swaps. Holm multiple-comparison correction adjusts test $p$-values to control the
+family-wise probability of one or more false rejections. It is applied within
+specified families: two isolated
 strategy tests, two initial-load primary tests, two revised-interference primary
 tests, six retention tests and six interruption tests. The new cross-pass audit
-uses four posthoc tests. These corrections do not control every analysis ever
+uses four post-hoc tests. These corrections do not control every analysis ever
 examined in the project. Intervals are pointwise, not simultaneous family
 intervals. Null tests do not establish equivalent accuracy.
 
@@ -307,7 +329,7 @@ both retained. End/midpoint subtraction, drift exclusions and short-window
 exclusions are secondary sensitivities. Per-condition totals are preferred to
 precise interpretations of short individual windows. The registered primary
 cache-energy experiment is incomplete; retention energy remains descriptive or
-posthoc. No whole-system electricity, carbon, GPU or cloud inference is measured.
+post-hoc. No whole-system electricity, carbon, GPU or cloud inference is measured.
 
 \section{Contextual Interference}
 \subsection{Does task content matter beyond length?}
@@ -317,7 +339,7 @@ compares correctness of the designated target function under passive, active and
 neutral conditions. Passive-minus-filler estimates tend to be negative across
 $K$ in this roster, but many adjusted comparisons are inconclusive. The 0.5B
 $K=6$ estimate is $-25$ percentage points, conditional interval $[-37.5,-12.5]$,
-with Holm $p=0.015625$ in its eight-comparison posthoc family. This is evidence about the fixed task combinations tested here, rather than
+with Holm $p=0.015625$ in its eight-comparison post-hoc family. This is evidence about the fixed task combinations tested here, rather than
 a general penalty for multitasking.
 
 Tasks recur in several bundles, and all bundles are connected through shared
@@ -363,7 +385,7 @@ figure's CSV source table.}
 
 Overall accuracy does not describe which requirement a wrong answer follows.
 Testing the same saved programs against the competing specification reveals a
-different pattern. For 1.5B, the posthoc difference in
+different pattern. For 1.5B, the post-hoc difference in
 distractor-only success between competing and irrelevant contexts is
 \LargeCross{} percentage points, interval \LargeCrossCI{}, across
 \LargeCrossN{} complete matched tasks; Holm $p=\LargeCrossP{}$. Versus
@@ -441,7 +463,7 @@ assignments (Figure~\ref{fig:paired}).
 \begin{figure*}[t]
 \centering\includegraphics[width=.98\linewidth]{paired_effects.pdf}
 \caption{Paired task effects for revised interference, with 95\% pointwise
-bootstrap intervals. Cross-pass comparisons are posthoc. Adverse-bound rows
+bootstrap intervals. Cross-pass comparisons are post-hoc. Adverse-bound rows
 assign censored indicators against the observed association; target accuracy
 uses registered bounded outcomes. Different endpoints and populations are
 labelled rather than pooled.}
@@ -550,7 +572,7 @@ asks for code only but does not explicitly prohibit Markdown fences. The zero sc
 was forgotten.
 
 To understand the zero scores, I retained the original metric and added a
-separate posthoc format check recording fences,
+separate post-hoc format check recording fences,
 outside prose, comments, docstrings and a fence-tolerant syntax predicate.
 For 1.5B, each explicit-preference condition has 40/40 fence-tolerant outputs,
 whereas no-preference has 21/40. For 0.5B, explicit conditions range from
@@ -575,7 +597,8 @@ information without automatically passing the entire history to the model. Its
 \href{https://github.com/buildgit17626-ctrl/MemoryGraph}{implementation} is
 examined at commit
 \texttt{c569143ec6be1c767a2c56c59c936f85bd1fc1cb}. It stores editable local
-plain-text memories; TF-IDF and pretrained sentence embeddings rank candidates.
+plain-text memories; term-frequency--inverse-document-frequency (TF-IDF)
+lexical scores and pretrained sentence embeddings rank candidates.
 A NetworkX bipartite graph links memories to a small fixed entity vocabulary.
 The graph-assisted method adds a bounded bonus to lexical scores for shared
 entities. This is not full GraphRAG, automatic memory extraction, or learned
@@ -591,16 +614,18 @@ arbitrary contradictions. No usability, trust, personalization or energy benefit
 was measured. Figure~\ref{fig:mg} describes the existing components only.
 
 \begin{figure*}[t]
-\centering\includegraphics[width=\linewidth]{memorygraph_architecture.pdf}
+\centering\includegraphics[width=\linewidth,trim=0 12 0 46,clip]{memorygraph_architecture.pdf}
 \caption{Existing companion prototype, not an evaluated intervention in the
 main study. Candidate selection and approval precede optional inference. The
-separate saved synthetic benchmark evaluates ranking only; MG1 remains unrun.}
+separate saved synthetic benchmark evaluates ranking only. The proposed
+end-to-end MemoryGraph evaluation (MG1) has not been conducted.}
 \label{fig:mg}
 \end{figure*}
 
 My saved synthetic evaluation contains 600 labelled query--memory pairs,
 24 fictional profiles and 120 queries with five candidate memories each.
-Exactly one candidate is labelled relevant. Recomputed embedding MRR is
+Exactly one candidate is labelled relevant. Recomputed embedding Mean Reciprocal Rank (MRR), the mean of one divided by
+the relevant memory's rank for each query, is
 \EmbeddingMRR{}, versus \LexicalMRR{} for TF-IDF, using the saved scores and
 stable tie ordering. The embedding snapshot and data hashes are retained.
 The offline lexical benchmark fits its vocabulary across the saved corpus;
@@ -620,7 +645,7 @@ successful API responses reach the 128-token output budget, and correctness
 and energy were not scored. A preceding failed demonstration run is retained separately. This is a concrete example of availability without the intended
 surface behavior, not an estimate of the prototype's benefit or its failure rate.
 I do not pool the HumanEval+ study with this synthetic benchmark. An
-integrated MG1 comparison remains Version 2 work.
+integrated MemoryGraph comparison remains future work.
 
 \section{Discussion}
 The experiments trace a progression from prompt design to context selection.
@@ -643,8 +668,8 @@ against expecting one consistent effect from a longer history or a reminder.
 
 The retention results connect this behavioral question to efficiency. Shorter
 oracle contexts have lower observed estimated energy per correct solution, but
-accuracy preservation has not been established. Shorter inputs change prefill
-work; wording and position can change generated output; output length and failed
+accuracy preservation has not been established. Shorter inputs change prefill work, the computation used to process the input
+before generating tokens; wording and position can change generated output; output length and failed
 attempts change the cost ratio. The oracle also avoids the work of discovering
 what is relevant. A practical policy must be evaluated with that selection cost
 included, rather than inherit the oracle's advantage by assumption.
@@ -677,7 +702,7 @@ models, other quantizations, GPUs or cloud deployments.
 
 The study developed through revisions and is partly exploratory. Registrations and dated amendments
 are preserved, but the final synthesis and cross-specification audit are
-posthoc. Local Git hashes support provenance, not independent public
+post-hoc. Local Git hashes support provenance, not independent public
 timestamping. Family correction does not erase prior exploration. The separate
 synthetic prototype benchmark is small and templated, with no user study.
 
@@ -710,29 +735,41 @@ both the behavior it produces and its total computational cost. MemoryGraph
 provides an implemented direction for that subsequent investigation.
 
 \section{Data and Code Availability}
-\begingroup\raggedright
-My code is available in the
+\begingroup\RaggedRight
+Code and research artifacts accompany this report in the
 \href{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-}{GitHub repository}.
-This local Version 1.1 editorial revision retains the reserved Zenodo DOI
-\href{https://doi.org/10.5281/zenodo.24500468}{10.5281/zenodo.24500468}
-and the proposed
-\href{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0}{planned v1.1.0 GitHub release}.
-The DOI is reserved; its registration and public accessibility have not been
-confirmed. This editorial revision preserves the scientific findings and has
-not been published externally.
-I will complete Zenodo publication separately. The artifacts supply code,
-frozen designs, transformed raw journals,
-per-task scores, numerical power/time samples, analysis tables and source/hash
-mappings. Original raw evidence remains unchanged locally. Unnecessary local
-paths and process/account metadata are removed only in public derivatives;
-original/public hashes distinguish them. Full multi-sensor CSV mirrors are not
-redistributed; the numerical CPU-package/time exports reproduce the included
-energy integrations. They do not calibrate the sensor or reconstruct other
-hardware channels. The archive is an analysis release, not a claim that its
-sanitized files can resume the original frozen supervisor.
+The version identifier is
+\href{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0}{v1.1.0},
+with archive DOI
+\href{https://doi.org/10.5281/zenodo.24500468}{10.5281/zenodo.24500468}.
+The evidence archive contains frozen configurations, exact prompts, transformed
+raw-response journals, per-task scores, numerical power/time samples, analysis
+scripts, figures and integrity manifests. The separate
+\href{https://github.com/buildgit17626-ctrl/Prompt-Energy}{Prompt-Energy} and
+\href{https://github.com/buildgit17626-ctrl/MemoryGraph}{MemoryGraph}
+repositories provide the preceding experiment and companion prototype.
+
+After extracting the reproducibility archive and installing the pinned
+analysis-only dependencies, run \texttt{python -I verify\_public.py --full}
+to check saved-data counts, principal effects, confidence intervals and energy
+integrations. The archive README supplies environment and installation commands.
+The demonstrated run uses Windows and Python 3.13; it does not regenerate model
+outputs, independently rescore programs, calibrate sensors or establish
+cross-platform portability.
+
+Public derivatives remove unnecessary local paths and process/account metadata;
+source/public hashes record the transformations. Original raw observations are
+unchanged. Full multi-sensor CSV mirrors are not redistributed. Included numerical
+CPU-package power/time exports reproduce energy integrations, without reconstructing
+other sensor channels. The sanitized archive supports analysis rather than
+resumption of the original frozen supervisor.
 \par\endgroup
 
 \section{AI-Assistance Disclosure}
+\paragraph{Author contribution.}
+I contributed the research questions, design decisions, experiment oversight
+and interpretation review. I conducted this work independently.
+
 I used AI assistance for setup, autonomous Ollama execution,
 harness and analysis coding, distractor construction, auditing, literature
 organization and manuscript drafting. I subjected AI-generated constructions
@@ -762,7 +799,7 @@ E0 is the isolated strategy comparison; initial M3 is selected-task context
 load; M1 is task bundling; revised M3/R2 is semantic interference; M2 is static
 return-to-task interference; R1 is retention; E5 is preference placement.
 The table reproduces specified primary contrasts; it does not relabel the
-posthoc synthesis as a confirmatory study. Full intervals, transition IDs and
+post-hoc synthesis as a confirmatory study. Full intervals, transition IDs and
 sensitivity populations are in the machine-readable archive.
 E5 rows use its original strict-adherence endpoint and four-test Holm family,
 not the secondary fence-tolerant metric. All-zero paired differences yield

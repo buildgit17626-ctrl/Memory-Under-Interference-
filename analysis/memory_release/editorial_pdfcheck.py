@@ -13,6 +13,34 @@ BASE = Path(__file__).resolve().parents[2] / "releases/v1.1"
 def main():
     path = BASE / "manuscript/main.pdf"
     reader = PdfReader(path)
+    fonts = {}
+    visited = set()
+
+    def inspect_resources(resources):
+        resources = resources.get_object()
+        for entry in (
+            resources.get("/Font", {}).get_object().values() if resources.get("/Font") else []
+        ):
+            font = entry.get_object()
+            descendants = font.get("/DescendantFonts")
+            base = descendants[0].get_object() if descendants else font
+            descriptor = base.get("/FontDescriptor")
+            descriptor = descriptor.get_object() if descriptor else {}
+            fonts[str(font["/BaseFont"])] = any(
+                key in descriptor for key in ("/FontFile", "/FontFile2", "/FontFile3")
+            )
+        objects = resources.get("/XObject")
+        for entry in objects.get_object().values() if objects else []:
+            key = (getattr(entry, "idnum", None), getattr(entry, "generation", None))
+            if key in visited:
+                continue
+            visited.add(key)
+            obj = entry.get_object()
+            if obj.get("/Resources"):
+                inspect_resources(obj["/Resources"])
+
+    for page in reader.pages:
+        inspect_resources(page["/Resources"])
     texts = [p.extract_text() for p in reader.pages]
     text = "\n".join(texts)
     expected = [
@@ -64,6 +92,18 @@ def main():
         "missing_key_numbers": absent,
         "removed_byline_text_hits": byline_hits,
         "pdf_author_metadata": reader.metadata.get("/Author"),
+        "authorship_metadata_correct": reader.metadata.get("/Author") == "Dhruv Brahmbhatt",
+        "pdf_title": reader.metadata.get("/Title"),
+        "pdf_subject": reader.metadata.get("/Subject"),
+        "pdf_keywords": reader.metadata.get("/Keywords"),
+        "embedded_fonts": fonts,
+        "all_fonts_embedded": all(fonts.values()),
+        "times_new_roman_embedded": any("TimesNewRomanPSMT" in name for name in fonts),
+        "bold_times_new_roman_embedded": any("TimesNewRomanPS-BoldMT" in name for name in fonts),
+        "font_scope": (
+            "Times New Roman prose; TeX Gyre Termes Math; Latin Modern Mono code; "
+            "unchanged figure labels use DejaVu Serif."
+        ),
         "missing_bibliography_entries": sorted(citations - entries),
         "cited_entries": len(citations),
         "verified_publications": len(entries),
@@ -85,6 +125,10 @@ def main():
         or status["undefined_reference_warnings"]
         or bounds
         or status["overfull_boxes"]
+        or not status["authorship_metadata_correct"]
+        or not status["all_fonts_embedded"]
+        or not status["times_new_roman_embedded"]
+        or not status["bold_times_new_roman_embedded"]
     ):
         raise ValueError("Manuscript PDF quality gate failed")
 

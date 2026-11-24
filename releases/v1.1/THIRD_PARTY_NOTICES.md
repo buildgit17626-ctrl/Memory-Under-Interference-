@@ -30,3 +30,5 @@ No conference logo, acceptance, institutional endorsement or DOI is invented.
 External publication requires the owner's final approval. Third-party exceptions
 and any downstream rights in model-generated code remain explicit; this record
 is not a legal opinion on every possible downstream use.
+
+Typography: Times New Roman comes from the licensed system font installation and is not redistributed as font files. The PDF embeds the used faces. TeX Gyre Termes Math and Latin Modern Mono come from the TeX bundle; DejaVu Serif remains in the original plots. These fonts retain their respective rights/notices; no new font binaries are bundled in the archives.

@@ -33,3 +33,4 @@ releases/v1.1/manuscript/*.out
 releases/v1.1/manuscript/*.xdv
 releases/v1.1/manuscript/*.blg
 releases/v1.1/manuscript/*.log
+releases/v1.1/manuscript/local-fonts/

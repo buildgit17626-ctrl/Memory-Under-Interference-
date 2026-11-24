@@ -1,0 +1,428 @@
+{
+  "checked": "2026-11-24",
+  "records": [
+    {
+      "key": "lost",
+      "primary_url": "https://aclanthology.org/2024.tacl-1.9/",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Nelson F. Liu",
+        "Kevin Lin",
+        "John Hewitt",
+        "Ashwin Paranjape",
+        "Michele Bevilacqua",
+        "Fabio Petroni",
+        "Percy Liang"
+      ],
+      "year": "2024",
+      "doi": "10.1162/tacl_a_00638",
+      "dates": [
+        "2024"
+      ],
+      "publication_fields": {
+        "journal": "Transactions of the Association for Computational Linguistics",
+        "volume": "12",
+        "pages": "157--173",
+        "doi": "10.1162/tacl_a_00638"
+      },
+      "primary_sha256": "b33ddc8392f57d7cb28c26bcda8ae0720ea3d9bf185b34a4a03b0bb1b59a871b",
+      "status": "PASS"
+    },
+    {
+      "key": "interference",
+      "primary_url": "https://aclanthology.org/2024.emnlp-main.811/",
+      "title": "LLM Task Interference: An Initial Study on the Impact of Task-Switch in Conversational History",
+      "authors": [
+        "Akash Gupta",
+        "Ivaxi Sheth",
+        "Vyas Raina",
+        "Mark Gales",
+        "Mario Fritz"
+      ],
+      "year": "2024",
+      "doi": "10.18653/v1/2024.emnlp-main.811",
+      "dates": [
+        "2024/11"
+      ],
+      "publication_fields": {
+        "booktitle": "Proceedings of EMNLP 2024",
+        "pages": "14633--14652",
+        "doi": "10.18653/v1/2024.emnlp-main.811"
+      },
+      "primary_sha256": "a770e0b97ebac5f2ddfbee2f6eb1525a3cf9c2aff1ee571f9b27d12608ee6003",
+      "status": "PASS"
+    },
+    {
+      "key": "multitask",
+      "primary_url": "https://aclanthology.org/2024.acl-long.304/",
+      "title": "Multi-Task Inference: Can Large Language Models Follow Multiple Instructions at Once?",
+      "authors": [
+        "Guijin Son",
+        "Sangwon Baek",
+        "Sangdae Nam",
+        "Ilgyun Jeong",
+        "Seungone Kim"
+      ],
+      "year": "2024",
+      "doi": "10.18653/v1/2024.acl-long.304",
+      "dates": [
+        "2024/8"
+      ],
+      "publication_fields": {
+        "booktitle": "Proceedings of ACL 2024 (Volume 1: Long Papers)",
+        "pages": "5606--5627",
+        "doi": "10.18653/v1/2024.acl-long.304"
+      },
+      "primary_sha256": "daeed5111ff94d52b5c087c14df511992927e5366ee51a123887f05016a709a8",
+      "status": "PASS"
+    },
+    {
+      "key": "prefeval",
+      "primary_url": "https://arxiv.org/abs/2502.09597",
+      "title": "Do LLMs Recognize Your Preferences? Evaluating Personalized Preference Following in LLMs",
+      "authors": [
+        "Zhao, Siyan",
+        "Hong, Mingyi",
+        "Liu, Yang",
+        "Hazarika, Devamanyu",
+        "Lin, Kaixiang"
+      ],
+      "year": "2025",
+      "doi": null,
+      "dates": [
+        "2025/02/13"
+      ],
+      "publication_fields": {
+        "booktitle": "International Conference on Learning Representations"
+      },
+      "primary_sha256": "7b60f7ce0ebe6d4a12651494d760e5cac6b15be78376fd21c121d7739e79021f",
+      "status": "PASS"
+    },
+    {
+      "key": "longmem",
+      "primary_url": "https://arxiv.org/abs/2410.10813",
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "authors": [
+        "Wu, Di",
+        "Wang, Hongwei",
+        "Yu, Wenhao",
+        "Zhang, Yuwei",
+        "Chang, Kai-Wei",
+        "Yu, Dong"
+      ],
+      "year": "2025",
+      "doi": null,
+      "dates": [
+        "2024/10/14"
+      ],
+      "publication_fields": {
+        "booktitle": "International Conference on Learning Representations"
+      },
+      "primary_sha256": "ca85151e7848aea0a7e54d52cfe4375ad6c00e48afe1935f5d24732136454f90",
+      "status": "PASS"
+    },
+    {
+      "key": "humaneval",
+      "primary_url": "https://arxiv.org/abs/2107.03374",
+      "title": "Evaluating Large Language Models Trained on Code",
+      "authors": [
+        "Chen, Mark",
+        "Tworek, Jerry",
+        "Jun, Heewoo",
+        "Yuan, Qiming",
+        "Pinto, Henrique Ponde de Oliveira",
+        "Kaplan, Jared",
+        "Edwards, Harri",
+        "Burda, Yuri",
+        "Joseph, Nicholas",
+        "Brockman, Greg",
+        "Ray, Alex",
+        "Puri, Raul",
+        "Krueger, Gretchen",
+        "Petrov, Michael",
+        "Khlaaf, Heidy",
+        "Sastry, Girish",
+        "Mishkin, Pamela",
+        "Chan, Brooke",
+        "Gray, Scott",
+        "Ryder, Nick",
+        "Pavlov, Mikhail",
+        "Power, Alethea",
+        "Kaiser, Lukasz",
+        "Bavarian, Mohammad",
+        "Winter, Clemens",
+        "Tillet, Philippe",
+        "Such, Felipe Petroski",
+        "Cummings, Dave",
+        "Plappert, Matthias",
+        "Chantzis, Fotios",
+        "Barnes, Elizabeth",
+        "Herbert-Voss, Ariel",
+        "Guss, William Hebgen",
+        "Nichol, Alex",
+        "Paino, Alex",
+        "Tezak, Nikolas",
+        "Tang, Jie",
+        "Babuschkin, Igor",
+        "Balaji, Suchir",
+        "Jain, Shantanu",
+        "Saunders, William",
+        "Hesse, Christopher",
+        "Carr, Andrew N.",
+        "Leike, Jan",
+        "Achiam, Josh",
+        "Misra, Vedant",
+        "Morikawa, Evan",
+        "Radford, Alec",
+        "Knight, Matthew",
+        "Brundage, Miles",
+        "Murati, Mira",
+        "Mayer, Katie",
+        "Welinder, Peter",
+        "McGrew, Bob",
+        "Amodei, Dario",
+        "McCandlish, Sam",
+        "Sutskever, Ilya",
+        "Zaremba, Wojciech"
+      ],
+      "year": "2021",
+      "doi": null,
+      "dates": [
+        "2021/07/07"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "a3c4f548b0712ae6efeb3a4af3ebce52a8296274c35cf293fef8ca28d04fbd15",
+      "status": "PASS"
+    },
+    {
+      "key": "evalplus",
+      "primary_url": "https://arxiv.org/abs/2305.01210",
+      "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation",
+      "authors": [
+        "Liu, Jiawei",
+        "Xia, Chunqiu Steven",
+        "Wang, Yuyao",
+        "Zhang, Lingming"
+      ],
+      "year": "2023",
+      "doi": null,
+      "dates": [
+        "2023/05/02"
+      ],
+      "publication_fields": {
+        "booktitle": "Advances in Neural Information Processing Systems",
+        "volume": "36"
+      },
+      "primary_sha256": "5dd841605fa43f04952043399635f2fbdeefbda5c706e2d73c5d92b18f20d316",
+      "status": "PASS"
+    },
+    {
+      "key": "qwen",
+      "primary_url": "https://arxiv.org/abs/2409.12186",
+      "title": "Qwen2.5-Coder Technical Report",
+      "authors": [
+        "Hui, Binyuan",
+        "Yang, Jian",
+        "Cui, Zeyu",
+        "Yang, Jiaxi",
+        "Liu, Dayiheng",
+        "Zhang, Lei",
+        "Liu, Tianyu",
+        "Zhang, Jiajun",
+        "Yu, Bowen",
+        "Lu, Keming",
+        "Dang, Kai",
+        "Fan, Yang",
+        "Zhang, Yichang",
+        "Yang, An",
+        "Men, Rui",
+        "Huang, Fei",
+        "Zheng, Bo",
+        "Miao, Yibo",
+        "Quan, Shanghaoran",
+        "Feng, Yunlong",
+        "Ren, Xingzhang",
+        "Ren, Xuancheng",
+        "Zhou, Jingren",
+        "Lin, Junyang"
+      ],
+      "year": "2024",
+      "doi": null,
+      "dates": [
+        "2024/09/18"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "3348da44de2c785178b6014c8c750e14fc4c3627267e9220e9127d2273ed05e1",
+      "status": "PASS"
+    },
+    {
+      "key": "sustainable",
+      "primary_url": "https://aclanthology.org/2025.naacl-long.632/",
+      "title": "Towards Sustainable NLP: Insights from Benchmarking Inference Energy in Large Language Models",
+      "authors": [
+        "Soham Poddar",
+        "Paramita Koley",
+        "Janardan Misra",
+        "Niloy Ganguly",
+        "Saptarshi Ghosh"
+      ],
+      "year": "2025",
+      "doi": "10.18653/v1/2025.naacl-long.632",
+      "dates": [
+        "2025/4"
+      ],
+      "publication_fields": {
+        "booktitle": "Proceedings of NAACL 2025 (Volume 1: Long Papers)",
+        "pages": "12688--12704",
+        "doi": "10.18653/v1/2025.naacl-long.632"
+      },
+      "primary_sha256": "1d1f7053187a11eb7103323cd65e2ba24b5d98f222ca3beff6e61a5a9e580fe6",
+      "status": "PASS"
+    },
+    {
+      "key": "slmenergy",
+      "primary_url": "https://arxiv.org/abs/2604.02776",
+      "title": "Evaluating the Environmental Impact of using SLMs and Prompt Engineering for Code Generation",
+      "authors": [
+        "Mamun, Md Afif Al",
+        "Nath, Sayan",
+        "Uddin, Gias",
+        "Deb, Novarun"
+      ],
+      "year": "2026",
+      "doi": null,
+      "dates": [
+        "2026/04/03"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "9c0b834795b64f045fae0676104e9c27501651dae837f10636d59284788f5626",
+      "status": "PASS"
+    },
+    {
+      "key": "hierarchy",
+      "primary_url": "https://arxiv.org/abs/2404.13208",
+      "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+      "authors": [
+        "Wallace, Eric",
+        "Xiao, Kai",
+        "Leike, Reimar",
+        "Weng, Lilian",
+        "Heidecke, Johannes",
+        "Beutel, Alex"
+      ],
+      "year": "2024",
+      "doi": null,
+      "dates": [
+        "2024/04/19"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "61f35a451712f1793297038995655a626f1d61ede90b7b4e333662e0e21f55db",
+      "status": "PASS"
+    },
+    {
+      "key": "graphrag",
+      "primary_url": "https://arxiv.org/abs/2404.16130",
+      "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+      "authors": [
+        "Edge, Darren",
+        "Trinh, Ha",
+        "Cheng, Newman",
+        "Bradley, Joshua",
+        "Chao, Alex",
+        "Mody, Apurva",
+        "Truitt, Steven",
+        "Metropolitansky, Dasha",
+        "Ness, Robert Osazuwa",
+        "Larson, Jonathan"
+      ],
+      "year": "2024",
+      "doi": null,
+      "dates": [
+        "2024/04/24"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "ca7c30847d41afdfcb885b1dd877717bfc30b7413f2450941ba58d2cc882b32c",
+      "status": "PASS"
+    },
+    {
+      "key": "mem0",
+      "primary_url": "https://arxiv.org/abs/2504.19413",
+      "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "authors": [
+        "Chhikara, Prateek",
+        "Khant, Dev",
+        "Aryan, Saket",
+        "Singh, Taranjeet",
+        "Yadav, Deshraj"
+      ],
+      "year": "2025",
+      "doi": null,
+      "dates": [
+        "2025/04/28"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "0a7de4bea73f17b0dfce757b2d565f896fa3bf64290d83a4b24d7386f54a4fb5",
+      "status": "PASS"
+    },
+    {
+      "key": "evalmem",
+      "primary_url": "https://arxiv.org/abs/2609.22231",
+      "title": "EvalMem: An Operation-Level Diagnostic Framework for Long-Term Memory Systems",
+      "authors": [
+        "Liu, Zeyu",
+        "Zhong, Jian",
+        "Han, Rongduo",
+        "Wu, Ziyang",
+        "Tang, Shunye",
+        "He, Chenghao",
+        "Yang, Yaxuan",
+        "Qiu, Yihang",
+        "Wang, Ailing",
+        "Liang, Xiao",
+        "Xie, Guohuan",
+        "Xue, Xiaokang",
+        "Li, Gongchen",
+        "Zhang, Haining",
+        "Wang, Wei"
+      ],
+      "year": "2026",
+      "doi": null,
+      "dates": [
+        "2026/09/03"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "4349e5d7dbb7039874758f7f582c5a3b3ee7a18203ef21d79ab0453d441db06c",
+      "status": "PASS"
+    },
+    {
+      "key": "longmemv2",
+      "primary_url": "https://arxiv.org/abs/2605.12493",
+      "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
+      "authors": [
+        "Wu, Di",
+        "Ji, Zixiang",
+        "Kawatkar, Asmi",
+        "Kwan, Bryan",
+        "Gu, Jia-Chen",
+        "Peng, Nanyun",
+        "Chang, Kai-Wei"
+      ],
+      "year": "2026",
+      "doi": null,
+      "dates": [
+        "2026/05/12"
+      ],
+      "publication_fields": {},
+      "primary_sha256": "74a4682af8f6aeff209f3470ee507b1eee5d2d7259cf3d7eb7d763d0544f703b",
+      "status": "PASS"
+    }
+  ],
+  "count": 15,
+  "method": "Current primary metadata matched to archived primary title/author/DOI records; conference years/fields cross-checked against primary pages, arXiv identifiers retained.",
+  "venue_checks": {
+    "prefeval": "ICLR 2025: primary arXiv comments",
+    "longmem": "ICLR 2025: primary arXiv comments",
+    "evalplus": "NeurIPS 2023, volume 36: https://proceedings.neurips.cc/paper_files/paper/2023/hash/43e9d647ccd3e4b7b5baab53f0368686-Abstract.html",
+    "ACL_records": "DOIs, years and page ranges checked on respective ACL Anthology publication pages"
+  }
+}

@@ -1,214 +1,213 @@
 Memory Under Interference:
-Context Utilization, Speciﬁcation Confusion, and Inference Eﬃciency
+Context Utilization, Specification Confusion, and Inference Efficiency
 in Small Code Language Models
 Abstract
-Increasing a language model’s context makes more
-information available, but also adds computational
-work and potentially competing instructions. When
-does that extra information help a model solve the
-intended task? I investigate this question through
-seven studies containing 5,528 experimental requests
-to quantized Qwen2.5-Coder 0.5B and 1.5B models
-running on a CPU laptop. The experiments vary task
-descriptions, competing requirements, interruptions,
-retained context and the placement of a code-only
-preference. In addition to testing the requested so-
-lution, I test whether an incorrect answer satisﬁes
-a competing requirement. This posthoc comparison
-ﬁnds 8.97 percentage points more such failures un-
-der competing than irrelevant context on 1.5B (95%
-task-bootstrap interval [3.21, 16.67]). The 0.5B com-
-parison is inconclusive, and conservative assumptions
-about incomplete generations weaken the 1.5B re-
-sult. Retaining context using known relevance labels
-yields observed estimated net CPU-package energy-
-per-correct-solution reductions of 76.5% and 67.4%
-for 0.5B and 1.5B relative to full history. Accuracy
-preservation remains uncertain, and diﬀerences in
-prompt length, position, instructions and generated
-output confound attribution of these reductions to re-
-tention alone. The results motivate evaluating mem-
-ory management through the answers it produces
-and its total computational cost, alongside the rele-
-vance of the information it supplies.
+Increasing a language model’s context makes more infor-
+mation available, but also adds computational work and
+potentially competing instructions. When does that ex-
+tra information help a model solve the intended task? I
+investigate this question through seven studies contain-
+ing 5,528 experimental requests on HumanEval+-based
+coding tasks using Qwen2.5-Coder 0.5B and 1.5B mod-
+els with mixed-precision four-bit weights, running on a
+CPU laptop. The experiments vary task descriptions, com-
+peting requirements, interruptions, retained context and
+the placement of a code-only preference. In addition to
+testing the requested solution, I test whether an incorrect
+answer satisfies a competing requirement. This post-hoc
+analysis, formulated after data collection, finds 8.97 per-
+centage points more such failures under competing than
+irrelevant context on 1.5B (95% task-bootstrap interval
+[3.21, 16.67]). The 0.5B comparison is inconclusive, and
+conservative assumptions about incomplete generations
+weaken the 1.5B result. When only known relevant in-
+formation was retained, the estimated net CPU-package
+energy per correct solution decreased by 76.5% for the
+0.5B model and 67.4% for the 1.5B model, compared with
+retaining the full history. However, accuracy preservation
+remains uncertain, and differences in prompt length, posi-
+tion, instructions and generated output may also contribute
+to these savings. The results motivate evaluating memory
+management through the answers it produces and its total
+computational cost, alongside the relevance of the informa-
+tion it supplies.
 1 Introduction
-A coding assistant often receives more than the task
-it must solve. Its context may contain earlier re-
-quests, examples, preferences and descriptions of re-
-lated problems. Keeping that history can preserve
-useful information. It can also leave an old require-
-ment beside a new one, increasing both the amount
-of text to process and the chance of producing a
-plausible answer to the wrong problem. The cen-
-tral question is whether the model uses the informa-
-tion needed for the current task, rather than simply
-whether that information ﬁts in its context.
-This question grew out of Prompt-Energy, my ear-
-lier experiment on how prompt design relates to code
-correctness, token use, latency and estimated infer-
-ence energy. Its implementation and report showed
-me why response length and the cost of unsuccessful
-attempts belong in an evaluation of prompting. The
-present study asks a broader question: what happens
-when context accumulates, and useful instructions
-appear alongside irrelevant or competing informa-
-tion? Prompt-Energy motivated this work, but its
-earlier observations are a separate dataset and are
-not pooled with the experiments reported here.
-Existing research shows that context position mat-
-ters, that conversation history can interfere with a
-new task, and that preferences become diﬃcult to fol-
-low in long interactions [ 4, 7, 15]. Other work ﬁnds
-beneﬁts from combining tasks [ 11]. More context
-is therefore neither inherently useful nor inherently
-harmful. I examine when its content matters for two
-small local code models, using executable tests to dis-
-tinguish the requested behavior from a competing
+A coding assistant often receives more than the task it
+must solve. Its context may contain earlier requests, ex-
+amples, preferences and descriptions of related problems.
+Keeping that history can preserve useful information. It
+can also leave an old requirement beside a new one, in-
+creasing both the amount of text to process and the chance
+of producing a plausible answer to the wrong problem.
+The central question is whether the model uses the in-
+formation needed for the current task, rather than simply
+whether that information fits in its context.
+This question grew out of Prompt-Energy, my earlier ex-
+periment on how prompt design relates to code correct-
+ness, token use, latency and estimated inference energy.
+Its implementation and report showed me why response
+length and the cost of unsuccessful attempts belong in an
+evaluation of prompting. The present study asks a broader
+question: what happens when context accumulates, and
+useful instructions appear alongside irrelevant or compet-
+ing information? Prompt-Energy motivated this work, but
+its earlier observations are a separate dataset and are not
+pooled with the experiments reported here.
+Existing research shows that context position matters, that
+conversation history can interfere with a new task, and that
+preferences become difficult to follow in long interactions
+[4, 7, 15]. Other work finds benefits from combining tasks
+[11]. More context is therefore neither inherently useful
+nor inherently harmful. I examine when its content matters
+for two small local code models, using executable tests
+to distinguish the requested behavior from a competing
 behavior.
-Three questions guide the experiments. RQ1: Does
-additional task content change correctness compared
-with similarly long neutral text? RQ2: When an an-
-swer is wrong, does it satisfy a competing require-
-ment present in context? RQ3: How do context-
-retention policies and preference instructions relate
-to correctness and computational cost?
-The contribution is a set of paired code-task com-
-parisons with inspectable prompts and outputs, a
-cross-speciﬁcation diagnosis of failures, and an evalu-
-ation of cost per correct solution that includes failed
-attempts. The comparisons reveal a mixed picture:
-the larger model’s error distribution changes in the
-complete cases, reduced context has lower observed
-estimated cost, and several accuracy and reminder
-comparisons remain uncertain. The posthoc analy-
-sis and its sensitivity to incomplete generations are
-reported alongside the positive ﬁndings.
-These results lead naturally to selective context man-
-agement. To explore that practical direction, I de-
-veloped MemoryGraph, a local prototype for stor-
-ing, organizing and retrieving historical information
-before it enters a prompt. It combines lexical and
-embedding retrieval with a small entity graph and
-lets the user inspect and approve selected memories.
-Its separate synthetic evaluation measures ranking;
-downstream correctness and energy beneﬁts remain
-untested. I describe the existing prototype after the
-context experiments, connecting the measurement
-questions to a system that could be evaluated in sub-
-sequent work.
-1
-Memory Under Interference Preprint – Version 1.1
+Three questions guide the experiments. RQ1: Does addi-
+tional task content change correctness compared with sim-
+ilarly long neutral text? RQ2: When an answer is wrong,
+does it satisfy a competing requirement present in context?
+RQ3: How do context-retention policies and preference
+instructions relate to correctness and computational cost?
+The contribution is a set of paired code-task comparisons
+with inspectable prompts and outputs, a cross-specification
+diagnosis of failures, and an evaluation of cost per correct
+solution that includes failed attempts. The comparisons
+reveal a mixed picture: the larger model’s error distribu-
+tion changes in the complete cases, reduced context has
+lower observed estimated cost, and several accuracy and
+reminder comparisons remain uncertain. The post-hoc
+analysis and its sensitivity to incomplete generations are
+reported alongside the positive findings.
+These results lead naturally to selective context manage-
+ment. To explore that practical direction, I developed
+MemoryGraph, a local prototype for storing, organizing
+and retrieving historical information before it enters a
+prompt. It combines lexical and embedding retrieval with
+a small entity graph and lets the user inspect and approve
+selected memories. Its separate synthetic evaluation mea-
+sures ranking; downstream correctness and energy benefits
+remain untested. I describe the existing prototype after the
+context experiments, connecting the measurement ques-
+tions to a system that could be evaluated in subsequent
+work.
 2 Related Work
-Using context and resolving instructions. Lost
-in the Middle shows that the position of relevant ma-
-terial can change performance in question answer-
-ing and retrieval [ 7]. Gupta et al. study interference
-when conversational history switches tasks [ 4]. Son
-et al. examine following several instructions in one
-call and ﬁnd that combining tasks can improve some
-outcomes [ 11]. These studies motivate comparisons
-that vary content as well as length. My interruption
-experiment uses constructed transcripts rather than
-actual earlier model execution, and my task bundles
-use smaller code models and diﬀerent workloads. In-
-struction Hierarchy studies training models to respect
-instruction priorities [ 12]; here I evaluate ﬁxed mod-
-els without training an instruction hierarchy or test-
-ing adversarial security robustness.
-Preferences and memory systems. PrefEval
-examines explicit and implicit preference following
-across longer conversations [ 15]. My code-only pref-
-erence is a narrower case, with a scoring limitation
-discussed in the results. LongMemEval separates
-indexing, retrieval and reading [ 13]; EvalMem diag-
-noses encoding, retrieval and generation failures [ 8].
-LongMemEval-V2 extends memory evaluation to
-accumulated experience in agent environments [ 14].
-This work builds on the distinction between supply-
-ing information and using it, rather than claiming
-that distinction as new. The main experiments be-
-gin with already assembled prompts, so they examine
-code generation from available context rather than
-the quality of a memory store.
-Code correctness and computational cost. Hu-
-manEval evaluates generated functions through ex-
-ecution [ 1]. EvalPlus adds tests and demonstrates
-that limited test coverage can change both mea-
-sured correctness and model rankings [ 6]. I use its
-expanded benchmark with the Qwen2.5-Coder fam-
-ily [ 5]. Inference-energy research links cost to output
-length, prompts and runtime choices [ 10]; a directly
-related 2026 study examines prompting, code accu-
-racy and environmental cost across small and open
-models [ 9]. The present measurements concern CPU-
-package energy on one laptop, without transferring
-carbon or hardware conclusions from those studies.
-Retrieving useful history . GraphRAG uses
-graph indexes and community summaries for ques-
-tions about a corpus [ 3]; Mem0 evaluates a more inte-
-grated persistent-memory system [ 2]. MemoryGraph
-is a smaller companion prototype with local mem-
-ory editing, ranking and a basic entity graph. Its role
-here is to identify a practical next evaluation, not to
-claim the architecture or demonstrated beneﬁts of
-these systems. The accompanying related-work table
-records the overlap and distinctions in this focused
-literature review; it is not a systematic search or a
-claim of priority.
+Using context and resolving instructions. Lost in the
+Middle shows that the position of relevant material can
+change performance in question answering and retrieval
+[7]. Gupta et al. study interference when conversational
+history switches tasks [ 4]. Son et al. examine following
+1
+Memory Under Interference Preprint – V ersion 1.1
+several instructions in one call and find that combining
+tasks can improve some outcomes [ 11]. These studies mo-
+tivate comparisons that vary content as well as length. My
+interruption experiment uses constructed transcripts rather
+than actual earlier model execution, and my task bundles
+use smaller code models and different workloads. Instruc-
+tion Hierarchy studies training models to respect instruc-
+tion priorities [12]; here I evaluate fixed models without
+training an instruction hierarchy or testing adversarial se-
+curity robustness.
+Preferences and memory systems. PrefEval examines
+explicit and implicit preference following across longer
+conversations [15]. My code-only preference is a narrower
+case, with a scoring limitation discussed in the results.
+LongMemEval separates indexing, retrieval and reading
+[13]; EvalMem diagnoses encoding, retrieval and gener-
+ation failures [8]. LongMemEval-V2 extends memory
+evaluation to accumulated experience in agent environ-
+ments [14]. This work builds on the distinction between
+supplying information and using it, rather than claiming
+that distinction as new. The main experiments begin with
+already assembled prompts, so they examine code gener-
+ation from available context rather than the quality of a
+memory store.
+Code correctness and computational cost. HumanEval
+evaluates generated functions through execution [ 1].
+EvalPlus adds tests and demonstrates that limited test
+coverage can change both measured correctness and
+model rankings [6]. I use its expanded benchmark with
+the Qwen2.5-Coder family [ 5]. Inference-energy research
+links cost to output length, prompts and runtime choices
+[10]; a directly related 2026 study examines prompting,
+code accuracy and environmental cost across small and
+open models [9]. The present measurements concern CPU-
+package energy on one laptop, without transferring carbon
+or hardware conclusions from those studies.
+Retrieving useful history. GraphRAG uses graph in-
+dexes and community summaries for questions about a
+corpus [3]; Mem0 evaluates a more integrated persistent-
+memory system [2]. MemoryGraph is a smaller compan-
+ion prototype with local memory editing, ranking and a ba-
+sic entity graph. Its role here is to identify a practical next
+evaluation, not to claim the architecture or demonstrated
+benefits of these systems. The accompanying related-work
+table records the overlap and distinctions in this focused
+literature review; it is not a systematic search or a claim of
+priority.
 3 Evaluation Framework
-The experiments separate four ideas. Availability
-means that the needed speciﬁcation is present in the
-prompt. Retrieval is the preceding act of selecting
-stored material, illustrated separately by Memory-
-Graph. Utilization is measured through what the gen-
-erated function does on its tests. Eﬃciency concerns
-tokens, latency and estimated CPU-package energy.
-These observable outcomes do not measure internal
-memory capacity or cognitive states.
-An incorrect solution can still be informative. Sup-
-pose the target requires a strict comparison, while
-a background task includes equality. A solution us-
-ing the inclusive rule is wrong for the target but may
-be right for that background task. I test each com-
-plete response against target suite T and alternative
-suite A, distinguishing target-only pass, alternative-
-only pass, both pass and both fail. An alternative-
-consistent failure is thus an incorrect target solution
-that satisﬁes the competing computational require-
-ment. “Speciﬁcation confusion” names this observed
-pattern, not a diagnosis of the model’s internal rea-
-soning. Finite tests, extraction errors and ordinary
-algorithmic mistakes remain relevant to interpreting
-every cell.
-For each model and paired task t, let ytc denote a
-binary test outcome, or the mean over the regis-
-tered repeated cells in condition c. I report ˆ∆ =
-|S|−1 ∑t∈S(yta−ytb), preserving both arms and all in-
-cluded cells within each resampled task. For energy, I
-ask how much computation was spent to obtain each
-correct solution. The numerator includes the energy
-of failed attempts: discarding those attempts would
-make an unreliable method look artiﬁcially cheap.
-For the attempts with both energy and correctness
+The experiments separate four ideas. Availability means
+that the needed specification is present in the prompt. Re-
+trieval is the preceding act of selecting stored material,
+illustrated separately by MemoryGraph. Utilization is
+measured through what the generated function does on
+its tests. Efficiency concerns tokens, latency and estimated
+CPU-package energy. These observable outcomes do not
+measure internal memory capacity or cognitive states.
+An incorrect solution can still be informative. Suppose the
+target requires a strict comparison, while a background
+task includes equality. A solution using the inclusive
+rule is wrong for the target but may be right for that back-
+ground task. I test each complete response against target
+suite 𝑇 and alternative suite 𝐴, distinguishing target-only
+pass, alternative-only pass, both pass and both fail. An
+alternative-consistent failure is thus an incorrect target
+solution that satisfies the competing computational re-
+quirement. “Specification confusion” names this observed
+pattern, not a diagnosis of the model’s internal reasoning.
+Finite tests, extraction errors and ordinary algorithmic mis-
+takes remain relevant to interpreting every cell.
+For each model and paired task 𝑡, let 𝑦𝑡𝑐 denote a binary
+test outcome, or the mean over the registered repeated
+cells in condition 𝑐. I report ̂Δ = |𝑆| −1 ∑𝑡∈𝑆(𝑦𝑡𝑎 − 𝑦 𝑡𝑏),
+preserving both arms and all included cells within each
+resampled task. For energy, I ask how much computation
+was spent to obtain each correct solution. The numerator
+includes the energy of failed attempts: discarding those at-
+tempts would make an unreliable method look artificially
+cheap. For the attempts with both energy and correctness
 readings, this cost is
-ˆCc =
-∑
-i∈Ic Ei∑
-i∈Ic 1{correcti} , (1)
-where Ic contains attempts with both energy and
-correctness readings. I report measurement cover-
-age with the ratio and use successes from the same
-covered attempts, so missing energy cannot silently
-change its denominator.
+̂𝐶𝑐 = ∑𝑖∈𝐼𝑐 𝐸𝑖∑𝑖∈𝐼𝑐 1{correct𝑖} , (1)
+where 𝐼𝑐 contains attempts with both energy and correct-
+ness readings. I report measurement coverage with the
+ratio and use successes from the same covered attempts, so
+missing energy cannot silently change its denominator.
 4 Experimental Methodology
 4.1 Models, tasks and execution
 The models are qwen2.5-coder:0.5b and
-qwen2.5-coder:1.5b, both Q4_K_M quantizations,
-with exact model digests recorded in frozen jobs.
-Inference used Ollama on Windows 11, an Intel i5-
-13420H CPU and approximately 16 GB RAM, with
+qwen2.5-coder:1.5b, both using Q4_K_M quantiza-
+tion, a mixed-precision format that stores most model
+weights at four bits. Exact model digests are recorded in
+frozen jobs. Inference used Ollama on Windows 11, an In-
+tel i5-13420H CPU and approximately 16 GB RAM, with
+eight inference threads and num_gpu=0. Generation was
+sequential, with randomized interleaved condition sched-
+ules. Recorded block-start checks observed AC power
+and Best performance; these snapshots do not prove an
+invariant host state throughout every request. Decoding
+settings, templates, native token counts, raw outputs and
+retry records are retained.
+An experimental request means one scheduled task/con-
+dition/model/sample call; a retry does not create another
+independent observation. The seven studies contain the
+following requests, including documented failures: iso-
+lated strategy comparison, 1,968; initial context load plus
+its isolation controls, 280; task bundles, 1,040; retention,
+400; revised semantic interference plus isolation, 1,040;
+static interruptions plus isolation, 400; and preference
+placement, 400. These sum directly to 5,528. Pilots are
 2
-Memory Under Interference Preprint – Version 1.1
+Memory Under Interference Preprint – V ersion 1.1
 Task specification
 + controlled context
 (fixed literal prompts)
@@ -221,211 +220,220 @@ in the R2 audit
 Paired task outcomes
 tokens / latency
 CPU-package estimates
-Figure 1: Observed-data framework. Target and context text are frozen before generation. Scoring is separate and
-restricted. The additional alternative-suite analysis uses saved outputs; it does not generate new answers.
-eight inference threads and num_gpu=0. Generation
-was sequential, with randomized interleaved condi-
-tion schedules. Recorded block-start checks observed
-AC power and Best performance; these snapshots do
-not prove an invariant host state throughout every
-request. Decoding settings, templates, native token
-counts, raw outputs and retry records are retained.
-An experimental request means one scheduled task/-
-condition/model/sample call; a retry does not create
-another independent observation. The seven stud-
-ies contain the following requests, including docu-
-mented failures: isolated strategy comparison, 1,968;
-initial context load plus its isolation controls, 280;
-task bundles, 1,040; retention, 400; revised semantic
-interference plus isolation, 1,040; static interruptions
-plus isolation, 400; and preference placement, 400.
-These sum directly to 5,528. Pilots are separate ob-
-servations. The revised cache study saved 76 of 400
-planned full requests and is a partial appendix diag-
-nostic. The detailed inventory and unﬁnished studies
-are documented in the appendix.
-The isolated strategy study covers all 164 Hu-
-manEval+ tasks, comparing P1 and P3_1 with three
-temperature-0.2 samples per task/model, context
-8,192 and output budget 2,048. The strategies diﬀer
-in both instructions and an external example, so this
-is not a pure example-eﬀect contrast. Initial context
-load uses 20 held-out-eligible tasks per model, with
-fresh temperature-0 no-ﬁller outcomes; the sample
-used for selection is never the isolation comparator.
-Its model-selected populations and weaker renamed-
-speciﬁcation distractors remain separate from the
-revised designs.
-In my later studies, I use the original ﬁxed 40-task
-roster for both models. I use temperature 0 and
-one generation per task-condition-model. Context is
-32,768 for task bundles, 16,384 for retention/revised
-interference/interruptions, and 8,192 for preferences.
-Output budgets are 2,048 except that active bundles
-receive 2,048 per requested function. Explicit context
-reservations and native prompt counts detect mis-
-matches; invalid calls are reported, not repaired by
-silent parameter changes.
-4.2 What the context comparisons
-test
-To separate reading extra tasks from solving them,
-passive load adds other task descriptions, while
-active load requests their functions as well. K ∈
-{2, 3, 4, 6}; neutral ﬁller matches passive input length.
-Target placement and companions are ﬁxed. Ac-
-tive requests do more output work, so focal-target,
-per-function and whole-bundle endpoints are kept
-distinct. Reused component-isolation outputs are
-lookup references, not newly measured bundle exe-
-cution.
-To test whether a competing requirement changes the
-answer, the revised interference experiment crosses
-three ﬁller types, ﬁller-token targets 1,000/2,000 and
-target beginning/end, with matched isolation con-
-trols. Competing descriptions change a computa-
-tional requirement, such as strict versus non-strict
-comparison or inclusive versus exclusive boundaries.
-Alternative references and distinguishing inputs were
-validated. The model sees descriptions, not the alter-
-native implementation or hidden tests. Related/irrel-
-evant labels are authored coarse categories; they are
-not calibrated semantic similarity. Filler budgets do
-not guarantee identical complete input lengths across
-every wrapper, an important limit on attributing dif-
-ferences solely to content.
-To examine the cost of keeping history, I compare
-full history, target/query only, verbatim target replay,
-lossless target-format compaction, and oracle reten-
-tion. Oracle retention means selecting context using
-known relevance labels: the target speciﬁcation and
-preference are kept without having to discover which
-history is relevant. Eight ﬁxed distractor descriptions
-form full history. No-history omits the explicit code-
-only preference, while the oracle retains target, pref-
-erence and ﬁnal query. Compaction removes redun-
-dant target formatting and drops other history; it is
-not semantic summarization of a conversation. These
-policies jointly change length, position, repetition and
-sometimes instruction content.
-To examine returning to a task after intervening de-
-scriptions, the static interruption conditions contain
-neutral material, one similar competing description,
-3
-Memory Under Interference Preprint – Version 1.1
-one other-domain description, or three other-domain
-descriptions. Loaded complete input counts match,
-with the same target and ﬁnal instruction. Descrip-
-tions and acknowledgements are literal transcripts,
-not tasks executed earlier by the model. Similarity,
-count and diversity are not fully crossed. Finally, to
-test whether a reminder helps with an output pref-
-erence, preference placement compares absent, im-
-mediate, buried, replayed and corrected code-only
-instructions while preserving the target/query and
-distractor history.
+Figure 1: Observed-data framework. Target and context text are frozen before generation. Scoring is separate and restricted. The
+additional alternative-suite analysis uses saved outputs; it does not generate new answers.
+separate observations. The revised cache study saved 76
+of 400 planned full requests and is a partial appendix diag-
+nostic. The detailed inventory and unfinished studies are
+documented in the appendix.
+The isolated strategy study covers all 164 HumanEval+
+tasks, comparing a code-only instruction (P1) with an
+example-guided instruction (P3_1) and three temperature-
+0.2 samples per task/model, context 8,192 and output bud-
+get 2,048. P1 asks, “Complete the Python function. Re-
+turn only code. P3_1 asks, “Complete the Python function
+following the example, and includes one external exam-
+ple. They differ in both instruction and example content,
+so this is not a pure example-effect contrast. Initial con-
+text load uses 20 held-out-eligible tasks per model, with
+fresh temperature-0 no-filler outcomes; the sample used
+for selection is never the isolation comparator. Its model-
+selected populations and weaker renamed-specification
+distractors remain separate from the revised designs.
+In my later studies, I use the original fixed 40-task ros-
+ter for both models. I use temperature 0 and one genera-
+tion per task-condition-model. Context is 32,768 for task
+bundles, 16,384 for retention/revised interference/inter-
+ruptions, and 8,192 for preferences. Output caps—the
+maximum number of generated tokens allowed per call—
+are 2,048 except that active bundles receive 2,048 per
+requested function. Explicit context reservations and na-
+tive prompt counts detect mismatches; invalid calls are
+reported, not repaired by silent parameter changes.
+4.2 What the context comparisons test
+To separate reading extra tasks from solving them, pas-
+sive load adds other task descriptions, while active load
+requests their functions as well. 𝐾 ∈ {2, 3, 4, 6} ; neu-
+tral filler matches passive input length. Target placement
+and companions are fixed. Active requests do more out-
+put work, so focal-target, per-function and whole-bundle
+endpoints are kept distinct. Reused component-isolation
+outputs are lookup references, not newly measured bundle
+execution.
+To test whether a competing requirement changes the an-
+swer, the revised interference experiment crosses three
+filler types, filler-token targets 1,000/2,000 and target be-
+ginning/end, with matched isolation controls. Competing
+descriptions change a computational requirement, such as
+strict versus non-strict comparison or inclusive versus ex-
+clusive boundaries. Alternative references and distinguish-
+ing inputs were validated. The model sees descriptions,
+not the alternative implementation or hidden tests. Relat-
+ed/irrelevant labels are authored coarse categories; they
+are not calibrated semantic similarity. Filler budgets do
+not guarantee identical complete input lengths across ev-
+ery wrapper, an important limit on attributing differences
+solely to content.
+To examine the cost of keeping history, I compare full his-
+tory, target/query only, verbatim target replay, lossless
+target-format compaction, and oracle retention. Oracle re-
+tention means selecting context using known relevance
+labels: the target specification and preference are kept
+without having to discover which history is relevant. Eight
+fixed distractor descriptions form full history. No-history
+omits the explicit code-only preference, while the oracle
+retains target, preference and final query. Compaction
+removes redundant target formatting and drops other his-
+tory; it is not semantic summarization of a conversation.
+These policies jointly change length, position, repetition
+and sometimes instruction content.
+To examine returning to a task after intervening descrip-
+tions, the static interruption conditions contain neutral
+material, one similar competing description, one other-
+domain description, or three other-domain descriptions.
+Loaded complete input counts match, with the same tar-
+get and final instruction. Descriptions and acknowledge-
+ments are literal transcripts, not tasks executed earlier by
+the model. Similarity, count and diversity are not fully
+crossed. Finally, to test whether a reminder helps with an
+output preference, preference placement compares absent,
+immediate, buried, replayed and corrected code-only in-
+structions while preserving the target/query and distractor
+history.
 4.3 Statistics, exclusions and energy
-Intervals use 2,000 paired task-bootstrap draws with
-seed 1732. Binary pairs use exact discordant-pair Mc-
-Nemar tests; task means over repeated cells use exact
-paired sign swaps. Holm correction is within speciﬁed
-families: two isolated strategy tests, two initial-load
-primary tests, two revised-interference primary tests,
-six retention tests and six interruption tests. The
-new cross-pass audit uses four posthoc tests. These
-corrections do not control every analysis ever exam-
-ined in the project. Intervals are pointwise, not simul-
-taneous family intervals. Null tests do not establish
-equivalent accuracy.
-I preserve failed requests and capped generations.
-Caps are nonpasses for bounded correctness end-
-points but unknown for the uncensored cross-pass
-taxonomy. API, input or evaluator-infrastructure fail-
-ures are missing for valid-input accuracy and sepa-
-rately reduce operational yield. I report cap exclu-
-sion, optimistic bounded-correctness scenarios, ad-
-verse cross-pass coding, independently labelled el-
-igibility subsets, and exclusion of the documented
-HumanEval/32 oracle anomaly. The expanded-test
-adapter and sandbox restrictions remain part of the
-operational outcome, not an infallible correctness ora-
-cle.
-HWiNFO CPU Package Power was logged at a nomi-
-nal 500 ms interval. Gross energy uses trapezoidal in-
-tegration; net estimates subtract the block-start idle
-baseline over the request window. Approximate post-
-load and total windows are both retained. End/mid-
-point subtraction, drift exclusions and short-window
-exclusions are secondary sensitivities. Per-condition
-totals are preferred to precise interpretations of short
-individual windows. The registered primary cache-
-energy experiment is incomplete; retention energy
-remains descriptive or posthoc. No whole-system elec-
-tricity, carbon, GPU or cloud inference is measured.
+Intervals use 2,000 paired task-bootstrap draws with seed
+1732. Binary pairs use exact discordant-pair McNemar
+tests; task means over repeated cells use exact paired sign
+swaps. Holm multiple-comparison correction adjusts test
+𝑝-values to control the family-wise probability of one or
+more false rejections. It is applied within specified fami-
+lies: two isolated strategy tests, two initial-load primary
+tests, two revised-interference primary tests, six retention
+tests and six interruption tests. The new cross-pass audit
+uses four post-hoc tests. These corrections do not control
+every analysis ever examined in the project. Intervals are
+pointwise, not simultaneous family intervals. Null tests do
+not establish equivalent accuracy.
+I preserve failed requests and capped generations. Caps
+are nonpasses for bounded correctness endpoints but un-
+known for the uncensored cross-pass taxonomy. API,
+input or evaluator-infrastructure failures are missing
+3
+Memory Under Interference Preprint – V ersion 1.1
+for valid-input accuracy and separately reduce opera-
+tional yield. I report cap exclusion, optimistic bounded-
+correctness scenarios, adverse cross-pass coding, inde-
+pendently labelled eligibility subsets, and exclusion of
+the documented HumanEval/32 oracle anomaly. The
+expanded-test adapter and sandbox restrictions remain part
+of the operational outcome, not an infallible correctness
+oracle.
+HWiNFO CPU Package Power was logged at a nominal
+500 ms interval. Gross energy uses trapezoidal integration;
+net estimates subtract the block-start idle baseline over
+the request window. Approximate post-load and total win-
+dows are both retained. End/midpoint subtraction, drift
+exclusions and short-window exclusions are secondary
+sensitivities. Per-condition totals are preferred to precise
+interpretations of short individual windows. The registered
+primary cache-energy experiment is incomplete; retention
+energy remains descriptive or post-hoc. No whole-system
+electricity, carbon, GPU or cloud inference is measured.
 5 Contextual Interference
-5.1 Does task content matter beyond
-length?
-The task-bundle experiment asks whether similarly
-long contexts behave diﬀerently when the extra text
-describes other problems. Figure 2 compares correct-
-ness of the designated target function under passive,
-active and neutral conditions. Passive-minus-ﬁller
-estimates tend to be negative across K in this ros-
-ter, but many adjusted comparisons are inconclu-
-sive. The 0.5B K = 6 estimate is −25 percentage
-points, conditional interval [−37.5, −12.5], with Holm
-p = 0 .015625 in its eight-comparison posthoc family.
-This is evidence about the ﬁxed task combinations
-tested here, rather than a general penalty for multi-
-tasking.
-Tasks recur in several bundles, and all bundles are
-connected through shared members. The bootstrap
-therefore describes variation across target tasks while
-keeping their companions ﬁxed; it cannot supply
-uncertainty for independently resampled bundles.
-Changing K also changes which companion functions
-appear. Active per-function fractions and whole-
-bundle successes are reported against the same com-
-ponents’ isolation outcomes in the archive, rather
-than equating a passive focal pass with a complete
-active bundle. The additional output budget and re-
-peated component references limit cost comparisons.
-The shared companions and additional output work
-are important alternative explanations when compar-
-ing bundle performance and cost.
+5.1 Does task content matter beyond length?
+The task-bundle experiment asks whether similarly long
+contexts behave differently when the extra text describes
+other problems. Figure 2 compares correctness of the des-
+ignated target function under passive, active and neutral
+conditions. Passive-minus-filler estimates tend to be neg-
+ative across 𝐾 in this roster, but many adjusted compar-
+isons are inconclusive. The 0.5B 𝐾 = 6 estimate is −25
+percentage points, conditional interval [−37.5, −12.5],
+with Holm 𝑝 = 0.015625 in its eight-comparison post-hoc
+family. This is evidence about the fixed task combinations
+tested here, rather than a general penalty for multitasking.
+Tasks recur in several bundles, and all bundles are con-
+nected through shared members. The bootstrap therefore
+describes variation across target tasks while keeping their
+companions fixed; it cannot supply uncertainty for inde-
+pendently resampled bundles. Changing 𝐾 also changes
+which companion functions appear. Active per-function
+fractions and whole-bundle successes are reported against
+the same components’ isolation outcomes in the archive,
+rather than equating a passive focal pass with a complete
+active bundle. The additional output budget and repeated
+component references limit cost comparisons. The shared
+companions and additional output work are important
+alternative explanations when comparing bundle perfor-
+mance and cost.
 5.2 Does a wrong answer follow the
 competing requirement?
-The ﬁrst comparison asks whether competing descrip-
-tions reduce target correctness relative to irrelevant
-descriptions. The registered diﬀerence is -11.25 per-
-centage points for 0.5B, interval [-20.62, -2.50], Holm
-p = 0 .056396, and -2.50 for 1.5B, interval [-10.00,
-4.39], Holm p = 0 .63525. Both comparisons have
-40 paired tasks averaged over four length/position
-cells. A pointwise interval excluding zero can coexist
-with an adjusted test that does not reject; both are
-reported. Figure 3 shows the cell-level outcomes with-
+The first comparison asks whether competing descriptions
+reduce target correctness relative to irrelevant descriptions.
+The registered difference is -11.25 percentage points for
+0.5B, interval [-20.62, -2.50], Holm 𝑝 = 0.056396 , and
+-2.50 for 1.5B, interval [-10.00, 4.39], Holm 𝑝 = 0.63525 .
+Both comparisons have 40 paired tasks averaged over four
+length/position cells. A pointwise interval excluding zero
+can coexist with an adjusted test that does not reject; both
+are reported. Figure 3 shows the cell-level outcomes with-
 out treating them as independent task replications.
-Overall accuracy does not describe which requirement
-a wrong answer follows. Testing the same saved pro-
-grams against the competing speciﬁcation reveals a
-diﬀerent pattern. For 1.5B, the posthoc diﬀerence
-in distractor-only success between competing and ir-
-relevant contexts is 8.97 percentage points, interval
-[3.21, 16.67], across 39 complete matched tasks; Holm
-p = 0 .03125. Versus isolation, the estimate is 9.62
-points, interval [3.21, 17.95], in the same four-test
-family. The 0.5B competing-minus-irrelevant esti-
-mate is 3.12 points, interval [-3.12, 11.25], p = 1. The
-stronger 1.5B error-type association therefore does
-not imply a similarly large change in its overall target
+Overall accuracy does not describe which requirement a
+wrong answer follows. Testing the same saved programs
+against the competing specification reveals a different pat-
+tern. For 1.5B, the post-hoc difference in distractor-only
+success between competing and irrelevant contexts is 8.97
+percentage points, interval [3.21, 16.67], across 39 com-
+plete matched tasks; Holm 𝑝 = 0.03125 . V ersus isola-
+tion, the estimate is 9.62 points, interval [3.21, 17.95], in
+the same four-test family. The 0.5B competing-minus-
+irrelevant estimate is 3.12 points, interval [-3.12, 11.25],
+𝑝 = 1 . The stronger 1.5B error-type association therefore
+does not imply a similarly large change in its overall target
 pass rate.
 Figure 5 includes every scheduled response, whereas
-complete-case inference requires all paired cells. No
-response passes both suites in this dataset. Figure 4
-makes one alternative-only outcome concrete. The
-target speciﬁcation is present and marked as the only
+complete-case inference requires all paired cells. No re-
+sponse passes both suites in this dataset. Figure 4 makes
+one alternative-only outcome concrete. The target spec-
+ification is present and marked as the only function to
+implement, yet the saved body uses the competing inclu-
+sive boundary. A second audited 1.5B response reverses
+parenthesis-group order as required by its alternative.
+These selected examples illustrate the test categories; they
+do not estimate their prevalence or reveal why the model
+produced those programs.
+Incomplete or invalid responses leave some classifica-
+tions unknown. As a conservative check, I assign those
+unknown outcomes in whichever way weakens the ob-
+served association: none counts as an alternative-only
+success under competing context, and every unknown
+control does. This yields a 1.5B difference of 6.88 points
+over all 40 tasks, scenario interval [−0.02, 15.00], adjusted
+𝑝 = 0.53125 . The favorable assignment gives 10.62 points,
+interval [3.75, 18.75]. These adverse and favorable assign-
+ments describe sensitivity to missing outcomes. They are
+hypothetical classifications, not repaired responses or a
+formal confidence set for missingness. The complete-case
+result is therefore suggestive but not robust to all cap as-
+signments (Figure 6).
+5.3 Initial context load and static
+interruptions
+Initial context load shows a near-minus-irrelevant estimate
+of -27.50 points for 0.5B, interval [-45.00, -10.00], Holm
+𝑝 = 0.033691 , and -2.50 for 1.5B, interval [-17.50, 12.50],
+𝑝 = 1 . These selected populations and weaker distractors
+cannot be pooled with the revised semantic experiment.
+Differences in selection and distractor construction pre-
+vent interpreting the larger initial estimate as a stronger
+version of the revised experiment.
+The six primary interruption comparisons do not establish
+a corrected effect. For example, three other-domain de-
+scriptions versus neutral material on 1.5B give −15 points
+with interval [−27.5, −2.5], but Holm 𝑝 = 0.421875 . This
+illustrates the distinction between pointwise intervals and
+family tests. Its constructed history and coarse domain
 4
-Memory Under Interference Preprint – Version 1.1
+Memory Under Interference Preprint – V ersion 1.1
 2 3 4 6
 Number of task descriptions, K
 0
@@ -441,9 +449,9 @@ Number of task descriptions, K
 Passive
 Active
 Filler
-Figure 2: M1 focal-target pass rates, 40 anchors per model/mode/ K. Whiskers are conditional task-bootstrap
-intervals with overlapping ﬁxed companions. Active mode requests K functions and has a larger output budget. These
-are not dependence-robust independent-bundle conﬁdence intervals.
+Figure 2: M1 focal-target pass rates, 40 anchors per model/mode/ 𝐾. Whiskers are conditional task-bootstrap intervals with
+overlapping fixed companions. Active mode requests 𝐾 functions and has a larger output budget. These are not dependence-robust
+independent-bundle confidence intervals.
 1k/start 1k/end 2k/start 2k/end
 Irrelevant
 Related
@@ -464,91 +472,90 @@ Competing
 80
 100
 Target pass rate (%)
-Figure 3: Revised M3/R2 target pass rates. Columns are ﬁller-token targets and target positions, not total input
-length. Cells contain 40 scheduled tasks; one related-context API failure leaves 39 valid outcomes in its cell. Caps are
-bounded-endpoint nonpasses. Per-cell denominators and intervals accompany the ﬁgure’s CSV source table.
-function to implement, yet the saved body uses the
-competing inclusive boundary. A second audited
-1.5B response reverses parenthesis-group order as re-
-quired by its alternative. These selected examples
-illustrate the test categories; they do not estimate
-their prevalence or reveal why the model produced
-those programs.
-Incomplete or invalid responses leave some classi-
-ﬁcations unknown. As a conservative check, I as-
-sign those unknown outcomes in whichever way
-weakens the observed association: none counts as
-an alternative-only success under competing con-
-text, and every unknown control does. This yields
-a 1.5B diﬀerence of 6.88 points over all 40 tasks, sce-
-nario interval [−0.02, 15.00], adjusted p = 0 .53125.
-The favorable assignment gives 10.62 points, inter-
-val [3.75, 18.75]. These adverse and favorable as-
-signments describe sensitivity to missing outcomes.
-They are hypothetical classiﬁcations, not repaired
-responses or a formal conﬁdence set for missingness.
-The complete-case result is therefore suggestive but
-not robust to all cap assignments (Figure 6).
-5.3 Initial context load and static
-interruptions
-Initial context load shows a near-minus-irrelevant
-estimate of -27.50 points for 0.5B, interval [-45.00,
--10.00], Holm p = 0 .033691, and -2.50 for 1.5B, inter-
-val [-17.50, 12.50], p = 1 . These selected populations
-and weaker distractors cannot be pooled with the re-
-vised semantic experiment. Diﬀerences in selection
-and distractor construction prevent interpreting the
-larger initial estimate as a stronger version of the re-
-vised experiment.
-The six primary interruption comparisons do not es-
-tablish a corrected eﬀect. For example, three other-
-domain descriptions versus neutral material on 1.5B
-give −15 points with interval [−27.5, −2.5], but Holm
-p = 0.421875. This illustrates the distinction between
-pointwise intervals and family tests. Its constructed
-history and coarse domain labels also preclude a gen-
-eral claim about real task switching. Isolated strat-
-egy diﬀerences are similarly uncertain: P3_1 minus
-P1 is -2.25 points on 0.5B, interval [-7.77, 2.86], and
-2.64 on 1.5B, interval [-1.22, 6.30]. Together, these
-comparisons show why neither additional history nor
-a reminder can be assumed to have a consistent eﬀect
+Figure 3: Revised M3/R2 target pass rates. Columns are filler-token targets and target positions, not total input length. Cells contain
+40 scheduled tasks; one related-context API failure leaves 39 valid outcomes in its cell. Caps are bounded-endpoint nonpasses. Per-cell
+denominators and intervals accompany the figure’s CSV source table.
+labels also preclude a general claim about real task switch-
+ing. Isolated strategy differences are similarly uncertain:
+P3_1 minus P1 is -2.25 points on 0.5B, interval [-7.77,
+2.86], and 2.64 on 1.5B, interval [-1.22, 6.30]. Together,
+these comparisons show why neither additional history
+nor a reminder can be assumed to have a consistent effect
 across the tested settings.
+6 What Is Gained by Keeping Less
+Context?
+The retention experiment compares ways of presenting
+the same target amid a fixed history. It asks whether keep-
+ing less information, or replaying the target, changes cor-
+rectness and the cost of obtaining a correct answer. All
+five policies are shown in Table 1 and Figure 7. Oracle re-
+tention’s correctness difference from full history is +7.5
+points on 0.5B, interval [−5, 22.5], and +2.5 on 1.5B,
+interval [−10, 15]. All six registered replay/oracle/com-
+paction accuracy contrasts have Holm 𝑝 = 1 . Replay is not
+established to improve accuracy, and neither is equivalent
+accuracy established by these wide intervals.
+Although the accuracy comparisons remain uncertain, the
+observed cost ratios differ substantially. Estimated net
+energy per correct solution is 325.38 mWh for full his-
+tory and 76.39 for oracle retention on 0.5B; corresponding
+1.5B values are 154.16 and 50.20 mWh. These ratios cor-
+respond to observed estimated-cost reductions of 76.5%
+and 67.4%, computed as 100(1 − 𝐶 oracle/𝐶full). They are
+descriptive reductions, without an established accuracy-
+preservation guarantee. Paired oracle-minus-full ratio dif-
+ferences are -249.00 mWh, interval [-529.62, -127.49],
+and -103.96 mWh, interval [-152.30, -77.58]. These inter-
+vals resample complete paired task clusters and recompute
+both ratios; they are not intervals on the energy of success-
+ful requests alone.
+End- and midpoint-baseline subtraction retain the lower
+oracle cost estimates in these data. Excluding drifted ob-
+servations also retains the direction, on smaller matched
+populations. Cap exclusion reduces the 0.5B paired differ-
+ence to approximately −112.65 mWh over 35 tasks. Some
+short-window-excluded 0.5B ratio draws have zero correct
+solutions; finite intervals are deliberately left unavailable.
+In 1.5B oracle retention, removing short windows leaves
+only 18 of 40 calls. It preferentially removes cheap re-
+quests, rather than producing a cleaner estimate for the
+original population.
+These cost differences make selective context manage-
+ment worth investigating, but the oracle has an advantage
+a practical system must earn: it is told what matters. Full
+history and the reduced policies differ in input length and
 5
-Memory Under Interference Preprint – Version 1.1
-Actual pair: HumanEval/0. The target requirement
-reads: “Check if in given list of numbers, are any two
-numbers closer to each other than given threshold. ” Its
-reference uses a strict inequality. The background al-
-ternative reads: “Return whether two distinct list posi-
-tions have absolute diﬀerence less than OR EQUAL TO
-threshold. Equality is included. ”
-V alidated distinguishing input: numbers=[1.0,
-2.0], threshold=1.0 . The target expects False; the al-
-ternative expects True. The archived generated program
-fails the target suite and passes the alternative suite; sep-
-arate saved witness checks reproduce that classiﬁcation.
-Source: 0.5B, competing 1k/start condition; saved
-call key begins 34303c8e4927. Full key, prompt,
-original code, test outcomes and hashes are in
-examples/provenance.json. No new execution was used
-for this ﬁgure.
+Memory Under Interference Preprint – V ersion 1.1
+Actual pair: HumanEval/0. The target requirement reads:
+“Check if in given list of numbers, are any two numbers closer
+to each other than given threshold.” Its reference uses a strict
+inequality. The background alternative reads: “Return whether
+two distinct list positions have absolute difference less than OR
+EQUAL TO threshold. Equality is included.”
+Validated distinguishing input: numbers=[1.0, 2.0],
+threshold=1.0. The target expects False; the alternative
+expects True. The archived generated program fails the target
+suite and passes the alternative suite; separate saved witness
+checks reproduce that classification.
+Source: 0.5B, competing 1k/start condition; saved call key be-
+gins 34303c8e4927. Full key, prompt, original code, test out-
+comes and hashes are in examples/provenance.json. No
+new execution was used for this figure.
 from typing import List
-def has_close_elements(numbers: List[ float], threshold: float)
--> bool:
+def has_close_elements(numbers: List[ float], threshold: float) ->
+bool:
 for i in range (len(numbers)):
 for j in range (i + 1, len(numbers)):
 if abs (numbers[i] - numbers[j]) <= threshold:
 return True
 return False
-The executable text is unchanged; only the function doc-
-string is omitted from this listing. The complete saved
-response retains the original target docstring, making
-the mismatch between stated requirement and body in-
-spectable.
-Figure 4: Worked cross-speciﬁcation diagnosis from existing audited evidence. The model saw the alternative
-description, not its implementation or hidden tests. The construction repeats that description to reach its ﬁller budget;
-this repetition is part of the tested context (Appendix E).
+The executable text is unchanged; only the function docstring is
+omitted from this listing. The complete saved response retains
+the original target docstring, making the mismatch between stated
+requirement and body inspectable.
+Figure 4: Worked cross-specification diagnosis from existing audited evidence. The model saw the alternative description, not its
+implementation or hidden tests. The construction repeats that description to reach its filler budget; this repetition is part of the tested
+context (Appendix E).
 Isolation
 N=40
 Irrelevant
@@ -574,55 +581,54 @@ Distractor only
 Both pass
 Neither
 Censored/invalid
-Figure 5: Descriptive cross-speciﬁcation cells. Isolation has 40 requests per model; loaded groups have 160.
-Censored/invalid outcomes remain visible and both-pass counts are explicitly zero. These stacked shares are not
-independent request-level inferential estimates; paired eﬀects use task means.
-6 What Is Gained by Keeping
-Less Context?
-The retention experiment compares ways of present-
-ing the same target amid a ﬁxed history. It asks
-whether keeping less information, or replaying the
-target, changes correctness and the cost of obtain-
-ing a correct answer. All ﬁve policies are shown in
-Table 1 and Figure 7. Oracle retention’s correctness
-diﬀerence from full history is +7.5 points on 0.5B, in-
-terval [−5, 22.5], and +2.5 on 1.5B, interval [−10, 15].
-All six registered replay/oracle/compaction accuracy
-contrasts have Holm p = 1 . Replay is not established
-to improve accuracy, and neither is equivalent accu-
-racy established by these wide intervals.
-Although the accuracy comparisons remain uncer-
-tain, the observed cost ratios diﬀer substantially.
-Estimated net energy per correct solution is 325.38
-mWh for full history and 76.39 for oracle retention on
-0.5B; corresponding 1.5B values are 154.16 and 50.20
-mWh. These ratios correspond to observed estimated-
-cost reductions of 76.5% and 67.4%, computed as
-100(1 − Coracle/Cfull). They are descriptive reductions,
-without an established accuracy-preservation guar-
-antee. Paired oracle-minus-full ratio diﬀerences are
--249.00 mWh, interval [-529.62, -127.49], and -103.96
-mWh, interval [-152.30, -77.58]. These intervals re-
-sample complete paired task clusters and recompute
-both ratios; they are not intervals on the energy of
-successful requests alone.
-End- and midpoint-baseline subtraction retain the
-lower oracle cost estimates in these data. Exclud-
-ing drifted observations also retains the direction, on
-smaller matched populations. Cap exclusion reduces
-the 0.5B paired diﬀerence to approximately −112.65
-mWh over 35 tasks. Some short-window-excluded
-0.5B ratio draws have zero correct solutions; ﬁnite
-intervals are deliberately left unavailable. In 1.5B or-
-acle retention, removing short windows leaves only 18
-of 40 calls. It preferentially removes cheap requests,
-rather than producing a cleaner estimate for the orig-
-inal population.
-These cost diﬀerences make selective context manage-
-ment worth investigating, but the oracle has an ad-
-vantage a practical system must earn: it is told what
+Figure 5: Descriptive cross-specification cells. Isolation has 40 requests per model; loaded groups have 160. Censored/invalid
+outcomes remain visible and both-pass counts are explicitly zero. These stacked shares are not independent request-level inferential
+estimates; paired effects use task means.
+recency. No-history omits the code-only instruction and
+produces more output tokens; compaction only changes
+formatting of retained target text. Generation budgets, out-
+put caps and runtime overhead can also influence ratios.
+No automated retrieval/indexing cost is included. The
+sample Pareto display (Figure 8) summarizes observed
+policy trade-offs, not a population-optimal frontier or
+proof of accuracy-preserving energy savings.
+7 What Does the Preference Test
+Measure?
+I designed the preference experiment to ask whether a
+buried code-only instruction is followed less often than
+an immediate instruction, and whether repeating it helps.
+The registered score accepts parseable Python defining the
+target function only when it is not enclosed in Markdown
+fences. It accepts zero out of 400 full-study responses: ev-
+ery output fails this particular rule, leaving no variation
+for either primary placement/reminder comparison. The
+instruction asks for code only but does not explicitly pro-
+hibit Markdown fences. The zero score therefore cannot
+be read as evidence that every preference was forgotten.
+To understand the zero scores, I retained the original met-
+ric and added a separate post-hoc format check record-
+ing fences, outside prose, comments, docstrings and a
+fence-tolerant syntax predicate. For 1.5B, each explicit-
+preference condition has 40/40 fence-tolerant outputs,
+whereas no-preference has 21/40. For 0.5B, explicit condi-
+tions range from 36/40 to 39/40, versus 15/40 without the
+preference. These descriptive differences do not establish
+long-term retention: immediate, buried and replayed con-
+ditions also differ in rendered wording and position, and
+the registered strict contrasts remain unchanged. Buried/re-
+play comparisons under the fence-tolerant predicate do not
+establish a benefit after correction.
+Comments and docstrings can be legitimate code or ex-
+planatory content. Mechanical counts do not replace hu-
+man semantic adherence annotations. Joint correctness-
+and-adherence outcomes are provided under each defini-
+tion rather than silently selecting the most favorable score.
+A zero-width empirical bootstrap interval at an all-zero/all-
+one sample is not certainty about a population rate. This
+scoring-definition problem is itself an honest limitation of
+the experiment.
 6
-Memory Under Interference Preprint – Version 1.1
+Memory Under Interference Preprint – V ersion 1.1
 −20 −10 0 10 20 30
 Paired difference (percentage points)
 0.5b Cross-pass: complete case
@@ -637,74 +643,74 @@ n=40
 n=39
 n=40
 n=40
-Figure 6: Paired task eﬀects for revised interference, with 95% pointwise bootstrap intervals. Cross-pass comparisons
-are posthoc. Adverse-bound rows assign censored indicators against the observed association; target accuracy uses
-registered bounded outcomes. Diﬀerent endpoints and populations are labelled rather than pooled.
+Figure 6: Paired task effects for revised interference, with 95% pointwise bootstrap intervals. Cross-pass comparisons are post-hoc.
+Adverse-bound rows assign censored indicators against the observed association; target accuracy uses registered bounded outcomes.
+Different endpoints and populations are labelled rather than pooled.
 Model Policy Correct/40 Input Output Net mWh/correct
 0.5B Full history 14/40 1327.8 448.4 325.38
 0.5B Target/query 19/40 170.6 501.2 157.52
-0.5B Verbatim replay 15/40 1467.8 225.2 226.92
+0.5B V erbatim replay 15/40 1467.8 225.2 226.92
 0.5B Lossless compaction 16/40 177.0 193.7 79.29
 0.5B Oracle retention 17/40 183.6 196.0 76.39
 1.5B Full history 22/40 1327.8 69.1 154.16
 1.5B Target/query 28/40 170.6 301.6 161.21
-1.5B Verbatim replay 23/40 1467.8 75.2 163.53
+1.5B V erbatim replay 23/40 1467.8 75.2 163.53
 1.5B Lossless compaction 22/40 177.0 64.6 53.00
 1.5B Oracle retention 23/40 183.6 63.6 50.20
-T able 1: R1 observed outcomes, 40 tasks per policy/model. Tokens are means. Energy is HWiNFO estimated net
-CPU-package mWh per correct solution, including failed-attempt energy. All 40 requests have readings in each row.
-Conﬁdence intervals and paired contrasts are reported separately.
-matters. Full history and the reduced policies diﬀer
-in input length and recency. No-history omits the
-code-only instruction and produces more output to-
-kens; compaction only changes formatting of retained
-target text. Generation budgets, output caps and
-runtime overhead can also inﬂuence ratios. No auto-
-mated retrieval/indexing cost is included. The sam-
-ple Pareto display (Figure 8) summarizes observed
-policy trade-oﬀs, not a population-optimal frontier or
-proof of accuracy-preserving energy savings.
-7 What Does the Preference
-Test Measure?
-I designed the preference experiment to ask whether
-a buried code-only instruction is followed less often
-than an immediate instruction, and whether repeat-
-ing it helps. The registered score accepts parseable
-Python deﬁning the target function only when it is
-not enclosed in Markdown fences. It accepts zero
-out of 400 full-study responses: every output fails
-this particular rule, leaving no variation for either
-primary placement/reminder comparison. The in-
-struction asks for code only but does not explicitly
-prohibit Markdown fences. The zero score therefore
-cannot be read as evidence that every preference was
-forgotten.
-To understand the zero scores, I retained the original
-metric and added a separate posthoc format check
-recording fences, outside prose, comments, docstrings
-and a fence-tolerant syntax predicate. For 1.5B, each
-explicit-preference condition has 40/40 fence-tolerant
-outputs, whereas no-preference has 21/40. For 0.5B,
-explicit conditions range from 36/40 to 39/40, ver-
-sus 15/40 without the preference. These descriptive
-diﬀerences do not establish long-term retention: im-
-mediate, buried and replayed conditions also diﬀer
-in rendered wording and position, and the registered
-strict contrasts remain unchanged. Buried/replay
-comparisons under the fence-tolerant predicate do
-not establish a beneﬁt after correction.
-Comments and docstrings can be legitimate code or
-explanatory content. Mechanical counts do not re-
-place human semantic adherence annotations. Joint
-correctness-and-adherence outcomes are provided
-under each deﬁnition rather than silently selecting
-the most favorable score. A zero-width empirical
-bootstrap interval at an all-zero/all-one sample is
-not certainty about a population rate. This scoring-
-deﬁnition problem is itself an honest limitation of the
-experiment.
+Table 1: R1 observed outcomes, 40 tasks per policy/model. Tokens are means. Energy is HWiNFO estimated net CPU-package mWh
+per correct solution, including failed-attempt energy. All 40 requests have readings in each row. Confidence intervals and paired
+contrasts are reported separately.
+8 MemoryGraph: A Practical
+Direction for Context Selection
+8.1 From Oracle Retention to Practical
+Memory Retrieval
+MemoryGraph addresses the step before genera-
+tion: choosing useful historical information with-
+out automatically passing the entire history to the
+model. Its implementation is examined at commit
+c569143ec6be1c767a2c56c59c936f85bd1fc1cb. It
+stores editable local plain-text memories; term-frequency–
+inverse-document-frequency (TF-IDF) lexical scores and
+pretrained sentence embeddings rank candidates. A Net-
+workX bipartite graph links memories to a small fixed
+entity vocabulary. The graph-assisted method adds a
+bounded bonus to lexical scores for shared entities. This
+is not full GraphRAG, automatic memory extraction, or
+learned feedback adaptation. Logistic regression and
+random-forest pipelines are evaluation baselines, not a
+demonstrated learned online memory controller.
+User control matters because a highly ranked memory may
+still be obsolete, conflicting or unwanted in the current
+context. The interface exposes selected text and requires
+explicit approval before a local Ollama response compari-
+son. Limited warnings detect explicit pytest versus unittest
+and VS Code versus PyCharm preference conflicts; they
+do not resolve arbitrary contradictions. No usability, trust,
+personalization or energy benefit was measured. Figure 9
+describes the existing components only.
+My saved synthetic evaluation contains 600 labelled
+query–memory pairs, 24 fictional profiles and 120 queries
+with five candidate memories each. Exactly one candi-
+date is labelled relevant. Recomputed embedding Mean
+Reciprocal Rank (MRR), the mean of one divided by the
+relevant memory’s rank for each query, is 0.7364, ver-
+sus 0.5163 for TF-IDF, using the saved scores and stable
+tie ordering. The embedding snapshot and data hashes
+are retained. The offline lexical benchmark fits its vo-
+cabulary across the saved corpus; the interactive lexical
+retriever instead fits the query and candidate memories.
+MRR summarizes how early the relevant memory appears
+in a ranked list; it does not score the subsequent answer.
+Because the two lexical pipelines fit different vocabularies,
+the benchmark also does not directly measure interface
+ranking. These are template-based synthetic rankings, not
+held-out code-generation outcomes or estimates of real-
+user behavior. Grouped classifier evaluation splits by fic-
+tional profile, but repeated templates can still supply short-
+cuts; the random forest’s recorded perfect synthetic result
+should not be read as general memory-understanding abil-
 7
-Memory Under Interference Preprint – Version 1.1
+Memory Under Interference Preprint – V ersion 1.1
 Full history Target/query
 (no preference)
 Target replay Losslesscompaction Oracleretention
@@ -734,10 +740,10 @@ Full history Target/query
 (no preference)
 Target replay Losslesscompaction Oracleretention
 Estimated net CPU-package mWh/correct
-Figure 7: R1 correctness and estimated net CPU-package energy per correct solution, with pointwise task-bootstrap
-intervals. A shorter retained prompt does not isolate memory-policy quality: instructions, input position and output
-length also diﬀer. Ratios include every covered attempt’s energy. Model panels use common scales within each row;
-target/query omits the code-only preference.
+Figure 7: R1 correctness and estimated net CPU-package energy per correct solution, with pointwise task-bootstrap intervals. A
+shorter retained prompt does not isolate memory-policy quality: instructions, input position and output length also differ. Ratios
+include every covered attempt’s energy. Model panels use common scales within each row; target/query omits the code-only
+preference.
 100 200 300 400 500 600
 Estimated net CPU-package mWh/correct
 20
@@ -768,146 +774,30 @@ Oracle
 retention
 1.5b
 Observed point frontier
-Figure 8: Descriptive R1 accuracy–energy plots, separately by model, 40 tasks per policy. Energy is HWiNFO
-estimated net CPU-package mWh/correct. Horizontal and vertical whiskers are marginal bootstrap intervals, not joint
-conﬁdence regions. Both model panels share the same axes. The dotted frontier uses sample point estimates only.
-8 MemoryGraph: A Practical
-Direction for Context
-Selection
-8.1 From Oracle Retention to
-Practical Memory Retrieval
-MemoryGraph addresses the step before genera-
-tion: choosing useful historical information with-
-out automatically passing the entire history to the
-model. Its implementation is examined at commit
-c569143ec6be1c767a2c56c59c936f85bd1fc1cb. It
-stores editable local plain-text memories; TF-IDF
-and pretrained sentence embeddings rank candi-
-dates. A NetworkX bipartite graph links memo-
-ries to a small ﬁxed entity vocabulary. The graph-
-assisted method adds a bounded bonus to lexical
-scores for shared entities. This is not full GraphRAG,
-automatic memory extraction, or learned feedback
-adaptation. Logistic regression and random-forest
-pipelines are evaluation baselines, not a demon-
-8
-Memory Under Interference Preprint – Version 1.1
-strated learned online memory controller.
-User control matters because a highly ranked mem-
-ory may still be obsolete, conﬂicting or unwanted in
-the current context. The interface exposes selected
-text and requires explicit approval before a local Ol-
-lama response comparison. Limited warnings detect
-explicit pytest versus unittest and VS Code versus
-PyCharm preference conﬂicts; they do not resolve
-arbitrary contradictions. No usability, trust, person-
-alization or energy beneﬁt was measured. Figure 9
-describes the existing components only.
-My saved synthetic evaluation contains 600 labelled
-query–memory pairs, 24 ﬁctional proﬁles and 120
-queries with ﬁve candidate memories each. Exactly
-one candidate is labelled relevant. Recomputed em-
-bedding MRR is 0.7364, versus 0.5163 for TF-IDF,
-using the saved scores and stable tie ordering. The
-embedding snapshot and data hashes are retained.
-The oﬄine lexical benchmark ﬁts its vocabulary
-across the saved corpus; the interactive lexical re-
-triever instead ﬁts the query and candidate memories.
-MRR summarizes how early the relevant memory
-appears in a ranked list; it does not score the sub-
-sequent answer. Because the two lexical pipelines
-ﬁt diﬀerent vocabularies, the benchmark also does
-not directly measure interface ranking. These are
-template-based synthetic rankings, not held-out
-code-generation outcomes or estimates of real-user
-behavior. Grouped classiﬁer evaluation splits by ﬁc-
-tional proﬁle, but repeated templates can still supply
-shortcuts; the random forest’s recorded perfect syn-
-thetic result should not be read as general memory-
-understanding ability.
-A recorded two-prompt local demonstration supplies
-a pytest preference, yet the memory-enabled response
-begins with import unittest . Both successful API
-responses reach the 128-token output budget, and
-correctness and energy were not scored. A preced-
-ing failed demonstration run is retained separately.
-This is a concrete example of availability without the
-intended surface behavior, not an estimate of the pro-
-totype’s beneﬁt or its failure rate. I do not pool the
-HumanEval+ study with this synthetic benchmark.
-An integrated MG1 comparison remains Version 2
-work.
+Figure 8: Descriptive R1 accuracy–energy plots, separately by model, 40 tasks per policy. Energy is HWiNFO estimated net
+CPU-package mWh/correct. Horizontal and vertical whiskers are marginal bootstrap intervals, not joint confidence regions. Both
+model panels share the same axes. The dotted frontier uses sample point estimates only.
+ity.
+A recorded two-prompt local demonstration supplies a
+pytest preference, yet the memory-enabled response be-
+gins with import unittest . Both successful API re-
+sponses reach the 128-token output budget, and correct-
+ness and energy were not scored. A preceding failed
+demonstration run is retained separately. This is a con-
+crete example of availability without the intended surface
+behavior, not an estimate of the prototype’s benefit or its
+failure rate. I do not pool the HumanEval+ study with this
+synthetic benchmark. An integrated MemoryGraph com-
+parison remains future work.
 9 Discussion
-The experiments trace a progression from prompt de-
-sign to context selection. Prompt-Energy asked what
-an instruction costs to execute. Here the question is
-also which instruction the model follows when sev-
-eral are available. The cross-speciﬁcation test makes
-this distinction visible: some wrong answers satisfy a
-competing requirement rather than simply failing ev-
-ery tested contract. Cross-scoring isolation responses
-provides a reference for how often that behavior oc-
-curs without competing context. The 1.5B complete
-cases show an association, while conservative treat-
-ment of incomplete generations weakens it. Recency,
-repetition, pattern completion and ordinary bound-
-ary errors remain possible explanations rather than
-mechanisms identiﬁed by these measurements.
-Context length alone is consequently an incomplete
-description of the problem. Extra relevant material
-may help, while competing material can introduce a
-diﬀerent answer that still looks reasonable. The task-
-bundle results suggest that content can matter even
-beside matched ﬁller, although shared tasks limit the
-inference. The uncertain interruption and replay com-
-parisons also caution against expecting one consistent
-eﬀect from a longer history or a reminder.
-The retention results connect this behavioral question
-to eﬃciency. Shorter oracle contexts have lower ob-
-served estimated energy per correct solution, but ac-
-curacy preservation has not been established. Shorter
-inputs change preﬁll work; wording and position can
-change generated output; output length and failed at-
-tempts change the cost ratio. The oracle also avoids
-the work of discovering what is relevant. A practical
-policy must be evaluated with that selection cost in-
-cluded, rather than inherit the oracle’s advantage by
-assumption.
-Retrieval is therefore an intermediate measurement.
-A system must select useful material, handle conﬂicts
-and produce an answer that applies the current re-
-quirement. In the worked example, the target is avail-
-able but the code follows the competing boundary. In
-MemoryGraph’s capped demonstration, the pytest
-preference is available but the response uses unittest.
-Neither illustration estimates a general failure rate;
-both explain why a good retrieval rank alone cannot
-demonstrate successful utilization.
-MemoryGraph oﬀers a concrete next setting for inves-
-tigating these questions. A future comparison could
-measure retrieval relevance, target correctness, prefer-
-ence adherence and complete computational overhead
-under matched instructions and output budgets. It
-should also validate the adherence metric before col-
-lecting outcomes: the all-zero registered preference
-score here shows how an unsuitable formatting rule
-can obscure the intended question. The existing pro-
-totype and synthetic ranking benchmark establish a
-starting point, not a completed evaluation of selective
-memory in use.
-10 Limitations
-These results concern two small quantized models,
-one code benchmark and one CPU laptop. Training-
-set exposure is unknown; benchmark familiarity is
-neither ruled out nor inferred from a pass. Fixed task
-rosters, noisy eligibility selection, one structural gen-
-eration per cell and only three isolated stochastic
-samples limit generalization. Shared functions con-
-nect M1 bundles and prevent robust component-level
-intervals. The smaller-model eﬀects need not predict
-larger models, other quantizations, GPUs or cloud
-9
-Memory Under Interference Preprint – Version 1.1
+The experiments trace a progression from prompt design
+to context selection. Prompt-Energy asked what an instruc-
+tion costs to execute. Here the question is also which in-
+struction the model follows when several are available.
+The cross-specification test makes this distinction visi-
+ble: some wrong answers satisfy a competing requirement
+8
+Memory Under Interference Preprint – V ersion 1.1
 Local memory CRUD
 fictional preferences
 plain-text store
@@ -921,168 +811,220 @@ Optional local Ollama
 with / without memory
 no integrated MG1
 Separate synthetic retrieval evaluation: no HumanEval+ pooling or energy claims
-Figure 9: Existing companion prototype, not an evaluated intervention in the main study. Candidate selection and
-approval precede optional inference. The separate saved synthetic benchmark evaluates ranking only; MG1 remains
-unrun.
-deployments.
-The study developed through revisions and is partly
-exploratory. Registrations and dated amendments
-are preserved, but the ﬁnal synthesis and cross-
-speciﬁcation audit are posthoc. Local Git hashes
-support provenance, not independent public times-
-tamping. Family correction does not erase prior ex-
-ploration. The separate synthetic prototype bench-
-mark is small and templated, with no user study.
-Scoring depends on ﬁnite test suites, extraction and
-a Windows restricted subprocess adapter. These con-
-trols are documented rather than described as a com-
-plete adversarial sandbox. Alternative construction
-and similarity labels are AI-assisted and authored;
-representative witnesses are not exhaustive semantic
-validation. Adverse censoring weakens the principal
-cross-pass result. No recognition, internal state or
-intentional giving-up measurement exists.
-CPU-package estimates are not calibrated process-
-speciﬁc energy. Unrelated work, shared baselines,
-clock/sampling gaps, thermal eﬀects and approxi-
-mate post-load boundaries remain potential errors.
-Bootstrap intervals reﬂect task variation, not mea-
-surement calibration or independent block errors.
-Short requests are particularly diﬃcult at 500 ms res-
-olution. The incomplete registered cache experiment
-prevents a completed primary energy claim.
+Figure 9: Existing companion prototype, not an evaluated intervention in the main study. Candidate selection and approval precede
+optional inference. The separate saved synthetic benchmark evaluates ranking only. The proposed end-to-end MemoryGraph
+evaluation (MG1) has not been conducted.
+rather than simply failing every tested contract. Cross-
+scoring isolation responses provides a reference for how
+often that behavior occurs without competing context.
+The 1.5B complete cases show an association, while con-
+servative treatment of incomplete generations weakens
+it. Recency, repetition, pattern completion and ordinary
+boundary errors remain possible explanations rather than
+mechanisms identified by these measurements.
+Context length alone is consequently an incomplete de-
+scription of the problem. Extra relevant material may help,
+while competing material can introduce a different answer
+that still looks reasonable. The task-bundle results sug-
+gest that content can matter even beside matched filler,
+although shared tasks limit the inference. The uncertain
+interruption and replay comparisons also caution against
+expecting one consistent effect from a longer history or a
+reminder.
+The retention results connect this behavioral question to
+efficiency. Shorter oracle contexts have lower observed
+estimated energy per correct solution, but accuracy preser-
+vation has not been established. Shorter inputs change pre-
+fill work, the computation used to process the input before
+generating tokens; wording and position can change gener-
+ated output; output length and failed attempts change the
+cost ratio. The oracle also avoids the work of discovering
+what is relevant. A practical policy must be evaluated with
+that selection cost included, rather than inherit the oracle’s
+advantage by assumption.
+Retrieval is therefore an intermediate measurement. A sys-
+tem must select useful material, handle conflicts and pro-
+duce an answer that applies the current requirement. In the
+worked example, the target is available but the code fol-
+lows the competing boundary. In MemoryGraph’s capped
+demonstration, the pytest preference is available but the
+response uses unittest. Neither illustration estimates a gen-
+eral failure rate; both explain why a good retrieval rank
+alone cannot demonstrate successful utilization.
+MemoryGraph offers a concrete next setting for investigat-
+ing these questions. A future comparison could measure
+retrieval relevance, target correctness, preference adher-
+ence and complete computational overhead under matched
+instructions and output budgets. It should also validate the
+adherence metric before collecting outcomes: the all-zero
+registered preference score here shows how an unsuitable
+formatting rule can obscure the intended question. The ex-
+isting prototype and synthetic ranking benchmark establish
+a starting point, not a completed evaluation of selective
+memory in use.
+10 Limitations
+These results concern two small quantized models, one
+code benchmark and one CPU laptop. Training-set expo-
+sure is unknown; benchmark familiarity is neither ruled
+out nor inferred from a pass. Fixed task rosters, noisy el-
+igibility selection, one structural generation per cell and
+only three isolated stochastic samples limit generalization.
+Shared functions connect M1 bundles and prevent robust
+component-level intervals. The smaller-model effects need
+not predict larger models, other quantizations, GPUs or
+cloud deployments.
+The study developed through revisions and is partly ex-
+ploratory. Registrations and dated amendments are pre-
+served, but the final synthesis and cross-specification audit
+are post-hoc. Local Git hashes support provenance, not
+independent public timestamping. Family correction does
+not erase prior exploration. The separate synthetic pro-
+totype benchmark is small and templated, with no user
+study.
+Scoring depends on finite test suites, extraction and a Win-
+dows restricted subprocess adapter. These controls are
+documented rather than described as a complete adversar-
+ial sandbox. Alternative construction and similarity labels
+are AI-assisted and authored; representative witnesses are
+not exhaustive semantic validation. Adverse censoring
+weakens the principal cross-pass result. No recognition,
+internal state or intentional giving-up measurement exists.
+CPU-package estimates are not calibrated process-specific
+energy. Unrelated work, shared baselines, clock/sampling
+gaps, thermal effects and approximate post-load bound-
+aries remain potential errors. Bootstrap intervals reflect
+task variation, not measurement calibration or independent
+block errors. Short requests are particularly difficult at 500
+ms resolution. The incomplete registered cache experi-
+ment prevents a completed primary energy claim.
 11 Conclusion
-I investigated how additional and competing context
-relates to code correctness and inference cost in two
-small local language models. Testing a failed answer
-against a competing speciﬁcation provides informa-
-tion that a single pass/fail score misses. The 1.5B
-complete cases show more competing-requirement
-failures under competing context, although conserva-
-tive assumptions about incomplete outputs weaken
-that ﬁnding. Oracle retention has lower observed es-
-timated energy per correct solution, with accuracy
-preservation unresolved and several policy diﬀerences
-confounded. The preference experiment adds a mea-
-surement lesson: a rule that rejects every response
-cannot answer the intended retention question. To-
-gether, these ﬁndings motivate evaluating context
-selection through both the behavior it produces and
-its total computational cost. MemoryGraph provides
-an implemented direction for that subsequent investi-
-gation.
-12 Data and Code A vailability
-My code is available in the GitHub repository . This
-local Version 1.1 editorial revision retains the
-reserved Zenodo DOI 10.5281/zenodo.24500468 and
-the proposed planned v1.1.0 GitHub release . The
-DOI is reserved; its registration and public
-accessibility have not been conﬁrmed. This editorial
-revision preserves the scientiﬁc ﬁndings and has not
-been published externally. I will complete Zenodo
-publication separately. The artifacts supply code,
-frozen designs, transformed raw journals, per-task
-scores, numerical power/time samples, analysis tables
-and source/hash mappings. Original raw evidence
-remains unchanged locally. Unnecessary local paths
-and process/account metadata are removed only in
-public derivatives; original/public hashes distinguish
-them. Full multi-sensor CSV mirrors are not
-redistributed; the numerical CPU-package/time
-exports reproduce the included energy integrations.
-They do not calibrate the sensor or reconstruct other
-hardware channels. The archive is an analysis release,
-not a claim that its sanitized ﬁles can resume the
-original frozen supervisor.
+I investigated how additional and competing context re-
+lates to code correctness and inference cost in two small
+9
+Memory Under Interference Preprint – V ersion 1.1
+local language models. Testing a failed answer against a
+competing specification provides information that a sin-
+gle pass/fail score misses. The 1.5B complete cases show
+more competing-requirement failures under competing
+context, although conservative assumptions about incom-
+plete outputs weaken that finding. Oracle retention has
+lower observed estimated energy per correct solution, with
+accuracy preservation unresolved and several policy differ-
+ences confounded. The preference experiment adds a mea-
+surement lesson: a rule that rejects every response cannot
+answer the intended retention question. Together, these
+findings motivate evaluating context selection through
+both the behavior it produces and its total computational
+cost. MemoryGraph provides an implemented direction
+for that subsequent investigation.
+12 Data and Code Availability
+Code and research artifacts accompany this report in the
+GitHub repository. The version identifier is v1.1.0, with
+archive DOI 10.5281/zenodo.24500468. The evidence
+archive contains frozen configurations, exact prompts,
+transformed raw-response journals, per-task scores, numer-
+ical power/time samples, analysis scripts, figures and in-
+tegrity manifests. The separate Prompt-Energy and Mem-
+oryGraph repositories provide the preceding experiment
+and companion prototype.
+After extracting the reproducibility archive and installing
+the pinned analysis-only dependencies, run python -I
+verify_public.py --full to check saved-data counts,
+principal effects, confidence intervals and energy integra-
+tions. The archive README supplies environment and
+installation commands. The demonstrated run uses Win-
+dows and Python 3.13; it does not regenerate model out-
+puts, independently rescore programs, calibrate sensors or
+establish cross-platform portability.
+Public derivatives remove unnecessary local paths and pro-
+cess/account metadata; source/public hashes record the
+transformations. Original raw observations are unchanged.
+Full multi-sensor CSV mirrors are not redistributed. In-
+cluded numerical CPU-package power/time exports re-
+produce energy integrations, without reconstructing other
+sensor channels. The sanitized archive supports analysis
+rather than resumption of the original frozen supervisor.
 13 AI-Assistance Disclosure
-I used AI assistance for setup, autonomous Ollama
-execution, harness and analysis coding, distractor
-construction, auditing, literature organization and
-manuscript drafting. I subjected AI-generated con-
-structions to the recorded reference/witness checks;
-AI assistance is not independent scientiﬁc validation.
-10
-Memory Under Interference Preprint – Version 1.1
-Original report/data are licensed under CC BY 4.0
-and original code under MIT, with third-party no-
-tices retained.
+Author contribution. I contributed the research ques-
+tions, design decisions, experiment oversight and interpre-
+tation review. I conducted this work independently.
+I used AI assistance for setup, autonomous Ollama execu-
+tion, harness and analysis coding, distractor construction,
+auditing, literature organization and manuscript drafting. I
+subjected AI-generated constructions to the recorded refer-
+ence/witness checks; AI assistance is not independent sci-
+entific validation. Original report/data are licensed under
+CC BY 4.0 and original code under MIT, with third-party
+notices retained.
 References
-[1] Mark Chen, Jerry Tworek, Heewoo Jun, et al. Evaluating
-Large Language Models Trained on Code, 2021. URL
-https://arxiv.org/abs/2107.03374.
-[2] Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet
-Singh, and Deshraj Yadav. Mem0: Building Production-
-Ready AI Agents with Scalable Long-Term Memory, 2025.
-URL https://arxiv.org/abs/2504.19413.
-[3] Darren Edge, Ha Trinh, Newman Cheng, et al. From Lo-
-cal to Global: A Graph RAG Approach to Query-Focused
-Summarization, 2024. URL https://arxiv.org/abs/2404.
-16130.
-[4] Akash Gupta, Ivaxi Sheth, Vyas Raina, Mark Gales, and
-Mario Fritz. LLM Task Interference: An Initial Study on
-the Impact of Task-Switch in Conversational History. In
-Proceedings of EMNLP 2024 , pages 14633–14652, 2024.
-doi: 10.18653/v1/2024.emnlp-main.811. URL https:
-//aclanthology.org/2024.emnlp-main.811/.
-[5] Binyuan Hui, Jian Yang, Zeyu Cui, et al. Qwen2.5-Coder
-Technical Report, 2024. URL https://arxiv.org/abs/
-2409.12186.
-[6] Jiawei Liu, Chunqiu Steven Xia, Yuyao Wang, and Ling-
-ming Zhang. Is Your Code Generated by ChatGPT Re-
-ally Correct? Rigorous Evaluation of Large Language
-Models for Code Generation. In Advances in Neural In-
-formation Processing Systems , volume 36, 2023. URL
-https://arxiv.org/abs/2305.01210.
-[7] Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paran-
-jape, Michele Bevilacqua, Fabio Petroni, and Percy Liang.
-Lost in the Middle: How Language Models Use Long Con-
-texts. Transactions of the Association for Computational
-Linguistics, 12:157–173, 2024. doi: 10.1162/tacl_a_00638.
-URL https://aclanthology.org/2024.tacl-1.9/.
-[8] Zeyu Liu, Jian Zhong, Rongduo Han, et al. EvalMem:
-An Operation-Level Diagnostic Framework for Long-Term
-Memory Systems, 2026. URL https://arxiv.org/abs/
-2609.22231.
-[9] Md Aﬁf Al Mamun, Sayan Nath, Gias Uddin, and No-
-varun Deb. Evaluating the Environmental Impact of using
-SLMs and Prompt Engineering for Code Generation, 2026.
-URL https://arxiv.org/abs/2604.02776.
-[10] Soham Poddar, Paramita Koley, Janardan Misra, Niloy
-Ganguly, and Saptarshi Ghosh. Towards Sustainable
-NLP: Insights from Benchmarking Inference Energy in
-Large Language Models. In Proceedings of NAACL
-2025 (Volume 1: Long Papers) , pages 12688–12704,
-2025. doi: 10.18653/v1/2025.naacl-long.632. URL
+[1] Mark Chen, Jerry Tworek, Heewoo Jun, et al. Evaluating Large
+Language Models Trained on Code, 2021. URL https://arxiv.org/
+abs/2107.03374.
+[2] Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and
+Deshraj Y adav. Mem0: Building Production-Ready AI Agents with
+Scalable Long-Term Memory, 2025. URL https://arxiv.org/abs/
+2504.19413.
+[3] Darren Edge, Ha Trinh, Newman Cheng, et al. From Local to
+Global: A Graph RAG Approach to Query-Focused Summariza-
+tion, 2024. URL https://arxiv.org/abs/2404.16130.
+[4] Akash Gupta, Ivaxi Sheth, V yas Raina, Mark Gales, and Mario
+Fritz. LLM Task Interference: An Initial Study on the Impact
+of Task-Switch in Conversational History. In Proceedings of
+EMNLP 2024, pages 14633–14652, 2024. doi: 10.18653/v1/2024.
+emnlp-main.811. URL https://aclanthology.org/2024.emnlp-main.
+811/.
+[5] Binyuan Hui, Jian Y ang, Zeyu Cui, et al. Qwen2.5-Coder Technical
+Report, 2024. URL https://arxiv.org/abs/2409.12186.
+[6] Jiawei Liu, Chunqiu Steven Xia, Y uyao Wang, and Lingming
+Zhang. Is Y our Code Generated by ChatGPT Really Correct? Rig-
+orous Evaluation of Large Language Models for Code Generation.
+In Advances in Neural Information Processing Systems , volume 36,
+2023. URL https://arxiv.org/abs/2305.01210.
+[7] Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele
+Bevilacqua, Fabio Petroni, and Percy Liang. Lost in the Middle:
+How Language Models Use Long Contexts. Transactions of the
+Association for Computational Linguistics , 12:157–173, 2024. doi:
+10.1162/tacl_a_00638. URL https://aclanthology.org/2024.tacl-1.
+9/.
+[8] Zeyu Liu, Jian Zhong, Rongduo Han, et al. EvalMem: An
+Operation-Level Diagnostic Framework for Long-Term Memory
+Systems, 2026. URL https://arxiv.org/abs/2609.22231.
+[9] Md Afif Al Mamun, Sayan Nath, Gias Uddin, and Novarun Deb.
+Evaluating the Environmental Impact of using SLMs and Prompt
+Engineering for Code Generation, 2026. URL https://arxiv.org/abs/
+2604.02776.
+[10] Soham Poddar, Paramita Koley, Janardan Misra, Niloy Ganguly,
+and Saptarshi Ghosh. Towards Sustainable NLP: Insights from
+Benchmarking Inference Energy in Large Language Models. In
+Proceedings of NAACL 2025 (V olume 1: Long Papers), pages
+12688–12704, 2025. doi: 10.18653/v1/2025.naacl-long.632. URL
 https://aclanthology.org/2025.naacl-long.632/.
-[11] Guijin Son, Sangwon Baek, Sangdae Nam, Ilgyun Jeong,
-and Seungone Kim. Multi-Task Inference: Can Large
-Language Models Follow Multiple Instructions at Once?
-In Proceedings of ACL 2024 (Volume 1: Long Papers) ,
-pages 5606–5627, 2024. doi: 10.18653/v1/2024.acl-long.
-304. URL https://aclanthology.org/2024.acl-long.
-304/.
-[12] Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Jo-
-hannes Heidecke, and Alex Beutel. The Instruction Hi-
-erarchy: Training LLMs to Prioritize Privileged Instruc-
-tions, 2024. URL https://arxiv.org/abs/2404.13208.
-[13] Di Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-
-Wei Chang, and Dong Yu. LongMemEval: Benchmarking
-Chat Assistants on Long-Term Interactive Memory. In
-International Conference on Learning Representations ,
-2025. URL https://arxiv.org/abs/2410.10813.
-[14] Di Wu, Zixiang Ji, Asmi Kawatkar, Bryan Kwan,
-Jia-Chen Gu, Nanyun Peng, and Kai-Wei Chang.
-LongMemEval-V2: Evaluating Long-Term Agent Mem-
-ory Toward Experienced Colleagues, 2026. URL https:
-//arxiv.org/abs/2605.12493.
-[15] Siyan Zhao, Mingyi Hong, Yang Liu, Devamanyu Haz-
-arika, and Kaixiang Lin. Do LLMs Recognize Your Pref-
-erences? Evaluating Personalized Preference Following
-in LLMs. In International Conference on Learning Rep-
-resentations, 2025. URL https://arxiv.org/abs/2502.
-09597.
-11
-Memory Under Interference Preprint – Version 1.1
+[11] Guijin Son, Sangwon Baek, Sangdae Nam, Ilgyun Jeong, and Se-
+ungone Kim. Multi-Task Inference: Can Large Language Models
+Follow Multiple Instructions at Once? In Proceedings of ACL
+2024 (V olume 1: Long Papers), pages 5606–5627, 2024. doi:
+10.18653/v1/2024.acl-long.304. URL https://aclanthology.org/
+2024.acl-long.304/.
+[12] Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes
+Heidecke, and Alex Beutel. The Instruction Hierarchy: Training
+LLMs to Prioritize Privileged Instructions, 2024. URL https://arxiv.
+org/abs/2404.13208.
+[13] Di Wu, Hongwei Wang, Wenhao Y u, Y uwei Zhang, Kai-Wei Chang,
+and Dong Y u. LongMemEval: Benchmarking Chat Assistants on
+Long-Term Interactive Memory. In International Conference on
+Learning Representations, 2025. URL https://arxiv.org/abs/2410.
+10813.
+[14] Di Wu, Zixiang Ji, Asmi Kawatkar, Bryan Kwan, Jia-Chen Gu,
+Nanyun Peng, and Kai-Wei Chang. LongMemEval-V2: Evaluating
+Long-Term Agent Memory Toward Experienced Colleagues, 2026.
+URL https://arxiv.org/abs/2605.12493.
+[15] Siyan Zhao, Mingyi Hong, Y ang Liu, Devamanyu Hazarika, and
+Kaixiang Lin. Do LLMs Recognize Y our Preferences? Evaluating
+Personalized Preference Following in LLMs. In International
+Conference on Learning Representations, 2025. URL https://arxiv.
+org/abs/2502.09597.
+10
+Memory Under Interference Preprint – V ersion 1.1
 A Registered Primary Contrasts and Request Inventory
 Study Calls API failures Caps Energy readings
 E0 1968 2 6 1966
@@ -1092,29 +1034,25 @@ M2 400 0 1 400
 M3R2 1040 1 10 1038
 M3_initial 280 0 1 280
 R1 400 0 5 400
-These are scheduled experimental requests, not retry counts. Caps are bounded-outcome nonpasses; API fail-
-ures remain separately missing for valid-input accuracy. Energy readings are approximate post-load CPU-
-package observations. The revised interference study has one missing energy window in addition to its API
-failure. Pilot and partial-diagnostic counts remain separate in the archive.
-The study identiﬁers connect these results to the frozen protocols. E0 is the isolated strategy comparison; ini-
-tial M3 is selected-task context load; M1 is task bundling; revised M3/R2 is semantic interference; M2 is static
-return-to-task interference; R1 is retention; E5 is preference placement. The table reproduces speciﬁed primary
-contrasts; it does not relabel the posthoc synthesis as a conﬁrmatory study. Full intervals, transition IDs and
-sensitivity populations are in the machine-readable archive. E5 rows use its original strict-adherence endpoint
-and four-test Holm family, not the secondary fence-tolerant metric. All-zero paired diﬀerences yield degener-
-ate empirical bootstrap intervals; these are not proof of population equivalence. M1’s diagnostic/exploratory
-comparisons and E5 secondary correctness contrasts are supplied in the archive rather than relabelled primary.
-Study Model Contrast n Diﬀ. pp 95% CI pp Holm p
+These are scheduled experimental requests, not retry counts. Caps are bounded-outcome nonpasses; API failures remain
+separately missing for valid-input accuracy. Energy readings are approximate post-load CPU-package observations. The
+revised interference study has one missing energy window in addition to its API failure. Pilot and partial-diagnostic
+counts remain separate in the archive.
+The study identifiers connect these results to the frozen protocols. E0 is the isolated strategy comparison; initial M3 is
+selected-task context load; M1 is task bundling; revised M3/R2 is semantic interference; M2 is static return-to-task in-
+terference; R1 is retention; E5 is preference placement. The table reproduces specified primary contrasts; it does not re-
+label the post-hoc synthesis as a confirmatory study. Full intervals, transition IDs and sensitivity populations are in the
+machine-readable archive. E5 rows use its original strict-adherence endpoint and four-test Holm family, not the secondary
+fence-tolerant metric. All-zero paired differences yield degenerate empirical bootstrap intervals; these are not proof of
+population equivalence. M1’s diagnostic/exploratory comparisons and E5 secondary correctness contrasts are supplied in
+the archive rather than relabelled primary.
+Study Model Contrast 𝑛 Diff. pp 95% CI pp Holm 𝑝
 E0 0.5B P3_1 minus P1 163 -2.25 [−7.77, 2.86] 0.44696
 E0 1.5B P3_1 minus P1 164 2.64 [−1.22, 6.30] 0.44156
-Initial
-M3
-0.5B near-minus-irrelevant averaged
+Initial M3 0.5B near-minus-irrelevant averaged
 length
 20 -27.50 [−45.00, −10.00] 0.033691
-Initial
-M3
-1.5B near-minus-irrelevant averaged
+Initial M3 1.5B near-minus-irrelevant averaged
 length
 20 -2.50 [−17.50, 12.50] 1
 R1 0.5B lossless_compaction minus
@@ -1123,12 +1061,8 @@ full_history
 R1 1.5B lossless_compaction minus
 full_history
 40 0.00 [−15.00, 15.00] 1
-R1 0.5B oracle_selective minus
-full_history
-40 7.50 [−5.00, 22.50] 1
-R1 1.5B oracle_selective minus
-full_history
-40 2.50 [−10.00, 15.00] 1
+R1 0.5B oracle_selective minus full_history 40 7.50 [−5.00, 22.50] 1
+R1 1.5B oracle_selective minus full_history 40 2.50 [−10.00, 15.00] 1
 R1 0.5B verbatim_replay minus
 full_history
 40 2.50 [−7.50, 12.50] 1
@@ -1159,68 +1093,64 @@ adherence)
 E5 1.5B replayed minus buried (strict
 adherence)
 40 0.00 [0.00, 0.00] 1
-My broad starting claims about load, replay and a possible recognition–generation gap motivated this project,
-but I do not test all of them in this release. Load contrasts do not establish internal capacity; the revised reten-
-12
-Memory Under Interference Preprint – Version 1.1
-tion design does not test the original replay-rate phase diagram; and the unrun recognition/hint studies cannot
-establish a know–do gap. Frozen hypotheses and amendments remain intact.
+My broad starting claims about load, replay and a possible recognition–generation gap motivated this project, but I do not
+test all of them in this release. Load contrasts do not establish internal capacity; the revised retention design does not test
+the original replay-rate phase diagram; and the unrun recognition/hint studies cannot establish a know–do gap. Frozen
+hypotheses and amendments remain intact.
+11
+Memory Under Interference Preprint – V ersion 1.1
 B Scoring, Censoring and Oracle Audit
-I re-extract saved outputs using the frozen extractor and check native request/response measurements. Sepa-
-rate sandbox records cross-score 1,029 uncensored revised-interference outputs on their alternative suites, in-
-cluding isolation and controls. Sixty capped per-function candidates and one merged complete-fence candidate
-are scored separately; none changes the audited target correctness outcome. This does not prove the extractor
-is optimal or justify removing caps from the registered endpoint.
-I retain HumanEval/32’s original oracle anomaly and report an exclusion sensitivity. Caps-as-missing and op-
-timistic cap-pass scenarios preserve their diﬀerent denominators. Held-out eligibility sensitivity excludes the
-selecting P1 sample0 from isolated-strategy comparison outcomes. The original all-task primary estimates re-
-main intact. Failure reasons and infrastructure-policy outcomes are not silently converted into evidence about
-model knowledge.
-The cross-pass complete-case comparison requires all four competing and irrelevant cells per task. Adverse/fa-
-vorable assignments bound unknown indicators; their intervals describe assigned scenarios. The principal 1.5B
-point estimate and signiﬁcance are sensitive to that assignment. No claim of missing-at-random censoring is
-made. Zero both-pass cells remain explicit.
+I re-extract saved outputs using the frozen extractor and check native request/response measurements. Separate sandbox
+records cross-score 1,029 uncensored revised-interference outputs on their alternative suites, including isolation and con-
+trols. Sixty capped per-function candidates and one merged complete-fence candidate are scored separately; none changes
+the audited target correctness outcome. This does not prove the extractor is optimal or justify removing caps from the reg-
+istered endpoint.
+I retain HumanEval/32’s original oracle anomaly and report an exclusion sensitivity. Caps-as-missing and optimistic cap-
+pass scenarios preserve their different denominators. Held-out eligibility sensitivity excludes the selecting P1 sample0
+from isolated-strategy comparison outcomes. The original all-task primary estimates remain intact. Failure reasons and
+infrastructure-policy outcomes are not silently converted into evidence about model knowledge.
+The cross-pass complete-case comparison requires all four competing and irrelevant cells per task. Adverse/favorable
+assignments bound unknown indicators; their intervals describe assigned scenarios. The principal 1.5B point estimate
+and significance are sensitive to that assignment. No claim of missing-at-random censoring is made. Zero both-pass cells
+remain explicit.
 C Energy Robustness and the Partial Cache Diagnostic
-I retain the original block baselines, drift ﬂags and time/power windows in my export. Start, end and midpoint
-subtraction are reported separately. Excluding drift or short windows changes the retained task population;
-paired cost-ratio sensitivities require covered observations in both arms. Undeﬁned ratio draws are reported
-rather than silently discarded. Total-request and approximate post-load estimates answer diﬀerent measure-
-ment questions.
-E4’s original feasibility pilot stops at 10 of 20 planned requests because one response ends short of its intended
-workload. A separately registered JSON-array amendment completes a 20-call pilot, then saves 76 of 400 full
-requests. These workloads and pilots are not pooled. The full run has 35 cold and 41 warm requests. Native
-cached-token counters show zero for the cold requests and positive counts for the warm requests; model res-
-idency, preparation and priming are logged separately. Matching by model, preﬁx and repeat yields only six
-pairs in total, spread sparsely across cells. Most cells have zero or one pair; they do not support the planned
-cache-energy inference. Setup/priming energy is outside measured requests. A setup-only paused intent is not
-a completed measured generation. No full E3 or U-family outcome is substituted.
+I retain the original block baselines, drift flags and time/power windows in my export. Start, end and midpoint subtraction
+are reported separately. Excluding drift or short windows changes the retained task population; paired cost-ratio sensitiv-
+ities require covered observations in both arms. Undefined ratio draws are reported rather than silently discarded. Total-
+request and approximate post-load estimates answer different measurement questions.
+E4’s original feasibility pilot stops at 10 of 20 planned requests because one response ends short of its intended workload.
+A separately registered JSON-array amendment completes a 20-call pilot, then saves 76 of 400 full requests. These work-
+loads and pilots are not pooled. The full run has 35 cold and 41 warm requests. Native cached-token counters show zero
+for the cold requests and positive counts for the warm requests; model residency, preparation and priming are logged sep-
+arately. Matching by model, prefix and repeat yields only six pairs in total, spread sparsely across cells. Most cells have
+zero or one pair; they do not support the planned cache-energy inference. Setup/priming energy is outside measured re-
+quests. A setup-only paused intent is not a completed measured generation. No full E3 or U-family outcome is substi-
+tuted.
 D Companion Implementation and Reproduction Boundaries
-My pinned MemoryGraph source snapshot includes local CRUD, ranking, a ﬁxed alias graph, two narrow
-conﬂict categories and approval-gated optional Ollama comparison. The archived synthetic dataset, per-pair
-scores and per-query rankings permit MRR recalculation without embedding inference. Classiﬁer pipelines use
-grouped ﬁctional-proﬁle validation; template shortcuts remain. No model weights, private memories, real-user
-records or executable trained classiﬁer pickles are needed in the release.
-The portable reproduction script veriﬁes release hashes, logical-call counts, key ﬁelds and the principal paired
-comparisons from public records. An optional full audit rebuild uses the supplied analysis code and dependen-
-cies. Oﬄine veriﬁcation does not launch Ollama or regenerate embeddings. Original frozen commit identiﬁers
-and transformation mappings remain provenance references; sanitized archive bytes have their own checksums.
-13
-Memory Under Interference Preprint – Version 1.1
-E Representative Rendered
-Prompts
-I selected these saved requests for HumanEval/0 on
-0.5B; they are not new prompt variants. The system
-message is You are a helpful coding assistant.
-The public examples/ directory supplies the exact
-UTF-8 prompt strings, full call keys, native token
-counts, decoding options and SHA256 values; those
-strings also occur in the archived call journals. The
-R1 examples below are complete. The longer R2 and
-E5 layouts explicitly mark editorial omissions; their
-complete unabridged strings remain in the supple-
-ment.
-E.1 Oracle-retained target, preference
-and query (complete)
+My pinned MemoryGraph source snapshot includes local CRUD, ranking, a fixed alias graph, two narrow conflict cat-
+egories and approval-gated optional Ollama comparison. The archived synthetic dataset, per-pair scores and per-query
+rankings permit MRR recalculation without embedding inference. Classifier pipelines use grouped fictional-profile vali-
+dation; template shortcuts remain. No model weights, private memories, real-user records or executable trained classifier
+pickles are needed in the release.
+The portable reproduction script verifies release hashes, logical-call counts, key fields and the principal paired compar-
+isons from public records. An optional full audit rebuild uses the supplied analysis code and dependencies. Offline ver-
+ification does not launch Ollama or regenerate embeddings. Original frozen commit identifiers and transformation map-
+pings remain provenance references; sanitized archive bytes have their own checksums.
+12
+Memory Under Interference Preprint – V ersion 1.1
+E Representative Rendered Prompts
+I selected these saved requests for HumanEval/0 on 0.5B;
+they are not new prompt variants. The system message is
+You are a helpful coding assistant. The public
+examples/ directory supplies the exact UTF-8 prompt
+strings, full call keys, native token counts, decoding op-
+tions and SHA256 values; those strings also occur in the
+archived call journals. The R1 examples below are com-
+plete. The longer R2 and E5 layouts explicitly mark edito-
+rial omissions; their complete unabridged strings remain in
+the supplement.
+E.1 Oracle-retained target, preference and
+query (complete)
 [TARGET SPECIFICATION]
 from typing import List
 def has_close_elements(numbers: List[float], threshold: float)
@@ -1253,12 +1183,12 @@ True
 """
 [CURRENT QUERY]
 Complete the function has_close_elements.
-The diﬀerence is an actual instruction diﬀerence in
-the collected policies, not a length-only intervention.
-It helps explain why an oracle/no-history comparison
-cannot isolate relevance selection.
-E.3 Competing-context request used
-in the worked example (abridged)
+The difference is an actual instruction difference in the
+collected policies, not a length-only intervention. It helps
+explain why an oracle/no-history comparison cannot iso-
+late relevance selection.
+E.3 Competing-context request used in the
+worked example (abridged)
 Implement only the TARGET function has_close_elements.
 Background specifications are distractors; do not
 implement them. Return only Python code.
@@ -1287,14 +1217,14 @@ descriptions]
 x x x x x x x x x x x x x x x x
 [CURRENT QUERY]
 Complete only has_close_elements from the TARGET specification.
-Only repeated copies are elided here; the exact
-archived request contains all of them. They are task
-descriptions without implementation bodies or hid-
-den tests. Repetition to ﬁll the budget, task position
-and explicit distractor labelling are part of the con-
-struction and constrain its interpretation.
-E.4 Immediate preference in the
-placement study (abridged)
+Only repeated copies are elided here; the exact archived
+request contains all of them. They are task descriptions
+without implementation bodies or hidden tests. Repeti-
+tion to fill the budget, task position and explicit distractor
+labelling are part of the construction and constrain its inter-
+pretation.
+E.4 Immediate preference in the placement
+study (abridged)
 [TARGET SPECIFICATION]
 from typing import List
 def has_close_elements(numbers: List[float], threshold: float)
@@ -1313,9 +1243,8 @@ For future coding tasks, return only Python code, without
 explanation.
 [CURRENT QUERY]
 Complete the function has_close_elements.
-The omitted region contains the ﬁxed earlier-task de-
-scriptions. The wording asks for code without expla-
-nation and does not explicitly ban Markdown fences;
-the registered strict score nevertheless rejects fenced
-responses.
-14
+The omitted region contains the fixed earlier-task descrip-
+tions. The wording asks for code without explanation and
+does not explicitly ban Markdown fences; the registered
+strict score nevertheless rejects fenced responses.
+13

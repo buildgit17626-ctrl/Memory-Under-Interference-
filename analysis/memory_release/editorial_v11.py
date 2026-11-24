@@ -81,15 +81,17 @@ def check() -> dict:
 
 def package() -> None:
     check()
-    shutil.copyfile(NEW / "manuscript/main.pdf", NEW / "Memory_Under_Interference_v1_1.pdf")
+    shutil.copyfile(NEW / "manuscript/main.pdf", NEW / "Memory_Under_Interference_v1.pdf")
     files = sorted(
         p
         for p in NEW.rglob("*")
         if p.is_file()
         and p.name not in {"SHA256SUMS.json", "SHA256SUMS.txt"}
-        and not p.name.startswith("Memory_Under_Interference_v1_1_")
+        and not (p.name.startswith("Memory_Under_Interference_v1") and p.suffix == ".zip")
         and p.suffix not in {".aux", ".out", ".xdv", ".blg", ".pyc", ".html"}
         and "__pycache__" not in p.parts
+        and "local-fonts" not in p.parts
+        and p.suffix not in {".ttf", ".otf"}
         and not (p.parent.name == "manuscript" and p.suffix == ".log")
     )
     hashes = {
@@ -101,19 +103,23 @@ def package() -> None:
     }
     (NEW / "SHA256SUMS.json").write_text(json.dumps(hashes, indent=2) + "\n")
     names = [
-        "Memory_Under_Interference_v1_1_source.zip",
-        "Memory_Under_Interference_v1_1_reproducibility.zip",
+        "Memory_Under_Interference_v1_source.zip",
+        "Memory_Under_Interference_v1_reproducibility.zip",
     ]
     for i, name in enumerate(names):
         with zipfile.ZipFile(NEW / name, "w", zipfile.ZIP_DEFLATED) as z:
             for p in files + ([NEW / "SHA256SUMS.json"] if i else []):
                 rel = p.relative_to(NEW)
-                if i or rel.parts[0] in {"manuscript", "figures", "examples", "licenses"}:
+                if (
+                    i
+                    or rel.parts[0] in {"manuscript", "figures", "examples", "licenses"}
+                    or rel.name in {"compile_manuscript.py", "BUILDING.md", "README.md"}
+                ):
                     if i or p.suffix != ".png":
                         z.write(p, rel.as_posix())
         with zipfile.ZipFile(NEW / name) as z:
             assert z.testzip() is None
-    assets = ["Memory_Under_Interference_v1_1.pdf", *names]
+    assets = ["Memory_Under_Interference_v1.pdf", *names]
     (NEW / "SHA256SUMS.txt").write_text(
         "".join(
             hashlib.sha256((NEW / n).read_bytes()).hexdigest() + "  " + n + "\n" for n in assets

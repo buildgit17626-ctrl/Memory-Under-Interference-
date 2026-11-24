@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source": "Clean extracted source ZIP",
+  "command": "python compile_manuscript.py",
+  "engine": "Tectonic 0.17.0 (XeTeX / LaTeX)",
+  "installed_fonts_verified": "Four actual Times New Roman TrueType faces",
+  "pages_pixel_matched": 13,
+  "comparison_dpi": 35,
+  "font_files_distributed": false,
+  "platform": "Windows 11 / Python 3.13"
+}

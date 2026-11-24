@@ -8,8 +8,16 @@
   "push_authorized": false,
   "new_inference": 0,
   "science_unchanged": true,
-  "pdf_pages": 14,
+  "pdf_pages": 13,
   "pytest_passed": 494,
   "ruff": "clean",
-  "prior_release_preserved": "v1.0.1"
+  "prior_release_preserved": "v1.0.1",
+  "compilation_engine": "Tectonic 0.17.0 / XeTeX + fontspec",
+  "public_link_gate": "FAIL: v1.1.0 tag/release absent (404); no publication authorized",
+  "assets": [
+    "Memory_Under_Interference_v1.pdf",
+    "Memory_Under_Interference_v1_source.zip",
+    "Memory_Under_Interference_v1_reproducibility.zip",
+    "SHA256SUMS.txt"
+  ]
 }

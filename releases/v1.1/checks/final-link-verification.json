@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-24",
+  "tag": "v1.1.0",
+  "tag_exists": false,
+  "release_exists": false,
+  "http_status": 404,
+  "publication_authorized": false,
+  "doi": "10.5281/zenodo.24500468",
+  "doi_status": "Reserved; not claimed published",
+  "repositories_verified": [
+    "https://github.com/buildgit17626-ctrl/MemoryGraph",
+    "https://github.com/buildgit17626-ctrl/Prompt-Energy"
+  ],
+  "blocker": "Version-specific publication link must resolve before external release is finalized."
+}

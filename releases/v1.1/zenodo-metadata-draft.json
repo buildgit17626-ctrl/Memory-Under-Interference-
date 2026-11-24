@@ -11,7 +11,7 @@
       "affiliation": "Independent researcher; IIT Madras student (no institutional endorsement)"
     }
   ],
-  "description": "Local unpublished Version 1.1 editorial revision of Memory Under Interference. Scientific findings and evidence are unchanged. Two small quantized code models, paired context comparisons, posthoc cross-specification diagnosis and estimated CPU-package energy. MemoryGraph remains a separately evaluated synthetic retrieval prototype. Reserved DOI; no Zenodo publication has been performed.",
+  "description": "Empirical evaluation of context utilization, competing computational specifications and estimated CPU-package inference cost in two small quantized code language models on HumanEval+-based tasks. Seven studies contain 5,528 main experimental requests. Post-hoc and censoring limitations, uncertain accuracy preservation and retention-policy confounding remain explicit. MemoryGraph is a separately evaluated synthetic retrieval prototype, without demonstrated end-to-end correctness or energy benefits.",
   "license": "cc-by-4.0",
   "access_right": "open",
   "keywords": [
@@ -22,7 +22,7 @@
     "CPU package energy",
     "memory retrieval"
   ],
-  "notes": "LOCAL UNPUBLISHED editorial revision. DOI reserved; no external publication authorized.",
+  "notes": "Publication-preparation draft for manuscript Version 1.1 / proposed package v1.1.0. DOI reserved; not confirmed published. Actual Times New Roman embedded in manuscript; licensed font files not distributed.",
   "related_identifiers": [
     {
       "identifier": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0",

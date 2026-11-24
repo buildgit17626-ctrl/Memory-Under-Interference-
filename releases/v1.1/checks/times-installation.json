@@ -1,0 +1,22 @@
+[
+  {
+    "file": "times.ttf",
+    "bytes": 1190952,
+    "sha256": "0bf1b21b27b370039b60eca23d532c3fe3fb308750d8f13816db70a6cb666804"
+  },
+  {
+    "file": "timesbd.ttf",
+    "bytes": 1170312,
+    "sha256": "cb8f85dedb0ab01792baad20da28d26773485ac9c21e112bb5c511a8b2001eee"
+  },
+  {
+    "file": "timesbi.ttf",
+    "bytes": 904428,
+    "sha256": "5d78b5c66ac8e9c3fc94bd4ead792e1127f5f3faa29f768ff9b599339afe95bf"
+  },
+  {
+    "file": "timesi.ttf",
+    "bytes": 963084,
+    "sha256": "11e6aae7436a5f2442eada66493d1767c78dde02acedc0afa6e7d0afeb0f3a14"
+  }
+]

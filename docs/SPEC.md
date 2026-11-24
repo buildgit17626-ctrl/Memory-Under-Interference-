@@ -1,5 +1,12 @@
 # SPEC: The cost of a correct answer
 
+Final formatting authorization (2026-11-24): installed/embedded Times New Roman,
+accurate PDF metadata, concise terminology/abstract/availability corrections and
+final local v1.1.0 preparation. Preserve approved science and prior public releases;
+no inference, feature work, push or publication. Requested asset basenames return
+to Memory_Under_Interference_v1 inside releases/v1.1. Plan:
+docs/plans/MUI_FINAL_TYPOGRAPHY.md.
+
 Current editorial authorization: substantial scientific writing revision in
 first-person singular plus consistent spacing, with unchanged evidence/results.
 Prepare local manuscript Version 1.1 / planned package v1.1.0 in releases/v1.1;
