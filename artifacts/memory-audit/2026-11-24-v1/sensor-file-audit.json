@@ -1,0 +1,1261 @@
+[
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\30641459922a4932b727d4faa2fa2770.csv",
+    "samples": 23733,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\4bd5c3ff0519475284508c75a0b1011c.csv",
+    "samples": 29435,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\54e0d60ca8f94c669431fe081d357431.csv",
+    "samples": 8579,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\62c46a58840b4eaa9c8e9b939bebe1fc.csv",
+    "samples": 28079,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\715a2dd4c9804c6b941d54e47d3d4ae4.csv",
+    "samples": 15122,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\71b07b469ad842ee911fd9ae881d00ad.csv",
+    "samples": 20900,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\73411ec4fade481dbb85e0d306a95272.csv",
+    "samples": 17978,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\8a4c177db59d42ceb4a696c86a32be42.csv",
+    "samples": 25176,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\9ed37b49660e421fbba281ba6bd52426.csv",
+    "samples": 26691,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\a0501e4b582842979366525e4171628f.csv",
+    "samples": 19373,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\a0b0243196b94860bd4b626f6287133b.csv",
+    "samples": 22298,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\aefbe8a91996482a81c3a75f51417b88.csv",
+    "samples": 11175,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\b1c57d1dd4c84d798880142ca17ec302.csv",
+    "samples": 12461,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\bfa1216d72394c538ec267305027c4b6.csv",
+    "samples": 9868,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\d7936c03a6d244dabf468708f7624e46.csv",
+    "samples": 13713,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\full\\sensors\\f4226796824f49da860378ebe1f62f5a.csv",
+    "samples": 16571,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\pilot\\sensors\\2c10f6ff4b1e4c4a9674b54a6a2cb09e.csv",
+    "samples": 7077,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\E5\\pilot\\sensors\\6bcb16e226d84a94a94bf41817e8b094.csv",
+    "samples": 5286,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\01e61a7978aa4a01a03e70075fc901d9.csv",
+    "samples": 5607,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\0a6760960d6147ff8197f6c4038a7bdb.csv",
+    "samples": 15124,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\102a2d2f4be04c108b0e01c896fbc707.csv",
+    "samples": 51004,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\26eaffe559d643c4843f406e1ed8bf39.csv",
+    "samples": 57511,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\2791c7602fdd408f92232eb9b14e2336.csv",
+    "samples": 52719,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\3a91541cc6e14c459f913601009cf87f.csv",
+    "samples": 42864,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\3bc11e99ff344c14b2f80b5b5041f0a3.csv",
+    "samples": 16751,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\42402581b445451a985a4e847bab6bfa.csv",
+    "samples": 12200,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\42fde1576bc7480ab9d05865ff342e32.csv",
+    "samples": 66011,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\46950a69fbb9484f89f784e9b30bc920.csv",
+    "samples": 18560,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\5236acb8a8b542d0b6db2c4fe25aeb23.csv",
+    "samples": 54293,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\52f144b063944b4aaa292184b8f02979.csv",
+    "samples": 41365,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\64e00559100640e997b966d6dde69af6.csv",
+    "samples": 1706,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\6b9153d6fffb4ec88102b83d93e0e1b6.csv",
+    "samples": 46292,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\6d3a154e98474016bac079ece3ff91f6.csv",
+    "samples": 9003,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\7298b927735f4369ad64654361729d6e.csv",
+    "samples": 10730,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\7cc9a28984084f3d8bd5e5eb727c09ab.csv",
+    "samples": 18164,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\831dcad1a50740c88d97646f06253954.csv",
+    "samples": 55859,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\984d5aeb32f947598cb33d83eb67ebf7.csv",
+    "samples": 21829,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\9b39cc7de26144b3ac9687bcc2ae11c4.csv",
+    "samples": 12253,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\9b6c6934c82349f9851726b1d2a2ac3c.csv",
+    "samples": 64411,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\a4576e31064848fe87f962ae668ef576.csv",
+    "samples": 2169,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\ad9cd55f03134528b99a6c16ae48b02b.csv",
+    "samples": 3817,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\ada8d7315e0a4b8bacb89cce88b18c0c.csv",
+    "samples": 13632,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\ae185b5a0a494ad3ba6466660856ee45.csv",
+    "samples": 7505,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\b696ed49e36842728a6795f29121b0d7.csv",
+    "samples": 61152,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\bad699f7fd704f728a888c61c5031d8e.csv",
+    "samples": 15541,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\bfeac2414fc64cfd94ebe2333ee61220.csv",
+    "samples": 44421,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\c605d6ae35ad47b9a556804e86aa6da0.csv",
+    "samples": 23285,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\ca3dc8648ff144e2879fc3d6847fe15e.csv",
+    "samples": 49406,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\cd1fae763260453aa41b42524271e61f.csv",
+    "samples": 9044,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\d0ef964cd7a142ff91501af5de3b2fcc.csv",
+    "samples": 17027,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\d2a561b0a1db4024926b7e73ce958247.csv",
+    "samples": 59428,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\d3ab46849aab4efba742b64f89197814.csv",
+    "samples": 20141,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\db87aa7141234e6db7a93f582a07324c.csv",
+    "samples": 62794,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\dd2ef05c33f448f793b2ef546ddf902d.csv",
+    "samples": 47868,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\e651550dbdd049aca71dedb7c2ab2b19.csv",
+    "samples": 10729,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\e688f6be16fa443ab0ecd0a9255878b0.csv",
+    "samples": 4635,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\e7e1e5bf186445688c481502bd95629f.csv",
+    "samples": 7143,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\e88efa6ebfb44beea885b0d4a6369925.csv",
+    "samples": 6036,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\f3d278d9d75a4f92aa1efd7627fdcd03.csv",
+    "samples": 3159,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\full\\sensors\\f83eefb9b859437d8fb3f7e1630ea50f.csv",
+    "samples": 13675,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\pilot\\sensors\\158664f831e64d159fd4bae7b3522444.csv",
+    "samples": 39106,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\pilot\\sensors\\36ad3f464ebc4a12aafe888de590b503.csv",
+    "samples": 35874,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\pilot\\sensors\\44740339d63443218bc94453a281c618.csv",
+    "samples": 39757,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\pilot\\sensors\\6b09db2fde5444f7819ab1adc7c913bc.csv",
+    "samples": 34344,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\pilot\\sensors\\76e6d308dd86442aadcb59d47d769895.csv",
+    "samples": 37484,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\continuation-v3\\R2\\pilot\\sensors\\b7e82e2b0caf4f6f8b5074e922fe26d5.csv",
+    "samples": 32798,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\e4-schema-v5\\full\\sensors\\17259893a9624a25a93c2497e53c4f73.csv",
+    "samples": 2035,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\e4-schema-v5\\full\\sensors\\660e57fc9f594889920fa2861077c221.csv",
+    "samples": 4339,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\e4-schema-v5\\full\\sensors\\8ab4d26947154aa7b248cb93767b38d5.csv",
+    "samples": 3869,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\e4-schema-v5\\full\\sensors\\eabe34f7cccb4260af4d85e02c4dec84.csv",
+    "samples": 78545,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\e4-schema-v5\\pilot\\sensors\\8dd5ca9c92b64e58a289887bee1bb142.csv",
+    "samples": 76564,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\02dcdcce421c4b86a37479944904351d.csv",
+    "samples": 39276,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\0c5c37f544e446d0953ebb21ef4c085f.csv",
+    "samples": 5777,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\1cea7398ef054637ad35cec305d7dd8b.csv",
+    "samples": 13854,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\211f2a9b53f74ab0b6d494c0363eef02.csv",
+    "samples": 15274,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\24cec702dbce4290b04604aca577044a.csv",
+    "samples": 36499,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\25b7bb8777e7409cbbe721a17577e46f.csv",
+    "samples": 10004,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\28e5846b1d0f4cd0b1a67c595ded0018.csv",
+    "samples": 25144,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\295652feb38140b0b39be29d1d4824cd.csv",
+    "samples": 1431,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\2e60895feefc41c8ba6a68858aed4e09.csv",
+    "samples": 11240,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\2ff6e266faed4be9a36633e0dde6731b.csv",
+    "samples": 32235,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\32fac3a5bc014219b9abc6a41043c640.csv",
+    "samples": 4412,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\3df948150d5b4b9e8d3bcbf0162ee4fb.csv",
+    "samples": 21189,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\53e7664a9cef4e448d69e1d170645ff9.csv",
+    "samples": 8542,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\5ebb66c57256410b95f983bbc5896236.csv",
+    "samples": 16679,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\5f5f6ca43e4343c3ad724bb24afb1b09.csv",
+    "samples": 12585,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\60faa069ea3b44e6868ea2e5d2107677.csv",
+    "samples": 7302,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\6df5653a0b374fd4857c694a9b9df2aa.csv",
+    "samples": 9886,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\6f40444d732344ba83342390d12ac586.csv",
+    "samples": 46023,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\729b1740faa94f63819c5cc057e770d6.csv",
+    "samples": 4387,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\7948bad632064c3d88261b9da04bd065.csv",
+    "samples": 11210,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\79b45bf21978417d891e09c97665521d.csv",
+    "samples": 40841,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\81f1b0fcbb154d4aad55220b8cd0475b.csv",
+    "samples": 30919,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\8237121b404347de8c75ddafc2f2a51a.csv",
+    "samples": 33699,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\848cbb16c0e2480ab7e3bc45b9464d2d.csv",
+    "samples": 8434,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\86a19bd3761c4cc0af7863012a20cde9.csv",
+    "samples": 7176,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\91bb589485a14ac8a1ad66713d184688.csv",
+    "samples": 47361,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\9c867bf431184820982e27a80aefd0ba.csv",
+    "samples": 14786,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\9ca9888a31654dc19aef49d733539188.csv",
+    "samples": 13763,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\9d47d3db22b2484395c7ea27a2adf1f3.csv",
+    "samples": 23874,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\9d9eb257febb463691565dbdb590e248.csv",
+    "samples": 26492,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\acfb6b3a75874512b201d2203a1fbcdf.csv",
+    "samples": 35064,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\b08d5c433a7a4ad4b45c1e1fcd326690.csv",
+    "samples": 12502,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\b78d331a8991441a9c0c4c7246b60a18.csv",
+    "samples": 2691,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\b9ff61911e604ad085c353a2ddeeb477.csv",
+    "samples": 3009,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\bb560270ddfa4678a400e045ad9abf92.csv",
+    "samples": 43643,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\c343c3edfd0a43e88e5c9144e140d61e.csv",
+    "samples": 37850,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\c824e3c576234a65a24e3efc350ab23c.csv",
+    "samples": 27830,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\cfc1a6994d474b5c9712fe901e5744ee.csv",
+    "samples": 19046,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\d1d3a700c8b84f6aa3d3821dc26dd66c.csv",
+    "samples": 29526,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\e27287c1226747af91cd71bdd2c8c73c.csv",
+    "samples": 22635,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\e97bed1689304e7886df0dfc13cc60ef.csv",
+    "samples": 42245,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-full\\sensors\\f9e5de3c1c3b4226887df5d80e04ecbb.csv",
+    "samples": 6023,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-pilot\\sensors\\3f5ab46711c04fbbb2affd68f6622105.csv",
+    "samples": 2210,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-pilot\\sensors\\4dc8114fb6544efd8fbecf11bc359bf0.csv",
+    "samples": 3702,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\m1-pilot\\sensors\\e15d92c40b3d442aa744d4492bafda27.csv",
+    "samples": 4796,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\pilot\\sensors\\fbc1a3bf434749c8807c0be772dadfee.csv",
+    "samples": 916,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\02bbe451dd1a4d36a1e276b773d79741.csv",
+    "samples": 33827,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\04b0868b9a0e4d2f8ac75e4d055cadff.csv",
+    "samples": 22008,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\0f3f4ac0956945538fb8d6e4999e308b.csv",
+    "samples": 37911,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\13b153f7ecd14582a5caeb13c28a4231.csv",
+    "samples": 36613,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\218a836236484d6eb8350370438140b2.csv",
+    "samples": 31241,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\3c6a4a48e25a4cc9865de5dd1e0d1b08.csv",
+    "samples": 28428,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\4aa538b92b2242d6882442154b69144a.csv",
+    "samples": 40866,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\4d5d9bee97c14a728b57d3ed2e86ba28.csv",
+    "samples": 35191,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\56a7121bf8b5404486473e14c1dcb469.csv",
+    "samples": 27091,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\7c2ba745079c4f809f2a9bd7f804bc2b.csv",
+    "samples": 32555,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\a7674d31540445ce9687958eb1e73f8d.csv",
+    "samples": 29752,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\b0794252f87943a6b65d7d461122243f.csv",
+    "samples": 23232,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\c43943dfb62141d79b530627044d0d9b.csv",
+    "samples": 39279,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\cd0ba0a5356d482f9722b0fa3df7793e.csv",
+    "samples": 70218,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\d2a8f6aec9ca4b0f87890c2bd14e851b.csv",
+    "samples": 24464,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\full\\sensors\\daafba31475747a486fc917638c05b32.csv",
+    "samples": 25792,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\pilot\\sensors\\a479f5fb5fa64d5885b885abb941194d.csv",
+    "samples": 20660,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\r1-v2\\pilot\\sensors\\fbab55ef3b8549c4a1aa42e4d097e6a6.csv",
+    "samples": 19542,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\E4\\pilot\\sensors\\f1cf13c03526486981def6876de82073.csv",
+    "samples": 58314,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\1219738989eb4d0e8f904e8a4ede35a7.csv",
+    "samples": 42547,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\1d36c4d1d4a4421bb771e6ebe6d751d6.csv",
+    "samples": 55692,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\368c1b37a1974cc48a9e410613421e5d.csv",
+    "samples": 46210,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\36c9c738fe4f4d14a4fce65c29a4c0d8.csv",
+    "samples": 50982,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\3da15ce54640413a982fcd149f45fb3a.csv",
+    "samples": 44613,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\4784849e305c43e5a123466004b443f3.csv",
+    "samples": 47747,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\4b8085b033894236b5eff9b11e179fbf.csv",
+    "samples": 39453,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\4fef6c4430b94ce8be066e678ac907f5.csv",
+    "samples": 34729,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\5455fd8da1724087abc48f8f1463e924.csv",
+    "samples": 49369,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\628ff0dac8b949e6b6d631c13eb8b2da.csv",
+    "samples": 52538,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\631f22d7fff241e6b3b6e633063408d8.csv",
+    "samples": 36464,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\7f294b38ead5480a9a525a57dd424772.csv",
+    "samples": 33259,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\aab9fd8d163440059280e21870d63950.csv",
+    "samples": 40971,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\c2cdd9d07e5c477389231e9cc6245de9.csv",
+    "samples": 37995,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\cd4a0ce1b8b640c0a5423b3cdec97d58.csv",
+    "samples": 31697,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\full\\sensors\\fba5a690b68b4497815b65c68e753ccb.csv",
+    "samples": 54126,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\pilot\\sensors\\19dabade28a6488fa4a01494d355a323.csv",
+    "samples": 30144,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\remaining-v4\\M2\\pilot\\sensors\\bc055b6532e94e06949e1f12d64bf289.csv",
+    "samples": 28742,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\0093dd0e01a2466988d60f8bb15dca33.csv",
+    "samples": 20757,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\0162c3abef2a4fc8a2eaf193a78ff922.csv",
+    "samples": 12647,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\08dc2942b3704d2fa09b463afa81501c.csv",
+    "samples": 2691,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\0c976526d184488180dd1e0363db2ff6.csv",
+    "samples": 45517,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\0e20a36e22214f9dbd3cedbc92103bec.csv",
+    "samples": 42883,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\16dcf46e8369410bb653047fcf330820.csv",
+    "samples": 32856,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\199ed2e33fd34227a03efcbebeed8913.csv",
+    "samples": 1684,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\1afa718fc5d94e34ba61d14e60ff4819.csv",
+    "samples": 16041,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\1f1200fc5c8b44448580ea40d14ab4ed.csv",
+    "samples": 86482,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\1fc1ab17e1124e3d94e7f7e785048413.csv",
+    "samples": 23016,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\2053a98dc6b341f7946f105b1e03078c.csv",
+    "samples": 2331,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\23caf6577be4402693fc18dd8ddd1106.csv",
+    "samples": 24157,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\27b62cc731d349688aafae30bfb0359b.csv",
+    "samples": 25489,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\2844f02e9ed24665a991377ac89f7ecf.csv",
+    "samples": 4366,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\2a7bdea44b304c8aafcc5620536af7c1.csv",
+    "samples": 27854,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\376434a9e8bf4725a4efc9adf6d077e2.csv",
+    "samples": 8084,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\37906edea9fa494d8400f3875549ed47.csv",
+    "samples": 50842,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\3d0b004cf5ec4643af425f7eada629fc.csv",
+    "samples": 57541,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\3e6fa7e2bdcc43d1b8c4b19bc97bc34c.csv",
+    "samples": 35296,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\41f4aa91382a429485db7446d536fe97.csv",
+    "samples": 30339,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\468f587f086a4927ab946ff05a4eac0d.csv",
+    "samples": 1337,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\4d85d195af104433802bbe4ec4dc8736.csv",
+    "samples": 36505,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\53eb28d97e00452399827db624991f19.csv",
+    "samples": 54897,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\5a267a7f3d724a9f91306ee2a59cac93.csv",
+    "samples": 83772,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\5a26c78d63754457b248669cd7264399.csv",
+    "samples": 5395,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\5f11f968430d481eae9c0858bf60f206.csv",
+    "samples": 58835,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\6092119f236349e6a4a8d1b8300b13dd.csv",
+    "samples": 40211,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\616a093d96a14fcf8a4c5591dbefe00a.csv",
+    "samples": 52271,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\622ce6ff2be640ed9386e7c1dcbe3baa.csv",
+    "samples": 17158,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\62391f76913b44d0b714f175ec6bcb11.csv",
+    "samples": 18273,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\6880abf3d0e045f7adea85c3bc1254ca.csv",
+    "samples": 62789,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\6e81165862424391b79b69d0bfbc2dca.csv",
+    "samples": 8352,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\74de5b5e42d6432e98c88c031ef8281c.csv",
+    "samples": 48135,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\7bc67f1aea984e958838e8302a48e260.csv",
+    "samples": 6878,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\829c1f3960c847928a4ebc1b3633cc77.csv",
+    "samples": 44241,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\83502fa7d7714717b48762431356e8f7.csv",
+    "samples": 69744,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\853e3f71e69f4921802bf90296d4bac5.csv",
+    "samples": 53599,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\855c8984cccf4274ab9701047495f89f.csv",
+    "samples": 3328,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\88354da2f97b4bde870eec5366b2769f.csv",
+    "samples": 7318,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\8b59d19f332d4a298b53d769ac855ad5.csv",
+    "samples": 90327,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\9049e8937e9d4f6b9ef8cc245ff378f0.csv",
+    "samples": 38955,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\92a32985f5d84d56b50ebc1e4024e13b.csv",
+    "samples": 68366,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\99e0cbc9cbd94d7dad3e66d12a74bfa4.csv",
+    "samples": 9331,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\9d7c783f9ba04e438e22aad575588c2b.csv",
+    "samples": 11512,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\9e36efa799b64ef8a3583b06b686ac26.csv",
+    "samples": 37707,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\9e3d009e0c09488ba2d6b6dea146546b.csv",
+    "samples": 67003,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\9ee1837814204bb6b2af4f20ef8a7e02.csv",
+    "samples": 46829,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\a3fa1b31bf784cfeb540271a3ef3c41e.csv",
+    "samples": 85122,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\a71a4a720303484ea102cfe54ee96349.csv",
+    "samples": 89191,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\a93d4e79942e42c9a8d005866faefa13.csv",
+    "samples": 49436,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\aedf825d56284f8f93fc943e9865fcf9.csv",
+    "samples": 64198,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\af440a168faa4765994626313748788a.csv",
+    "samples": 29168,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\b3fc03000c964cb8b07a8c05de4a8493.csv",
+    "samples": 60152,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\ba1541140950457c91005ce998df683c.csv",
+    "samples": 6409,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\ba382c200abb4f05a57e5044b89e24d5.csv",
+    "samples": 14923,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\bf9f67883e5943e188b9048b97b18086.csv",
+    "samples": 31534,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\bfdaa8502c924436bbea9f6bb4d1661d.csv",
+    "samples": 8671,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\c30fa35d878e492783cd9410f916c04b.csv",
+    "samples": 4836,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\c454e492249a474c97e04c3eb9db80f9.csv",
+    "samples": 3257,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\c5d0091401b54d83866dcf0acc9adc90.csv",
+    "samples": 34094,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\c88be2047fca4722b4c20510be7dc976.csv",
+    "samples": 21888,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\cb9dfc8467b24f22b175fa1c583e299a.csv",
+    "samples": 26617,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\cc18e82f86bf48ed84ac5bdfbae4de95.csv",
+    "samples": 56182,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\cf6da2c8a3f749328472cf59a83aeafe.csv",
+    "samples": 10431,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\cf6e02b5cb574d97b4017ee8934301ae.csv",
+    "samples": 71226,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\d3c44c1a685740719a23ebb71cc5c19a.csv",
+    "samples": 5849,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\d8208eb8a49b412ca06c43db735d6b41.csv",
+    "samples": 61489,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\e1dd2ae4c2854b22a7abcae789bcbb7c.csv",
+    "samples": 13738,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\e20488aeec324acfb714906b1ad94112.csv",
+    "samples": 41494,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\e62c860502e64f31b1bcd2953bd34e01.csv",
+    "samples": 19512,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\e7e564e871fa4b939b1a48e3d3fdc173.csv",
+    "samples": 87835,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\f8377c38d9394f6791f02b4510133b1a.csv",
+    "samples": 3715,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\E0\\sensors\\fa4dae3adafe4f14a2f6984c1c9b1587.csv",
+    "samples": 65680,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\1254fe94aba540b387cfa1082e72cd86.csv",
+    "samples": 98950,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\217704678414402ab61d7b2cdb358355.csv",
+    "samples": 101028,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\2c91cb7b5c834e15b98500ac2c4ff0b5.csv",
+    "samples": 12030,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\55fb675153c3433a830ebf28e9601848.csv",
+    "samples": 5463,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\8e067919813a4c23a13a61f95c4b67be.csv",
+    "samples": 96818,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\b16686325ebf4acaa542808ff8c01da0.csv",
+    "samples": 3221,
+    "notes": [
+      "trailing incomplete line ignored in read-only live-parser equivalence"
+    ]
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\bb4632e8296d4f86b48e7dd7f3b520d9.csv",
+    "samples": 94679,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\d202f26983954fd88ff7cb1fef8655a1.csv",
+    "samples": 13485,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\f15bece59074430294b4dd58125b2ff7.csv",
+    "samples": 9614,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3\\sensors\\fed99c8fd24a419d9c0c9ea078e485de.csv",
+    "samples": 7651,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3-isolated\\sensors\\8b5149b0412f4296b44c6f9e4ee46267.csv",
+    "samples": 91688,
+    "notes": []
+  },
+  {
+    "path": "C:\\Users\\Dhruv Brahmbhatt\\prompt-energy-study\\results\\utilisation\\supervised\\M3-isolated\\sensors\\fccb0149ae404c45995962c0bb7287c6.csv",
+    "samples": 92649,
+    "notes": []
+  }
+]

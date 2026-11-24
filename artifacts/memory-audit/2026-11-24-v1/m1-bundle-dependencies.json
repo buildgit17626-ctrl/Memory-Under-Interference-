@@ -1,0 +1,5634 @@
+[
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "active/K2",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.175,
+      "ci95": [
+        -0.2625,
+        -0.0875
+      ],
+      "treatment_mean": 0.2,
+      "control_mean": 0.375,
+      "n_missing_pairs": 0,
+      "p_value": 0.00091552734375,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 0.0018310546875
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.05,
+      "ci95": [
+        -0.125,
+        0.0
+      ],
+      "treatment_mean": 0.025,
+      "control_mean": 0.075,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 2,
+      "fail_to_pass": 0,
+      "p_value": 0.5,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 1.0
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "aca81e1f8aafa858031c7a3c9c56708ee16357667070eceff0ff2277cad307ee",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "92f4318ae173460331ac144a9913a87141853951f35b3788d23ab7d57ec94de2",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/116"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "6c089429a41aaec2691c15d0b5e40c6b1ccf8730ad1ea07c0c7c42b6a3c2f0f5",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/76"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "88597be94ceddb70790ef20924a66a0b1dc8fa5215c3f4e53575022e1c226e7d",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/57"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "010df3ddd361b57f277af46e90a2ec5ae2078f123c4b14745873dd78f22a8a5f",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/143"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "ffdb087d8bf6c32e2eeb04689cb967a1360693f0dbebfad0252c36d8e4edccf4",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/46"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "a80f0a5e7d646b1ed683ab1ff78b62a1bc2ac4dc7377c6fb0da85f7beb143a03",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "ce6b841909fd29f375b7f2ea313e1baf05b599740cc0b557a705bad68f57c8f1",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "9834cd32b6c3fe9aea7cfbe33d6c2f2e4ccf4c6a16b2c895698fa06c7f8a6b60",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "24b7b051aa9f239807f4ed3b1f477278db368b53d6769bda1ebaf13234a1b591",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/1"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "471d4099f6eecead8d04b21beaa17e982c6ae649ffc83319123062963cd3479b",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "03bd660c0ddc1d6826ca6138cdd8d3bd8d73ed701ab072c2ed0d4f0808a3d79f",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/101"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "31d43558f83b7309a9f03e797cf5e1aa2795cc1bb7d351eb62dd1b5d98345462",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "5505ee98793abc050277fe1601863b2318fbb1dd801943dfb4898f65fac57b32",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "52799300e339f0b3ea7f996f41f6755a43e703df9662929ff55bce4ba4baf549",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3dced69aac87a087582f501c751e3f845c4e0510d5084493104e004ed74239bf",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/0"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "5f3c1e2a3a52ecf2714b5ea0c3909a4666ee84d621fb2223da78e7b3b239b9b0",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "7c94c02fdc7d78290cbe33414d745ac7388f581d00b7f4062547f2794abca5b1",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "983491fcc8e66b9cb6d5f29406fd9f47ff0c3a26152dd634af77469213d4d73a",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "b9b27a27b4e86dae2959a44112eda798d33690112fa1dfa8a56e97d00a5f8211",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/128"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "4829807e73f86ec5bb0eac0f34c73b0323243db39a1508aa7a72f21edf39f169",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/43"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f1cd3d2e3a83dd1773a82f435d1eec1e8322910f56ebbd9a50d081c32b199f70",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "cdcb3f351e755d25e6bb40498bc635549d20326f5b89bfcd4f592828fcbacc53",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/55"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "cbb370ee9979abdb1ce4f1e86effdd73ebcdf813b128f6ba029ca8ddd9c92e33",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ba6d8aefd67ff80a8e046cc39279544a5ef1bc4e261cb9996aa92d8831ff42e6",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "9debed11db289e6bf63ec66d5e7f2f06f0aadaaaf5a900657b4221ec24ea33c1",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "d3b9e4b016384d5934d67b4fa652a2422c682c939dc565d3879eb8170a12abe5",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "d962fed12832e7e9b565d89c6517b3bb3d2752408acdd1e082ed7a18f38af47c",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/140"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "01a701598e25ae50294ac08f7ad6c062e33944983dd56dd4b9c783d1de9305bc",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/148"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "84a72c5e6bc0ec5f95e282332b643bb47a2374a8d6c3c0f661d358307bd01b11",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/96"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "0b1cac6f59194ebb45c62cc0639edaa6e5318af1d3460f801bcfd57177a2177b",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/53"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3169a198cb84d2917ec46c1939e054555bc7cb2678f2e8d7c78f873876ea25e2",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/156"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "4438a583356cbf417c3fbd32446fb43c9e0fba6b953194854bc93709254c8276",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "0c9d02a766a15ace6a63998ae0b435b347c915951688224ea426334f476b7f0c",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/144"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "489903cccb055e18c9d3163b79432eed5eac1470c8adbb9d6ea14546e55fa599",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/94"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "cd68c89cfdb82176512c7b196edaf65f9ac7492014062ca68e18290e320b4587",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "584efcfee1d3e947df06fa0239d058845b606bfb6000eb2e6ce97a3f33a586bf",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/14"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "72d7382a129e6cc2a2cb1ac95b991b634982a21e3571bc1038346040e9e9ac26",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/73"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "970ab71ebf8c3144d2eb25a4d6cec4fd867985291486defc1e042f759bda5896",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8be33dea1f22a5d7e34e61d960d1c94aa7c6e875266c300b89293df6a7b88d88",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "active/K3",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.2833333333333333,
+      "ci95": [
+        -0.3583333333333333,
+        -0.20833333333333331
+      ],
+      "treatment_mean": 0.09166666666666665,
+      "control_mean": 0.375,
+      "n_missing_pairs": 0,
+      "p_value": 1.564621925354004e-07,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 6.258487701416016e-07
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "treatment_mean": 0.0,
+      "control_mean": 0.0,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 0,
+      "fail_to_pass": 0,
+      "p_value": 1.0,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 1.0
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "4c8d784bbbe50d1b4310adaeb64101c33eb09a46c14061263415a795fef95fc4",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "fbc91d5a36b2ea63c5e5643dba9d77190300efdd7fd75622e42e2f2703987e16",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/140"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "5e4537a6962e9a89a90742ce58a76f79bc07c99b6d2f6a7d860f9792f5daeac3",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "2656871b4a0f73fbf63b5210815f3fa46b544950b0d909e779cdc2330639ff38",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/46"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "5f1fec709fec4db7d8c5c6075e9021a9dadd52c9e59d4fc7db9cffac326003f4",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/144"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "90449867592e01dbbd4f548d319da1859f0a6c2ed979a9f28324017f2a658852",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/1"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "3d8a0e01bfd40c280fb7c4ffa20684b16aa1bd6ea71d8d121d43853bfed7d49b",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/128"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "8012deb57e101219a814320f8101a8a017c0e09a11f13eb8ebf94803ae76b3f4",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/156"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "733da742dbd0810965bd857e5d010f0e4a2ac3f9a357d1dd7f352c5e8f492c28",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "7c503cef273e659300c998226ac8f6291774d08f0b5000d3983c6840fe041ed8",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "9effb3c98c1cf8353ecd952e31f93cd70c15bab7669af1ff52b054eef1b5f2f9",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "2209846c589cfe5ed9fcf9b1e0e90088143c38d117ca451837c4c4d0f8197731",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f0c7b8835721645734a36f65e0ebb53c4af8a8962f920d56c2a296ce28982cb3",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8a62aaac87cdac644370178da475b702d5291d661797d4bf8ac7e725b28065a2",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "340342548a22cd68c67a8704c597f362ae0faa3e70a99adea9fc6d3733452c69",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/143"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "9b996250973f86c5bc1c47d928d704968450694ec4d770f7819c43e1e76f86bd",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/14"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "c75b257d1654b361d8fe1539fe420cd40fd502484b67002ed922a63a8427295e",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e62b8dd8d416be1d788becb710736a21da28987c5a431ba18be5891800ef44f8",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a2f6277255569ab6dca2ffc84dab8946323f7c3a285cf4fa532429d9bb5e6ca8",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/94"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "dde21f8c96432e2f445ae05d2381e442eda7c2c07bf680ee394910f4512ee5eb",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/0"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "7e5868ab54b30d50abdc77a851f5720d67d1223416151196f27956a09b6f3119",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/116"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f568daa4134089bd1e6e9edf038b9b168007f439bddb061c8543bba9b33df65b",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "269f641e36a54d52a40c4b6ecbe576de376dc9b38a0269fe6b02b8fbaafcadcf",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "814b19e5f1375545516e577752049b89e96cd7909db63c2f4e8f7007019163fe",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "37ac06aac286e06a4bb00d62fd66e92798533bf85da9bb9f2b81187ad4852275",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/76"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f07ce6d232c56d6be4af1f651db8d25d8c00740c0ebbb2eb5d7e6328dbcb067b",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "c5c55a3a587871085211c83a5f0c17a19a93232d097d275ea71793b7e977e206",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/55"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "a53a4c55c3f792af93fb237860e2beca6443fbeacb000e0a4478763e272a419c",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "32dd3ea5475daeb44d4769866187acab22956a7f1664c0fd42d03c4c5fa687f9",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "7cd636c6cf71189ff3295f3bd7ccd2b1fd661c3f229bc4968bbd8410abed2bf0",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "6bfd593a484e83e26c47688de3569908a71d0ebc78fdcffd84720f229496dd9f",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/43"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c15673e71a888f6742400c4a33f32425df5037544198c1b5eba96eb81a76e911",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/57"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "b6b25057f0d1e5f59519bf5f49af45b26f04c4135c5bb57737b29b5cc5f1a00e",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "8f1cd77c766b9c95b0d72255fece2dd8130ce4f72a6980067c99ad11d66c11bc",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "48f25061e25249e754062d2713edea127d7f226bd2493f1af5076a587239a8cc",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/53"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c2fe2f3d7b7425fb2df3af2b2afa6ca9050b8cc713a5984cef74c1188a4fe0d5",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/73"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ad68aabb8b0dcd1c7846e212570d080e6c9649b6f1b88bdea18026b5977616e5",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/148"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "bb52e3cadc9b78d1a511a1f3ceafb777fea45d7220a263f1ed8651e3979e001e",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/101"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "1d5c3255e9ad4b7f8be35dc9cb4229ce9995fdc01ef341756146718fdc30af54",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/96"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ec79c17a7b96c311b67c2710d0511e22e3ee0466321a154cd1cdd1f7e0800f78",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "active/K4",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.33125,
+      "ci95": [
+        -0.4,
+        -0.2623437500000009
+      ],
+      "treatment_mean": 0.04375,
+      "control_mean": 0.375,
+      "n_missing_pairs": 0,
+      "p_value": 4.656612873077393e-10,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 3.259629011154175e-09
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "treatment_mean": 0.0,
+      "control_mean": 0.0,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 0,
+      "fail_to_pass": 0,
+      "p_value": 1.0,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 1.0
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "8d75797f7c429e321ddcbff19c99735efbfedecc1f106c81ba592fcb61a220ed",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/148"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "5a09c4b13c5c2a4c3b25f05463d14850bb8198f0c265c52ce7d9e4c78701302d",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/43"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "927bac2c5c38f1d0d01104f73ebb833016c42f593ad976c2791e04a9331a3f9d",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/1"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "943fcccfba80b1d336f631fa671476c7e80670ce5199b8dbbb293b22923db9ef",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "93c1bc439560519b58c630b90449e2593895973cfcd7a2bef708c5b68811c263",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "78057c4915df195181176738af6e3a8af64f0b7d47244d7dc7f184316fb63e47",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "40c3cabcab3f027eb26cf323de47ef066337963bac52257362fb9eae4be8b7bc",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "6e57684580997aca08c9d0781b9d7a2c56deedbd1ef70f59dec97428325cdcd7",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "11a1527ed8f83e423631981f06071992be2f881385990982a38e170775c63949",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/46"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "cee230d996e0a034dc687e3dff4af014f2851746247effb717a84aad8e351e44",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/96"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "67365ee254674d1a69de0c3736ad79d4df70aeea0a4d3653a07dd2014fe87654",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/156"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "d0e8a48f5702f4ca7c393022cf37d14a99cdba47a84f992234d5067c192465cc",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "19f968e86e2037946af74ce7e558fcc515014909dd398f127d1e66444eace5ce",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/53"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "61533e9d80f0417997305a0643bb3e7cf54d4284836a5197e09d21d41e0f948e",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/94"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "1edbf47439e5d41e5d94b7ea4ce07b303a2b1095f8fd548fbf676f9b2bb324ff",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "245bad7d9647d36bd05edec8e82560d886de3a7da1d71c058615234850e5f875",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "1f3f5e1b3648609e9c3ca5c95e6cfbb21b1f821e62ebe8f1c4de7b9a8c328056",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "e027a8d869f552b741b57aab6b86c7a1337bf5f8e92a72801585349f71b45fcf",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/0"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "b92b359103c1b72959568c357947a87396d263ca9025a824d65e9f42ff39790b",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "4cec428065db7988598a85ca3cd7132b4e4fd8aae44196d8c2b4f36f353f5314",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b1252ac388708be7b4788aebbc1cbb2d108878fe1a5f08d7e9d17573f0ff137b",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "fb0d919f2a76a5695da8499eda28b300c789433ea57b8606f16906e106829d13",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/140"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "c9b63ea109be64a7c38ce9aaca95e254248b12130da109f1456449455877bc76",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "45f5551a25e75670e5916178cbd69e3d8f9d6e2c26752efd626f2bfdf23ac660",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/57"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "783f299ad8471738ba2bac5534b1d412538fc5772fa4de9c74bb7e1c9d2a31a1",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "3dbf2177862d7ce776a321b4296d6969fd50e0df01108231b98639257bfd63d7",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/128"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "c6a700ede89ebae52cf17afccd1defd999d59725041bf85ecaeedda8d10ad998",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "c8d3b956ce5747b3ff62a595888960ab8bdf1bc25645f7465c88999813724a9d",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "20cbea05c1564a76cfff9dba0030916efe1babeaf064713e3ef121badc72d49c",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/55"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "0c87db8e39cea66f4becc7ae05200721e2f4def0373f3a26892d5c441eb1edce",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/144"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "d68df31f84a9806d88ea51bf03079273fa992a69ba369384868ae7e089626a0d",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/116"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "01a0087750d2db9a5e8429cdfa74e7b3dddc4271f851772f6747dc992a473466",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/76"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "038983a1c913e087c6077a331ab96176d65c4e1269b16f8a746f1633ed11bb2f",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ffc6474399e5b3167290290a2f8972a6a737636f60474ee8cf1a116bc818f689",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "96865497de83dfba0cf3fa7cd3ef612131355f588bcfcd25db48d4b35c3c39a1",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "417f601c9399585035a66fe67ba820570fe38e68119cf98db70968e069048f68",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/14"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "617c433c70a33dc9044458186953c30720e5fbd8cb5543a56f376c688fc2c32f",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3e13a2ae964ed8733daebbbd8ecbf3cc087a751d9cebcbf67e72afbae6112a1c",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/73"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "922070aca868fc61c85315a4bef9308111b0df36f3ae8b9ea9323eebdde467d5",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/101"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "035d27827e9e336f4ac21e548e5a11cc28d1ae2d4694a9ce69104e85da50c877",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/143"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "active/K6",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.3458333333333333,
+      "ci95": [
+        -0.39999999999999997,
+        -0.29166666666666663
+      ],
+      "treatment_mean": 0.029166666666666664,
+      "control_mean": 0.375,
+      "n_missing_pairs": 0,
+      "p_value": 7.275957614183426e-12,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 5.820766091346741e-11
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "treatment_mean": 0.0,
+      "control_mean": 0.0,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 0,
+      "fail_to_pass": 0,
+      "p_value": 1.0,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 1.0
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "2169135fb1f91ae51a0af91a6f34c1aeee0ce2a467dcb644852dd3c4e4913c99",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/73"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b3004b314cc05480e80d53a1d307757e46fa451c55d4efd10762b2009e224524",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f8e6011556f2a22dec7e72604b459a88b68199dca0bd23f9d8182e6985149c58",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/46"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "05b091815e352c129e8fcccff13fb7f89fc1ff6b1ff7bc581b0e76cf756dd632",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "e12af345e57c79b59e7e4761730e23b46817d2424b8c6973ce5fc9c25bcdb408",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "495c5af3c00e8de3791edf0dbea257369dedecd13569b02d43b80127e52c2266",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "420f1937f241064f9e58c5eec7867dce012a064cbd3a145b92d086bc8f724628",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "7c92dabe84ae73f48fc74c19b685b18b7c93ed3575d6fa02bd0566ab1fc32385",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/43"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "bb9c54b340738a9c35f4920e40c44d456759847bcac7e0de452608ceb781153e",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/14"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "86445776184013d12ee844144a65aa4eeb5cec70e0d3cc6b592bf94d4c2ec1c6",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "7ac9633a9c0e6ab1570f5e5ed8970e7cd56527fb819000ba85919adb83ba41a1",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/101"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "121e81357cd50cef6d81fe8ae588b66df2c89d0ddc79eef6129e284770849019",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f68ee4666cce43cf5f6c4eeb958450582ddcb32ac95e01396f30cf9aaba11431",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "6c33ae3663286ebd5726b742ca00f04410dc0159bef75481a1a50024c2aa753b",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "7b54c0ba31d1749de07154f9ae01960aa2984f3208c71a9c20d651db38a05afa",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/1"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "4ea26afb03b93bb443a655140597176f9107307a1929a58a7008998f1ce8b162",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "3fc1137a91ba9b9aebbaf45a27d986fd6a1333de7da17c4e795bfebaf3b663c0",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/0"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "101da63c48beeea20f8b8dbd5f7d16c8665dd74f5ad98948bfb731103a792c50",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/128"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "8b0a323e4932f4e16c124dafc9f0a33b70f0235c0f53afeb972fbb2f39902835",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/94"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "33810181b0d8ab031d4e1a0b08b0c2c96c42ad8239d256b04505197f43274a11",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/116"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "80a7fb43e56ac4683d3197ce939a16902459d822e41f6a06640ecb3bf542d483",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a75e0cc1cc1bad7765c50e22c791fc9d9bfd9131b08e294bdf232c006411e1f1",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/140"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "9e8143efdd47abc8b7292a6ad0abad2468d5f54f5964a69eb3dd39b81d04e27d",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "19d70c412ed793701f9933bb5256fd8d416d6e175737443d63410a3d80853951",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "66998b4906ce143c60522b15c6454344884c8724a5993ad24fca0c54a5ea1a57",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/53"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "01a602afbc9515f080757ca08dac6d89a430fec625f7e2d3ed666e7e493a2d71",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/144"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "440f96db1d02540bb3d95660755f5cb53d84abe0c003fdac6634e969c00b2906",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/148"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "2578b4fc74bdfda6ab368529c07eb805f7fa5e3869c1da35e1544a7baab62df3",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/76"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "e5a8080d3b132860efd2c4b7a6a77ce0a98cd4659c468302786c489f6e9d9572",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f5f5d31f6d67d2610520fe8ec7c2b16a3d2067f6782160166ce1c1a46dcd385e",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/55"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f9140d354caafeac17a4cdc5ec2d9306e7a7755416c439d9e2bb46d4effc53ef",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/96"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f65c60a113d36335e3f261e2a7acea52528138bd6b09b701a18adc3cc2feb64b",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "a9ebc694584e26dab56780234403a2b325fab9f518da7e8d509ba725430501fe",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "1ce19b81d216c490876437ede3748cd4855fd1731dd34fb98e3d32a97889b25f",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/57"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "6578fb06ff17a217303133a9b85dc342f427750fb3cd38545ba2a404a81ea1e5",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b744dc5c895c222be4f07b20337eb84d4586b7c768083af4b61ef1b4d62c5dc3",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "353f453e8d3a2c58e9d7686a5b514e900f952ce5d957439a735676713dc42469",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/143"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "e1d2ca43c9905a53a10a9269fcf9d7f99b563fc58279082d175962dbf289fe0c",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "43e165c3f17eab7eb2e733fd95451742bfd4bd53ebd3915483cd8eee19572252",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/156"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "0be494d1c864c74cf704c9e35380c501ed4150f9ba046a3f1b7108b495497ad5",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "active/K2",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.1875,
+      "ci95": [
+        -0.3,
+        -0.0875
+      ],
+      "treatment_mean": 0.5125,
+      "control_mean": 0.7,
+      "n_missing_pairs": 0,
+      "p_value": 0.00146484375,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 0.0018310546875
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.225,
+      "ci95": [
+        -0.375,
+        -0.075
+      ],
+      "treatment_mean": 0.25,
+      "control_mean": 0.475,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 10,
+      "fail_to_pass": 1,
+      "p_value": 0.01171875,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 0.0703125
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "d0b6cb44a47fbe806972ba5ee3585da2ad514a3b0d8a15a3a3f27e2f159ebba0",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/73"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "188134a24769c978392ffe06ed6a19ad062bb86c9f18ff00c355f643c38337ef",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/128"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "817a9561f88cec194de6c42f0c54ffb4603ab2cb4247775166d4fcc86eececf3",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/46"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "9b88630f076a690d2cda3682d4f0298b99b7606b303b666c0dc7ed325c372708",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/0"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "856990dbfd9f2f67c6ea8a14e9405f689eda154738ddb1f7d5e5b9a186fabe0b",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "07c5713923b75552d95092b7226e3e437659600b9bd1b7c2e47d43daae7c4f24",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/14"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "826133672e1efcaed978b18fd8d52984f37b55ce1e2791abdd7603dab3083d8a",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/55"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "64bc37c5efd3570cb14242467e0a8f711897905336103af3283e6fc14df7df91",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/143"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e8e37816b2028938dad410ed9f77836c3fafaeaa0795b10c695fc9b33e1cb0e0",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/94"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "1d278cfc91d6741cafe41542fe9552cfc8dafa37552463fb6cd9b9ae88e8a212",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3ff85b2be242e518469e8e2bddf841b62d7f5c4b7ac552e396d87cd663347b88",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "5b4706aaaed5280f851e2507f91b20ce4b04a6f7ec1ff219a5b2c560ee150023",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/53"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a8cc4219bc669a5959406117a7a75afdcb07a48035b077ea6b60b603e8f68e80",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "d2c3cdfe0452bb0d48aa3625ac02739705ee8fddb91edeeda9eb297ce90d2b04",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/76"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "10bde2fec98a51ccb1dc3b4056e000d7a11c83e213ff8e678e69bf0fa99dc668",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/148"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "e744a80103fdd87c146b85acab840aa5a31e920260ece3870a44c6c76c8b7eee",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/156"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b2ce5e84bab8178886ecafa6550826bf1071bac11ce94cb5d8b5944a69d057f8",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "613365fcb1c1ee6cbf1991df4ad5d88432ef8bc9b67f081d7a8a74e8e5ce9c57",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/101"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "4212b78f5bab943912e87fa185c9225ffe370915eaa86f90a0d3aa649c133be0",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "78f950f9841702324c323fa1952c9aaf624e1fc10b165e166e0bfa3495dc0198",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/57"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "74e18778206eaeb8b003cb9dcbf4be5cf6d75fa22858d7a4c4c64b7c6b391bf7",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "df3eb98c7ddeebe45a365d4bd60c51464ec451164d05bd0568e5c63655e61d0b",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/96"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a1af25df5707223c63c7586986cee1781968549ff5b6f5372d45e26453b3de26",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "d2b3fffe8195bf11f993e7ac231655b052493c16f90ea531b867b218d9ad260c",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "1ed9bf00145df00c8f05b32ef18a26f2512f82d84a329fd09f424ec72e7d689f",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "900a6c4d570ac3db2288f515db0e9c9c17d1d171b82dd47817bff2cd13ed3fd0",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "40bf7cd303f5e76ced1a1a0d4e35a88c91249d5eda1ed53baec72a49cbbf0b3e",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "1a1c28962aa4680aa84979d8508ef6a5e0518810b309ab039ae2ed43d6b9ff1b",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "fcb5539aa933c0b73570567cb00dda57fb259e9a977fc94a3e7c4fd4fcb57a48",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/144"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "cb9f958ffb535722012bfa83a9e4ae28ffec96ba2c6504d7de48eb2b50d3b123",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/116"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "6fc780b1a7ad9c04e5944fec9580206a07e2cac3b9bab622b4b2244bfcc78c94",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e227855f0164d863e33f5386315495ffd0953868c0be8274cbe1fec4313ecc8f",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "77a8797e17131b198525d9e7f039db55973e6b713291a83a7cd6e37bf612cbe9",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/1"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "7a0c455daa3705c501859685301cda5bc57242d8123c2aaeabea74666318f3b0",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f115697cb55c16ea1d02de9c4f8596cfb46ac55b5659e77b7ef0f2d1607fd0e3",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b8588492952a3dda2772bdcd907669dcd76ea41df618137e3de65e08588e8cbc",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "fa7a1647b205478e3986e8fb413a810c6036c36c76d42c89739b090dde24c4ad",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "53afcab88189be39ff0821ee0fc7af1caefdb158f3f880eed5295c4372dbab88",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/140"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "1384b6ba8c71a5cc9ca96be0d26305fe448633eab5b8b3b23887f19cd4356821",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/43"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b1972231b48e2fc5befb23b8ba4787fa032bd72c8454793d2929b5347730db11",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46"
+        ],
+        "function_observations": 2,
+        "component_isolation_passes": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "active/K3",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.2583333333333333,
+      "ci95": [
+        -0.3585416666666667,
+        -0.15833333333333335
+      ],
+      "treatment_mean": 0.4416666666666667,
+      "control_mean": 0.7,
+      "n_missing_pairs": 0,
+      "p_value": 1.9073486328125e-05,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 5.7220458984375e-05
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.25,
+      "ci95": [
+        -0.4,
+        -0.125
+      ],
+      "treatment_mean": 0.1,
+      "control_mean": 0.35,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 10,
+      "fail_to_pass": 0,
+      "p_value": 0.001953125,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 0.015625
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "cc9ef9050f47ca930b09422d38be4b6033c3e9c850b373ecc9ac1f78bd023178",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "2dbef7192d3acf7848a0f9017e4853b56580d3f51c7b86a352db518c4e83509d",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/148"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "962e857377b948c8c944e3e550c403a4ba0fefe7f35ac8d4f6457e6596e15e83",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "a9bcbd605e247b6053b932978784819a77d510d3df71157481339a4b9424aade",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "2dd51825b7594be5143474e63726300d3099fd3f8ad4b5ec575897a4f236ce12",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "2b431cb1a2a329ad02efd26291e59d7d7e52b7d1d9deb60a8b73a61c6baecddd",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "d9ed67e1dccb21bb30acd171677bbd883fc27d92e193337970ee07bdeaee9c1b",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "1f87bee8de5ca2ab6af3642a21c9d9ecd80642fe0fac584b741a1d8374cfaecf",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "611046b0575845324d85e512fb982ca7079453602d4405711a7c32cb8c016bb7",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/128"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "7fe1346a4e6905a9b0d9769529a3ea1f5f1ba5f9e692dd6ea93d6ad0b28be9a6",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/73"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a6591590f1553703b06f31d1364e2c2c3c7a9a9a62659bc8841c239811c4348d",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/140"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f3802df3e8ec7d6d9c0738e0efb54634bfb747e360b80ccdb955d33a930a164b",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e6392484c6e8c74f33b40cee9aac13ba1f43fb309f2998c851b2cd84e72d5cb5",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/53"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8171fe4b06f03b14836dd4123c219f20906886168bd8fbd38df50db41f79b2f2",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/143"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "69af3d49e6f10ff46f22fb63cd181c1c0863943c99663987340b582b26d0b65e",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "cae925b2cc9a92c8d727e4af4b26128aa7c55b157e598856bfefe0fd2fa8bc12",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "6b5a185efff893907ce73fdea99149acb23d00ab25e61a657a342623511ea19e",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "03e29dfef5c5aa09b0906b14bb2f0d87b1c12795c04b386859b9426839afe50f",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/14"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "66a60c17cfd9945f6dbb034ba5dc5c6c4b5751de2710c586f22aa9327183e3af",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/94"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "21f31994e4bafb9aee0f77db6772c3dc3d820a137646713e11793cd0610ecea0",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/156"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "edfb2eb1ba572a098a73c48403fcbaeab728047c7f2b3c47112dbe6ae0307e89",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ee22fde6667eff9cb6cff412f0cb2d87a78e8b335d3df67245d759435113354d",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/101"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "be9c1ff869625abb8668c3c7067b5e34290373b2269e75e838a399f848f2bee8",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/0"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c0f51856a0cbbaf32577671920c31cdaf85453c28b71e4ce76e28f23daed7071",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/57"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c6d84a281121ed9c8b8dcc3cbb5270959eb1f15f096a68b01a39377c3a1f4c44",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/76"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "fa21ebf62c78c087aa7b9cd5a2286b56777f3f238c28dae5f93734b0d5afd6c5",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "1fd05c4bcde53bcc0760917f40e733a06be8d7040d6b4c0b9896eb8c682b1feb",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/43"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f264e309a2fe67ab0e232009a8359a3f59457d5866af5b01e51992f39bae9e50",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "729ef21f9a05920b7440fcb7aa54c13b0a551323aaa1f536539a7e31bddaf552",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/144"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "4460fc1a2d5682a569a1dfbea52316e98d8514307e1bf3a79a1c274fe0afa98a",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "4e0fc5b30e21bc78cd19ff9f808a253d847b3d9277a5a184459b688270409f7d",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "d2331af65116b09e9d854c3926b6ec045b50a0658afeb80dce75252e2bfcb551",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "ed8f8d070586b0984a3c138170439c24901205cfa6196ce73f4148ab2263492d",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/46"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "7f9ef6adf8ed344f896220ebc98f7b6765fcdd9ba1cefb6112269c57ce68661c",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/116"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8737a66bb3004acd6c80d86875fb821a394f17a94025dd0e2c44465785084a3e",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8eda36ef0b412c15491db420b13b27c98d26a0817db82a7d7c9f9f09e92b12f6",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/55"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b4819017a2171e0a49e7139ca243f2084e694a6f531ae8972cdbffe7b8a37f52",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "210886639706faccccc1496bdca6f977f1deeed5b9e5aacea326e0a775f6f074",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8cdb9deab9349e2c840e326f07ce92cf2833d9cc648c1c07342b30df697ba1b7",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/96"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "75b31cd1d784cd86cd0913e9e49c3b9ded64a83bab93a2c5e2afc4b78f6c236a",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/1"
+        ],
+        "function_observations": 3,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "active/K4",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.33125,
+      "ci95": [
+        -0.425,
+        -0.2375
+      ],
+      "treatment_mean": 0.36875,
+      "control_mean": 0.7,
+      "n_missing_pairs": 0,
+      "p_value": 2.9802322387695312e-08,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 1.4901161193847656e-07
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.2,
+      "ci95": [
+        -0.325,
+        -0.075
+      ],
+      "treatment_mean": 0.025,
+      "control_mean": 0.225,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 8,
+      "fail_to_pass": 0,
+      "p_value": 0.0078125,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 0.0546875
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "93c2a0020cc54896672687f90c76314b156f4cf16f1b570066f23bfb1e63400d",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "aedded42ce9ac78aac9299b6444924bdccad5a703af88a2397cab9997e6e3462",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/148"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "aa926ffe35354e0c88dddc37b41e5239b029d36e5d263aa3a12e4613b6e44769",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/0"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e0b66b8cea74af5b49bcb3c31dda33d5602f0247951274ade3c172ed09385735",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a80ee849f3b05cf21d17062de73ad3d350aa3a997ffed9e33162b1d70e2c3aa6",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3010fd5522b775b9a39ceaedab21b28a21c7fb857987392efbff785429818452",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/55"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "1a49c81756c9718499981be7f901c3fa7e3ffbd8d8a51f627a39b61eb5d4e504",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/96"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ac1b66aa7eb43cef9865994f3c7829ceabd07b4f7312894c1febea8e551b5e83",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c9811c95c7b252d1df9cd722beb3e9373d40a3febd3e888efb9d33b35d0d1591",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/156"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f490909c0779b386938e9054493a5dd6842cdbd732f3a44b78807c6a41ac4bc4",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/94"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "939e50aec2562da0cf801f0f1fe2cc7d4b38035cd7766cc4c9b98a9a260511f7",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/1"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "bb835f8c138fb719765ceecae6b22316874291a1fba722f6e81892f0c137e1a5",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "35ce3b83ef23ad0e1078eddd7bcc66a9166f806f0e67f5517dcb84af516747ba",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "4298e84201f273f55b2170f26dac655310e2ce7429d59d26fc8cdb91fe03e269",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "63d8120bb86285d89a7fa31ea1a830cbbd4ec3779c613895064e80e314570dc2",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/53"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "92c5df64cb0d5004d23104e20189d58f9448298e8910a5e9cc7e990c311b1d35",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "9f48425b745792202729aad78c25546356bddd59893f6949578f67a8fedf1926",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/76"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f8596089f6f88f6981e91941e2b14663af6b2ac41f33d000c899f4add02b179a",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "2a56df964cf05397f1aea820fbdbc54c305ec66f55b57c583179893950d146b1",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/101"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "b4cefffca13e1d10221a0d68184371d664650083db12a1d9a74a1a33394595ec",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/73"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "932006aa47f04d47a2e5bb00d396ac3336d2c948ebcd06e30512a6e1924175bd",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "31f8007d7b85f889bdbb8c6261b42a1e6532775b6a031e63f32a33b6390a8642",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/116"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a6dcb4bfd222dd67c615b6685d1adf4311a5c1009a289d8d86cf3653efe4640f",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c49d92f48998adadc758c5c6d29fa3921f5e9ae54cbb6d81457eae6931d3d066",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/46"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "954db8a043d8436c2913724d7bb86ceae6ee6408793f97ee6ebb054b17f6595a",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "fa2297533c9beb4ea578e92cf9c3e4e2a1c06c2a065649a232190e53c424dc20",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/140"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "5ce5a65ce495187d6887d4091c547af7d70ca0771a2c6d7185a96dc0dc9419c9",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/14"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c61695121ffc4538aa4d484b68b839aff92e5f1fbe7926d7547689bbac8e80d9",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "f50ec1d8bce0b6ba4c448009c583b7dba5f6ae57c5a52f861e4da43fe0ae3a9a",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "0aa5debb0ccc75f02a14a495694af240d82d9f844b3a8c2dad93919b241f9f03",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e1ccac11b0f5df51814b21fa76f39c3fd90ce1d6d5e7d1d3de53bf05898e42df",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/143"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c15b62be10f8c0c6391f4437bdd2dd1038d475557dd019c991d228717a7ebe61",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/43"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "9c59a5e2a23adcccd4c5073832cccf79e60dc2044ae509b43ea23c9b5870a056",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/144"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "13e9be3d2d7d53b68b65e4a2899091c9a78b69046282d817336ff36b424af76d",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c750e3e20368c47e45d8a76b86006242a6181f6e3c7a7eb1d56ed26d3b93febe",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/57"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "b8d62d3001b74e1d6f88af0d61809ad541ee8940e4374e83aa17ae9aa53d4a20",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/128"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "aebb1615e552019da24fc5f1d6e00c7133e17d7fd94462339712eb88c56762da",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "a3ca30d747704f13804b3b026a50267b6f38c02e086dfd5e921255692e6e163a",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "19535305cb40a611018a3d4b5a31090902f67fd6d66b820b1dce2ead954fdf45",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "6c91e1e2ca5463d363d8553dd6b48eefc0e8025abb8ba9cba3546bc579212ce9",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55"
+        ],
+        "function_observations": 4,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "active/K6",
+    "bundles": 40,
+    "membership_components": [
+      [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/101",
+        "HumanEval/102",
+        "HumanEval/105",
+        "HumanEval/11",
+        "HumanEval/115",
+        "HumanEval/116",
+        "HumanEval/117",
+        "HumanEval/122",
+        "HumanEval/127",
+        "HumanEval/128",
+        "HumanEval/13",
+        "HumanEval/133",
+        "HumanEval/14",
+        "HumanEval/140",
+        "HumanEval/143",
+        "HumanEval/144",
+        "HumanEval/148",
+        "HumanEval/150",
+        "HumanEval/156",
+        "HumanEval/158",
+        "HumanEval/160",
+        "HumanEval/162",
+        "HumanEval/24",
+        "HumanEval/29",
+        "HumanEval/39",
+        "HumanEval/43",
+        "HumanEval/46",
+        "HumanEval/53",
+        "HumanEval/55",
+        "HumanEval/57",
+        "HumanEval/73",
+        "HumanEval/74",
+        "HumanEval/76",
+        "HumanEval/89",
+        "HumanEval/90",
+        "HumanEval/92",
+        "HumanEval/94",
+        "HumanEval/96"
+      ]
+    ],
+    "component_count": 1,
+    "function_fraction_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.37083333333333335,
+      "ci95": [
+        -0.4541666666666666,
+        -0.2873958333333339
+      ],
+      "treatment_mean": 0.32916666666666666,
+      "control_mean": 0.7,
+      "n_missing_pairs": 0,
+      "p_value": 1.280568540096283e-09,
+      "test": "exact paired task sign swaps",
+      "holm_family8_p": 7.683411240577698e-09
+    },
+    "whole_bundle_difference_conditional": {
+      "n_units": 40,
+      "estimate": -0.075,
+      "ci95": [
+        -0.15,
+        0.0
+      ],
+      "treatment_mean": 0.0,
+      "control_mean": 0.075,
+      "n_missing_pairs": 0,
+      "pass_to_fail": 3,
+      "fail_to_pass": 0,
+      "p_value": 0.25,
+      "test": "exact McNemar (discordant binomial)",
+      "holm_family8_p": 1.0
+    },
+    "robust_component_interval": null,
+    "reason": "One membership component cannot identify component-level uncertainty.",
+    "sources": [
+      {
+        "call_key": "39982e8257e59fd1fac6eb796d8399029cd6f112a30486e1ea6f6a6470f3cf91",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/148"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "8a2be8a97e25328620808434c11a8f1695706e11fb382b2e64ef39f5f12c16c1",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "59b6ba54e17820f1284f4b13e7b2ab7dcb597c5d75a29b7b21ccc36777499bf6",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "071c6ed1ee466fc62bc2dad65689faa2c8dacba9680bb41aa5b3fa0a7abe4fde",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "8e27fbbc151050394e4b39d8d1571e594f20b27584e0b75c20223623bc56b65d",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ca9fde34ae7bcee5b1ae3df8829c0438ea5291b39b652857ea214d6c3ce44e45",
+        "members": [
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/101"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "d21497b3dbe063e6187595531974f1aef1953e4b74737b2c95bc831d89de225a",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3b3dfadb8fc90d9727bdb4f54b7b90f8cbc9e6bd6bfa7d26b547cc549857e5fc",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/76"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "ec50ed8170ae7d699f3be538876523d3392096b5569b337ab1307af10aa49617",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/144"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "30a989120a1573cbdbaa12752b510c0f8c2248d51a22bbee9967bf33eecf8699",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "dfe387c079902bcea4457b6faaa3fd147c60e3e6d6d06736ed62d584420ff947",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "6a4e79a1171add0bf41a9198bc40be3c276331106b1e1e55c81f9696fef92651",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/96"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3ffd7b4dd3952c96eb872e46b767066f4aaada9352ef6e6a17dbeb506e62cae9",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "dcfd580d82890a8730cca8e602fcc2d0aa06579cad443da5fe093fd6ffa27c41",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/14"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3595b17596e6eadb0a4f2743ba4cb170240cd91a8fd270533eac9c9b5c9e582b",
+        "members": [
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/43"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "961c7c6b1498c941038b4a1c0020e58cc78310b4f89a06f62f1062836abf30fe",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "fcfc1e9b894e3a913966e34e714660214796b29bcb8d32f721512350f3f65c23",
+        "members": [
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "9f0b0575ae65b6951199162489f668ae24e0309281bd0fc3069d5608c5008d9b",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "8aa26a4529001592b0b129eab54c6f9e2870e93f595870061a1182b290c062ba",
+        "members": [
+          "HumanEval/162",
+          "HumanEval/55",
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/53"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "5d14a366c2fb1819cd30d5b6061e2266e77bc5c14b1e28a0089aa508a537f4cd",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/73"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "c8c324838c68cf8010fa207b735097046a7ea77c4c56f73cd892ba60bb8866ce",
+        "members": [
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/148",
+          "HumanEval/158",
+          "HumanEval/140"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "36e25fb9ffda73203faf8ad28fda0d450ad95325155adebccd103c8cf0645fd7",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "2c65150832b2794c2aea8e9cacd29810e3be95bc8a74dcdef131c019cf3ad05f",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/55"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "46e1adf5db6fd3b0bd36406a1baf63ddb0908603dba5f226c909ef05e57421fc",
+        "members": [
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "call_key": "cafe8f99257bea4587f55f521450213a6473a9fa8dfa701d002da6af41b36c7f",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/46"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a5e0f7ecb2cbe62e0de4b153417892220481632b4130907cd07cf4c1c1ba601d",
+        "members": [
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/0"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "0578595ccf2770538537e9be76f31f0225e9b0bdd737f63d5d979d609ba05a09",
+        "members": [
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "246d3e1002e7eb0fb404c0e9d3b86aea6386ef59075a950f57a8ffc2e722c21d",
+        "members": [
+          "HumanEval/127",
+          "HumanEval/128",
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/55"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "bd87c9e8cc0c70fda5bd0dab22e7a27d4e67141edcdbf850dedc5869b27c4728",
+        "members": [
+          "HumanEval/92",
+          "HumanEval/96",
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "30257ba533088ce2d2c72dea5dd9773e1c0fb3ca7c636ec378a68a320418c3bd",
+        "members": [
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/101",
+          "HumanEval/29",
+          "HumanEval/116"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "3d8f99feacca0872098ae51f1309158f2a46fd53c1b71eefae1c43cdc0ed0650",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/96"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "a3f62b51824b7729a704ec44ab1cbe2413071bb3448a9b6240f13bd52215e94c",
+        "members": [
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53",
+          "HumanEval/162",
+          "HumanEval/57"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "4cfa991663b19b463587090ced0640f829f130c804583a2b3aebcee7dc7d336a",
+        "members": [
+          "HumanEval/115",
+          "HumanEval/116",
+          "HumanEval/74",
+          "HumanEval/140",
+          "HumanEval/133",
+          "HumanEval/156"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "f1f6b1f86080718667c5753de41d2009401823a0c44c2d44ba879eafbcacfe47",
+        "members": [
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "13737fa18b331b0b06a86fae56f1e9166ac4a97747f85fdd5b41ba48f101924d",
+        "members": [
+          "HumanEval/105",
+          "HumanEval/144",
+          "HumanEval/39",
+          "HumanEval/1",
+          "HumanEval/102",
+          "HumanEval/94"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "732b644701d191cb4faee91cb59a261c49ea4132f3e0903166c3bf98644f18c2",
+        "members": [
+          "HumanEval/150",
+          "HumanEval/14",
+          "HumanEval/117",
+          "HumanEval/73",
+          "HumanEval/92",
+          "HumanEval/128"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "6374d339f63c9ea08d6b22dcf89fbf13e21aafcbc26793c994490517499c9a1c",
+        "members": [
+          "HumanEval/158",
+          "HumanEval/57",
+          "HumanEval/11",
+          "HumanEval/43",
+          "HumanEval/160",
+          "HumanEval/53"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "4b30691c2f75379e00103b168f820d78c0b02e4019d20224289a9a9fc69018e1",
+        "members": [
+          "HumanEval/102",
+          "HumanEval/0",
+          "HumanEval/90",
+          "HumanEval/156",
+          "HumanEval/115",
+          "HumanEval/1"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "ed4284582483e74a2418760338033ba9396cd46897a918cd57adcb9b49e7e706",
+        "members": [
+          "HumanEval/13",
+          "HumanEval/76",
+          "HumanEval/122",
+          "HumanEval/143",
+          "HumanEval/24",
+          "HumanEval/46"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "call_key": "e4fae2e40f7a4cb208183c375883423ed7f5bf6f309e7c2673f76467584b9a13",
+        "members": [
+          "HumanEval/24",
+          "HumanEval/46",
+          "HumanEval/89",
+          "HumanEval/94",
+          "HumanEval/105",
+          "HumanEval/143"
+        ],
+        "function_observations": 6,
+        "component_isolation_passes": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+model,condition,attempts,adherence,fence_tolerant,comments,docstrings,joint,joint_fence_tolerant
+qwen2.5-coder:0.5b,buried,40,0,37,16,39,0,14
+qwen2.5-coder:0.5b,corrected,40,0,36,15,38,0,14
+qwen2.5-coder:0.5b,immediate,40,0,36,7,37,0,11
+qwen2.5-coder:0.5b,no_preference,40,0,15,24,37,0,5
+qwen2.5-coder:0.5b,replayed,40,0,39,11,40,0,13
+qwen2.5-coder:1.5b,buried,40,0,40,1,0,0,21
+qwen2.5-coder:1.5b,corrected,40,0,40,4,5,0,22
+qwen2.5-coder:1.5b,immediate,40,0,40,1,2,0,23
+qwen2.5-coder:1.5b,no_preference,40,0,21,13,23,0,15
+qwen2.5-coder:1.5b,replayed,40,0,40,1,1,0,23

@@ -1,0 +1,36 @@
+........................................................................ [ 14%]
+........................................................................ [ 29%]
+........................................................................ [ 44%]
+........................................................................ [ 58%]
+........................................................................ [ 73%]
+........................................................................ [ 88%]
+.........................................................                [100%]
+============================== warnings summary ===============================
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64
+  C:\Users\Dhruv Brahmbhatt\prompt-energy-study\.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+  C:\Users\Dhruv Brahmbhatt\prompt-energy-study\.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+  C:\Users\Dhruv Brahmbhatt\prompt-energy-study\.venv313\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+.venv313\Lib\site-packages\matplotlib\_mathtext.py:45
+  C:\Users\Dhruv Brahmbhatt\prompt-energy-study\.venv313\Lib\site-packages\matplotlib\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+489 passed, 14 warnings in 91.75s (0:01:31)

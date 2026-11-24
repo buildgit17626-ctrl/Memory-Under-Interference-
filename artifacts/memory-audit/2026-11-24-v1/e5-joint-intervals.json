@@ -1,0 +1,842 @@
+[
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "buried",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "buried",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "buried",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 37,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.925,
+    "ci95": [
+      0.825,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "buried",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 14,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.35,
+    "ci95": [
+      0.2,
+      0.5
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "buried",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "buried",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "corrected",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "corrected",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "corrected",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 36,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.9,
+    "ci95": [
+      0.8,
+      0.975
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "corrected",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 14,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.35,
+    "ci95": [
+      0.2,
+      0.5
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "corrected",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "corrected",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "immediate",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "immediate",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "immediate",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 36,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.9,
+    "ci95": [
+      0.8,
+      0.975
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "immediate",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 11,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.275,
+    "ci95": [
+      0.15,
+      0.425
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "immediate",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "immediate",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "no_preference",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "no_preference",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "no_preference",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 15,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.375,
+    "ci95": [
+      0.225,
+      0.525
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "no_preference",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 5,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.125,
+    "ci95": [
+      0.025,
+      0.225
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "no_preference",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "no_preference",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "replayed",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "replayed",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "replayed",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 39,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.975,
+    "ci95": [
+      0.925,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "replayed",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 13,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.325,
+    "ci95": [
+      0.175,
+      0.475
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "replayed",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "condition": "replayed",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "buried",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "buried",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "buried",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 40,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "buried",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 21,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.525,
+    "ci95": [
+      0.375,
+      0.675
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "buried",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 39,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.975,
+    "ci95": [
+      0.925,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "buried",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 20,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.5,
+    "ci95": [
+      0.35,
+      0.65
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "corrected",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "corrected",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "corrected",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 40,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "corrected",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 22,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.55,
+    "ci95": [
+      0.4,
+      0.7
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "corrected",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 32,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.8,
+    "ci95": [
+      0.675,
+      0.925
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "corrected",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 17,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.425,
+    "ci95": [
+      0.275,
+      0.575
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "immediate",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "immediate",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "immediate",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 40,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "immediate",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 23,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.575,
+    "ci95": [
+      0.425,
+      0.725
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "immediate",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 37,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.925,
+    "ci95": [
+      0.825,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "immediate",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 20,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.5,
+    "ci95": [
+      0.35,
+      0.65
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "no_preference",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "no_preference",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "no_preference",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 21,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.525,
+    "ci95": [
+      0.375,
+      0.675
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "no_preference",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 15,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.375,
+    "ci95": [
+      0.225,
+      0.525
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "no_preference",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 2,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.05,
+    "ci95": [
+      0.0,
+      0.125
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "no_preference",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 1,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.025,
+    "ci95": [
+      0.0,
+      0.075
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "replayed",
+    "endpoint": "adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "replayed",
+    "endpoint": "joint_adherence",
+    "attempts": 40,
+    "successes": 0,
+    "analysis_label": "original strict metric",
+    "n_units": 40,
+    "estimate": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "replayed",
+    "endpoint": "adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 40,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "replayed",
+    "endpoint": "joint_adherence_fence_tolerant",
+    "attempts": 40,
+    "successes": 23,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.575,
+    "ci95": [
+      0.425,
+      0.725
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "replayed",
+    "endpoint": "adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 38,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.95,
+    "ci95": [
+      0.875,
+      1.0
+    ]
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "condition": "replayed",
+    "endpoint": "joint_adherence_strict_proxy",
+    "attempts": 40,
+    "successes": 21,
+    "analysis_label": "posthoc mechanical definition",
+    "n_units": 40,
+    "estimate": 0.525,
+    "ci95": [
+      0.375,
+      0.675
+    ]
+  }
+]

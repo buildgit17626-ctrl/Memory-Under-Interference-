@@ -1,0 +1,294 @@
+{
+  "E0": {
+    "phase": "main",
+    "expected": 1968,
+    "calls": 1968,
+    "scores": 1968,
+    "responses": 1973,
+    "started_attempts": 1977,
+    "failed_calls": 2,
+    "caps": 6,
+    "score_status": {
+      "passed": 1056,
+      "failed": 904,
+      "invalid_input": 2,
+      "truncated": 6
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M3_isolated": {
+    "phase": "main",
+    "expected": 40,
+    "calls": 40,
+    "scores": 40,
+    "responses": 40,
+    "started_attempts": 40,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {
+      "passed": 30,
+      "failed": 10
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M3_initial": {
+    "phase": "main",
+    "expected": 240,
+    "calls": 240,
+    "scores": 240,
+    "responses": 240,
+    "started_attempts": 240,
+    "failed_calls": 0,
+    "caps": 1,
+    "score_status": {
+      "passed": 163,
+      "failed": 76,
+      "truncated": 1
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M1": {
+    "phase": "main",
+    "expected": 1040,
+    "calls": 1040,
+    "scores": 1040,
+    "responses": 1040,
+    "started_attempts": 1040,
+    "failed_calls": 0,
+    "caps": 11,
+    "score_status": {
+      "passed": 374,
+      "failed": 655,
+      "truncated": 11
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M1_pilot": {
+    "phase": "pilot",
+    "expected": 70,
+    "calls": 70,
+    "scores": 70,
+    "responses": 70,
+    "started_attempts": 70,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {
+      "failed": 47,
+      "passed": 23
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "R1": {
+    "phase": "main",
+    "expected": 400,
+    "calls": 400,
+    "scores": 400,
+    "responses": 400,
+    "started_attempts": 400,
+    "failed_calls": 0,
+    "caps": 5,
+    "score_status": {
+      "passed": 199,
+      "failed": 196,
+      "truncated": 5
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "R1_pilot": {
+    "phase": "pilot",
+    "expected": 50,
+    "calls": 50,
+    "scores": 50,
+    "responses": 50,
+    "started_attempts": 50,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {
+      "failed": 10,
+      "passed": 40
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M3R2": {
+    "phase": "main",
+    "expected": 1040,
+    "calls": 1040,
+    "scores": 1040,
+    "responses": 1040,
+    "started_attempts": 1040,
+    "failed_calls": 1,
+    "caps": 10,
+    "score_status": {
+      "failed": 523,
+      "passed": 506,
+      "truncated": 10,
+      "invalid_input": 1
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M3R2_pilot": {
+    "phase": "pilot",
+    "expected": 130,
+    "calls": 130,
+    "scores": 130,
+    "responses": 130,
+    "started_attempts": 130,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {
+      "failed": 78,
+      "passed": 52
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M2": {
+    "phase": "main",
+    "expected": 400,
+    "calls": 400,
+    "scores": 400,
+    "responses": 400,
+    "started_attempts": 400,
+    "failed_calls": 0,
+    "caps": 1,
+    "score_status": {
+      "passed": 180,
+      "failed": 219,
+      "truncated": 1
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "M2_pilot": {
+    "phase": "pilot",
+    "expected": 50,
+    "calls": 50,
+    "scores": 50,
+    "responses": 50,
+    "started_attempts": 50,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {
+      "failed": 34,
+      "passed": 16
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "E5": {
+    "phase": "main",
+    "expected": 400,
+    "calls": 400,
+    "scores": 400,
+    "responses": 400,
+    "started_attempts": 400,
+    "failed_calls": 0,
+    "caps": 8,
+    "score_status": {
+      "failed": 211,
+      "passed": 181,
+      "truncated": 8
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "E5_pilot": {
+    "phase": "pilot",
+    "expected": 50,
+    "calls": 50,
+    "scores": 50,
+    "responses": 50,
+    "started_attempts": 50,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {
+      "failed": 38,
+      "passed": 12
+    },
+    "calls_without_scores": 0,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "E4_original_pilot": {
+    "phase": "failed_feasibility",
+    "expected": 20,
+    "calls": 10,
+    "scores": 0,
+    "responses": 10,
+    "started_attempts": 10,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {},
+    "calls_without_scores": 10,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "E4_schema_pilot": {
+    "phase": "pilot",
+    "expected": 20,
+    "calls": 20,
+    "scores": 0,
+    "responses": 20,
+    "started_attempts": 20,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {},
+    "calls_without_scores": 20,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  },
+  "E4_partial": {
+    "phase": "partial",
+    "expected": 400,
+    "calls": 76,
+    "scores": 0,
+    "responses": 76,
+    "started_attempts": 77,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {},
+    "calls_without_scores": 76,
+    "blocks_without_end": [],
+    "orphan_start_attempts": [
+      {
+        "attempt": "d7363ae26d8e44e89174f895ce520886",
+        "block": "660e57fc9f594889920fa2861077c221",
+        "key": "2fcd3783bda6c306a41bd0edee613fc511ef14c9abc4facb338436e763bc491f"
+      }
+    ]
+  },
+  "harness_pilot": {
+    "phase": "harness_validation",
+    "expected": 22,
+    "calls": 22,
+    "scores": 0,
+    "responses": 22,
+    "started_attempts": 22,
+    "failed_calls": 0,
+    "caps": 0,
+    "score_status": {},
+    "calls_without_scores": 22,
+    "blocks_without_end": [],
+    "orphan_start_attempts": []
+  }
+}

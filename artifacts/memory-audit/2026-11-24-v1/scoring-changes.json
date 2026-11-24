@@ -1,0 +1,346 @@
+[
+  {
+    "operation": "merged_complete_fences",
+    "key": "869620eedbb47e2bd2e430e9a112bc37ec580e0b1b244be8d92212bbde0b4878",
+    "task": "HumanEval/39",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "23f8cc54737782036f9741c0cdeca38b62d51a6f6f9cc4a97dbba06436c65e52"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "6951d35a1990c2c7067078c6b7659236fe08b9cf184fecddc0b945fedf6b3b52",
+    "task": "HumanEval/1",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "cf37b6b518624ec0dfcbd4b76ecf21789e0da8951c0199acd4a3b07fdb29081c"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "66776222492242eb4684f3fc25edb4fb2971782849aaa8a46cb64c21970b255f",
+    "task": "HumanEval/64",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "6dc1f719d8516b2ff234dfaf8320a4e62543bf2983e4083bd0007287813b5db2"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "97c2b5c16e31657007cd7f6b425168671d4d7031a30fbf0f0d77a230e966dd5f",
+    "task": "HumanEval/64",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "f4b8185b586c4f24d7f9b5e9426827db1c6b91fe0be9f0753192efbdf3da5b36"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "0611e7ff930f3268e1acfe83d6dce303a4f1873e3201794f37c28715bbe69c1b",
+    "task": "HumanEval/6",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "04372b3c3c5ae650481a0c3ff907654fac5f295fab1286abf4821e04d2472e10"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "f20998d78fb5af60fe0bf985a892aff194cbf21cdb2bbb7eaf2d99ff8e055518",
+    "task": "HumanEval/141",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "9e4bf89bdc45b06bbb92251086c5b9d1957a4770e336a971dabcc027b3486c92"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "848a36fb2252d38c25b3763dc6e014f351f8defd62cc7fc093b2d7712b4fb8da",
+    "task": "HumanEval/141",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "1c62226224fbd2a6c410989679540e34aa557a96f5dc08187bb67c34866545e8"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "cd4f4d74791bf6c34a7700e9dbbf69710c92c56dc5347b16db29312682cc0c73",
+    "task": "HumanEval/112",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "7517666b4d3ba918ebff163b205b4fd256f2f3fa593c7079cd6d2731b7ca75a5"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "90449867592e01dbbd4f548d319da1859f0a6c2ed979a9f28324017f2a658852",
+    "task": "HumanEval/1",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "79f110af91a2a1082423cde4d15165b4cf9b1e2d9292b7f6418d99a4cf78adf3"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "419302c8d7b447101aa9c04f709e31da431dde1d7890f3138949d276b7ddc96c",
+    "task": "HumanEval/127",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "8ab4b137a0aeed7d5eb62d5df8ee5c501919aff15f1cb11659b7d319f1a9e016"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "6c33ae3663286ebd5726b742ca00f04410dc0159bef75481a1a50024c2aa753b",
+    "task": "HumanEval/162",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "f37783efaa9b5efa5567e0b7855fdb17ad982fad57ce7c0e4a8394925bb4d567"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "ea39c7429e6b3824a5e6e13ebe989f122dc72e0232e8d6da37ee4ce56ea22b4d",
+    "task": "HumanEval/13",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "b6c344baf2de7cbadc503a52edb5b9f718c998a1fd1efd0ee44108eb9d38633e"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "7b54c0ba31d1749de07154f9ae01960aa2984f3208c71a9c20d651db38a05afa",
+    "task": "HumanEval/1",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "28d2c0a7ade9c46c183cf773b02ddfa00e5f8f6d1080f740bd44f4b2de4e5824"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "f65c60a113d36335e3f261e2a7acea52528138bd6b09b701a18adc3cc2feb64b",
+    "task": "HumanEval/89",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "85aec3957414f1d6906939bd29837efd5db9654606451939307ce7c3221f8870"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "9fe086cbd550080b2cd6183bfbff07377d85c6c23d44d370b3c99e50419214b3",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "2bf9052a1eb8cd636f8db2d38b05a7fe83fe71f59ebd7b91b51fa4755e40ba5c"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "225c6325ad5fb49973acc8e4780a7872399e98e5c8438f33c62fd4b1559e1f24",
+    "task": "HumanEval/160",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "c7b0f8dfe07f173872e1a34e4f518a46d1a9dd3d51efcd9fc11174a7a68789ed"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "c9be5a4aa677899591b04537e7aedf118d35e0e81f1f1cf90d0fc74fcf65c426",
+    "task": "HumanEval/105",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "0ba073b99847f4ca15bbce0448c8a4d8ed93a52a669389ce982d3646f70ce21a"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "3169a198cb84d2917ec46c1939e054555bc7cb2678f2e8d7c78f873876ea25e2",
+    "task": "HumanEval/156",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "9ae644a797906645687e95a3637df30e245140da954dc84c342d919b559b34b8"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "a14617931c47bc4aad1dce7aac97f3c377baa564c28763f49c0120771ad33116",
+    "task": "HumanEval/115",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "40469cff9475ecdbc5db072cf06f8611bf0afca9cb9da26cb36fce5871b9eba8"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "204a9102c69268c1084edab4d0b0323a385eccca114037e4b894b2e6bb376244",
+    "task": "HumanEval/0",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "79338b50b3817c4e0b740d19ad9c8185caff444eb3d2516d1d6c5c828a64c088"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "af3ea23989f2fedb8d7271c33dc5853e78d0b108081d077801f027d2ec5ea342",
+    "task": "HumanEval/94",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "55b347b786e6add661a582c352cb3a0a127d4110817c905235e57979ededc22a"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "4b859f2ed2f4e9b164328238d282b05344e952869c04426009471284b0986b2a",
+    "task": "HumanEval/73",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "5ea20b5872a3c2300323b1195af98a67a2f56fd4149899442e548caba924943c"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "ce7309ebcedf33cd721b7686b02afd22d75f965a14b53e0971c713f11c8106b0",
+    "task": "HumanEval/144",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "7da796768b47ddc61e99742a4d871a6ced5de9d14259b3a0974bd213570d99b7"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "5f308b7c0217745f5c6f75fec8a93d04caa4e98b7e87297ba636c211e728adda",
+    "task": "HumanEval/160",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "019a16784c4c9408b5cd5be146d7bf098511661a67737bcbc4f12d7421668d04"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "82d121d4d44dadf1728f0ef54dded21f3f0bc46a25baefac5d304fb4dec1c8cc",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "5d581cb73bb43c8a5d38bdc894ba07de7db2293f6870291aa6eca67de2acb3a2"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "c8d98d4c11174e802c78eaf3cd39eff35a3afcc5a2b4e5a69294f141def9a5a2",
+    "task": "HumanEval/148",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "7b2b11762458ec0c55a2bfb77613e5da8ec0c1fa1c7d82c73d07fd9fefbd27bf"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "40dd58a4815b337b4d005d9300a6c933bdbde8d8d85c97e220ba50b8dd780bc9",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "b04fc4a560c0105a9955665b7bb8198b673a1ef2cadf44bd95da1d7fa84d463b"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "f2196959dea9042055974feaa4c41088dca835218c047c24638e936fc565d80d",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "e694d0fb5db3f8a55edd8d5c5385f09969f40bdb1a9eb32dc32aacd66e6ddc72"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "3f0f2fd687ac3eef273e97657c5e3939e27d98819528418a64398f5c7817d0fb",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "4c494dc22d0543253992da0292e9bf6e6c396332ffa8e1967acb29933ee7b234"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "9c62aadca5c6f9feb3b130b52df1fcab3065420a3353ccb9db44d3ebee455070",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "f0dcd148539ddd4e5083ab8a6a2ff6bf5e70db05018cc772cb3d30c118b21f41"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "cf0edcf26860fcc949d9cff447b40e97b847630ae8806375694613ad97ecb7f0",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "853dd88f8d1e2bba40bc630de4a1d64499516a10bed122e08d28b7748b0f11dc"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "4f50e990ade081bfdb224b73e7276ce4dbd52d521efa4a6ecf3d41c76874a754",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "8b267afadc3485859a214f4ca6e0da1478fe910d7f6cefc951a07935ba64a042"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "177a381c3d9ab31410459e6d9d570d3582bc7438e06459446d5dfd9a9b7c9b17",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "0404d86b141b8f0694bde9e54c3c57b0a7616fe0b44f017cbc00aa9ef906ff87"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "4f42977ab551c5bb9b271e7d6b3a630173244210d83f8384dd2f307bb353acc2",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "caf3b69b61bd228c99ddd44f070eee078a78350430c1f3f9c1a8b9e1bde4af8e"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "7617760664b730815fdf770d9b3aa2284bb5a8896527885be759c7ff57d2a826",
+    "task": "HumanEval/76",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "6911b9bcf370c3ad10d88a78065bccf48f886bd09aa7acb63cbbebe308f0dc70"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "7ed345b8af710b3e6c13004c8e120f74989f941b905910ea0fa244b8f4e6a331",
+    "task": "HumanEval/102",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "5234b549f5b64e6359683d318851c3f33561c95b417752c934e83c1a496eb021"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "99641108ac196b07ab6ac1fb6ef1012d61a032420cb3a84f9c01f2cfe4582ce4",
+    "task": "HumanEval/144",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "e8369f39849fe8398badd15813f81129939d57209c9332a08b144fd3a8618ed7"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "0af0f6783f111822452bcd9fb90463783650bb962e37c13117bf33e7a6584239",
+    "task": "HumanEval/73",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "d10870a7fafa51ffc5b3984062227702a751582ec9b52b76470b3e054bd8a738"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "82f374947a19815bcbdc0cbab4d7b3a34a657d8d11ae1ee173ac3dc2140e686c",
+    "task": "HumanEval/148",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "fadd9a45f3b88e01d73d81c4d28ab05e870cf51eec1a74e3a9a20e6c3acdee58"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "c6688b409ca98638b1c958601dc17c03d16f22f19982493fea7fe96ffeef9eca",
+    "task": "HumanEval/144",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "aeed43b082e38a9f6282f0755cf66005568190f470bb3e2ecacc27eb402d858e"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "c2496660f1ecd4a06093f10cb787adffd1d61f4f955ec463ddef0b9fb4b0d65a",
+    "task": "HumanEval/144",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "1e4484c82b04c52506fe67e283c546a0d711b59d50ab613b095191f8099749a9"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "90858d543e3024d603e61bc686cb173498304a6384d0544aec64c1dd9c442be5",
+    "task": "HumanEval/144",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "f890d595e74d61b4e6450f9a699579b03eb482340546a668ecf20184f11d75cf"
+  },
+  {
+    "operation": "cap_salvage_original_extraction",
+    "key": "b77e6b58def810875a4049795815e8298c9ebcb1d0a18f21a2a7fdadd5d3de02",
+    "task": "HumanEval/160",
+    "before": 0.0,
+    "after": 0.0,
+    "audit_score_key": "16fd4fdbb737ed19e7312ed4a454edf8142e48a181ad07f6eb09aaa940d328f4"
+  }
+]

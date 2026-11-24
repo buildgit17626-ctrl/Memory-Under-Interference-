@@ -1,0 +1,197 @@
+[
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "cell": "both_fail",
+    "task": "HumanEval/1",
+    "condition": "near_duplicate_1000_beginning",
+    "call_key": "50a3d84b6d1b25231b32c56a07ce46c654def90e911b85ba21e5635b08c60fd7",
+    "code": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\"Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n    result = []\n    current_group = []\n    for char in paren_string:\n        if char == '(':\n            current_group.append(char)\n        elif char == ')':\n            if current_group:\n                result.append(''.join(current_group))\n                current_group = []\n    if current_group:\n        result.append(''.join(current_group))\n    return result",
+    "alternative_description": "Separate balanced top-level parenthesis groups, ignoring spaces. Return the groups in REVERSE occurrence order, preserving characters inside each group.",
+    "witnesses": [
+      {
+        "args": [
+          "(())()"
+        ],
+        "target_expected": "['(())', '()']",
+        "alternative_expected": "['()', '(())']"
+      },
+      {
+        "args": [
+          ""
+        ],
+        "target_expected": "[]",
+        "alternative_expected": "[]"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "failed",
+      "alternative_expected": "failed"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "cell": "distractor_only",
+    "task": "HumanEval/0",
+    "condition": "near_duplicate_1000_beginning",
+    "call_key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+    "code": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) <= threshold:\n                return True\n    return False",
+    "alternative_description": "Return whether two distinct list positions have absolute difference less than OR EQUAL TO threshold. Equality is included.",
+    "witnesses": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0
+          ],
+          1.0
+        ],
+        "target_expected": "False",
+        "alternative_expected": "True"
+      },
+      {
+        "args": [
+          [
+            1.0,
+            3.0
+          ],
+          1.0
+        ],
+        "target_expected": "False",
+        "alternative_expected": "False"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "failed",
+      "alternative_expected": "passed"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "cell": "target_only",
+    "task": "HumanEval/105",
+    "condition": "near_duplicate_1000_end",
+    "call_key": "a296c831d393c3c82dc04121c9a4b61eb8649b4c182929905440642b2c1fdeac",
+    "code": "def by_length(arr):\n    \"\"\"Keep integers from 1 through 9 inclusive, sort in ASCENDING order counting duplicates, then replace each by its capitalized English digit name. Ignore all other integers.\"\"\"\n    # Create a dictionary to map integers to their corresponding names\n    digit_names = {\n        1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n        4: \"Four\",\n        5: \"Five\",\n        6: \"Six\",\n        7: \"Seven\",\n        8: \"Eight\",\n        9: \"Nine\"\n    }\n    \n    # Filter out non-integer values and sort the remaining values\n    filtered_sorted = sorted([num for num in arr if num in digit_names])\n    \n    # Reverse the sorted list\n    reversed_sorted = filtered_sorted[::-1]\n    \n    # Map the reversed list back to integers and return the result\n    return [digit_names[num] for num in reversed_sorted]",
+    "alternative_description": "Keep integers from 1 through 9 inclusive, sort in ASCENDING order counting duplicates, then replace each by its capitalized English digit name. Ignore all other integers.",
+    "witnesses": [
+      {
+        "args": [
+          [
+            2,
+            1
+          ]
+        ],
+        "target_expected": "['Two', 'One']",
+        "alternative_expected": "['One', 'Two']"
+      },
+      {
+        "args": [
+          []
+        ],
+        "target_expected": "[]",
+        "alternative_expected": "[]"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "passed",
+      "alternative_expected": "failed"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "cell": "both_fail",
+    "task": "HumanEval/102",
+    "condition": "near_duplicate_1000_beginning",
+    "call_key": "37926bb5a84bb034ef48b255cb3ff7b1c7621d52c2deba1319903efea7a9598f",
+    "code": "def choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n    if x % 2 == 0:\n        return x\n    elif y % 2 == 0:\n        return y\n    else:\n        return -1",
+    "alternative_description": "Return the largest even integer in [x,y), EXCLUDING upper endpoint y. Return -1 if this half-open interval contains no even integer.",
+    "witnesses": [
+      {
+        "args": [
+          2,
+          2
+        ],
+        "target_expected": "2",
+        "alternative_expected": "-1"
+      },
+      {
+        "args": [
+          2,
+          4
+        ],
+        "target_expected": "4",
+        "alternative_expected": "2"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "failed",
+      "alternative_expected": "failed"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "cell": "distractor_only",
+    "task": "HumanEval/1",
+    "condition": "near_duplicate_1000_end",
+    "call_key": "5e69117690e279dfb55f7da75a1bcc82eb48554efd0aeb13d328539f34db0a96",
+    "code": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    groups = []\n    current_group = []\n    depth = 0\n\n    for char in paren_string.replace(\" \", \"\"):\n        if char == \"(\":\n            depth += 1\n            current_group.append(char)\n        elif char == \")\":\n            depth -= 1\n            current_group.append(char)\n            if depth == 0:\n                groups.append(\"\".join(current_group))\n                current_group = []\n\n    return groups[::-1]",
+    "alternative_description": "Separate balanced top-level parenthesis groups, ignoring spaces. Return the groups in REVERSE occurrence order, preserving characters inside each group.",
+    "witnesses": [
+      {
+        "args": [
+          "(())()"
+        ],
+        "target_expected": "['(())', '()']",
+        "alternative_expected": "['()', '(())']"
+      },
+      {
+        "args": [
+          ""
+        ],
+        "target_expected": "[]",
+        "alternative_expected": "[]"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "failed",
+      "alternative_expected": "passed"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "cell": "target_only",
+    "task": "HumanEval/0",
+    "condition": "near_duplicate_1000_beginning",
+    "call_key": "ceda75ad2c2bcd49991d1f1b3ec2332377dd17d81367ddb48804d5bfbd92a9b3",
+    "code": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+    "alternative_description": "Return whether two distinct list positions have absolute difference less than OR EQUAL TO threshold. Equality is included.",
+    "witnesses": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0
+          ],
+          1.0
+        ],
+        "target_expected": "False",
+        "alternative_expected": "True"
+      },
+      {
+        "args": [
+          [
+            1.0,
+            3.0
+          ],
+          1.0
+        ],
+        "target_expected": "False",
+        "alternative_expected": "False"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "passed",
+      "alternative_expected": "failed"
+    }
+  }
+]

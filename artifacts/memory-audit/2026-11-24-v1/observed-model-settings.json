@@ -1,0 +1,802 @@
+[
+  {
+    "stage": "E0",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 328
+  },
+  {
+    "stage": "E0",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 3141,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 328
+  },
+  {
+    "stage": "E0",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 2718,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 328
+  },
+  {
+    "stage": "E0",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 328
+  },
+  {
+    "stage": "E0",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 3141,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 328
+  },
+  {
+    "stage": "E0",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 2718,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 328
+  },
+  {
+    "stage": "M3_isolated",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 20
+  },
+  {
+    "stage": "M3_isolated",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 20
+  },
+  {
+    "stage": "M3_initial",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 120
+  },
+  {
+    "stage": "M3_initial",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 120
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 360
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 360
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 6144,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 12288,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 6144,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 4096,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 12288,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 4096,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "5bf29d3e89792bd28dd123f4c8fed8018dd1173500331e4a07345e154fdd3a31",
+    "calls": 40
+  },
+  {
+    "stage": "M1_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 5
+  },
+  {
+    "stage": "M1_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 4096,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 5
+  },
+  {
+    "stage": "M1_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 25
+  },
+  {
+    "stage": "M1_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 4096,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 5
+  },
+  {
+    "stage": "M1_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 25
+  },
+  {
+    "stage": "M1_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 32768,
+      "num_gpu": 0,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "11a80f14d51bfb7a98198359fef24c9b392f24752034a4f3889a5beb21923a5b",
+    "calls": 5
+  },
+  {
+    "stage": "R1",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "e0b24cae76edf99f04bcccf2d842f35a1e741c6ec29c2303b78938016197a795",
+    "calls": 200
+  },
+  {
+    "stage": "R1",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "e0b24cae76edf99f04bcccf2d842f35a1e741c6ec29c2303b78938016197a795",
+    "calls": 200
+  },
+  {
+    "stage": "R1_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "c8973ac44ec9b4bc7a62fe5dab2255601d70312c85fc7aff9632674dc1341c11",
+    "calls": 25
+  },
+  {
+    "stage": "R1_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "c8973ac44ec9b4bc7a62fe5dab2255601d70312c85fc7aff9632674dc1341c11",
+    "calls": 25
+  },
+  {
+    "stage": "M3R2",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "73640aece8f21a8b089eae305affcd3a1661e4bc1f4733dd6ed01d323043d723",
+    "calls": 520
+  },
+  {
+    "stage": "M3R2",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "73640aece8f21a8b089eae305affcd3a1661e4bc1f4733dd6ed01d323043d723",
+    "calls": 520
+  },
+  {
+    "stage": "M3R2_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "51b914562a93a67b2dbae5ebda6b65a98a00c3ba956b077a9a4b8214b7e10ca1",
+    "calls": 65
+  },
+  {
+    "stage": "M3R2_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "51b914562a93a67b2dbae5ebda6b65a98a00c3ba956b077a9a4b8214b7e10ca1",
+    "calls": 65
+  },
+  {
+    "stage": "M2",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "987c7e58f8802966e801128bc3219f332e0a0c40fba604971a279d02cce01902",
+    "calls": 200
+  },
+  {
+    "stage": "M2",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "987c7e58f8802966e801128bc3219f332e0a0c40fba604971a279d02cce01902",
+    "calls": 200
+  },
+  {
+    "stage": "M2_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "fb38bd232c17002d6df4f84a5b0de342569dcf0c1e21d17aaf37f6c801b03244",
+    "calls": 25
+  },
+  {
+    "stage": "M2_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "fb38bd232c17002d6df4f84a5b0de342569dcf0c1e21d17aaf37f6c801b03244",
+    "calls": 25
+  },
+  {
+    "stage": "E5",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "34b734f1b859b3d6817982307c77918519366a9fc476521b569ed12c57c3ba92",
+    "calls": 200
+  },
+  {
+    "stage": "E5",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "34b734f1b859b3d6817982307c77918519366a9fc476521b569ed12c57c3ba92",
+    "calls": 200
+  },
+  {
+    "stage": "E5_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "e2aa4d8a5b59a9a88827f84ad9f0ba86fd64badd71a87f26b70dba940c2beadb",
+    "calls": 25
+  },
+  {
+    "stage": "E5_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "e2aa4d8a5b59a9a88827f84ad9f0ba86fd64badd71a87f26b70dba940c2beadb",
+    "calls": 25
+  },
+  {
+    "stage": "E4_original_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 64,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "eb635500c9b867755dc513ba74d9e16b035471dae0313dd56dbbc43034562e05",
+    "calls": 5
+  },
+  {
+    "stage": "E4_original_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 64,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "eb635500c9b867755dc513ba74d9e16b035471dae0313dd56dbbc43034562e05",
+    "calls": 5
+  },
+  {
+    "stage": "E4_schema_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 64,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "afb6830b04e438b339d155c0760634a779d04a3c427472c894465c2efbd2ba2f",
+    "calls": 10
+  },
+  {
+    "stage": "E4_schema_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 64,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "afb6830b04e438b339d155c0760634a779d04a3c427472c894465c2efbd2ba2f",
+    "calls": 10
+  },
+  {
+    "stage": "E4_partial",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 64,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "e25cc5fe5bc2a28001f5a12445de3f15616942102e86e4120ecdef224ebeed30",
+    "calls": 34
+  },
+  {
+    "stage": "E4_partial",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 16384,
+      "num_gpu": 0,
+      "num_predict": 64,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0
+    },
+    "config_hash": "e25cc5fe5bc2a28001f5a12445de3f15616942102e86e4120ecdef224ebeed30",
+    "calls": 42
+  },
+  {
+    "stage": "harness_pilot",
+    "model": "qwen2.5-coder:1.5b",
+    "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "af0e7179480a0ed29e0ef73d4e42234ca709cd4eafdd426df7cbfefef0344712",
+    "calls": 11
+  },
+  {
+    "stage": "harness_pilot",
+    "model": "qwen2.5-coder:0.5b",
+    "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+    "options": {
+      "num_ctx": 8192,
+      "num_gpu": 0,
+      "num_predict": 2048,
+      "num_thread": 8,
+      "seed": 1729,
+      "stop": [],
+      "temperature": 0.2
+    },
+    "config_hash": "af0e7179480a0ed29e0ef73d4e42234ca709cd4eafdd426df7cbfefef0344712",
+    "calls": 11
+  }
+]

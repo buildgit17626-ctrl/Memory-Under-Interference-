@@ -1,0 +1,186 @@
+{
+  "AUDIT_STATUS.json": {
+    "bytes": 2906,
+    "sha256": "ad62aa016c833f2812275ea6c5268420a3bf52375d429a33440fc5838f1df5ff"
+  },
+  "calls-with-adherence.csv": {
+    "bytes": 4524171,
+    "sha256": "f6bbe4241e22f48deb9d70175372ebdd919e88c63914184260f362b46679b00e"
+  },
+  "calls.csv": {
+    "bytes": 4501400,
+    "sha256": "c05e8ec47a506a1e51b2bc46e2d7feb632a9db8459e0fd95921a13308e91bc8e"
+  },
+  "CONDITION_TABLES.md": {
+    "bytes": 23525,
+    "sha256": "9542040d7539bd64485fac1a8544b6e9204e842aaf64912b45d52ffcc79af673"
+  },
+  "conditions.csv": {
+    "bytes": 393248,
+    "sha256": "284eb44442daf84ffbb5b4ddb11ef5dc1c66526736cddc3870a0e82dd9c1e5aa"
+  },
+  "conditions.json": {
+    "bytes": 1277854,
+    "sha256": "453c56d627ff032805e9805b986fe736d7a800cdb1b7cf57be916a23a5a75479"
+  },
+  "cross-pass-counts.csv": {
+    "bytes": 7591,
+    "sha256": "9333c05cd67758f389eea342bb43c7ef02f1c403ef057b99890233211222b81b"
+  },
+  "cross-pass-effects.json": {
+    "bytes": 5656,
+    "sha256": "a8c84207d43b5e26488bc9c7d0717221227017ba8314d62c28854853f97dd54c"
+  },
+  "cross-pass-per-response.csv": {
+    "bytes": 152153,
+    "sha256": "8a73d504995a1c1e488bb4f06775e2db1fe901c506182bb533741e1ba139cc68"
+  },
+  "e4-partial-paired.json": {
+    "bytes": 11955,
+    "sha256": "be80408dc08bcfe81bc004b903d7baec626941ab67d984ccf6636f0757b52f30"
+  },
+  "e5-format-audit.csv": {
+    "bytes": 94182,
+    "sha256": "391aba39e61784f651c04c2c1ae141365ca7280c1ec320c39d3df3ceece28596"
+  },
+  "e5-joint-intervals.json": {
+    "bytes": 18318,
+    "sha256": "033242bc074406382736a193c9072d67d450ecc10913e191f7a86c8921352961"
+  },
+  "e5-joint-outcomes.csv": {
+    "bytes": 578,
+    "sha256": "d4425e8c122349f381f572a0cf5de289e3562773742fcb5afc76d5e3ac002625"
+  },
+  "energy-per-correct-differences.json": {
+    "bytes": 1192418,
+    "sha256": "8f21bb6fc2354b9cb851772dd0626833dff8039ef5bc58b981665645f7db0be2"
+  },
+  "energy-sensitivities.csv": {
+    "bytes": 313243,
+    "sha256": "20f4c8bb42a8e9b101a1fb3869b6d2f7beffb30efbdf6966124a0f2d933199da"
+  },
+  "energy-sensitivities.json": {
+    "bytes": 838118,
+    "sha256": "d2ba1e55631c645a6e843813cf39ee16f73284c5b1538983d38fd3d903e32b66"
+  },
+  "environment-block-audit.json": {
+    "bytes": 549620,
+    "sha256": "04c707799aa4d7c4f23c7667e0af5c9ae225ad5b162fcb929ea3d9d3b044c2a9"
+  },
+  "freeze-status.json": {
+    "bytes": 77,
+    "sha256": "9d71dca5e5a44a25b48920d9d66f91da6d7b6780d50dbbf0364ac9011566e794"
+  },
+  "functions.csv": {
+    "bytes": 1353939,
+    "sha256": "1f2d8dc95d647e07c64aeb657b74bff218cb1d487a9dad3ab0eebf22957152b9"
+  },
+  "input-manifest.json": {
+    "bytes": 113121,
+    "sha256": "259841f7e3f3a5c1a33012af9c8237d3ff7cc5d6e8bb7a2aefd1d7cff0d75f8a"
+  },
+  "integrity-issues.json": {
+    "bytes": 4,
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+  },
+  "inventory.json": {
+    "bytes": 6510,
+    "sha256": "1d5ca0aa1e84e8905aa2c31ee84825b0582ba10565637d8a0df90e6e9c4840ed"
+  },
+  "m1-bundle-dependencies.json": {
+    "bytes": 142837,
+    "sha256": "3d36d2f0d4d6c7573fb0bc8241475cd1f4b2a7c6b256f13894dffa7dc0e2202e"
+  },
+  "m1-work-and-function-cost.json": {
+    "bytes": 5624,
+    "sha256": "d15929e7e04ba239963574efc4737e07de61e42fc0ebeeaffab6d5b99ccc7e94"
+  },
+  "METHODS_AND_POPULATIONS.md": {
+    "bytes": 8556,
+    "sha256": "13965ba4a53a8d5b56c8f0afb244e32a5ea89f7e8ff09b48757fc18c671f4777"
+  },
+  "observed-model-settings.json": {
+    "bytes": 22677,
+    "sha256": "a109bb5169cb4eec7ab613849bcfbcaeda4b6a005c73ab2b7077926bc11b5dc7"
+  },
+  "paired-effects.csv": {
+    "bytes": 1204067,
+    "sha256": "7dc7d873186a51a7176adc12c52173313d0bb7eec34bfdbea1dbcb58b8506c9f"
+  },
+  "paired-effects.json": {
+    "bytes": 16612058,
+    "sha256": "d3a94c7f970fc96924552921d64ec70a18581a36911fa974b6af3ba0044fabcb"
+  },
+  "PHASES_1_4_REPORT.md": {
+    "bytes": 15445,
+    "sha256": "a32500d90b45e35a705955213a77a802aae53533cd64a444f3f12614205c4497"
+  },
+  "primary-effect-table.csv": {
+    "bytes": 52860,
+    "sha256": "90737971a720c4c6144f747a614defaf18292b47e7b6212c1111884ef5475612"
+  },
+  "pytest-full.log": {
+    "bytes": 2598,
+    "sha256": "ba508af7606fbff5f6ed6f0aa8d91377a1970f603b3e3658add410d03c76b89c"
+  },
+  "r1-prompt-audit.csv": {
+    "bytes": 78602,
+    "sha256": "e580c477a94b739ffdd632525383ac8cc8a1912631965939295bb6292142337e"
+  },
+  "representative-code-audit.json": {
+    "bytes": 9305,
+    "sha256": "d5790df2c0bbb760135eb8d048d932b6d9042960fe7a6c15e01aedc1566184f5"
+  },
+  "representative-witness-scores.jsonl": {
+    "bytes": 4755,
+    "sha256": "1eda7cb7ccd9cc60da53d4480e1303c56ebcb002a43da808307450712750fcd8"
+  },
+  "REPRESENTATIVE_CODE_AUDIT.md": {
+    "bytes": 8980,
+    "sha256": "da3b675bd1566d2aa1d95c78df960a05c7f1f68eaf82fa5f9690d5b1f16925da"
+  },
+  "REVIEWER_AUDIT.md": {
+    "bytes": 18420,
+    "sha256": "5386dbe15ff5aaaa172d7e8766c4c694e5db4c1ecf91ba4c1e072ca53e132b78"
+  },
+  "robustness-run.log": {
+    "bytes": 5143,
+    "sha256": "ce2bfc3ecbe78d0ec34bae8cc3c70aa9084db6809c29f0c9138cc7805a6f5820"
+  },
+  "ruff-check.log": {
+    "bytes": 20,
+    "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+  },
+  "schedule-audit.json": {
+    "bytes": 27872,
+    "sha256": "fa090869b57736c311a6480947ef27d966fda0b89fb1e9a3d15696026dcdd8e0"
+  },
+  "scoring-changes.json": {
+    "bytes": 13039,
+    "sha256": "55ba43b0523e0623904d34f00c2cb49e815ef1918025c426fe83a54763f3f06a"
+  },
+  "scoring-sensitivity-effects.json": {
+    "bytes": 586021,
+    "sha256": "7fdc6bc21f8f8ddf18a8a1687b0e2723f4048343949f9fa94826e4474b54d236"
+  },
+  "secondary-scores.jsonl": {
+    "bytes": 873267,
+    "sha256": "24b4ea6733b675878911582a220eba7468c86f706873790502b1489b627890bf"
+  },
+  "sensor-file-audit.json": {
+    "bytes": 51263,
+    "sha256": "3d6d44e9881ac533ca3d370d4e1b47ffe63d1f36e5078ef619d17aee89462861"
+  },
+  "sensor-integration-audit.json": {
+    "bytes": 5892160,
+    "sha256": "ecc6bfc274c6d05bbaabb89093525f2d834bc18eb7510927c2c8408ad72b0be3"
+  },
+  "sensor-prefix-audit.json": {
+    "bytes": 2104157,
+    "sha256": "ffdf42b004bc9cd8e673b7ff9131af8119e020f3a053b7cb2a9437aad0b923ff"
+  },
+  "supplemental-control-effects.json": {
+    "bytes": 986019,
+    "sha256": "a3f499efb7d55caadca2b64387a65acdbc40ca9bd183d7fca627120e0e3aa2e5"
+  }
+}
