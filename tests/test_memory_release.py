@@ -41,6 +41,9 @@ def test_public_redaction_preserves_generated_content_and_numbers():
     assert "Dhruv" not in clean["path"]
     assert original["host"]["username"] == "private"
     assert sanitize_text(code) == (code, 0)
+    # A short Windows account prefix can occur as escaped text in copied source.
+    assert sanitize_text(r"C:\\Users\\DHRUVB~1\\Temp")[0].startswith("LOCAL_USER_ROOT")
+    assert sanitize_text(r"C:\\\\Users\\\\DHRUVB~1\\\\Temp")[0].startswith("LOCAL_USER_ROOT")
 
 
 def test_synthetic_rank_audit_preserves_stable_tie_order():

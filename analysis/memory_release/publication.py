@@ -113,7 +113,9 @@ def main() -> None:
             (RELEASE / "manuscript/main.pdf").read_bytes()
         ).hexdigest(),
         "new_inference": 0,
-        "release_record_published": False,
+        "zenodo_record_published_by_agent": False,
+        "final_artifacts_uploaded_to_github_release": False,
+        "existing_github_release": "Public earlier-audit release; tag/record left unchanged",
     }
     save_json(RELEASE / "checks/publication-safety.json", status)
     print(

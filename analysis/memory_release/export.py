@@ -16,6 +16,8 @@ PREFIXES = (
     ("C:/Users/Dhruv Brahmbhatt", "LOCAL_USER_ROOT"),
     ("C:\\\\Users\\\\Dhruv Brahmbhatt", "LOCAL_USER_ROOT"),
     ("C:\\Users\\DHRUVB~1", "LOCAL_USER_ROOT"),
+    ("C:\\\\Users\\\\DHRUVB~1", "LOCAL_USER_ROOT"),
+    ("C:/Users/DHRUVB~1", "LOCAL_USER_ROOT"),
 )
 TEXT = {".json", ".jsonl", ".csv", ".md", ".txt", ".yaml", ".yml", ".py", ".toml", ".sha256"}
 
@@ -26,6 +28,11 @@ def sanitize_text(text: str) -> tuple[str, int]:
     for before, after in PREFIXES:
         count += text.count(before)
         text = text.replace(before, after)
+    # Copied Python/JSON can contain more escaping layers than the actual path.
+    text, escaped = re.subn(
+        r"[Cc]:[\\/]+Users[\\/]+(?:Dhruv Brahmbhatt|DHRUVB~1)", "LOCAL_USER_ROOT", text
+    )
+    count += escaped
     return text, count
 
 
