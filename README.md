@@ -10,12 +10,18 @@ test-suite correctness, token use, latency and estimated CPU-package energy.
 The study measures observable behavior and computation. It does not measure
 internal memory capacity, inspect cognition or establish intentional giving up.
 
-## Version 1 preprint candidate
+## Version 1 final preprint artifacts
 
-Prepared locally on 24 November 2026; not peer reviewed or deposited. Final
-interpretation and external publication approval remain with the author.
-Generation is paused. The rc1 candidate is preserved; the final revision is
-prepared as `v1.0.0-rc2` on the local review branch.
+Final Version 1 artifacts, 24 November 2026; not peer reviewed. Generation is paused.
+The reserved Zenodo DOI is **10.5281/zenodo.24500468**:
+[permanent DOI URL](https://doi.org/10.5281/zenodo.24500468).
+Reservation does not confirm DOI registration, publication or public accessibility.
+The designated version-specific GitHub release is
+[v1.0.0](https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0).
+An existing public GitHub release/tag points to the earlier audit commit and has
+no uploaded assets at the preparation check. Final-artifact upload and tag retargeting
+require separate approval, as does Zenodo publication. The repository main push
+is authorized. Prior candidate tags are preserved.
 
 - [Manuscript PDF](releases/v1/Memory_Under_Interference_v1.pdf)
 - [Manuscript source bundle](releases/v1/Memory_Under_Interference_v1_source.zip)
@@ -127,11 +133,12 @@ Confirmed contributions are research questions/design decisions, experiment
 oversight and interpretation review; no institutional supervision or endorsement
 is implied. The manuscript discloses AI-assisted analysis and drafting as well.
 
-For the Version 1 release candidate, the owner selected MIT for original code
+For Version 1, the owner selected MIT for original code
 and CC BY 4.0 for original report/data. Third-party datasets and software retain
 their existing notices; see the release's THIRD_PARTY_NOTICES.md. HumanEval and
 HumanEval+/EvalPlus are not relicensed by that grant.
 
-Version 1 scientific preparation is on a local review branch. Its manuscript,
-public derivatives and archives require owner approval before upload or release;
-no Zenodo/TechRxiv deposit or DOI is implied by these files.
+Final upload files and instructions are in
+[the upload guide](releases/v1/UPLOAD_GUIDE.md). The outer SHA-256 manifest is
+[SHA256SUMS.txt](releases/v1/SHA256SUMS.txt); the archive also contains an internal
+file manifest. The reserved DOI is not evidence that a release record is public.

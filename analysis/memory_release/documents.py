@@ -8,7 +8,17 @@ import json
 import yaml
 
 from analysis.memory_audit.records import save_json
-from analysis.memory_release.common import AUDIT, MG_COMMIT, MODELS, RELEASE, TITLE, directories
+from analysis.memory_release.common import (
+    AUDIT,
+    DOI,
+    DOI_URL,
+    MG_COMMIT,
+    MODELS,
+    RELEASE,
+    RELEASE_URL,
+    TITLE,
+    directories,
+)
 
 
 def ci(values, scale=100):
@@ -35,8 +45,8 @@ def main():
     findings = [
         "# Version 1 findings",
         "",
-        "Release candidate: author interpretation/publication "
-        "approval pending. This document freezes evidence-supported wording, not approval "
+        "Final Version 1 artifacts, with Zenodo publication/GitHub final-artifact update "
+        "awaiting author approval. This document records evidence-supported wording, not approval "
         "of an internal mechanism or a peer-reviewed claim.",
         "",
         f"Main-study logical requests verified directly from calls.jsonl: "
@@ -202,15 +212,16 @@ def main():
 |Archive changes raw evidence|Public copies only, original/public hash map and explicit metadata/path redactions|Sanitized export is not byte-identical inference-resume evidence|
 |Authorship/affiliation inflated|Owner-confirmed name, student status, independent work and contributions; AI help disclosed|Final author review required; no institutional endorsement|
 
-Disposition: release candidate is scientifically supportable only with these limitations.
-External publication remains unapproved. Final build and archive checks are recorded separately.
+Disposition: final Version 1 is scientifically supportable only with these limitations.
+Zenodo/GitHub release publication remains unapproved; the main repository push is authorized.
+Final build and archive checks are recorded separately.
 """,
     )
     write(
         "DATA_AVAILABILITY.md",
         f"""# Data availability and transformations
 
-This local Version 1 candidate contains {counts["completed_main_logical_requests"]:,} main
+The final Version 1 archive contains {counts["completed_main_logical_requests"]:,} main
 logical requests plus separate pilots and partial diagnostics. `data/raw/results/utilisation/`
 contains transformed raw call/start/response/scoring/block/validation records, benchmark
 and tokenizer artifacts. `data/audit/` contains source-linked derived analysis. Preserved
@@ -248,8 +259,13 @@ Original report/data: CC BY 4.0; original code: MIT, as owner-approved. HumanEva
 and HumanEval+/EvalPlus Apache-2.0 notices remain applicable. No model/tool binaries
 or publisher HTML/PDF caches are distributed. See THIRD_PARTY_NOTICES.md.
 
-No Zenodo/TechRxiv upload or DOI exists as part of preparation. Archive hashes and local
-version tag identify the prepared bytes; public availability requires owner approval.
+Zenodo DOI {DOI} is reserved, as supplied by the author; DOI registration,
+public accessibility and release-record publication are not confirmed. Its permanent
+URL is {DOI_URL}. The designated version-specific GitHub release is {RELEASE_URL}.
+An existing public GitHub v1.0.0 release/tag points at the earlier audit commit;
+these final artifacts have not been uploaded there by this preparation.
+Main-branch file publication is authorized; Zenodo publication or GitHub release updates require
+separate owner approval. Archive hashes identify the final prepared bytes.
 """,
     )
     write(
@@ -278,9 +294,11 @@ does not depend on additional E3/U-family/MemoryGraph inference and launches non
     )
     write(
         "RELEASE_NOTES_V1.md",
-        """# Version 1.0 release candidate
+        """# Version 1.0 final artifact release notes
 
-Date: 24 November 2026. Status: prepared locally; not peer reviewed; not deposited.
+Date: 24 November 2026. Final artifacts verified; not peer reviewed.
+Repository main publication is authorized. Zenodo publication and final-artifact upload
+to the existing GitHub release remain pending approval.
 
 - Frozen completed main scope: E0, M1, initial M3, revised M3/R2, M2, R1, E5.
 - Diagnostic pilots separate; revised E4 76/400 and older feasibility versions separate.
@@ -294,8 +312,8 @@ Date: 24 November 2026. Status: prepared locally; not peer reviewed; not deposit
 - Important new caveat: adverse censoring weakens the 1.5B cross-specification finding.
 - Original report/data CC BY 4.0; original code MIT, with third-party exceptions retained.
 - Local source/tag/build/verification hashes are in checks/RELEASE_STATUS.json and
-  SHA256SUMS.json. No DOI/acceptance/endorsement is invented.
-- Final rc2 communication revision: explicit research questions/contributions,
+  SHA256SUMS.json. The upload assets have an additional SHA256SUMS.txt manifest.
+- Final communication revision: explicit research questions/contributions,
   verified 76.5%/67.4% descriptive energy-cost reductions, an actual saved
   target/distractor/code/witness example, selected exact prompt strings, four
   E5 strict-adherence primary rows, common model-comparison axes and clearer labels.
@@ -303,15 +321,19 @@ Date: 24 November 2026. Status: prepared locally; not peer reviewed; not deposit
   restricted verification harness distinguish saved-data reproduction from
   regeneration, rescoring or physical energy calibration. See checks/portable-environment.json.
 
-External upload, publication, pushes and tag publication require owner approval.
+The reserved DOI and designated release URL appear below. Reserving an identifier is not
+confirmation of registration, public accessibility or publication. The main push is
+authorized; publishing the Zenodo record, GitHub release or release tag remains unapproved.
 """,
     )
     citation = {
         "cff-version": "1.2.0",
-        "message": "Please cite the independent Version 1 preprint; not peer reviewed.",
+        "message": "Final Version 1 preprint; not peer reviewed. DOI reserved; "
+        "registration/public accessibility not confirmed.",
         "type": "article",
         "title": TITLE,
         "version": "1.0.0",
+        "doi": DOI,
         "date-released": "2026-11-24",
         "authors": [
             {
@@ -320,7 +342,7 @@ External upload, publication, pushes and tag publication require owner approval.
                 "affiliation": "Independent researcher; IIT Madras student",
             }
         ],
-        "url": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-",
+        "url": RELEASE_URL,
         "license": "CC-BY-4.0",
     }
     (RELEASE / "CITATION.cff").write_text(
@@ -332,6 +354,7 @@ External upload, publication, pushes and tag publication require owner approval.
         "publication_type": "preprint",
         "publication_date": "2026-11-24",
         "version": "1.0.0",
+        "doi": DOI,
         "creators": [
             {
                 "name": "Brahmbhatt, Dhruv",
@@ -341,7 +364,9 @@ External upload, publication, pushes and tag publication require owner approval.
         "description": "Independent empirical preprint on context/specification utilization "
         "in two small local code models. Posthoc and measurement limitations "
         "are explicit. Not peer reviewed. MemoryGraph is a separate prototype, "
-        "not an evaluated integrated intervention. No DOI or external deposit yet.",
+        "not an evaluated integrated intervention. DOI reserved; release-record publication "
+        "and public accessibility are not confirmed. Final-artifact upload to the existing "
+        "GitHub release is pending approval.",
         "license": "cc-by-4.0",
         "access_right": "open",
         "keywords": [
@@ -353,15 +378,20 @@ External upload, publication, pushes and tag publication require owner approval.
             "memory retrieval",
         ],
         "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; "
-        "third-party notices retained. External publication requires author approval.",
+        "third-party notices retained. DOI is reserved, not confirmed registered or accessible. "
+        "Zenodo publication/GitHub release updates require author approval.",
+        "related_identifiers": [
+            {"identifier": RELEASE_URL, "relation": "isSupplementTo", "scheme": "url"}
+        ],
     }
     save_json(RELEASE / "zenodo-metadata-draft.json", metadata)
     write(
         "README.md",
         r"""# Memory Under Interference -- Version 1.0
 
-Local scientific release candidate, 24 November 2026. Not peer reviewed. External
-publication requires owner approval. Start with manuscript/main.pdf, FINDINGS_FINAL.md,
+Final Version 1 artifacts, 24 November 2026. Not peer reviewed. Main repository push
+is authorized; Zenodo publication/GitHub final-artifact updates require owner approval.
+Start with manuscript/main.pdf, FINDINGS_FINAL.md,
 CLAIMS_AND_EVIDENCE.md, REVIEWER_RESPONSE.md and DATA_AVAILABILITY.md.
 
 ## Reproduce without inference
@@ -417,7 +447,7 @@ The separate source archive retains manuscript/ and figures/ relative paths. No
 conference template/acceptance is implied. Version 2 work is in VERSION_2_ROADMAP.md.
 Original report/data CC BY 4.0, original code MIT, third-party exceptions retained.
 
-The rc2 revision adds an evidence-linked worked example, exact selected prompt
+The final revision includes an evidence-linked worked example, exact selected prompt
 strings, E5 registered primary contrasts and clearer common-scale policy figures.
 See checks/portable-environment.json for the tested installation and filesystem/
 network restrictions; these verify saved-data reanalysis, not inference regeneration.
@@ -428,6 +458,15 @@ network restrictions; these verify saved-data reanalysis, not inference regenera
         "content retain their original notices; see THIRD_PARTY_NOTICES.md.\n",
         encoding="utf-8",
     )
+    identity = (
+        f"\n\nVersion 1 identifier: **{DOI}** (reserved; registration/public accessibility "
+        f"not confirmed), {DOI_URL}. Designated GitHub release: {RELEASE_URL}. "
+        "An existing public GitHub release points to the earlier audit; final-artifact "
+        "upload/retargeting and Zenodo publication are not performed by this preparation.\n"
+    )
+    for name in ("README.md", "RELEASE_NOTES_V1.md", "FINDINGS_FINAL.md", "CLAIMS_AND_EVIDENCE.md"):
+        path = RELEASE / name
+        path.write_text(path.read_text(encoding="utf-8") + identity, encoding="utf-8")
     print(json.dumps({"release_documents_prepared": 9, "external_publication": False}), flush=True)
 
 

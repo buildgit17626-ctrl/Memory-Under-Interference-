@@ -38,6 +38,8 @@ def main():
     references_page = next(
         (i + 1 for i, t in enumerate(texts) if re.search(r"(?:^|\n)References\n", t)), None
     )
+    aux = (BASE / "manuscript/main.aux").read_text(encoding="utf-8")
+    end_page = re.search(r"\\newlabel\{maintext:end\}\{\{[^}]*\}\{(\d+)\}", aux)
     bounds = []
     with pdfplumber.open(path) as pdf:
         for index, page in enumerate(pdf.pages):
@@ -53,7 +55,7 @@ def main():
                 bounds.append({"page": index + 1, "characters_outside_page": len(outside)})
     status = {
         "pages": len(texts),
-        "main_text_pages": references_page - 1 if references_page else None,
+        "main_text_pages": int(end_page.group(1)) if end_page else references_page - 1,
         "references_start_page": references_page,
         "missing_key_numbers": absent,
         "missing_bibliography_entries": sorted(citations - entries),

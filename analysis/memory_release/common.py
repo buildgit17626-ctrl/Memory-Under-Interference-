@@ -1,5 +1,6 @@
 """Offline Version 1 preparation paths and immutable evidence references."""
 
+import os
 import sys
 from pathlib import Path
 
@@ -8,8 +9,7 @@ sys.path.insert(0, str(ROOT / "src"))
 AUDIT = ROOT / "artifacts/memory-audit/2026-11-24-v1"
 RELEASE = ROOT / "releases/v1"
 MEMORYGRAPH = Path(
-    "C:/Users/Dhruv Brahmbhatt/Documents/Codex/2026-11-19/"
-    "you-are-an-expert-technical-resume/work/memorygraph-mvp"
+    os.environ.get("MEMORYGRAPH_AUDIT_ROOT", str(ROOT / "companion-checkouts/MemoryGraph"))
 )
 MG_COMMIT = "c569143ec6be1c767a2c56c59c936f85bd1fc1cb"
 AUDIT_COMMIT = "4d6c60d591c88bfd4b22464e53583a081c40d5c6"
@@ -18,6 +18,12 @@ TITLE = (
     "and Inference Efficiency in Small Code Language Models"
 )
 MODELS = ("qwen2.5-coder:0.5b", "qwen2.5-coder:1.5b")
+DOI = "10.5281/zenodo.24500468"
+DOI_URL = "https://doi.org/" + DOI
+RELEASE_TAG = "v1.0.0"
+RELEASE_URL = (
+    "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/" + RELEASE_TAG
+)
 
 
 def require_pause() -> None:

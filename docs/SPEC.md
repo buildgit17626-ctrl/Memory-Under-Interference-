@@ -1,5 +1,17 @@
 # SPEC: The cost of a correct answer
 
+## Authorized final Version 1 publication preparation (2026-11-24)
+
+Owner supplies reserved DOI 10.5281/zenodo.24500468 and planned GitHub v1.0.0
+release URL. Authorizes final identity/pagination, public-only reanalysis and
+publication-safety audit, then commit and push finalized files to the Memory
+Under Interference repository's main branch. Does not authorize publication of
+the Zenodo record or GitHub release/tag. DOI remains reserved, not confirmed
+registered or publicly accessible. No new experiments/features or scientific
+changes. Plan: docs/plans/MUI_V1_PUBLICATION_PREPARATION.md. This supersedes
+earlier candidate-only/no-push instructions solely for the explicitly authorized
+main push; original evidence and prior tags remain unchanged.
+
 ## Authorized Version 1 scientific release preparation (2026-11-24)
 
 Final revision authorization: improve scientific communication, add existing

@@ -1,4 +1,4 @@
-"""Prepare local, checksummed candidate archives. Never uploads or creates a DOI."""
+"""Prepare final checksummed artifacts; never publish a release record or reserve a DOI."""
 
 import hashlib
 import json
@@ -8,7 +8,17 @@ import subprocess
 import zipfile
 
 from analysis.memory_audit.records import save_json
-from analysis.memory_release.common import MG_COMMIT, RELEASE, ROOT, TITLE, directories
+from analysis.memory_release.common import (
+    DOI,
+    DOI_URL,
+    MG_COMMIT,
+    RELEASE,
+    RELEASE_TAG,
+    RELEASE_URL,
+    ROOT,
+    TITLE,
+    directories,
+)
 
 ARCHIVES = (
     "Memory_Under_Interference_v1_source.zip",
@@ -18,7 +28,7 @@ ARCHIVES = (
 
 def include(path):
     rel = path.relative_to(RELEASE)
-    if rel.name in ARCHIVES or rel.name == "SHA256SUMS.json":
+    if rel.name in ARCHIVES or rel.name in {"SHA256SUMS.json", "SHA256SUMS.txt"}:
         return False
     if rel.as_posix() == "checks/archive-deliverables.json":
         return False
@@ -69,7 +79,12 @@ def main():
     status = {
         "title": TITLE,
         "version": "1.0.0",
-        "candidate_tag": "v1.0.0-rc2",
+        "release_tag": RELEASE_TAG,
+        "artifact_status": "Final Version 1 artifacts verified",
+        "doi": DOI,
+        "doi_url": DOI_URL,
+        "doi_status": "Reserved by owner; registration/public accessibility not confirmed",
+        "planned_github_release": RELEASE_URL,
         "source_commit": source_commit,
         "memorygraph_commit": MG_COMMIT,
         "readiness": "READY WITH DISCLOSED LIMITATIONS",
@@ -81,8 +96,12 @@ def main():
         "pdf_compiled_and_rendered": True,
         "new_model_or_embedding_inference": 0,
         "external_publication": False,
+        "external_publication_scope": "Zenodo publication or final-artifact GitHub release update",
+        "existing_github_release_public": True,
+        "final_artifacts_uploaded_to_github_release": False,
         "scientific_blockers": [],
-        "release_gate": "Final author interpretation/upload approval",
+        "repository_main_push_authorized": True,
+        "release_gate": "Author approval to publish Zenodo record or GitHub release/tag",
         "limitations": [
             "Posthoc cross-pass finding sensitive to adverse censoring",
             "M1 overlapping fixed bundles; no robust component CI",
@@ -93,16 +112,26 @@ def main():
             "Two quantized models, one benchmark and one CPU",
         ],
     }
+    repository_check = RELEASE / "checks/repository-preflight.json"
+    if repository_check.exists():
+        status["repository_preflight"] = json.loads(repository_check.read_text())
     save_json(RELEASE / "checks/RELEASE_STATUS.json", status)
     decision = "# Publication readiness\n\n**READY WITH DISCLOSED LIMITATIONS** "
-    decision += "for final author review.\n\n"
+    decision += "for final Version 1 artifacts.\n\n"
     decision += (
         "No remaining compilation, missing-reference, numerical-reproduction or archive-data "
     )
     decision += (
         "blocker is identified by the recorded gates. This is not peer review or a guarantee of "
     )
-    decision += "publication. External upload and tag/repository publication remain unapproved.\n\n"
+    decision += (
+        "publication. The repository main push is authorized; Zenodo publication and "
+        "updates to the existing GitHub release/tag remain unapproved.\n\n"
+    )
+    decision += (
+        f"Reserved DOI: {DOI} ({DOI_URL}); registration/public accessibility is not "
+        f"confirmed. Planned version-specific release: {RELEASE_URL}.\n\n"
+    )
     decision += (
         "The strongest 1.5B complete-case result is cap-sensitive; M1 independence is unresolved; "
     )
@@ -114,11 +143,47 @@ def main():
         f"Validation: {passed.group(1)} tests; Ruff clean; {pdf['main_text_pages']} main pages "
     )
     decision += f"and {pdf['pages']} total PDF pages. See checks/ for evidence.\n"
+    decision += (
+        "\nSaved-data reanalysis was verified from an extracted public archive in a fresh "
+        "Windows/Python environment, with original-data/network access blocked. This is not "
+        "inference regeneration, independent rescoring, sensor calibration or demonstrated "
+        "Linux/macOS portability. Original multi-channel sensor mirrors are excluded; "
+        "numerical CPU power/time samples are included.\n"
+    )
+    decision += (
+        "\nRelease operation pending: the pre-existing remote v1.0.0 tag points to older "
+        "audit commit 51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16. Its GitHub release "
+        "is already public with no uploaded assets at the read-only check. Both are left "
+        "unchanged. Before uploading the final artifacts, the target must be reviewed and "
+        "retargeted to the final main commit reported after the push. Artifact checks "
+        "passing do not resolve this tag/publication approval gate.\n"
+    )
     (RELEASE / "PUBLICATION_READINESS.md").write_text(decision, encoding="utf-8")
     shutil.copyfile(RELEASE / "manuscript/main.pdf", RELEASE / "Memory_Under_Interference_v1.pdf")
     output = ROOT / "output/pdf"
     output.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(RELEASE / "manuscript/main.pdf", output / "Memory_Under_Interference_v1.pdf")
+    (RELEASE / "UPLOAD_GUIDE.md").write_text(
+        "# Version 1 upload guide\n\n"
+        f"Final release tag: {RELEASE_TAG}. DOI: {DOI} (reserved, not confirmed published "
+        "or publicly accessible). The exact final main commit is reported separately to "
+        "avoid a self-referential commit hash.\n\n"
+        "Upload these files from this directory to both the GitHub release and Zenodo:\n\n"
+        "- Memory_Under_Interference_v1.pdf\n"
+        "- Memory_Under_Interference_v1_source.zip\n"
+        "- Memory_Under_Interference_v1_reproducibility.zip\n"
+        "- SHA256SUMS.txt (SHA-256 hashes of the upload assets)\n\n"
+        "Use zenodo-metadata-draft.json to populate/review the reserved Zenodo record; "
+        "use RELEASE_NOTES_V1.md for the GitHub release body. PUBLICATION_READINESS.md "
+        "records the checks and disclosed scientific limitations. SHA256SUMS.json is the "
+        "inner file manifest, also inside the reproducibility archive. Licences, notices, "
+        "raw-response derivatives and numerical sensor samples are inside that archive.\n\n"
+        "No record or GitHub release is published by these commands. Publish only after "
+        "author approval. The existing public v1.0.0 GitHub release has an older tag target "
+        "and no uploaded assets at preparation; update/retarget only with approval. "
+        "Do not treat the reserved DOI as registered or publicly accessible.\n",
+        encoding="utf-8",
+    )
     files = sorted(p for p in RELEASE.rglob("*") if p.is_file() and include(p))
     hashes = {
         p.relative_to(RELEASE).as_posix(): {
@@ -144,8 +209,9 @@ def main():
             "README.txt",
             b"Manuscript source bundle: compile manuscript/main.tex with Tectonic. "
             b"Relative figures/ and bibliography files are supplied. For data reanalysis use the "
-            b"separate reproducibility archive. Not peer reviewed; "
-            b"external release needs author approval.\n",
+            b"separate reproducibility archive. Final Version 1 artifacts; not peer reviewed. "
+            b"DOI 10.5281/zenodo.24500468 is reserved, not confirmed publicly accessible. "
+            b"Release-record publication needs author approval.\n",
         )
     with zipfile.ZipFile(RELEASE / ARCHIVES[1], "w") as archive:
         for p in files + [RELEASE / "SHA256SUMS.json"]:
@@ -166,6 +232,20 @@ def main():
                 }
             )
     save_json(RELEASE / "checks/archive-deliverables.json", archive_records)
+    uploads = [
+        "Memory_Under_Interference_v1.pdf",
+        *ARCHIVES,
+        "zenodo-metadata-draft.json",
+        "RELEASE_NOTES_V1.md",
+        "PUBLICATION_READINESS.md",
+        "UPLOAD_GUIDE.md",
+    ]
+    (RELEASE / "SHA256SUMS.txt").write_bytes(
+        "".join(
+            hashlib.sha256((RELEASE / name).read_bytes()).hexdigest() + "  " + name + "\n"
+            for name in uploads
+        ).encode("utf-8")
+    )
     print(json.dumps(status), flush=True)
     print(json.dumps(archive_records), flush=True)
 

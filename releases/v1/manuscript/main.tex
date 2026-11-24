@@ -656,8 +656,15 @@ behavior and total computation together. They do not establish an internal
 memory mechanism or an integrated MemoryGraph benefit.
 
 \section{Data and Code Availability}
-The public repository is \url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-}.
-The release candidate supplies code, frozen designs, transformed raw journals,
+The repository is \url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-}.
+The final Version 1 artifacts are associated with the reserved Zenodo DOI
+\href{https://doi.org/10.5281/zenodo.24500468}{10.5281/zenodo.24500468}
+and the designated version-specific GitHub release URL:
+\url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0}.
+The DOI is reserved; its registration and public accessibility have not been
+confirmed. Upload of these final artifacts to the designated GitHub release
+and publication of the Zenodo record await author approval. The artifacts supply code,
+frozen designs, transformed raw journals,
 per-task scores, numerical power/time samples, analysis tables and source/hash
 mappings. Original raw evidence remains unchanged locally. Unnecessary local
 paths and process/account metadata are removed only in public derivatives;
@@ -665,8 +672,8 @@ original/public hashes distinguish them. Full multi-sensor CSV mirrors are not
 redistributed; the numerical CPU-package/time exports reproduce the included
 energy integrations. They do not calibrate the sensor or reconstruct other
 hardware channels. The archive is an analysis release, not a claim that its
-sanitized files can resume the original frozen supervisor. A draft DOI has not
-been minted and no external deposit is implied.
+sanitized files can resume the original frozen supervisor. Publication of the
+Zenodo record and GitHub release requires separate author approval.
 
 \section{Author Contributions and AI-Assistance Disclosure}
 Dhruv Brahmbhatt contributed the research questions, design decisions, experiment
@@ -676,14 +683,16 @@ are not claimed. AI assistance supported setup, autonomous Ollama execution,
 harness and analysis coding, distractor construction, auditing, literature
 organization and manuscript drafting. AI-generated constructions were subject
 to the recorded reference/witness checks; AI assistance is not independent
-scientific validation. Publication requires the author's final review and
-approval. Original report/data are prepared under CC BY 4.0 and original code
+scientific validation. Original report/data are licensed under CC BY 4.0 and original code
 under MIT, with third-party notices retained.
+\label{maintext:end}
 
-\clearpage
+\begingroup
+\footnotesize
+\setlength{\bibsep}{3pt}
 \bibliographystyle{plainnat}
 \bibliography{references}
-\clearpage
+\endgroup
 \onecolumn
 \appendix
 \section{Registered Primary Contrasts and Request Inventory}
@@ -772,6 +781,7 @@ verification does not launch Ollama or regenerate embeddings. Original frozen
 commit identifiers and transformation mappings remain provenance references;
 sanitized archive bytes have their own checksums.
 
+\twocolumn
 \section{Representative Rendered Prompts}\label{app:prompts}
 These examples are selected saved requests for HumanEval/0 on 0.5B, not new
 prompt variants. The system message is \texttt{You are a helpful coding assistant.}
@@ -782,24 +792,24 @@ complete. The longer R2 and E5 layouts explicitly mark editorial omissions;
 their complete unabridged strings remain in the supplement.
 
 \subsection{Oracle-retained target, preference and query (complete)}
-\lstinputlisting[basicstyle=\ttfamily\small]{../examples/r1-oracle.txt}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{../examples/r1-oracle.txt}
 
 \subsection{Target and query without the preference (complete)}
-\lstinputlisting[basicstyle=\ttfamily\small]{../examples/r1-target-query.txt}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{../examples/r1-target-query.txt}
 The difference is an actual instruction difference in the collected policies,
 not a length-only intervention. It helps explain why an oracle/no-history
 comparison cannot isolate relevance selection.
 
-\clearpage
+\newpage
 \subsection{Competing-context request used in the worked example (abridged)}
-\lstinputlisting[basicstyle=\ttfamily\small]{../examples/r2-layout-excerpt.txt}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{../examples/r2-layout-excerpt.txt}
 Only repeated copies are elided here; the exact archived request contains all
 of them. They are task descriptions without implementation bodies or hidden
 tests. Repetition to fill the budget, task position and explicit distractor
 labelling are part of the construction and constrain its interpretation.
 
 \subsection{Immediate preference in the placement study (abridged)}
-\lstinputlisting[basicstyle=\ttfamily\small]{../examples/e5-layout-excerpt.txt}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{../examples/e5-layout-excerpt.txt}
 The omitted region contains the fixed earlier-task descriptions. The wording
 asks for code without explanation and does not explicitly ban Markdown fences;
 the registered strict score nevertheless rejects fenced responses.
