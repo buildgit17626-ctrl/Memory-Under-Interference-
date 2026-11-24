@@ -8,6 +8,10 @@
 |Energy is overstated|CPU-package tool/mode identified, missing/short/drift windows preserved; E4 incomplete explicitly|No physical calibration or whole-system/process isolation|
 |E5 changed scoring after seeing failure|Original 0/400 metric preserved; secondary syntax features and joint outcomes separate|No human semantic annotation; floor cannot establish preference retention|
 |Only positive results are shown|M2, E0, replay and cap reversals included|Statistical power and fixed-roster generalization limited|
+|The narrative reads like an internal audit|Motivation, explicit research questions/contributions and practical interpretation reorganized around behavior and cost|Underlying revised/posthoc design and methodological limits are preserved|
+|The diagnostic lacks a concrete example|Actual saved HumanEval/0 response, exact requirements, <= body and validated witness traced by full call key and hashes|Selected illustration is not a prevalence estimate or mechanism test|
+|Appendix omits E5 primary entries|All four registered strict-adherence contrasts added with intervals and Holm4 values|All-zero empirical intervals cannot establish population equivalence|
+|Public reproduction may depend on private local files|Fresh analysis-only environment and guarded release-only execution recorded|Saved-data reanalysis is not inference regeneration, universal portability or physical calibration|
 |MemoryGraph is advertised as GraphRAG or a tested solution|Pinned source, saved synthetic scores, explicit approval and narrow conflicts audited|MG1 unrun; no correctness/energy/usability/trust claim|
 |Related work already covers the idea|Fifteen primary publications verified, including recent direct overlap|No priority or exhaustive-review claim|
 |Archive changes raw evidence|Public copies only, original/public hash map and explicit metadata/path redactions|Sanitized export is not byte-identical inference-resume evidence|

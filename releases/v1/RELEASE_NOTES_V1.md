@@ -15,5 +15,12 @@ Date: 24 November 2026. Status: prepared locally; not peer reviewed; not deposit
 - Original report/data CC BY 4.0; original code MIT, with third-party exceptions retained.
 - Local source/tag/build/verification hashes are in checks/RELEASE_STATUS.json and
   SHA256SUMS.json. No DOI/acceptance/endorsement is invented.
+- Final rc2 communication revision: explicit research questions/contributions,
+  verified 76.5%/67.4% descriptive energy-cost reductions, an actual saved
+  target/distractor/code/witness example, selected exact prompt strings, four
+  E5 strict-adherence primary rows, common model-comparison axes and clearer labels.
+- Analysis-only dependency specifications and a fresh-environment, network/file-
+  restricted verification harness distinguish saved-data reproduction from
+  regeneration, rescoring or physical energy calibration. See checks/portable-environment.json.
 
 External upload, publication, pushes and tag publication require owner approval.

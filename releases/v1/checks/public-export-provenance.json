@@ -3269,10 +3269,10 @@
   {
     "source_relative": "README.md",
     "public_relative": "code/README.md",
-    "source_sha256": "ede679ca239641cef5ed82f2ba835f55754d157ea1d5944bea032ece84203543",
-    "public_sha256": "ede679ca239641cef5ed82f2ba835f55754d157ea1d5944bea032ece84203543",
-    "source_bytes": 6508,
-    "public_bytes": 6508,
+    "source_sha256": "a4770fdd53c99153c5d1d69a498bb04f292fc8c9607e557eed166efaf65b82d7",
+    "public_sha256": "a4770fdd53c99153c5d1d69a498bb04f292fc8c9607e557eed166efaf65b82d7",
+    "source_bytes": 7833,
+    "public_bytes": 7833,
     "operations": []
   },
   {
@@ -3476,10 +3476,10 @@
   {
     "source_relative": "analysis/memory_release/analytics.py",
     "public_relative": "code/analysis/memory_release/analytics.py",
-    "source_sha256": "ca2bbd1ef7373976df056e33ea37096b0ed8d1ca58a96a0fd3553603ec36f69f",
-    "public_sha256": "ca2bbd1ef7373976df056e33ea37096b0ed8d1ca58a96a0fd3553603ec36f69f",
-    "source_bytes": 4665,
-    "public_bytes": 4665,
+    "source_sha256": "4bcf867e2e1fec29a000e9ab94d367f440be9919735df10cd0590f5dc8f274b0",
+    "public_sha256": "4bcf867e2e1fec29a000e9ab94d367f440be9919735df10cd0590f5dc8f274b0",
+    "source_bytes": 4970,
+    "public_bytes": 4970,
     "operations": []
   },
   {
@@ -3505,10 +3505,19 @@
   {
     "source_relative": "analysis/memory_release/documents.py",
     "public_relative": "code/analysis/memory_release/documents.py",
-    "source_sha256": "a34bb4d63289b7eb8a79273437480e287f41453ffee2083825603e7e35a72000",
-    "public_sha256": "a34bb4d63289b7eb8a79273437480e287f41453ffee2083825603e7e35a72000",
-    "source_bytes": 22199,
-    "public_bytes": 22199,
+    "source_sha256": "310413c4eceeed38b49715fda590def828ad61c53a28dc21a7c25bfa33323ebb",
+    "public_sha256": "310413c4eceeed38b49715fda590def828ad61c53a28dc21a7c25bfa33323ebb",
+    "source_bytes": 24825,
+    "public_bytes": 24825,
+    "operations": []
+  },
+  {
+    "source_relative": "analysis/memory_release/examples.py",
+    "public_relative": "code/analysis/memory_release/examples.py",
+    "source_sha256": "f83c1cd6cafc7773bb42a3b5101bd68d3115d7010a6a0154a2465e986ce80429",
+    "public_sha256": "f83c1cd6cafc7773bb42a3b5101bd68d3115d7010a6a0154a2465e986ce80429",
+    "source_bytes": 6162,
+    "public_bytes": 6162,
     "operations": []
   },
   {
@@ -3525,10 +3534,10 @@
   {
     "source_relative": "analysis/memory_release/figures.py",
     "public_relative": "code/analysis/memory_release/figures.py",
-    "source_sha256": "588a3794d85e11da72978601cc32adb19099bdb9016fd160dd668f9c0a584c27",
-    "public_sha256": "588a3794d85e11da72978601cc32adb19099bdb9016fd160dd668f9c0a584c27",
-    "source_bytes": 14032,
-    "public_bytes": 14032,
+    "source_sha256": "ce0dbc428f4d7b774f8f94ca8502cfcd2641081c4ea34319d590637c32e5bef6",
+    "public_sha256": "ce0dbc428f4d7b774f8f94ca8502cfcd2641081c4ea34319d590637c32e5bef6",
+    "source_bytes": 14268,
+    "public_bytes": 14268,
     "operations": []
   },
   {
@@ -3543,19 +3552,19 @@
   {
     "source_relative": "analysis/memory_release/package.py",
     "public_relative": "code/analysis/memory_release/package.py",
-    "source_sha256": "2cf2ea0e4d93aeb60c77c3c08cde434d3b82f5d9d9da82414f6148ef0e4ef0f1",
-    "public_sha256": "2cf2ea0e4d93aeb60c77c3c08cde434d3b82f5d9d9da82414f6148ef0e4ef0f1",
-    "source_bytes": 6830,
-    "public_bytes": 6830,
+    "source_sha256": "08e66de29f02ecf55fc95f86fa8cbd2a36b615f3df16d388f7560e09cb4e9a51",
+    "public_sha256": "08e66de29f02ecf55fc95f86fa8cbd2a36b615f3df16d388f7560e09cb4e9a51",
+    "source_bytes": 7255,
+    "public_bytes": 7255,
     "operations": []
   },
   {
     "source_relative": "analysis/memory_release/pdfcheck.py",
     "public_relative": "code/analysis/memory_release/pdfcheck.py",
-    "source_sha256": "8d7cf31076658bb18350fe50249871e9f73d8ab5a86864d33458c2c82eca5048",
-    "public_sha256": "8d7cf31076658bb18350fe50249871e9f73d8ab5a86864d33458c2c82eca5048",
-    "source_bytes": 2767,
-    "public_bytes": 2767,
+    "source_sha256": "e75596f147f6b5c63411e58b736631eb2fceca39fc909173b474734c60989921",
+    "public_sha256": "e75596f147f6b5c63411e58b736631eb2fceca39fc909173b474734c60989921",
+    "source_bytes": 2872,
+    "public_bytes": 2872,
     "operations": []
   },
   {
@@ -3570,10 +3579,10 @@
   {
     "source_relative": "analysis/memory_release/quality.py",
     "public_relative": "code/analysis/memory_release/quality.py",
-    "source_sha256": "db85e4b92577bd71c42eb55253892d6894d0780f6db147d8ce241720790eb5ef",
-    "public_sha256": "db85e4b92577bd71c42eb55253892d6894d0780f6db147d8ce241720790eb5ef",
-    "source_bytes": 3451,
-    "public_bytes": 3451,
+    "source_sha256": "cf2e957c1577f9e592c11e294b2e351d0ba1b787697c181f52a8348c78bed368",
+    "public_sha256": "cf2e957c1577f9e592c11e294b2e351d0ba1b787697c181f52a8348c78bed368",
+    "source_bytes": 4010,
+    "public_bytes": 4010,
     "operations": []
   },
   {
@@ -3588,10 +3597,10 @@
   {
     "source_relative": "analysis/memory_release/texdata.py",
     "public_relative": "code/analysis/memory_release/texdata.py",
-    "source_sha256": "3dcc5000f4ae41fc65a2530f4968ed59cfc32958bb4729bf835126927cde556c",
-    "public_sha256": "3dcc5000f4ae41fc65a2530f4968ed59cfc32958bb4729bf835126927cde556c",
-    "source_bytes": 8886,
-    "public_bytes": 8886,
+    "source_sha256": "39c688b99b8548ee16f086784117329c20b33d67d676bf7898ee0f5cb818cfa5",
+    "public_sha256": "39c688b99b8548ee16f086784117329c20b33d67d676bf7898ee0f5cb818cfa5",
+    "source_bytes": 9561,
+    "public_bytes": 9561,
     "operations": []
   },
   {
@@ -3808,10 +3817,10 @@
   {
     "source_relative": "docs/SPEC.md",
     "public_relative": "code/docs/SPEC.md",
-    "source_sha256": "7e5506c810cc7f1604a32de274d6de62df57f60d5c20175d244e7f566e1f827f",
-    "public_sha256": "7e5506c810cc7f1604a32de274d6de62df57f60d5c20175d244e7f566e1f827f",
-    "source_bytes": 62406,
-    "public_bytes": 62406,
+    "source_sha256": "68be19125a0a01c77a14c3fa18e391afab55d0ca668a8c8a5a1461dcb5cad839",
+    "public_sha256": "68be19125a0a01c77a14c3fa18e391afab55d0ca668a8c8a5a1461dcb5cad839",
+    "source_bytes": 62882,
+    "public_bytes": 62882,
     "operations": []
   },
   {
@@ -5794,10 +5803,10 @@
   {
     "source_relative": "tests/test_memory_release.py",
     "public_relative": "code/tests/test_memory_release.py",
-    "source_sha256": "7a211dc763dea6c8a3cc3ead30f87162076f0ccf81f815671bac1a54dbec7e33",
-    "public_sha256": "1b7cb62457650d43cb212a56296892a5adb9341eef832b4c3f2f01819d438fd7",
-    "source_bytes": 3145,
-    "public_bytes": 3133,
+    "source_sha256": "8369f422bb1a98bc8f99c00c0ea3698b10b0cce8d62f40171c218370ace6e36e",
+    "public_sha256": "dc706f749023d1377e91d2cb3ca7a78b7d2a929aeaf30b15c3f4c594222b81e3",
+    "source_bytes": 3832,
+    "public_bytes": 3820,
     "operations": [
       "known local-path prefixes replaced: 1"
     ]

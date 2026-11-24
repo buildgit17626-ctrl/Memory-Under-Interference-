@@ -13,11 +13,14 @@
     9,
     10,
     11,
-    12
+    12,
+    13,
+    14,
+    15
   ],
-  "render_dpi": 90,
-  "pdf_sha256": "db23c9095a62a28cee10e00da3d783538d486438c115f86a96245f1d65796997",
-  "method": "Rendered all pages; contact sheets plus detailed plot/table checks",
-  "findings": "No clipping, overlap or missing glyphs observed. Pareto labels and appendix overflow corrected.",
+  "render_dpi": 85,
+  "pdf_sha256": "591d0746fb49801264a7f649af11e19980e21ba3ea7607e25f0b432e428a7cb5",
+  "method": "All 15 pages rendered and inspected via contact sheets; detailed worked-example/policy plots and final prompt appendix inspected at 85-90 dpi",
+  "findings": "No clipping, overlaps or missing glyphs observed. Shared comparison axes and policy labels reviewed; long prompt excerpt kept on one page.",
   "reviewer": "AI-assisted visual audit; final author review remains required"
 }

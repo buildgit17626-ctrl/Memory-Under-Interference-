@@ -1,0 +1,205 @@
+{
+  "selection": "Existing deterministic audit example; illustrative, not a frequency estimate",
+  "original_audit": "data/audit/representative-code-audit.json",
+  "example": {
+    "model": "qwen2.5-coder:0.5b",
+    "cell": "distractor_only",
+    "task": "HumanEval/0",
+    "condition": "near_duplicate_1000_beginning",
+    "call_key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+    "code": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) <= threshold:\n                return True\n    return False",
+    "alternative_description": "Return whether two distinct list positions have absolute difference less than OR EQUAL TO threshold. Equality is included.",
+    "witnesses": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0
+          ],
+          1.0
+        ],
+        "target_expected": "False",
+        "alternative_expected": "True"
+      },
+      {
+        "args": [
+          [
+            1.0,
+            3.0
+          ],
+          1.0
+        ],
+        "target_expected": "False",
+        "alternative_expected": "False"
+      }
+    ],
+    "witness_outcomes": {
+      "target_expected": "failed",
+      "alternative_expected": "passed"
+    }
+  },
+  "target_score": {
+    "functions": {
+      "HumanEval/0": {
+        "base_input": {
+          "peak_memory_bytes": 10194944,
+          "reason": "",
+          "scheduled_cases": 7,
+          "seed": 1729,
+          "status": "passed",
+          "wall_seconds": 0.11937649999890709
+        },
+        "plus_input": {
+          "peak_memory_bytes": 22552576,
+          "reason": "assertion_failed",
+          "scheduled_cases": 999,
+          "seed": 1729,
+          "status": "failed",
+          "wall_seconds": 0.1533796000003349
+        }
+      }
+    },
+    "key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+    "status": "failed"
+  },
+  "alternative_score": [
+    {
+      "analysis_label": "posthoc scoring audit",
+      "call_key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+      "code_sha256": "77194efa9f85657bb7d5bb962bb42265950120803f87dbaf5ad5d1e01ba9e6c7",
+      "key": "d3fe0f17a815953e1123e795f9f037e44d9472ff8ed2ca0d8c531f7ec475982a",
+      "operation": "alternative_suite",
+      "partitions": {
+        "base_input": {
+          "peak_memory_bytes": 10211328,
+          "reason": "",
+          "scheduled_cases": 9,
+          "seed": 1729,
+          "status": "passed",
+          "wall_seconds": 0.15469869998923969
+        },
+        "plus_input": {
+          "peak_memory_bytes": 23343104,
+          "reason": "",
+          "scheduled_cases": 999,
+          "seed": 1729,
+          "status": "passed",
+          "wall_seconds": 0.2032790999946883
+        }
+      },
+      "passed": true,
+      "stage": "M3R2",
+      "suite_sha256": "35851e356283f96e95759946809bb12ce30a985014ae71570a8d234fe9fdd7e6",
+      "task": "HumanEval/0"
+    }
+  ],
+  "witness_scores": [
+    {
+      "call_key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+      "check_sha256": "195d4f6723a83bdd67461a72b0f64a17e4e4ca0649e6fd8270f4143dd8e46840",
+      "key": "0f53cba5cd795a4862f197730f3fd0403135bc021a289df5d3ffa703d1f78815",
+      "peak_memory_bytes": 10096640,
+      "reason": "assertion_failed",
+      "seed": 1729,
+      "status": "failed",
+      "suite": "target_expected",
+      "wall_seconds": 0.14020460000028834
+    },
+    {
+      "call_key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+      "check_sha256": "699a4ed33b96c2f73de7284507e4f895ef1309df2b2b14527f3bed95ae637d4c",
+      "key": "e2c2e59efac6570ee4d5a14994c8e13bc9742977d97aa86b59da5735befebcd3",
+      "peak_memory_bytes": 10027008,
+      "reason": "",
+      "seed": 1729,
+      "status": "passed",
+      "suite": "alternative_expected",
+      "wall_seconds": 0.14161089999834076
+    }
+  ],
+  "rendered_prompts": [
+    {
+      "name": "r2-competing",
+      "source": "data/raw/results/utilisation/continuation-v3/R2/full/calls.jsonl",
+      "call_key": "34303c8e4927afd811965083065734287a537b4b782b0c47886aa0bd8a9c6b7d",
+      "task": "HumanEval/0",
+      "model": "qwen2.5-coder:0.5b",
+      "condition": "near_duplicate_1000_beginning",
+      "prompt_sha256": "5abc33a52419a70c2ee27fdfe33c2fdc7d1a20af7fa6d4f8bd754717a1f1dff6",
+      "prompt_tokens": 1183,
+      "system": "You are a helpful coding assistant.",
+      "options": {
+        "num_ctx": 16384,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0
+      }
+    },
+    {
+      "name": "r1-oracle",
+      "source": "data/raw/results/utilisation/r1-v2/full/calls.jsonl",
+      "call_key": "dd7667ecb15441f30abeb44a35487f04e4f29303d1d67b9680d732df78984b36",
+      "task": "HumanEval/0",
+      "model": "qwen2.5-coder:0.5b",
+      "condition": "oracle_selective",
+      "prompt_sha256": "cff938234f4b673ce2a61288de27c73527e70f210666476873df078e8b25a0f2",
+      "prompt_tokens": 167,
+      "system": "You are a helpful coding assistant.",
+      "options": {
+        "num_ctx": 16384,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0
+      }
+    },
+    {
+      "name": "r1-target-query",
+      "source": "data/raw/results/utilisation/r1-v2/full/calls.jsonl",
+      "call_key": "3fddbabc51a0fabc427777033aee91a43b1adf4e20694fc3ac86ace5ca69dbe6",
+      "task": "HumanEval/0",
+      "model": "qwen2.5-coder:0.5b",
+      "condition": "no_history",
+      "prompt_sha256": "3dc8dfc05da905c67de45400aa7b68fc5901c2827bc59528357d9ed68b596b6e",
+      "prompt_tokens": 154,
+      "system": "You are a helpful coding assistant.",
+      "options": {
+        "num_ctx": 16384,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0
+      }
+    },
+    {
+      "name": "e5-immediate",
+      "source": "data/raw/results/utilisation/continuation-v3/E5/full/calls.jsonl",
+      "call_key": "d8c0d20e0645dd09e79939f73159c6edea060ca12f95aed86f511d0ac6562ca6",
+      "task": "HumanEval/0",
+      "model": "qwen2.5-coder:0.5b",
+      "condition": "immediate",
+      "prompt_sha256": "04300b8c148567b26e6f3b88e5ec7e584ef697bb3e78e674cf8513e752979775",
+      "prompt_tokens": 1335,
+      "system": "You are a helpful coding assistant.",
+      "options": {
+        "num_ctx": 8192,
+        "num_gpu": 0,
+        "num_predict": 2048,
+        "num_thread": 8,
+        "seed": 1729,
+        "stop": [],
+        "temperature": 0
+      }
+    }
+  ],
+  "new_inference_or_candidate_execution": false,
+  "code_excerpt_transformation": "Function docstring lines omitted; other text unchanged",
+  "r2_alternative_description_copies": 21
+}

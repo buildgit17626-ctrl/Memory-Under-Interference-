@@ -7,7 +7,9 @@
     "logical_calls_checked_against_raw": 6006,
     "main_logical_requests": 5528,
     "cross_pass_effects_reproduced": 4,
-    "new_model_inference": 0
+    "new_model_inference": 0,
+    "integrity_files_verified": 713,
+    "full_effects_verified": 976
   },
   "portable_energy": {
     "available_windows_verified": 12479,
@@ -15,9 +17,9 @@
   },
   "paired_ratio_ci_reproduced": 2,
   "pdf": {
-    "pages": 12,
-    "main_text_pages": 9,
-    "references_start_page": 10,
+    "pages": 15,
+    "main_text_pages": 10,
+    "references_start_page": 11,
     "missing_key_numbers": [],
     "missing_bibliography_entries": [],
     "cited_entries": 15,
@@ -25,11 +27,32 @@
     "undefined_reference_warnings": false,
     "overfull_boxes": 0,
     "page_bounds_flags": [],
-    "underfull_layout_warnings": 35,
+    "underfull_layout_warnings": 50,
     "note": "Text/bounds checks complement, not replace, rendered page inspection."
   },
   "verified_licence_notices": 3,
   "model_or_embedding_generations": 0,
   "external_publication": false,
-  "source_commit": "88dbf772c1140680251dca399fdc4e1da48dbb4f"
+  "source_commit": "e5756c7fa5eab029102e4c783ab1c77bf7279c94",
+  "fresh_environment_public_reproduction": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "isolated_mode": true,
+    "system_site_packages": false,
+    "blocked_file_accesses": 1,
+    "network_attempts": 0,
+    "subprocess_attempts": 0,
+    "original_data_probe_blocked": true,
+    "unexpected_blocked_file_accesses": 0,
+    "guard_boundary": "Public tree plus venv, Python standard library and Windows runtime",
+    "limitation": "Python audit hooks verify this trusted run; not an OS security sandbox",
+    "reproduction": {
+      "logical_calls_checked_against_raw": 6006,
+      "main_logical_requests": 5528,
+      "cross_pass_effects_reproduced": 4,
+      "new_model_inference": 0,
+      "integrity_files_verified": 713,
+      "full_effects_verified": 976
+    }
+  }
 }

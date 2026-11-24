@@ -6,4 +6,4 @@ No remaining compilation, missing-reference, numerical-reproduction or archive-d
 
 The strongest 1.5B complete-case result is cap-sensitive; M1 independence is unresolved; R1 energy is descriptive/confounded; E5 has a scoring floor; E4 is incomplete; MG1 is unrun. These constrain claims rather than disappear at release.
 
-Validation: 492 tests; Ruff clean; 9 main pages and 12 total PDF pages. See checks/ for evidence.
+Validation: 494 tests; Ruff clean; 10 main pages and 15 total PDF pages. See checks/ for evidence.

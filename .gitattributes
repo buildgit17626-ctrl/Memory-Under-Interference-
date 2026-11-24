@@ -5,4 +5,6 @@ artifacts/** -text
 releases/v1/** -text whitespace=cr-at-eol
 # Preserve verbatim third-party licence whitespace rather than editing notices.
 releases/v1/licenses/** -whitespace
+# Rendered prompts preserve collected benchmark whitespace byte for byte.
+releases/v1/examples/** -whitespace
 data/HumanEval.jsonl.gz binary

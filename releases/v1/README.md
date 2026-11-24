@@ -6,7 +6,23 @@ CLAIMS_AND_EVIDENCE.md, REVIEWER_RESPONSE.md and DATA_AVAILABILITY.md.
 
 ## Reproduce without inference
 
-Use Python 3.13 in a new environment; install code/requirements-lock.txt. Then:
+Use Python 3.13 in a new environment; install requirements-reanalysis.txt for
+offline analysis. The historical full experiment lock remains in code/requirements-lock.txt.
+requirements-reanalysis-lock.txt records every installed package in the fresh
+Windows verification environment; it can be used instead of the shorter direct list.
+The demonstrated environment is Windows 11/Python 3.13. Historical analysis imports
+still require Windows modules; Linux/macOS portability has not been demonstrated.
+Then:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-reanalysis-lock.txt
+.\.venv\Scripts\python.exe -I verify_public.py --full
+```
+
+The guarded verifier restricts this trusted analysis run to the public tree and
+Python/Windows runtime, and disables network and subprocess requests. It is not
+an OS security sandbox for untrusted code. The simpler unguarded command is:
 
 ```powershell
 python reproduce.py --full --energy --figures --output reproduced
@@ -40,3 +56,8 @@ An initial build may download standard TeX packages; manuscript/main.bbl is supp
 The separate source archive retains manuscript/ and figures/ relative paths. No
 conference template/acceptance is implied. Version 2 work is in VERSION_2_ROADMAP.md.
 Original report/data CC BY 4.0, original code MIT, third-party exceptions retained.
+
+The rc2 revision adds an evidence-linked worked example, exact selected prompt
+strings, E5 registered primary contrasts and clearer common-scale policy figures.
+See checks/portable-environment.json for the tested installation and filesystem/
+network restrictions; these verify saved-data reanalysis, not inference regeneration.

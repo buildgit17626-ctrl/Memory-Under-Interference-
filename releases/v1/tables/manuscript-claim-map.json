@@ -34,6 +34,11 @@
     "source": "data/audit/conditions.json",
     "field": "R1/qwen2.5-coder:0.5b/oracle_selective/net_wh_per_correct_covered/estimate"
   },
+  "SmallEnergyReduction": {
+    "rendered": "76.5",
+    "source": "data/audit/conditions.json",
+    "field": "R1/qwen2.5-coder:0.5b/100*(1-oracle_selective/full_history) net_wh_per_correct_covered"
+  },
   "SmallEnergyDiff": {
     "rendered": "-249.00",
     "source": "data/audit/energy-per-correct-differences.json",
@@ -118,6 +123,11 @@
     "rendered": "50.20",
     "source": "data/audit/conditions.json",
     "field": "R1/qwen2.5-coder:1.5b/oracle_selective/net_wh_per_correct_covered/estimate"
+  },
+  "LargeEnergyReduction": {
+    "rendered": "67.4",
+    "source": "data/audit/conditions.json",
+    "field": "R1/qwen2.5-coder:1.5b/100*(1-oracle_selective/full_history) net_wh_per_correct_covered"
   },
   "LargeEnergyDiff": {
     "rendered": "-103.96",

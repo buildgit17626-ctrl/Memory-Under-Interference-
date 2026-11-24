@@ -11,6 +11,7 @@ Every numerical figure also has a CSV in tables/. The following macros are gener
 |SmallCrossP|1|tables/cross-specification-sensitivities.json|qwen2.5-coder:0.5b/complete_case/holm_family4_p|
 |SmallFullEnergy|325.38|data/audit/conditions.json|R1/qwen2.5-coder:0.5b/full_history/net_wh_per_correct_covered/estimate|
 |SmallOracleEnergy|76.39|data/audit/conditions.json|R1/qwen2.5-coder:0.5b/oracle_selective/net_wh_per_correct_covered/estimate|
+|SmallEnergyReduction|76.5|data/audit/conditions.json|R1/qwen2.5-coder:0.5b/100*(1-oracle_selective/full_history) net_wh_per_correct_covered|
 |SmallEnergyDiff|-249.00|data/audit/energy-per-correct-differences.json|R1/qwen2.5-coder:0.5b/net_wh/primary/difference|
 |SmallEnergyCI|[-529.62, -127.49]|data/audit/energy-per-correct-differences.json|R1/qwen2.5-coder:0.5b/net_wh/primary/ci95|
 |SmallPromptDiff|-2.25|data/audit/paired-effects.json|E0/qwen2.5-coder:0.5b/E0_primary_2/estimate|
@@ -28,6 +29,7 @@ Every numerical figure also has a CSV in tables/. The following macros are gener
 |LargeCrossP|0.03125|tables/cross-specification-sensitivities.json|qwen2.5-coder:1.5b/complete_case/holm_family4_p|
 |LargeFullEnergy|154.16|data/audit/conditions.json|R1/qwen2.5-coder:1.5b/full_history/net_wh_per_correct_covered/estimate|
 |LargeOracleEnergy|50.20|data/audit/conditions.json|R1/qwen2.5-coder:1.5b/oracle_selective/net_wh_per_correct_covered/estimate|
+|LargeEnergyReduction|67.4|data/audit/conditions.json|R1/qwen2.5-coder:1.5b/100*(1-oracle_selective/full_history) net_wh_per_correct_covered|
 |LargeEnergyDiff|-103.96|data/audit/energy-per-correct-differences.json|R1/qwen2.5-coder:1.5b/net_wh/primary/difference|
 |LargeEnergyCI|[-152.30, -77.58]|data/audit/energy-per-correct-differences.json|R1/qwen2.5-coder:1.5b/net_wh/primary/ci95|
 |LargePromptDiff|2.64|data/audit/paired-effects.json|E0/qwen2.5-coder:1.5b/E0_primary_2/estimate|

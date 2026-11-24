@@ -1,7 +1,7 @@
 {
-  "pages": 12,
-  "main_text_pages": 9,
-  "references_start_page": 10,
+  "pages": 15,
+  "main_text_pages": 10,
+  "references_start_page": 11,
   "missing_key_numbers": [],
   "missing_bibliography_entries": [],
   "cited_entries": 15,
@@ -9,6 +9,6 @@
   "undefined_reference_warnings": false,
   "overfull_boxes": 0,
   "page_bounds_flags": [],
-  "underfull_layout_warnings": 35,
+  "underfull_layout_warnings": 50,
   "note": "Text/bounds checks complement, not replace, rendered page inspection."
 }

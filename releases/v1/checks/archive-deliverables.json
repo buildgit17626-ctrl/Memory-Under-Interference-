@@ -1,28 +1,40 @@
 [
   {
     "file": "Memory_Under_Interference_v1_source.zip",
-    "bytes": 150600,
-    "sha256": "ac574d919d6f6605184a5df63a3e12be3076d8a7108abd2787b183c3963d2fc1",
-    "members": 21,
-    "extracted_checksum_verification": "passed",
-    "extracted_compilation": "passed"
+    "bytes": 161763,
+    "sha256": "8f6a49035c2553945564a8fcf9da42dae8393eb02f272397cc488a4486a16c52",
+    "members": 31,
+    "crc_and_extracted_checksums": "passed",
+    "extracted_manuscript_compilation": "passed"
   },
   {
     "file": "Memory_Under_Interference_v1_reproducibility.zip",
-    "bytes": 34467439,
-    "sha256": "f55899b77be4aee81aedd60e4b757ec58eae9325f280406dfbc92c235a2db95e",
-    "members": 700,
-    "extracted_checksum_verification": "passed",
-    "extracted_offline_reproduction": {
-      "logical_calls_checked_against_raw": 6006,
-      "main_logical_requests": 5528,
-      "cross_pass_effects_reproduced": 4,
-      "new_model_inference": 0
+    "bytes": 34576346,
+    "sha256": "3d05d53e6691607b9335088322199e61fd851e22f961559d9cf6942297d92223",
+    "members": 717,
+    "crc_and_extracted_checksums": "passed",
+    "final_archive_guarded_reproduction": {
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "isolated_mode": true,
+      "system_site_packages": false,
+      "blocked_file_accesses": 1,
+      "network_attempts": 0,
+      "subprocess_attempts": 0,
+      "original_data_probe_blocked": true,
+      "unexpected_blocked_file_accesses": 0,
+      "guard_boundary": "Public tree plus venv, Python standard library and Windows runtime",
+      "limitation": "Python audit hooks verify this trusted run; not an OS security sandbox",
+      "reproduction": {
+        "logical_calls_checked_against_raw": 6006,
+        "main_logical_requests": 5528,
+        "cross_pass_effects_reproduced": 4,
+        "new_model_inference": 0,
+        "integrity_files_verified": 716,
+        "full_effects_verified": null
+      }
     },
-    "extracted_energy_verification": {
-      "available_windows_verified": 12479,
-      "unavailable_windows": 2
-    },
-    "full_offline_reanalysis_effects_verified_before_packaging": 976
+    "full_offline_effects_reproduced": 976,
+    "full_run_matches_final_scientific_files": 359
   }
 ]
