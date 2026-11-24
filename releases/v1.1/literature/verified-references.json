@@ -1,0 +1,492 @@
+[
+  {
+    "key": "lost",
+    "url": "https://aclanthology.org/2024.tacl-1.9/",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": [
+      "Nelson F. Liu",
+      "Kevin Lin",
+      "John Hewitt",
+      "Ashwin Paranjape",
+      "Michele Bevilacqua",
+      "Fabio Petroni",
+      "Percy Liang"
+    ],
+    "year": "2024",
+    "doi": "10.1162/tacl_a_00638",
+    "primary_page_sha256": "b33ddc8392f57d7cb28c26bcda8ae0720ea3d9bf185b34a4a03b0bb1b59a871b",
+    "checked": "2026-11-24",
+    "question": "Position of relevant evidence in long input contexts",
+    "design": "Question answering and key-value retrieval with controlled positions",
+    "contribution": "Shows position-sensitive utilization",
+    "overlap": "We also vary target position",
+    "distinction": "Code tests, semantic competing specifications and local package-energy estimates",
+    "metadata_dates": [
+      "2024"
+    ],
+    "verified_publication_fields": {
+      "journal": "Transactions of the Association for Computational Linguistics",
+      "volume": "12",
+      "pages": "157--173",
+      "doi": "10.1162/tacl_a_00638"
+    }
+  },
+  {
+    "key": "interference",
+    "url": "https://aclanthology.org/2024.emnlp-main.811/",
+    "title": "LLM Task Interference: An Initial Study on the Impact of Task-Switch in Conversational History",
+    "authors": [
+      "Akash Gupta",
+      "Ivaxi Sheth",
+      "Vyas Raina",
+      "Mark Gales",
+      "Mario Fritz"
+    ],
+    "year": "2024",
+    "doi": "10.18653/v1/2024.emnlp-main.811",
+    "primary_page_sha256": "a770e0b97ebac5f2ddfbee2f6eb1525a3cf9c2aff1ee571f9b27d12608ee6003",
+    "checked": "2026-11-24",
+    "question": "Effect of task switches in conversation history",
+    "design": "Conversational task switches across multiple datasets",
+    "contribution": "Documents history-associated task interference",
+    "overlap": "Direct overlap with our static interruptions",
+    "distinction": "Our M2 is constructed, not an independent discovery of task interference",
+    "metadata_dates": [
+      "2024/11"
+    ],
+    "verified_publication_fields": {
+      "booktitle": "Proceedings of EMNLP 2024",
+      "pages": "14633--14652",
+      "doi": "10.18653/v1/2024.emnlp-main.811"
+    }
+  },
+  {
+    "key": "multitask",
+    "url": "https://aclanthology.org/2024.acl-long.304/",
+    "title": "Multi-Task Inference: Can Large Language Models Follow Multiple Instructions at Once?",
+    "authors": [
+      "Guijin Son",
+      "Sangwon Baek",
+      "Sangdae Nam",
+      "Ilgyun Jeong",
+      "Seungone Kim"
+    ],
+    "year": "2024",
+    "doi": "10.18653/v1/2024.acl-long.304",
+    "primary_page_sha256": "daeed5111ff94d52b5c087c14df511992927e5366ee51a123887f05016a709a8",
+    "checked": "2026-11-24",
+    "question": "Following multiple instructions in one inference",
+    "design": "MTI Bench compares bundled and separate instruction execution",
+    "contribution": "Bundling can improve some tasks; degradation is not universal",
+    "overlap": "Direct overlap with M1",
+    "distinction": "Smaller quantized code models, function-level tests and explicit overlap caveats",
+    "metadata_dates": [
+      "2024/8"
+    ],
+    "verified_publication_fields": {
+      "booktitle": "Proceedings of ACL 2024 (Volume 1: Long Papers)",
+      "pages": "5606--5627",
+      "doi": "10.18653/v1/2024.acl-long.304"
+    }
+  },
+  {
+    "key": "prefeval",
+    "url": "https://arxiv.org/abs/2502.09597",
+    "title": "Do LLMs Recognize Your Preferences? Evaluating Personalized Preference Following in LLMs",
+    "authors": [
+      "Zhao, Siyan",
+      "Hong, Mingyi",
+      "Liu, Yang",
+      "Hazarika, Devamanyu",
+      "Lin, Kaixiang"
+    ],
+    "year": "2025",
+    "doi": null,
+    "primary_page_sha256": "7b60f7ce0ebe6d4a12651494d760e5cac6b15be78376fd21c121d7739e79021f",
+    "checked": "2026-11-24",
+    "question": "Preference inference, retention and adherence",
+    "design": "Explicit/implicit preferences across conversational lengths and intervention methods",
+    "contribution": "Separates preference-following capabilities",
+    "overlap": "Direct overlap with E5 reminders",
+    "distinction": "Our code-only metric floor limits claims; no new preference benchmark claim",
+    "metadata_dates": [
+      "2025/02/13"
+    ],
+    "verified_publication_fields": {
+      "booktitle": "International Conference on Learning Representations"
+    }
+  },
+  {
+    "key": "longmem",
+    "url": "https://arxiv.org/abs/2410.10813",
+    "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+    "authors": [
+      "Wu, Di",
+      "Wang, Hongwei",
+      "Yu, Wenhao",
+      "Zhang, Yuwei",
+      "Chang, Kai-Wei",
+      "Yu, Dong"
+    ],
+    "year": "2025",
+    "doi": null,
+    "primary_page_sha256": "ca85151e7848aea0a7e54d52cfe4375ad6c00e48afe1935f5d24732136454f90",
+    "checked": "2026-11-24",
+    "question": "Long-term conversational memory abilities",
+    "design": "Multi-session histories and curated questions; indexing/retrieval/reading designs",
+    "contribution": "A broader framework and benchmark for memory systems",
+    "overlap": "Availability and reading-stage utilization",
+    "distinction": "We use fixed code specifications, not sustained personal conversation histories",
+    "metadata_dates": [
+      "2024/10/14"
+    ],
+    "verified_publication_fields": {
+      "booktitle": "International Conference on Learning Representations"
+    }
+  },
+  {
+    "key": "humaneval",
+    "url": "https://arxiv.org/abs/2107.03374",
+    "title": "Evaluating Large Language Models Trained on Code",
+    "authors": [
+      "Chen, Mark",
+      "Tworek, Jerry",
+      "Jun, Heewoo",
+      "Yuan, Qiming",
+      "Pinto, Henrique Ponde de Oliveira",
+      "Kaplan, Jared",
+      "Edwards, Harri",
+      "Burda, Yuri",
+      "Joseph, Nicholas",
+      "Brockman, Greg",
+      "Ray, Alex",
+      "Puri, Raul",
+      "Krueger, Gretchen",
+      "Petrov, Michael",
+      "Khlaaf, Heidy",
+      "Sastry, Girish",
+      "Mishkin, Pamela",
+      "Chan, Brooke",
+      "Gray, Scott",
+      "Ryder, Nick",
+      "Pavlov, Mikhail",
+      "Power, Alethea",
+      "Kaiser, Lukasz",
+      "Bavarian, Mohammad",
+      "Winter, Clemens",
+      "Tillet, Philippe",
+      "Such, Felipe Petroski",
+      "Cummings, Dave",
+      "Plappert, Matthias",
+      "Chantzis, Fotios",
+      "Barnes, Elizabeth",
+      "Herbert-Voss, Ariel",
+      "Guss, William Hebgen",
+      "Nichol, Alex",
+      "Paino, Alex",
+      "Tezak, Nikolas",
+      "Tang, Jie",
+      "Babuschkin, Igor",
+      "Balaji, Suchir",
+      "Jain, Shantanu",
+      "Saunders, William",
+      "Hesse, Christopher",
+      "Carr, Andrew N.",
+      "Leike, Jan",
+      "Achiam, Josh",
+      "Misra, Vedant",
+      "Morikawa, Evan",
+      "Radford, Alec",
+      "Knight, Matthew",
+      "Brundage, Miles",
+      "Murati, Mira",
+      "Mayer, Katie",
+      "Welinder, Peter",
+      "McGrew, Bob",
+      "Amodei, Dario",
+      "McCandlish, Sam",
+      "Sutskever, Ilya",
+      "Zaremba, Wojciech"
+    ],
+    "year": "2021",
+    "doi": null,
+    "primary_page_sha256": "a3c4f548b0712ae6efeb3a4af3ebce52a8296274c35cf293fef8ca28d04fbd15",
+    "checked": "2026-11-24",
+    "question": "Functional code-generation correctness",
+    "design": "HumanEval tasks and execution-based evaluation",
+    "contribution": "Introduces the benchmark",
+    "overlap": "Benchmark source",
+    "distinction": "We do not claim benchmark novelty or contamination independence",
+    "metadata_dates": [
+      "2021/07/07"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "evalplus",
+    "url": "https://arxiv.org/abs/2305.01210",
+    "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation",
+    "authors": [
+      "Liu, Jiawei",
+      "Xia, Chunqiu Steven",
+      "Wang, Yuyao",
+      "Zhang, Lingming"
+    ],
+    "year": "2023",
+    "doi": null,
+    "primary_page_sha256": "5dd841605fa43f04952043399635f2fbdeefbda5c706e2d73c5d92b18f20d316",
+    "checked": "2026-11-24",
+    "question": "Insufficient tests in code evaluation",
+    "design": "Expanded generated tests and HumanEval+",
+    "contribution": "Detects errors missed by original tests",
+    "overlap": "Our execution oracle uses expanded partitions",
+    "distinction": "We retain reference anomalies and adapter limits",
+    "metadata_dates": [
+      "2023/05/02"
+    ],
+    "verified_publication_fields": {
+      "booktitle": "Advances in Neural Information Processing Systems",
+      "volume": "36"
+    }
+  },
+  {
+    "key": "qwen",
+    "url": "https://arxiv.org/abs/2409.12186",
+    "title": "Qwen2.5-Coder Technical Report",
+    "authors": [
+      "Hui, Binyuan",
+      "Yang, Jian",
+      "Cui, Zeyu",
+      "Yang, Jiaxi",
+      "Liu, Dayiheng",
+      "Zhang, Lei",
+      "Liu, Tianyu",
+      "Zhang, Jiajun",
+      "Yu, Bowen",
+      "Lu, Keming",
+      "Dang, Kai",
+      "Fan, Yang",
+      "Zhang, Yichang",
+      "Yang, An",
+      "Men, Rui",
+      "Huang, Fei",
+      "Zheng, Bo",
+      "Miao, Yibo",
+      "Quan, Shanghaoran",
+      "Feng, Yunlong",
+      "Ren, Xingzhang",
+      "Ren, Xuancheng",
+      "Zhou, Jingren",
+      "Lin, Junyang"
+    ],
+    "year": "2024",
+    "doi": null,
+    "primary_page_sha256": "3348da44de2c785178b6014c8c750e14fc4c3627267e9220e9127d2273ed05e1",
+    "checked": "2026-11-24",
+    "question": "Code-specialized model family",
+    "design": "Model training and code benchmarks",
+    "contribution": "Describes the evaluated model family",
+    "overlap": "Two smallest family members",
+    "distinction": "Our runtime is quantized CPU inference, not an upstream model evaluation",
+    "metadata_dates": [
+      "2024/09/18"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "sustainable",
+    "url": "https://aclanthology.org/2025.naacl-long.632/",
+    "title": "Towards Sustainable NLP: Insights from Benchmarking Inference Energy in Large Language Models",
+    "authors": [
+      "Soham Poddar",
+      "Paramita Koley",
+      "Janardan Misra",
+      "Niloy Ganguly",
+      "Saptarshi Ghosh"
+    ],
+    "year": "2025",
+    "doi": "10.18653/v1/2025.naacl-long.632",
+    "primary_page_sha256": "1d1f7053187a11eb7103323cd65e2ba24b5d98f222ca3beff6e61a5a9e580fe6",
+    "checked": "2026-11-24",
+    "question": "Inference energy across models, prompts and systems",
+    "design": "Energy benchmarking across NLP configurations",
+    "contribution": "Relates inference cost to outputs and runtime",
+    "overlap": "Prompt and inference-cost motivation",
+    "distinction": "Our package-energy ratios are narrow and exploratory",
+    "metadata_dates": [
+      "2025/4"
+    ],
+    "verified_publication_fields": {
+      "booktitle": "Proceedings of NAACL 2025 (Volume 1: Long Papers)",
+      "pages": "12688--12704",
+      "doi": "10.18653/v1/2025.naacl-long.632"
+    }
+  },
+  {
+    "key": "slmenergy",
+    "url": "https://arxiv.org/abs/2604.02776",
+    "title": "Evaluating the Environmental Impact of using SLMs and Prompt Engineering for Code Generation",
+    "authors": [
+      "Mamun, Md Afif Al",
+      "Nath, Sayan",
+      "Uddin, Gias",
+      "Deb, Novarun"
+    ],
+    "year": "2026",
+    "doi": null,
+    "primary_page_sha256": "9c0b834795b64f045fae0676104e9c27501651dae837f10636d59284788f5626",
+    "checked": "2026-11-24",
+    "question": "Prompt strategies, code accuracy and environmental cost",
+    "design": "Multiple small/open models and HumanEval+/MBPP+ prompting strategies",
+    "contribution": "Direct prior study of code-prompt efficiency",
+    "overlap": "Strong overlap with Prompt-Energy motivation",
+    "distinction": "No first-energy-study or emissions claim; focus is competing specifications",
+    "metadata_dates": [
+      "2026/04/03"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "hierarchy",
+    "url": "https://arxiv.org/abs/2404.13208",
+    "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+    "authors": [
+      "Wallace, Eric",
+      "Xiao, Kai",
+      "Leike, Reimar",
+      "Weng, Lilian",
+      "Heidecke, Johannes",
+      "Beutel, Alex"
+    ],
+    "year": "2024",
+    "doi": null,
+    "primary_page_sha256": "61f35a451712f1793297038995655a626f1d61ede90b7b4e333662e0e21f55db",
+    "checked": "2026-11-24",
+    "question": "Conflicting instructions with different privilege levels",
+    "design": "Training and evaluating hierarchy adherence",
+    "contribution": "Addresses prioritization and injection robustness",
+    "overlap": "Distinguishing competing instruction sources",
+    "distinction": "Competing descriptions do not form a security benchmark or training intervention",
+    "metadata_dates": [
+      "2024/04/19"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "graphrag",
+    "url": "https://arxiv.org/abs/2404.16130",
+    "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+    "authors": [
+      "Edge, Darren",
+      "Trinh, Ha",
+      "Cheng, Newman",
+      "Bradley, Joshua",
+      "Chao, Alex",
+      "Mody, Apurva",
+      "Truitt, Steven",
+      "Metropolitansky, Dasha",
+      "Ness, Robert Osazuwa",
+      "Larson, Jonathan"
+    ],
+    "year": "2024",
+    "doi": null,
+    "primary_page_sha256": "ca7c30847d41afdfcb885b1dd877717bfc30b7413f2450941ba58d2cc882b32c",
+    "checked": "2026-11-24",
+    "question": "Graph-assisted query-focused summarization",
+    "design": "Entity graph indexing and community summaries",
+    "contribution": "A graph RAG design for corpus-level questions",
+    "overlap": "Graph-assisted retrieval motivation",
+    "distinction": "MemoryGraph has a small alias/entity bonus, not this full GraphRAG architecture",
+    "metadata_dates": [
+      "2024/04/24"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "mem0",
+    "url": "https://arxiv.org/abs/2504.19413",
+    "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+    "authors": [
+      "Chhikara, Prateek",
+      "Khant, Dev",
+      "Aryan, Saket",
+      "Singh, Taranjeet",
+      "Yadav, Deshraj"
+    ],
+    "year": "2025",
+    "doi": null,
+    "primary_page_sha256": "0a7de4bea73f17b0dfce757b2d565f896fa3bf64290d83a4b24d7386f54a4fb5",
+    "checked": "2026-11-24",
+    "question": "Scalable persistent agent memory",
+    "design": "Memory extraction/update/retrieval and graph extension",
+    "contribution": "An integrated memory-system evaluation",
+    "overlap": "Practical retention/retrieval direction",
+    "distinction": "Our companion prototype lacks an integrated correctness/energy or real-user evaluation",
+    "metadata_dates": [
+      "2025/04/28"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "evalmem",
+    "url": "https://arxiv.org/abs/2609.22231",
+    "title": "EvalMem: An Operation-Level Diagnostic Framework for Long-Term Memory Systems",
+    "authors": [
+      "Liu, Zeyu",
+      "Zhong, Jian",
+      "Han, Rongduo",
+      "Wu, Ziyang",
+      "Tang, Shunye",
+      "He, Chenghao",
+      "Yang, Yaxuan",
+      "Qiu, Yihang",
+      "Wang, Ailing",
+      "Liang, Xiao",
+      "Xie, Guohuan",
+      "Xue, Xiaokang",
+      "Li, Gongchen",
+      "Zhang, Haining",
+      "Wang, Wei"
+    ],
+    "year": "2026",
+    "doi": null,
+    "primary_page_sha256": "4349e5d7dbb7039874758f7f582c5a3b3ee7a18203ef21d79ab0453d441db06c",
+    "checked": "2026-11-24",
+    "question": "Distinguishing encoding, retrieval and generation defects",
+    "design": "Operation-level examiners and oracle-evidence comparisons",
+    "contribution": "Direct prior diagnostic separation of memory-system operations",
+    "overlap": "Strong conceptual overlap",
+    "distinction": "The separation is not novel; our observations concern behavioral specification testing",
+    "metadata_dates": [
+      "2026/09/03"
+    ],
+    "verified_publication_fields": {}
+  },
+  {
+    "key": "longmemv2",
+    "url": "https://arxiv.org/abs/2605.12493",
+    "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
+    "authors": [
+      "Wu, Di",
+      "Ji, Zixiang",
+      "Kawatkar, Asmi",
+      "Kwan, Bryan",
+      "Gu, Jia-Chen",
+      "Peng, Nanyun",
+      "Chang, Kai-Wei"
+    ],
+    "year": "2026",
+    "doi": null,
+    "primary_page_sha256": "74a4682af8f6aeff209f3470ee507b1eee5d2d7259cf3d7eb7d763d0544f703b",
+    "checked": "2026-11-24",
+    "question": "Experience-oriented long-term web-agent memory",
+    "design": "Curated questions about customized environments",
+    "contribution": "Extends memory evaluation beyond user-history recall",
+    "overlap": "Recent boundary for memory claims",
+    "distinction": "Our static code tasks do not evaluate environment experience or long-term agents",
+    "metadata_dates": [
+      "2026/05/12"
+    ],
+    "verified_publication_fields": {}
+  }
+]

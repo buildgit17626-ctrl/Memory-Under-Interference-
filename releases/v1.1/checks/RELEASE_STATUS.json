@@ -1,0 +1,15 @@
+{
+  "manuscript_version": "1.1",
+  "proposed_package_tag": "v1.1.0",
+  "status": "Local editorial review package; not published",
+  "doi": "10.5281/zenodo.24500468",
+  "doi_status": "Reserved; registration/public accessibility unconfirmed",
+  "publication_authorized": false,
+  "push_authorized": false,
+  "new_inference": 0,
+  "science_unchanged": true,
+  "pdf_pages": 14,
+  "pytest_passed": 494,
+  "ruff": "clean",
+  "prior_release_preserved": "v1.0.1"
+}

@@ -1,5 +1,11 @@
 # SPEC: The cost of a correct answer
 
+Current editorial authorization: substantial scientific writing revision in
+first-person singular plus consistent spacing, with unchanged evidence/results.
+Prepare local manuscript Version 1.1 / planned package v1.1.0 in releases/v1.1;
+preserve releases/v1 and all published history. DOI remains reserved. No new
+inference, features, push or publication. Plan: docs/plans/MUI_EDITORIAL_V1_1.md.
+
 Current PDF presentation follow-up: remove the selected first-page status line,
 fix stretched heading/availability spacing, and rebuild local artifacts only.
 Published v1.0.1 assets/tag stay unchanged. Plan: docs/plans/MUI_PDF_SPACING.md.

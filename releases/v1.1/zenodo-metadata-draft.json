@@ -1,0 +1,33 @@
+{
+  "title": "Memory Under Interference: Context Utilization, Specification Confusion, and Inference Efficiency in Small Code Language Models",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-11-24",
+  "version": "1.1",
+  "doi": "10.5281/zenodo.24500468",
+  "creators": [
+    {
+      "name": "Brahmbhatt, Dhruv",
+      "affiliation": "Independent researcher; IIT Madras student (no institutional endorsement)"
+    }
+  ],
+  "description": "Local unpublished Version 1.1 editorial revision of Memory Under Interference. Scientific findings and evidence are unchanged. Two small quantized code models, paired context comparisons, posthoc cross-specification diagnosis and estimated CPU-package energy. MemoryGraph remains a separately evaluated synthetic retrieval prototype. Reserved DOI; no Zenodo publication has been performed.",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "code language models",
+    "context utilization",
+    "specification interference",
+    "inference efficiency",
+    "CPU package energy",
+    "memory retrieval"
+  ],
+  "notes": "LOCAL UNPUBLISHED editorial revision. DOI reserved; no external publication authorized.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

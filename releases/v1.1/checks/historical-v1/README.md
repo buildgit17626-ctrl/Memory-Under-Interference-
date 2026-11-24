@@ -1,0 +1,1 @@
+Historical validation and authorization records copied from Version 1. They describe that earlier package, not the current editorial revision or permission to publish it. Current status: ../RELEASE_STATUS.json; current PDF gate: ../pdf-quality.json; current reanalysis: ../editorial-full-reproduction.json.

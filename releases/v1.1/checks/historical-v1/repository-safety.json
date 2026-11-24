@@ -1,0 +1,109 @@
+{
+  "tracked_text_files_scanned": 550,
+  "credential_flags": [],
+  "historical_or_redaction_path_references": [
+    {
+      "file": "analysis/memory_release/export.py",
+      "sha256": "2d9f8a18f8da0426bf5a9c53a5b15bcbc0e6a4a67d2c0c9436f68c574702a97e",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "artifacts/memory-audit/2026-11-24-v1/calls-with-adherence.csv",
+      "sha256": "f6bbe4241e22f48deb9d70175372ebdd919e88c63914184260f362b46679b00e",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "artifacts/memory-audit/2026-11-24-v1/calls.csv",
+      "sha256": "c05e8ec47a506a1e51b2bc46e2d7feb632a9db8459e0fd95921a13308e91bc8e",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "artifacts/memory-audit/2026-11-24-v1/sensor-file-audit.json",
+      "sha256": "3d6d44e9881ac533ca3d370d4e1b47ffe63d1f36e5078ef619d17aee89462861",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "artifacts/memory-audit/2026-11-24-v1/sensor-prefix-audit.json",
+      "sha256": "ffdf42b004bc9cd8e673b7ff9131af8119e020f3a053b7cb2a9437aad0b923ff",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/ENVIRONMENT.md",
+      "sha256": "e8924368cb89269283b9158de7693b1b33e8c45e0c8b01dc6e4f208196ec7eb8",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/P2_SMOKE_REVIEW.md",
+      "sha256": "a29e955ad91dfb39b78b31905a155130af693b71ddff21ab909619cdcd3c3a62",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/P3_DIAGNOSTICS.md",
+      "sha256": "30ae0e09c66dbe1b225943976cf00eedb06658cc860a8497d9ce736237c21c11",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/P3_PILOT_REVIEW.md",
+      "sha256": "3cc607a455b140ea99aaef4ad1384b82e8ec3c86484cd4e02ed54072cc2664c8",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/learning/E4_WORKLOAD_AMENDMENT_2026_11_24.md",
+      "sha256": "efe889aacd6e5dc23e9b0c768799247c3950633f55e74c5d395a211aa5ae6ca9",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/learning/UTILISATION_CONTINUATION_V3.md",
+      "sha256": "6c20b76e23e247af87d2189f7a69092853bd8635253c4f7eee02f45bc64c92e6",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "docs/learning/UTILISATION_REMAINING_QUEUE_2026_11_24.md",
+      "sha256": "c4e598641aa48a5f73f3e3a90176ff1398f9bfcf94a6a7e0b9c891afdcd3f754",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "experiments/supervise.py",
+      "sha256": "08cffce2792f1c1c0b084f8c20090254db274556c136c4bd2e5e7d56d7a1f249",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "experiments/supervise_v2.py",
+      "sha256": "451170503d3ee65f90cb58f0596633a02d96be70c3fd618c3e0c100d8fe28e2a",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "results/samples/P2-backup-receipt.json",
+      "sha256": "de5214c5ef839ac3636c4d5cc9f4b112cef1f0909812f3713ce4f3171af7f91c",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "results/samples/P3-backup-receipt.json",
+      "sha256": "e5f0a1c1185649d4307f10c5097550996e07b975e86c6f6bf23170a0146e4caf",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "results/samples/P3-onedrive-backup-receipt.json",
+      "sha256": "2fe6c063c2a49cd8594b6cb88b502935c6f62f1fe1ec6d9eab0e32cc58250a65",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "results/samples/P4-before-run-backup-receipt.json",
+      "sha256": "59d3d1b92cda1aafc83f8b2cb4a010d44cece2d7c913fd65fda27582260e1446",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "results/samples/P4-calibration-backup-receipt.json",
+      "sha256": "82036c8828f66e19e1410ccaa55c111bf8b73a363ff62adac49697dcfc808206",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    },
+    {
+      "file": "tests/test_memory_release.py",
+      "sha256": "0850b16ed6859475ff36925439c0815c18c02a6ae3461254ec6ed657d17c3e0a",
+      "classification": "Existing host/audit provenance, or explicit redaction/test input; no credential. Original history preserved."
+    }
+  ],
+  "new_public_release_path_flags": "See publication-safety.json: no flags",
+  "tracked_environment_or_private_key_files": [],
+  "scope": "Working-tree tracked publication contents; existing public history is retained rather than rewritten"
+}

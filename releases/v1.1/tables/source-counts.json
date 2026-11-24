@@ -1,0 +1,141 @@
+{
+  "completed_main_logical_requests": 5528,
+  "stages": [
+    {
+      "stage": "E0",
+      "population": "main",
+      "logical_requests": 1968,
+      "expected": 1968,
+      "api_failures": 2,
+      "output_caps": 6
+    },
+    {
+      "stage": "M3_isolated",
+      "population": "main",
+      "logical_requests": 40,
+      "expected": 40,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "M3_initial",
+      "population": "main",
+      "logical_requests": 240,
+      "expected": 240,
+      "api_failures": 0,
+      "output_caps": 1
+    },
+    {
+      "stage": "M1",
+      "population": "main",
+      "logical_requests": 1040,
+      "expected": 1040,
+      "api_failures": 0,
+      "output_caps": 11
+    },
+    {
+      "stage": "M1_pilot",
+      "population": "pilot",
+      "logical_requests": 70,
+      "expected": 70,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "R1",
+      "population": "main",
+      "logical_requests": 400,
+      "expected": 400,
+      "api_failures": 0,
+      "output_caps": 5
+    },
+    {
+      "stage": "R1_pilot",
+      "population": "pilot",
+      "logical_requests": 50,
+      "expected": 50,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "M3R2",
+      "population": "main",
+      "logical_requests": 1040,
+      "expected": 1040,
+      "api_failures": 1,
+      "output_caps": 10
+    },
+    {
+      "stage": "M3R2_pilot",
+      "population": "pilot",
+      "logical_requests": 130,
+      "expected": 130,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "M2",
+      "population": "main",
+      "logical_requests": 400,
+      "expected": 400,
+      "api_failures": 0,
+      "output_caps": 1
+    },
+    {
+      "stage": "M2_pilot",
+      "population": "pilot",
+      "logical_requests": 50,
+      "expected": 50,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "E5",
+      "population": "main",
+      "logical_requests": 400,
+      "expected": 400,
+      "api_failures": 0,
+      "output_caps": 8
+    },
+    {
+      "stage": "E5_pilot",
+      "population": "pilot",
+      "logical_requests": 50,
+      "expected": 50,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "E4_original_pilot",
+      "population": "failed_feasibility",
+      "logical_requests": 10,
+      "expected": 20,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "E4_schema_pilot",
+      "population": "pilot",
+      "logical_requests": 20,
+      "expected": 20,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "E4_partial",
+      "population": "partial",
+      "logical_requests": 76,
+      "expected": 400,
+      "api_failures": 0,
+      "output_caps": 0
+    },
+    {
+      "stage": "harness_pilot",
+      "population": "harness_validation",
+      "logical_requests": 22,
+      "expected": 22,
+      "api_failures": 0,
+      "output_caps": 0
+    }
+  ]
+}

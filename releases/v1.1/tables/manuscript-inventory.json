@@ -1,0 +1,51 @@
+[
+  {
+    "stage": "E0",
+    "calls": 1968,
+    "api_failures": 2,
+    "caps": 6,
+    "energy": 1966
+  },
+  {
+    "stage": "E5",
+    "calls": 400,
+    "api_failures": 0,
+    "caps": 8,
+    "energy": 400
+  },
+  {
+    "stage": "M1",
+    "calls": 1040,
+    "api_failures": 0,
+    "caps": 11,
+    "energy": 1040
+  },
+  {
+    "stage": "M2",
+    "calls": 400,
+    "api_failures": 0,
+    "caps": 1,
+    "energy": 400
+  },
+  {
+    "stage": "M3R2",
+    "calls": 1040,
+    "api_failures": 1,
+    "caps": 10,
+    "energy": 1038
+  },
+  {
+    "stage": "M3_initial",
+    "calls": 280,
+    "api_failures": 0,
+    "caps": 1,
+    "energy": 280
+  },
+  {
+    "stage": "R1",
+    "calls": 400,
+    "api_failures": 0,
+    "caps": 5,
+    "energy": 400
+  }
+]

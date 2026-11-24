@@ -1,0 +1,44 @@
+{
+  "retention": [
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "policy": "full_history",
+      "attempts": 40,
+      "successes": 14,
+      "total_net_wh": 4.555372237865364,
+      "net_mwh_per_correct": 325.3837312760974,
+      "oracle_relative_reduction_percent": 76.52412446704462
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "policy": "oracle_selective",
+      "attempts": 40,
+      "successes": 17,
+      "total_net_wh": 1.2985735559006648,
+      "net_mwh_per_correct": 76.38667975886264,
+      "oracle_relative_reduction_percent": 76.52412446704462
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "policy": "full_history",
+      "attempts": 40,
+      "successes": 22,
+      "total_net_wh": 3.3915035469101786,
+      "net_mwh_per_correct": 154.15925213228084,
+      "oracle_relative_reduction_percent": 67.43375374420533
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "policy": "oracle_selective",
+      "attempts": 40,
+      "successes": 23,
+      "total_net_wh": 1.1546892785362695,
+      "net_mwh_per_correct": 50.203881675489974,
+      "oracle_relative_reduction_percent": 67.43375374420533
+    }
+  ],
+  "e5_registered_strict_successes": 0,
+  "e5_registered_attempts": 400,
+  "synthetic_embedding_mrr": 0.736388888888889,
+  "synthetic_tfidf_mrr": 0.51625
+}

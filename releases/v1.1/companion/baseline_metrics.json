@@ -1,0 +1,45 @@
+{
+  "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "dataset": "synthetic fictional coding preferences; no real users",
+  "dataset_sha256": "ae0f084acf60b163692f02a6d611cc65353c6997c510133a1e616fd44c9317d0",
+  "energy": "not measured",
+  "folds": 5,
+  "logical_cpu_count": 12,
+  "methods": {
+    "logistic_regression": {
+      "artifact_sha256": "6e4481b57b28c9b33bc02a68b9b92b9b834b90c104c71992e8be97aa556878e0",
+      "f1": 0.2099737532808399,
+      "mrr": 0.45652777777777775,
+      "precision": 0.1532567049808429,
+      "precision_at_k": 0.2,
+      "recall": 0.3333333333333333,
+      "validation": "out-of-fold by synthetic user ID"
+    },
+    "random_forest": {
+      "artifact_sha256": "3bc7805bebb775145e8e566747e815eac99730446c535873b068da4265de0156",
+      "f1": 1.0,
+      "mrr": 1.0,
+      "precision": 1.0,
+      "precision_at_k": 0.33333333333333326,
+      "recall": 1.0,
+      "validation": "out-of-fold by synthetic user ID"
+    },
+    "tfidf_cosine": {
+      "mrr": 0.51625,
+      "precision_at_k": 0.19722222222222222,
+      "validation": "label-free retrieval on synthetic queries"
+    }
+  },
+  "os": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.14",
+  "queries": 120,
+  "rows": 600,
+  "seed": 20261119,
+  "top_k": 3,
+  "users": 24,
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1"
+  }
+}

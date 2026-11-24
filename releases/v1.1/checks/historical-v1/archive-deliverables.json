@@ -1,0 +1,14 @@
+[
+  {
+    "file": "Memory_Under_Interference_v1_source.zip",
+    "bytes": 161855,
+    "sha256": "b8a94b9f1f6e885adc73398b492fb7a3a0dbc94eb0d6822f149ae4366e8d2d38",
+    "members": 31
+  },
+  {
+    "file": "Memory_Under_Interference_v1_reproducibility.zip",
+    "bytes": 34598412,
+    "sha256": "d7739e3d4b6d7cd65d1789096ee8c105e6ec53a765e28f812882f9d3be6530e3",
+    "members": 724
+  }
+]

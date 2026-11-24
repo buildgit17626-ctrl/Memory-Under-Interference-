@@ -8,3 +8,8 @@ releases/v1/licenses/** -whitespace
 # Rendered prompts preserve collected benchmark whitespace byte for byte.
 releases/v1/examples/** -whitespace
 data/HumanEval.jsonl.gz binary
+
+# Editorial release checksums must also survive checkout unchanged.
+releases/v1.1/** -text whitespace=cr-at-eol
+releases/v1.1/licenses/** -whitespace
+releases/v1.1/examples/** -whitespace

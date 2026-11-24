@@ -1,0 +1,6 @@
+{
+  "files_scanned": 660,
+  "findings": [],
+  "scope": "Pattern scan plus unchanged prior sanitized evidence; not a proof of absence of every possible secret.",
+  "licenses_byte_identical": true
+}

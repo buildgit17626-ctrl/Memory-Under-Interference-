@@ -22,3 +22,14 @@ releases/v1/manuscript/*.out
 releases/v1/manuscript/*.xdv
 releases/v1/manuscript/*.blg
 releases/v1/manuscript/*.log
+
+# Unpacked editorial release evidence remains inside its portable ZIP.
+releases/v1.1/code/
+releases/v1.1/data/raw/
+releases/v1.1/data/audit/
+releases/v1.1/literature/*.html
+releases/v1.1/manuscript/*.aux
+releases/v1.1/manuscript/*.out
+releases/v1.1/manuscript/*.xdv
+releases/v1.1/manuscript/*.blg
+releases/v1.1/manuscript/*.log

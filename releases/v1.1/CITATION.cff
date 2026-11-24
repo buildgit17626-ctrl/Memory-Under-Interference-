@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: Unpublished editorial revision; findings unchanged. DOI reserved.
+type: article
+title: 'Memory Under Interference: Context Utilization, Specification Confusion, and
+  Inference Efficiency in Small Code Language Models'
+version: '1.1'
+doi: 10.5281/zenodo.24500468
+authors:
+- family-names: Brahmbhatt
+  given-names: Dhruv
+  affiliation: Independent researcher; IIT Madras student
+url: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0
+license: CC-BY-4.0

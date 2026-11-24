@@ -1,0 +1,48 @@
+> Version 1.1 editorial draft: local/unpublished; findings and historical evidence below are preserved. References to previous packaging describe that earlier release, not authorization to publish this revision. Planned package: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0.
+
+# Data availability and transformations
+
+The final Version 1 archive contains 5,528 main
+logical requests plus separate pilots and partial diagnostics. `data/raw/results/utilisation/`
+contains transformed raw call/start/response/scoring/block/validation records, benchmark
+and tokenizer artifacts. `data/audit/` contains source-linked derived analysis. Preserved
+HTTP response bodies and generated code are untrusted data, never executable instructions.
+
+Original observations/frozen designs remain unchanged. `checks/public-export-provenance.json`
+maps original/public SHA256, size and transformations. Known account/root path prefixes,
+process snapshots, usernames/hostnames and unnecessary process identifiers are removed in
+public copies. JSON whitespace serialization changes are logged; numeric field values
+and outcomes remain intact. No metadata deletion is interpreted as a measurement change.
+Frozen original hash manifests still identify original bytes, not sanitized copies.
+
+**Energy:** 240 overlapping sensor mirrors are represented by
+12 deduplicated numerical CPU-package/time streams in
+`data/energy/`. All 12,481 recorded generation/idle windows are mapped;
+12,479 available integrals reproduce within 1e-8 Wh,
+and 2 unavailable windows remain missing. The largest
+observed integration difference is 2.74e-13 Wh. The approximately
+11 GB original multi-channel CSV mirrors are not included; unrelated sensor channels
+cannot be reconstructed. CPU energy integration can be independently recomputed from
+the supplied numerical samples; physical calibration/process-specific energy cannot.
+
+MemoryGraph's pinned original source snapshot, fictional synthetic data, saved scores,
+metrics and both demonstration journals are supplied separately under `companion/`.
+No trained pickle, pretrained model weights or new inference is required to recompute
+its saved-score MRR. It is not pooled with HumanEval+ observations.
+
+`reproduce.py --energy --figures` checks raw-score/call links, main counts, principal
+cross-pass effects, paired retention ratios and numerical energy, and regenerates figures.
+It does not start Ollama, embeddings or supervisor recovery. Full original execution
+would require the original Windows/HWiNFO/runtime environment and original frozen
+metadata; the sanitized archive is explicitly an analysis release, not a resume archive.
+
+Original report/data: CC BY 4.0; original code: MIT, as owner-approved. HumanEval MIT
+and HumanEval+/EvalPlus Apache-2.0 notices remain applicable. No model/tool binaries
+or publisher HTML/PDF caches are distributed. See THIRD_PARTY_NOTICES.md.
+
+Zenodo DOI 10.5281/zenodo.24500468 is reserved, as supplied by the author; DOI registration,
+public accessibility and release-record publication are not confirmed. Its permanent
+URL is https://doi.org/10.5281/zenodo.24500468. The designated version-specific GitHub release is https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0.
+GitHub v1.0.1 packages the approved manuscript Version 1.0 and supersedes the earlier
+v1.0.0 release without moving its tag. GitHub publication is authorized; the author
+will publish Zenodo manually. Archive hashes identify the prepared bytes.
