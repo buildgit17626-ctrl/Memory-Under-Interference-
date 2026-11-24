@@ -17,11 +17,12 @@ The reserved Zenodo DOI is **10.5281/zenodo.24500468**:
 [permanent DOI URL](https://doi.org/10.5281/zenodo.24500468).
 Reservation does not confirm DOI registration, publication or public accessibility.
 The designated version-specific GitHub release is
-[v1.0.0](https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0).
-An existing public GitHub release/tag points to the earlier audit commit and has
-no uploaded assets at the preparation check. Final-artifact upload and tag retargeting
-require separate approval, as does Zenodo publication. The repository main push
-is authorized. Prior candidate tags are preserved.
+[v1.0.1](https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1).
+GitHub packaging release **v1.0.1** contains the approved research manuscript
+**Version 1.0**, unchanged scientifically from verified commit
+`723cf5d139144f914023d0fa65b74d340cbcc943`. It supersedes the older v1.0.0
+release while preserving its tag and history. Zenodo publication remains manual;
+this handoff does not publish the reserved Zenodo record.
 
 - [Manuscript PDF](releases/v1/Memory_Under_Interference_v1.pdf)
 - [Manuscript source bundle](releases/v1/Memory_Under_Interference_v1_source.zip)

@@ -1,5 +1,15 @@
 # SPEC: The cost of a correct answer
 
+## Authorized GitHub v1.0.1 publication handoff (2026-11-24)
+
+Owner approves final science and authorizes GitHub release v1.0.1 from verified
+723cf5d139144f914023d0fa65b74d340cbcc943, four verified assets, latest status
+and a superseded notice on the old release while preserving its tag/history.
+Research manuscript remains Version 1.0; DOI 10.5281/zenodo.24500468 is reserved.
+No Zenodo publication, experiments, scientific revisions or MemoryGraph features.
+Plan: docs/plans/MUI_V1_0_1_GITHUB_HANDOFF.md. This supersedes prior GitHub-only
+publication approval gates; all original/frozen evidence stays unchanged.
+
 ## Authorized final Version 1 publication preparation (2026-11-24)
 
 Owner supplies reserved DOI 10.5281/zenodo.24500468 and planned GitHub v1.0.0

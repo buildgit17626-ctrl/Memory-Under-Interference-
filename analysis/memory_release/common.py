@@ -20,7 +20,8 @@ TITLE = (
 MODELS = ("qwen2.5-coder:0.5b", "qwen2.5-coder:1.5b")
 DOI = "10.5281/zenodo.24500468"
 DOI_URL = "https://doi.org/" + DOI
-RELEASE_TAG = "v1.0.0"
+MANUSCRIPT_VERSION = "1.0"
+RELEASE_TAG = "v1.0.1"
 RELEASE_URL = (
     "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/" + RELEASE_TAG
 )

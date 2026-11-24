@@ -11,6 +11,7 @@ from analysis.memory_audit.records import save_json
 from analysis.memory_release.common import (
     DOI,
     DOI_URL,
+    MANUSCRIPT_VERSION,
     MG_COMMIT,
     RELEASE,
     RELEASE_TAG,
@@ -78,7 +79,8 @@ def main():
     ).strip()
     status = {
         "title": TITLE,
-        "version": "1.0.0",
+        "version": MANUSCRIPT_VERSION,
+        "github_release_version": "1.0.1",
         "release_tag": RELEASE_TAG,
         "artifact_status": "Final Version 1 artifacts verified",
         "doi": DOI,
@@ -95,13 +97,12 @@ def main():
         "ruff": "passed",
         "pdf_compiled_and_rendered": True,
         "new_model_or_embedding_inference": 0,
-        "external_publication": False,
-        "external_publication_scope": "Zenodo publication or final-artifact GitHub release update",
-        "existing_github_release_public": True,
-        "final_artifacts_uploaded_to_github_release": False,
+        "build_stage": "Verified artifacts prepared for authorized GitHub publication",
+        "zenodo_publication_performed": False,
+        "github_publication_authorized": True,
         "scientific_blockers": [],
         "repository_main_push_authorized": True,
-        "release_gate": "Author approval to publish Zenodo record or GitHub release/tag",
+        "release_gate": "Verify GitHub upload/tag/latest state; Zenodo remains owner-only",
         "limitations": [
             "Posthoc cross-pass finding sensitive to adverse censoring",
             "M1 overlapping fixed bundles; no robust component CI",
@@ -125,12 +126,12 @@ def main():
         "blocker is identified by the recorded gates. This is not peer review or a guarantee of "
     )
     decision += (
-        "publication. The repository main push is authorized; Zenodo publication and "
-        "updates to the existing GitHub release/tag remain unapproved.\n\n"
+        "publication. GitHub packaging release v1.0.1 is authorized. The approved research "
+        "manuscript remains Version 1.0; Zenodo publication is left to the author.\n\n"
     )
     decision += (
         f"Reserved DOI: {DOI} ({DOI_URL}); registration/public accessibility is not "
-        f"confirmed. Planned version-specific release: {RELEASE_URL}.\n\n"
+        f"confirmed. Version-specific GitHub release: {RELEASE_URL}.\n\n"
     )
     decision += (
         "The strongest 1.5B complete-case result is cap-sensitive; M1 independence is unresolved; "
@@ -151,12 +152,11 @@ def main():
         "numerical CPU power/time samples are included.\n"
     )
     decision += (
-        "\nRelease operation pending: the pre-existing remote v1.0.0 tag points to older "
-        "audit commit 51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16. Its GitHub release "
-        "is already public with no uploaded assets at the read-only check. Both are left "
-        "unchanged. Before uploading the final artifacts, the target must be reviewed and "
-        "retargeted to the final main commit reported after the push. Artifact checks "
-        "passing do not resolve this tag/publication approval gate.\n"
+        "\nGitHub v1.0.1 supersedes v1.0.0 without changing its tag target "
+        "51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16. Only a superseded notice is added "
+        "to the old release; its original body/history are retained. Public asset hashes, "
+        "new tag target and latest status are checked after upload. This build report "
+        "records pre-publication artifact checks; it does not publish Zenodo.\n"
     )
     (RELEASE / "PUBLICATION_READINESS.md").write_text(decision, encoding="utf-8")
     shutil.copyfile(RELEASE / "manuscript/main.pdf", RELEASE / "Memory_Under_Interference_v1.pdf")
@@ -178,9 +178,9 @@ def main():
         "records the checks and disclosed scientific limitations. SHA256SUMS.json is the "
         "inner file manifest, also inside the reproducibility archive. Licences, notices, "
         "raw-response derivatives and numerical sensor samples are inside that archive.\n\n"
-        "No record or GitHub release is published by these commands. Publish only after "
-        "author approval. The existing public v1.0.0 GitHub release has an older tag target "
-        "and no uploaded assets at preparation; update/retarget only with approval. "
+        "This packaging command performs no uploads. The separate authorized handoff "
+        "publishes GitHub v1.0.1 and marks v1.0.0 superseded without moving its tag. "
+        "Zenodo must be published manually by the author. "
         "Do not treat the reserved DOI as registered or publicly accessible.\n",
         encoding="utf-8",
     )
@@ -211,7 +211,7 @@ def main():
             b"Relative figures/ and bibliography files are supplied. For data reanalysis use the "
             b"separate reproducibility archive. Final Version 1 artifacts; not peer reviewed. "
             b"DOI 10.5281/zenodo.24500468 is reserved, not confirmed publicly accessible. "
-            b"Release-record publication needs author approval.\n",
+            b"GitHub package v1.0.1; manuscript Version 1.0. Zenodo publication is manual.\n",
         )
     with zipfile.ZipFile(RELEASE / ARCHIVES[1], "w") as archive:
         for p in files + [RELEASE / "SHA256SUMS.json"]:
@@ -232,14 +232,8 @@ def main():
                 }
             )
     save_json(RELEASE / "checks/archive-deliverables.json", archive_records)
-    uploads = [
-        "Memory_Under_Interference_v1.pdf",
-        *ARCHIVES,
-        "zenodo-metadata-draft.json",
-        "RELEASE_NOTES_V1.md",
-        "PUBLICATION_READINESS.md",
-        "UPLOAD_GUIDE.md",
-    ]
+    # The fourth release asset is the manifest itself; never hash it recursively.
+    uploads = ["Memory_Under_Interference_v1.pdf", *ARCHIVES]
     (RELEASE / "SHA256SUMS.txt").write_bytes(
         "".join(
             hashlib.sha256((RELEASE / name).read_bytes()).hexdigest() + "  " + name + "\n"

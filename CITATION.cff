@@ -4,12 +4,12 @@ message: Final Version 1 preprint; not peer reviewed. DOI reserved; registration
 type: article
 title: 'Memory Under Interference: Context Utilization, Specification Confusion, and
   Inference Efficiency in Small Code Language Models'
-version: 1.0.0
+version: '1.0'
 doi: 10.5281/zenodo.24500468
 date-released: '2026-11-24'
 authors:
 - family-names: Brahmbhatt
   given-names: Dhruv
   affiliation: Independent researcher; IIT Madras student
-url: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0
+url: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1
 license: CC-BY-4.0

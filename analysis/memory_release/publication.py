@@ -8,12 +8,19 @@ import subprocess
 import yaml
 
 from analysis.memory_audit.records import save_json
-from analysis.memory_release.common import DOI, DOI_URL, RELEASE, RELEASE_URL, ROOT
+from analysis.memory_release.common import (
+    DOI,
+    DOI_URL,
+    MANUSCRIPT_VERSION,
+    RELEASE,
+    RELEASE_URL,
+    ROOT,
+)
 from analysis.memory_release.package import include
 
 
 def main() -> None:
-    reference = "v1.0.0-rc2"
+    reference = "723cf5d139144f914023d0fa65b74d340cbcc943"
     names = subprocess.check_output(
         ["git", "ls-tree", "-r", "--name-only", reference, "--", "releases/v1/tables"],
         cwd=ROOT,
@@ -54,6 +61,8 @@ def main() -> None:
     metadata = json.loads((RELEASE / "zenodo-metadata-draft.json").read_text())
     if cff != root_cff or cff["doi"] != DOI or metadata["doi"] != DOI:
         raise ValueError("DOI/citation identity mismatch")
+    if cff["version"] != MANUSCRIPT_VERSION or metadata["version"] != MANUSCRIPT_VERSION:
+        raise ValueError("Research manuscript version must remain 1.0")
     for name in (
         "README.md",
         "CITATION.cff",
@@ -100,8 +109,9 @@ def main() -> None:
         "doi": DOI,
         "doi_status": "Reserved; registration/public accessibility not confirmed",
         "planned_release_url": RELEASE_URL,
-        "numerical_tables_identical_to_rc2": unchanged,
-        "scientific_abstract_results_interpretation_identical_to_rc2": True,
+        "verified_base_commit": reference,
+        "numerical_tables_identical_to_verified_base": unchanged,
+        "scientific_abstract_results_interpretation_identical_to_verified_base": True,
         "public_text_files_scanned": checked,
         "credentials_or_local_account_path_flags": flags,
         "original_input_preservation": "Separately verified by scientific-quality.json",
@@ -114,8 +124,9 @@ def main() -> None:
         ).hexdigest(),
         "new_inference": 0,
         "zenodo_record_published_by_agent": False,
-        "final_artifacts_uploaded_to_github_release": False,
-        "existing_github_release": "Public earlier-audit release; tag/record left unchanged",
+        "github_publication_authorized": True,
+        "upload_verification": "Recorded separately after authorized GitHub publication",
+        "existing_github_release": "v1.0.0 history/tag preserved; superseded notice authorized",
     }
     save_json(RELEASE / "checks/publication-safety.json", status)
     print(

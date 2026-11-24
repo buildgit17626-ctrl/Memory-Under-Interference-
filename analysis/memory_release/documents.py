@@ -12,6 +12,7 @@ from analysis.memory_release.common import (
     AUDIT,
     DOI,
     DOI_URL,
+    MANUSCRIPT_VERSION,
     MG_COMMIT,
     MODELS,
     RELEASE,
@@ -45,8 +46,8 @@ def main():
     findings = [
         "# Version 1 findings",
         "",
-        "Final Version 1 artifacts, with Zenodo publication/GitHub final-artifact update "
-        "awaiting author approval. This document records evidence-supported wording, not approval "
+        "Final Version 1 scientific content is approved for GitHub v1.0.1 publication. "
+        "Zenodo publication is reserved for the author. This document records evidence-supported wording, not approval "
         "of an internal mechanism or a peer-reviewed claim.",
         "",
         f"Main-study logical requests verified directly from calls.jsonl: "
@@ -213,7 +214,7 @@ def main():
 |Authorship/affiliation inflated|Owner-confirmed name, student status, independent work and contributions; AI help disclosed|Final author review required; no institutional endorsement|
 
 Disposition: final Version 1 is scientifically supportable only with these limitations.
-Zenodo/GitHub release publication remains unapproved; the main repository push is authorized.
+GitHub v1.0.1 publication is authorized; Zenodo publication remains manual and unperformed.
 Final build and archive checks are recorded separately.
 """,
     )
@@ -262,10 +263,9 @@ or publisher HTML/PDF caches are distributed. See THIRD_PARTY_NOTICES.md.
 Zenodo DOI {DOI} is reserved, as supplied by the author; DOI registration,
 public accessibility and release-record publication are not confirmed. Its permanent
 URL is {DOI_URL}. The designated version-specific GitHub release is {RELEASE_URL}.
-An existing public GitHub v1.0.0 release/tag points at the earlier audit commit;
-these final artifacts have not been uploaded there by this preparation.
-Main-branch file publication is authorized; Zenodo publication or GitHub release updates require
-separate owner approval. Archive hashes identify the final prepared bytes.
+GitHub v1.0.1 packages the approved manuscript Version 1.0 and supersedes the earlier
+v1.0.0 release without moving its tag. GitHub publication is authorized; the author
+will publish Zenodo manually. Archive hashes identify the prepared bytes.
 """,
     )
     write(
@@ -297,8 +297,9 @@ does not depend on additional E3/U-family/MemoryGraph inference and launches non
         """# Version 1.0 final artifact release notes
 
 Date: 24 November 2026. Final artifacts verified; not peer reviewed.
-Repository main publication is authorized. Zenodo publication and final-artifact upload
-to the existing GitHub release remain pending approval.
+GitHub packaging release v1.0.1 publishes the approved research manuscript Version 1.0.
+It supersedes v1.0.0 while preserving that tag and history. Scientific findings are unchanged
+from verified commit 723cf5d139144f914023d0fa65b74d340cbcc943. Zenodo remains manual.
 
 - Frozen completed main scope: E0, M1, initial M3, revised M3/R2, M2, R1, E5.
 - Diagnostic pilots separate; revised E4 76/400 and older feasibility versions separate.
@@ -323,7 +324,7 @@ to the existing GitHub release remain pending approval.
 
 The reserved DOI and designated release URL appear below. Reserving an identifier is not
 confirmation of registration, public accessibility or publication. The main push is
-authorized; publishing the Zenodo record, GitHub release or release tag remains unapproved.
+authorized for GitHub v1.0.1. Zenodo publication is not authorized and is left to the author.
 """,
     )
     citation = {
@@ -332,7 +333,7 @@ authorized; publishing the Zenodo record, GitHub release or release tag remains 
         "registration/public accessibility not confirmed.",
         "type": "article",
         "title": TITLE,
-        "version": "1.0.0",
+        "version": MANUSCRIPT_VERSION,
         "doi": DOI,
         "date-released": "2026-11-24",
         "authors": [
@@ -353,7 +354,7 @@ authorized; publishing the Zenodo record, GitHub release or release tag remains 
         "upload_type": "publication",
         "publication_type": "preprint",
         "publication_date": "2026-11-24",
-        "version": "1.0.0",
+        "version": MANUSCRIPT_VERSION,
         "doi": DOI,
         "creators": [
             {
@@ -365,8 +366,8 @@ authorized; publishing the Zenodo record, GitHub release or release tag remains 
         "in two small local code models. Posthoc and measurement limitations "
         "are explicit. Not peer reviewed. MemoryGraph is a separate prototype, "
         "not an evaluated integrated intervention. DOI reserved; release-record publication "
-        "and public accessibility are not confirmed. Final-artifact upload to the existing "
-        "GitHub release is pending approval.",
+        "and public accessibility are not confirmed. GitHub packaging release v1.0.1 "
+        "contains the unchanged approved manuscript Version 1.0.",
         "license": "cc-by-4.0",
         "access_right": "open",
         "keywords": [
@@ -379,7 +380,7 @@ authorized; publishing the Zenodo record, GitHub release or release tag remains 
         ],
         "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; "
         "third-party notices retained. DOI is reserved, not confirmed registered or accessible. "
-        "Zenodo publication/GitHub release updates require author approval.",
+        "Zenodo will be published manually by the author. GitHub v1.0.1 publication is authorized.",
         "related_identifiers": [
             {"identifier": RELEASE_URL, "relation": "isSupplementTo", "scheme": "url"}
         ],
@@ -390,7 +391,8 @@ authorized; publishing the Zenodo record, GitHub release or release tag remains 
         r"""# Memory Under Interference -- Version 1.0
 
 Final Version 1 artifacts, 24 November 2026. Not peer reviewed. Main repository push
-is authorized; Zenodo publication/GitHub final-artifact updates require owner approval.
+and GitHub v1.0.1 publication are authorized. The research manuscript remains Version 1.0;
+Zenodo publication is left to the author and has not been performed.
 Start with manuscript/main.pdf, FINDINGS_FINAL.md,
 CLAIMS_AND_EVIDENCE.md, REVIEWER_RESPONSE.md and DATA_AVAILABILITY.md.
 
@@ -461,8 +463,8 @@ network restrictions; these verify saved-data reanalysis, not inference regenera
     identity = (
         f"\n\nVersion 1 identifier: **{DOI}** (reserved; registration/public accessibility "
         f"not confirmed), {DOI_URL}. Designated GitHub release: {RELEASE_URL}. "
-        "An existing public GitHub release points to the earlier audit; final-artifact "
-        "upload/retargeting and Zenodo publication are not performed by this preparation.\n"
+        "GitHub v1.0.1 supersedes the older v1.0.0 package without moving its tag. "
+        "The research manuscript remains Version 1.0. Zenodo publication is manual.\n"
     )
     for name in ("README.md", "RELEASE_NOTES_V1.md", "FINDINGS_FINAL.md", "CLAIMS_AND_EVIDENCE.md"):
         path = RELEASE / name
