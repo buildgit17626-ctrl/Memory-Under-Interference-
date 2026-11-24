@@ -886,24 +886,33 @@ total computation together. They do not establish an
 internal memory mechanism or an integrated Memory-
 Graph beneﬁt.
 12 Data and Code A vailability
-The public repository is https://
+The repository is https://
 github.com/buildgit17626-ctrl/
-Memory-Under-Interference- . The release can-
-didate supplies code, frozen designs, transformed
-raw journals, per-task scores, numerical power/time
-samples, analysis tables and source/hash mappings.
-Original raw evidence remains unchanged locally. Un-
-necessary local paths and process/account metadata
-are removed only in public derivatives; original/public
-hashes distinguish them. Full multi-sensor CSV
-mirrors are not redistributed; the numerical CPU-
-package/time exports reproduce the included energy
-integrations. They do not calibrate the sensor or
-reconstruct other hardware channels. The archive is
+Memory-Under-Interference- . The ﬁnal Ver-
+sion 1 artifacts are associated with the reserved
+Zenodo DOI 10.5281/zenodo.24500468 and the
+designated version-speciﬁc GitHub release URL:
+https://github.com/buildgit17626-ctrl/
+Memory-Under-Interference-/releases/tag/
+v1.0.0. The DOI is reserved; its registration and pub-
+lic accessibility have not been conﬁrmed. Upload of
+these ﬁnal artifacts to the designated GitHub release
+and publication of the Zenodo record await author
+approval. The artifacts supply code, frozen designs,
+transformed raw journals, per-task scores, numerical
+power/time samples, analysis tables and source/hash
+mappings. Original raw evidence remains unchanged
+locally. Unnecessary local paths and process/account
+metadata are removed only in public derivatives; orig-
+inal/public hashes distinguish them. Full multi-sensor
+CSV mirrors are not redistributed; the numerical
+CPU-package/time exports reproduce the included
+energy integrations. They do not calibrate the sensor
+or reconstruct other hardware channels. The archive is
 an analysis release, not a claim that its sanitized ﬁles
-can resume the original frozen supervisor. A draft
-DOI has not been minted and no external deposit is
-implied.
+can resume the original frozen supervisor. Publication
+of the Zenodo record and GitHub release requires
+separate author approval.
 13 Author Contributions and
 AI-Assistance Disclosure
 Dhruv Brahmbhatt contributed the research questions,
@@ -916,97 +925,83 @@ harness and analysis coding, distractor construction,
 auditing, literature organization and manuscript draft-
 ing. AI-generated constructions were subject to the
 recorded reference/witness checks; AI assistance is not
-independent scientiﬁc validation. Publication requires
-the author’s ﬁnal review and approval. Original re-
-port/data are prepared under CC BY 4.0 and original
-code under MIT, with third-party notices retained.
-10
-Memory Under Interference Preprint – Version 1.0
+independent scientiﬁc validation. Original report/data
+are licensed under CC BY 4.0 and original code under
+MIT, with third-party notices retained.
 References
-[1] Mark Chen, Jerry Tworek, Heewoo Jun, et al.
-Evaluating Large Language Models Trained on
-Code, 2021. URL https://arxiv.org/abs/2107.
-03374.
-[2] Prateek Chhikara, Dev Khant, Saket Aryan,
-Taranjeet Singh, and Deshraj Yadav. Mem0:
-Building Production-Ready AI Agents with Scal-
-able Long-Term Memory, 2025. URL https://
-arxiv.org/abs/2504.19413.
-[3] Darren Edge, Ha Trinh, Newman Cheng, et al.
-From Local to Global: A Graph RAG Approach
-to Query-Focused Summarization, 2024. URL
-https://arxiv.org/abs/2404.16130.
-[4] Akash Gupta, Ivaxi Sheth, Vyas Raina, Mark
-Gales, and Mario Fritz. LLM Task Interfer-
-ence: An Initial Study on the Impact of Task-
-Switch in Conversational History. In Proceedings
-of EMNLP 2024 , pages 14633–14652, 2024. doi:
-10.18653/v1/2024.emnlp-main.811. URL https:
-//aclanthology.org/2024.emnlp-main.811/.
-[5] Binyuan Hui, Jian Yang, Zeyu Cui, et al. Qwen2.5-
-Coder Technical Report, 2024. URL https://
-arxiv.org/abs/2409.12186.
-[6] Jiawei Liu, Chunqiu Steven Xia, Yuyao Wang,
-and Lingming Zhang. Is Your Code Generated
-by ChatGPT Really Correct? Rigorous Evalua-
-tion of Large Language Models for Code Gener-
-ation. In Advances in Neural Information Pro-
-cessing Systems , volume 36, 2023. URL https:
+[1] Mark Chen, Jerry Tworek, Heewoo Jun, et al. Evaluat-
+ing Large Language Models Trained on Code, 2021. URL
+https://arxiv.org/abs/2107.03374.
+[2] Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet
+Singh, and Deshraj Yadav. Mem0: Building Production-
+Ready AI Agents with Scalable Long-Term Memory, 2025.
+URL https://arxiv.org/abs/2504.19413.
+[3] Darren Edge, Ha Trinh, Newman Cheng, et al. From Lo-
+cal to Global: A Graph RAG Approach to Query-Focused
+Summarization, 2024. URL https://arxiv.org/abs/2404.
+16130.
+[4] Akash Gupta, Ivaxi Sheth, Vyas Raina, Mark Gales, and
+Mario Fritz. LLM Task Interference: An Initial Study
+on the Impact of Task-Switch in Conversational History.
+In Proceedings of EMNLP 2024 , pages 14633–14652, 2024.
+doi: 10.18653/v1/2024.emnlp-main.811. URL https://
+aclanthology.org/2024.emnlp-main.811/.
+[5] Binyuan Hui, Jian Yang, Zeyu Cui, et al. Qwen2.5-Coder
+Technical Report, 2024. URL https://arxiv.org/abs/
+2409.12186.
+[6] Jiawei Liu, Chunqiu Steven Xia, Yuyao Wang, and Ling-
+ming Zhang. Is Your Code Generated by ChatGPT Re-
+ally Correct? Rigorous Evaluation of Large Language Mod-
+els for Code Generation. In Advances in Neural Informa-
+tion Processing Systems , volume 36, 2023. URL https:
 //arxiv.org/abs/2305.01210.
-[7] Nelson F. Liu, Kevin Lin, John Hewitt, Ash-
-win Paranjape, Michele Bevilacqua, Fabio Petroni,
-and Percy Liang. Lost in the Middle: How Lan-
-guage Models Use Long Contexts. Transactions of
-the Association for Computational Linguistics , 12:
-157–173, 2024. doi: 10.1162/tacl_a_00638. URL
+[7] Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape,
+Michele Bevilacqua, Fabio Petroni, and Percy Liang. Lost
+in the Middle: How Language Models Use Long Contexts.
+Transactions of the Association for Computational Linguis-
+tics, 12:157–173, 2024. doi: 10.1162/tacl_a_00638. URL
 https://aclanthology.org/2024.tacl-1.9/.
-[8] Zeyu Liu, Jian Zhong, Rongduo Han, et al.
-EvalMem: An Operation-Level Diagnostic Frame-
-work for Long-Term Memory Systems, 2026. URL
-https://arxiv.org/abs/2609.22231.
-[9] Md Aﬁf Al Mamun, Sayan Nath, Gias Uddin, and
-Novarun Deb. Evaluating the Environmental Im-
-pact of using SLMs and Prompt Engineering for
-Code Generation, 2026. URL https://arxiv.
-org/abs/2604.02776.
-[10] Soham Poddar, Paramita Koley, Janardan Misra,
-Niloy Ganguly, and Saptarshi Ghosh. Towards
-Sustainable NLP: Insights from Benchmarking In-
-ference Energy in Large Language Models. In
-Proceedings of NAACL 2025 (Volume 1: Long
-Papers), pages 12688–12704, 2025. doi: 10.
-18653/v1/2025.naacl-long.632. URL https://
-aclanthology.org/2025.naacl-long.632/.
-[11] Guijin Son, Sangwon Baek, Sangdae Nam, Ilgyun
-Jeong, and Seungone Kim. Multi-Task Inference:
-Can Large Language Models Follow Multiple In-
-structions at Once? In Proceedings of ACL 2024
-(Volume 1: Long Papers) , pages 5606–5627, 2024.
-doi: 10.18653/v1/2024.acl-long.304. URL https:
-//aclanthology.org/2024.acl-long.304/.
-[12] Eric Wallace, Kai Xiao, Reimar Leike, Lilian
-Weng, Johannes Heidecke, and Alex Beutel. The
-Instruction Hierarchy: Training LLMs to Priori-
-tize Privileged Instructions, 2024. URL https:
-//arxiv.org/abs/2404.13208.
-[13] Di Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang,
-Kai-Wei Chang, and Dong Yu. LongMemEval:
-Benchmarking Chat Assistants on Long-Term In-
-teractive Memory. In International Conference
-on Learning Representations , 2025. URL https:
-//arxiv.org/abs/2410.10813.
-[14] Di Wu, Zixiang Ji, Asmi Kawatkar, Bryan Kwan,
-Jia-Chen Gu, Nanyun Peng, and Kai-Wei Chang.
-LongMemEval-V2: Evaluating Long-Term Agent
-Memory Toward Experienced Colleagues, 2026.
-URL https://arxiv.org/abs/2605.12493.
-[15] Siyan Zhao, Mingyi Hong, Yang Liu, Devamanyu
-Hazarika, and Kaixiang Lin. Do LLMs Recognize
-Your Preferences? Evaluating Personalized Pref-
-erence Following in LLMs. In International Con-
-ference on Learning Representations , 2025. URL
-https://arxiv.org/abs/2502.09597.
-11
+[8] Zeyu Liu, Jian Zhong, Rongduo Han, et al. EvalMem:
+An Operation-Level Diagnostic Framework for Long-Term
+Memory Systems, 2026. URL https://arxiv.org/abs/
+2609.22231.
+[9] Md Aﬁf Al Mamun, Sayan Nath, Gias Uddin, and Novarun
+Deb. Evaluating the Environmental Impact of using SLMs
+and Prompt Engineering for Code Generation, 2026. URL
+https://arxiv.org/abs/2604.02776.
+[10] Soham Poddar, Paramita Koley, Janardan Misra, Niloy
+Ganguly, and Saptarshi Ghosh. Towards Sustainable NLP:
+Insights from Benchmarking Inference Energy in Large Lan-
+guage Models. In Proceedings of NAACL 2025 (Volume 1:
+Long Papers) , pages 12688–12704, 2025. doi: 10.18653/
+v1/2025.naacl-long.632. URL https://aclanthology.org/
+2025.naacl-long.632/.
+[11] Guijin Son, Sangwon Baek, Sangdae Nam, Ilgyun Jeong,
+and Seungone Kim. Multi-Task Inference: Can Large Lan-
+guage Models Follow Multiple Instructions at Once? In
+Proceedings of ACL 2024 (Volume 1: Long Papers) , pages
+5606–5627, 2024. doi: 10.18653/v1/2024.acl-long.304. URL
+https://aclanthology.org/2024.acl-long.304/.
+[12] Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Jo-
+hannes Heidecke, and Alex Beutel. The Instruction Hier-
+archy: Training LLMs to Prioritize Privileged Instructions,
+2024. URL https://arxiv.org/abs/2404.13208.
+[13] Di Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-Wei
+Chang, and Dong Yu. LongMemEval: Benchmarking Chat
+Assistants on Long-Term Interactive Memory. In Interna-
+tional Conference on Learning Representations , 2025. URL
+https://arxiv.org/abs/2410.10813.
+[14] Di Wu, Zixiang Ji, Asmi Kawatkar, Bryan Kwan, Jia-Chen
+Gu, Nanyun Peng, and Kai-Wei Chang. LongMemEval-
+V2: Evaluating Long-Term Agent Memory Toward Expe-
+rienced Colleagues, 2026. URL https://arxiv.org/abs/
+2605.12493.
+[15] Siyan Zhao, Mingyi Hong, Yang Liu, Devamanyu Haz-
+arika, and Kaixiang Lin. Do LLMs Recognize Your Pref-
+erences? Evaluating Personalized Preference Following in
+LLMs. In International Conference on Learning Represen-
+tations, 2025. URL https://arxiv.org/abs/2502.09597.
+10
 Memory Under Interference Preprint – Version 1.0
 A Registered Primary Contrasts and Request Inventory
 Study Calls API failures Caps Energy readings
@@ -1086,7 +1081,7 @@ E5 1.5B replayed minus buried (strict
 adherence)
 40 0.00 [0.00, 0.00] 1
 The broad starting claims about load, replay and a possible recognition–generation gap motivated the project
-12
+11
 Memory Under Interference Preprint – Version 1.0
 but are not all tested by this release. Load contrasts do not establish internal capacity; the revised retention design
 does not test the original replay-rate phase diagram; and the unrun recognition/hint studies cannot establish a
@@ -1130,19 +1125,29 @@ The portable reproduction script veriﬁes release hashes, logical-call counts, 
 comparisons from public records. An optional full audit rebuild uses the supplied analysis code and dependencies.
 Oﬄine veriﬁcation does not launch Ollama or regenerate embeddings. Original frozen commit identiﬁers and
 transformation mappings remain provenance references; sanitized archive bytes have their own checksums.
-E Representative Rendered Prompts
-These examples are selected saved requests for HumanEval/0 on 0.5B, not new prompt variants. The system
-message is You are a helpful coding assistant. The public examples/ directory supplies the exact UTF-8
-prompt strings, full call keys, native token counts, decoding options and SHA256 values; those strings also occur
-in the archived call journals. The R1 examples below are complete. The longer R2 and E5 layouts explicitly
-mark editorial omissions; their complete unabridged strings remain in the supplement.
-13
+12
 Memory Under Interference Preprint – Version 1.0
-E.1 Oracle-retained target, preference and query (complete)
+E Representative Rendered
+Prompts
+These examples are selected saved requests for
+HumanEval/0 on 0.5B, not new prompt variants.
+The system message is You are a helpful coding
+assistant. The public examples/ directory supplies
+the exact UTF-8 prompt strings, full call keys, na-
+tive token counts, decoding options and SHA256 val-
+ues; those strings also occur in the archived call jour-
+nals. The R1 examples below are complete. The longer
+R2 and E5 layouts explicitly mark editorial omissions;
+their complete unabridged strings remain in the sup-
+plement.
+E.1 Oracle-retained target, preference
+and query (complete)
 [TARGET SPECIFICATION]
 from typing import List
-def has_close_elements(numbers: List[float], threshold: float) -> bool:
-""" Check if in given list of numbers, are any two numbers closer to each other than
+def has_close_elements(numbers: List[float], threshold: float)
+-> bool:
+""" Check if in given list of numbers, are any two numbers
+closer to each other than
 given threshold.
 >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
 False
@@ -1153,11 +1158,14 @@ True
 Return only Python code, without explanation.
 [CURRENT QUERY]
 Complete the function has_close_elements.
-E.2 Target and query without the preference (complete)
+E.2 Target and query without the pref-
+erence (complete)
 [TARGET SPECIFICATION]
 from typing import List
-def has_close_elements(numbers: List[float], threshold: float) -> bool:
-""" Check if in given list of numbers, are any two numbers closer to each other than
+def has_close_elements(numbers: List[float], threshold: float)
+-> bool:
+""" Check if in given list of numbers, are any two numbers
+closer to each other than
 given threshold.
 >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
 False
@@ -1166,17 +1174,21 @@ True
 """
 [CURRENT QUERY]
 Complete the function has_close_elements.
-The diﬀerence is an actual instruction diﬀerence in the collected policies, not a length-only intervention. It helps
-explain why an oracle/no-history comparison cannot isolate relevance selection.
-14
-Memory Under Interference Preprint – Version 1.0
-E.3 Competing-context request used in the worked example (abridged)
-Implement only the TARGET function has_close_elements. Background specifications are distractors; do
-not implement them. Return only Python code.
+The diﬀerence is an actual instruction diﬀerence in
+the collected policies, not a length-only intervention.
+It helps explain why an oracle/no-history comparison
+cannot isolate relevance selection.
+E.3 Competing-context request used in
+the worked example (abridged)
+Implement only the TARGET function has_close_elements.
+Background specifications are distractors; do not
+implement them. Return only Python code.
 [TARGET SPECIFICATION]
 from typing import List
-def has_close_elements(numbers: List[float], threshold: float) -> bool:
-""" Check if in given list of numbers, are any two numbers closer to each other than
+def has_close_elements(numbers: List[float], threshold: float)
+-> bool:
+""" Check if in given list of numbers, are any two numbers
+closer to each other than
 given threshold.
 >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
 False
@@ -1185,21 +1197,31 @@ True
 """
 [BACKGROUND SPECIFICATIONS; DO NOT IMPLEMENT]
 from typing import List
-def has_close_elements_alternative(numbers: List[float], threshold: float) -> bool:
-"""Return whether two distinct list positions have absolute difference less than OR EQUAL TO
-threshold. Equality is included."""
-[EDITORIAL OMISSION: 20 further identical alternative descriptions]
-[NEUTRAL PADDING] x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+def has_close_elements_alternative(numbers: List[float],
+threshold: float) -> bool:
+"""Return whether two distinct list positions have absolute
+difference less than OR EQUAL TO threshold. Equality is
+included."""
+[EDITORIAL OMISSION: 20 further identical alternative
+descriptions]
+[NEUTRAL PADDING] x x x x x x x x x x x x x x x x x x x x x x x
+x x x x x x x x x x x x x x x x
 [CURRENT QUERY]
 Complete only has_close_elements from the TARGET specification.
-Only repeated copies are elided here; the exact archived request contains all of them. They are task descriptions
-without implementation bodies or hidden tests. Repetition to ﬁll the budget, task position and explicit distractor
-labelling are part of the construction and constrain its interpretation.
-E.4 Immediate preference in the placement study (abridged)
+Only repeated copies are elided here; the exact
+archived request contains all of them. They are task
+descriptions without implementation bodies or hidden
+tests. Repetition to ﬁll the budget, task position and
+explicit distractor labelling are part of the construction
+and constrain its interpretation.
+E.4 Immediate preference in the place-
+ment study (abridged)
 [TARGET SPECIFICATION]
 from typing import List
-def has_close_elements(numbers: List[float], threshold: float) -> bool:
-""" Check if in given list of numbers, are any two numbers closer to each other than
+def has_close_elements(numbers: List[float], threshold: float)
+-> bool:
+""" Check if in given list of numbers, are any two numbers
+closer to each other than
 given threshold.
 >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
 False
@@ -1208,9 +1230,13 @@ True
 """
 [EDITORIAL OMISSION: fixed earlier-task descriptions]
 [USER PREFERENCE]
-For future coding tasks, return only Python code, without explanation.
+For future coding tasks, return only Python code, without
+explanation.
 [CURRENT QUERY]
 Complete the function has_close_elements.
-The omitted region contains the ﬁxed earlier-task descriptions. The wording asks for code without explanation
-and does not explicitly ban Markdown fences; the registered strict score nevertheless rejects fenced responses.
-15
+The omitted region contains the ﬁxed earlier-task de-
+scriptions. The wording asks for code without expla-
+nation and does not explicitly ban Markdown fences;
+the registered strict score nevertheless rejects fenced
+responses.
+13

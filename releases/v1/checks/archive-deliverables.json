@@ -1,19 +1,20 @@
 [
   {
     "file": "Memory_Under_Interference_v1_source.zip",
-    "bytes": 161763,
-    "sha256": "8f6a49035c2553945564a8fcf9da42dae8393eb02f272397cc488a4486a16c52",
+    "bytes": 162032,
+    "sha256": "724b4f2ea58a76c39a4ce5663f50a041bc0ef82fe14e2de0e4a1e968b9ee4407",
     "members": 31,
-    "crc_and_extracted_checksums": "passed",
-    "extracted_manuscript_compilation": "passed"
+    "crc_and_extracted_checksum_verification": "passed",
+    "extracted_source_compilation": "passed",
+    "compiled_source_text_equals_final_pdf": true
   },
   {
     "file": "Memory_Under_Interference_v1_reproducibility.zip",
-    "bytes": 34576346,
-    "sha256": "3d05d53e6691607b9335088322199e61fd851e22f961559d9cf6942297d92223",
-    "members": 717,
-    "crc_and_extracted_checksums": "passed",
-    "final_archive_guarded_reproduction": {
+    "bytes": 34605372,
+    "sha256": "b15f49ef9cf6f15c66dc33348915ed2dd132378e2815a8d2f1fbf1082e471844",
+    "members": 722,
+    "crc_and_extracted_checksum_verification": "passed",
+    "final_standalone_guarded_reproduction": {
       "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
       "platform": "Windows-11-10.0.26300-SP0",
       "isolated_mode": true,
@@ -30,11 +31,11 @@
         "main_logical_requests": 5528,
         "cross_pass_effects_reproduced": 4,
         "new_model_inference": 0,
-        "integrity_files_verified": 716,
+        "integrity_files_verified": 721,
         "full_effects_verified": null
       }
     },
-    "full_offline_effects_reproduced": 976,
-    "full_run_matches_final_scientific_files": 359
+    "full_paired_effects_reproduced": 976,
+    "full_run_and_final_archive_scientific_files_identical": 359
   }
 ]

@@ -17,5 +17,6 @@
 |Archive changes raw evidence|Public copies only, original/public hash map and explicit metadata/path redactions|Sanitized export is not byte-identical inference-resume evidence|
 |Authorship/affiliation inflated|Owner-confirmed name, student status, independent work and contributions; AI help disclosed|Final author review required; no institutional endorsement|
 
-Disposition: release candidate is scientifically supportable only with these limitations.
-External publication remains unapproved. Final build and archive checks are recorded separately.
+Disposition: final Version 1 is scientifically supportable only with these limitations.
+Zenodo/GitHub release publication remains unapproved; the main repository push is authorized.
+Final build and archive checks are recorded separately.

@@ -14,13 +14,11 @@
     10,
     11,
     12,
-    13,
-    14,
-    15
+    13
   ],
   "render_dpi": 85,
-  "pdf_sha256": "591d0746fb49801264a7f649af11e19980e21ba3ea7607e25f0b432e428a7cb5",
-  "method": "All 15 pages rendered and inspected via contact sheets; detailed worked-example/policy plots and final prompt appendix inspected at 85-90 dpi",
-  "findings": "No clipping, overlaps or missing glyphs observed. Shared comparison axes and policy labels reviewed; long prompt excerpt kept on one page.",
-  "reviewer": "AI-assisted visual audit; final author review remains required"
+  "pdf_sha256": "848fc98bf1ca80760c5971531b289caa1ffacad58ae15831dcdd22d4b22dee25",
+  "method": "All 13 final pages rendered/inspected; detailed DOI/disclosure/reference and two-column prompt appendix checks",
+  "findings": "No clipping, overlap, orphaned prompt heading or missing glyphs observed. Former whitespace on pages 10/14 removed by flowing references and compact two-column prompt appendix. Main text still spans 10 pages.",
+  "reviewer": "AI-assisted visual audit"
 }

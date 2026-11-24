@@ -3251,10 +3251,10 @@
   {
     "source_relative": "CITATION.cff",
     "public_relative": "code/CITATION.cff",
-    "source_sha256": "c9de2bb2ecbcfcc1963f9fd14d793e0910f4473101e6b41dc13dbd10a4072ad5",
-    "public_sha256": "c9de2bb2ecbcfcc1963f9fd14d793e0910f4473101e6b41dc13dbd10a4072ad5",
-    "source_bytes": 508,
-    "public_bytes": 508,
+    "source_sha256": "ce79dd6e56cb85d61b15a32b11bd19fd0360614ed0ce4ec68e5f3842b54e888f",
+    "public_sha256": "ce79dd6e56cb85d61b15a32b11bd19fd0360614ed0ce4ec68e5f3842b54e888f",
+    "source_bytes": 602,
+    "public_bytes": 602,
     "operations": []
   },
   {
@@ -3269,10 +3269,10 @@
   {
     "source_relative": "README.md",
     "public_relative": "code/README.md",
-    "source_sha256": "a4770fdd53c99153c5d1d69a498bb04f292fc8c9607e557eed166efaf65b82d7",
-    "public_sha256": "a4770fdd53c99153c5d1d69a498bb04f292fc8c9607e557eed166efaf65b82d7",
-    "source_bytes": 7833,
-    "public_bytes": 7833,
+    "source_sha256": "fe3e56bd3b5e1233785d0bf4641d20467603e32917a2fd95b2b030ede52dcd47",
+    "public_sha256": "fe3e56bd3b5e1233785d0bf4641d20467603e32917a2fd95b2b030ede52dcd47",
+    "source_bytes": 8346,
+    "public_bytes": 8346,
     "operations": []
   },
   {
@@ -3485,13 +3485,11 @@
   {
     "source_relative": "analysis/memory_release/common.py",
     "public_relative": "code/analysis/memory_release/common.py",
-    "source_sha256": "09741772a1b146f9498f5f2190227dd87102ec691bd8470dbc71cfd1ac7918d2",
-    "public_sha256": "4ee58c99baf44c0b1d6283d9b3738df4e6e039479c0ae3f770837a5a39431d61",
-    "source_bytes": 1141,
-    "public_bytes": 1131,
-    "operations": [
-      "known local-path prefixes replaced: 1"
-    ]
+    "source_sha256": "cb561aee9f56fc4ed218a239d5bfdd95c9c925eca938fdafc05ccb7c472ec42e",
+    "public_sha256": "cb561aee9f56fc4ed218a239d5bfdd95c9c925eca938fdafc05ccb7c472ec42e",
+    "source_bytes": 1328,
+    "public_bytes": 1328,
+    "operations": []
   },
   {
     "source_relative": "analysis/memory_release/companion.py",
@@ -3505,10 +3503,10 @@
   {
     "source_relative": "analysis/memory_release/documents.py",
     "public_relative": "code/analysis/memory_release/documents.py",
-    "source_sha256": "310413c4eceeed38b49715fda590def828ad61c53a28dc21a7c25bfa33323ebb",
-    "public_sha256": "310413c4eceeed38b49715fda590def828ad61c53a28dc21a7c25bfa33323ebb",
-    "source_bytes": 24825,
-    "public_bytes": 24825,
+    "source_sha256": "2f99f080c08dad8dd5b987441cb5ac8c259d89ef8efbbc8eea008db847e45b02",
+    "public_sha256": "2f99f080c08dad8dd5b987441cb5ac8c259d89ef8efbbc8eea008db847e45b02",
+    "source_bytes": 26770,
+    "public_bytes": 26770,
     "operations": []
   },
   {
@@ -3523,12 +3521,12 @@
   {
     "source_relative": "analysis/memory_release/export.py",
     "public_relative": "code/analysis/memory_release/export.py",
-    "source_sha256": "83bbc0ee24cd1ba3da90dde1d7b7d617ed9961e941d6e79470eeac7325edbf91",
-    "public_sha256": "980df0e41d1b9c7fc3a18ea0d010db3de95a8451495155a04638b1c3798e651f",
-    "source_bytes": 6177,
-    "public_bytes": 6155,
+    "source_sha256": "2d9f8a18f8da0426bf5a9c53a5b15bcbc0e6a4a67d2c0c9436f68c574702a97e",
+    "public_sha256": "7c124bec2e1dd3a81374351c9c552ef3863801aaccfb4b5f043c2722e7e05971",
+    "source_bytes": 6499,
+    "public_bytes": 6447,
     "operations": [
-      "known local-path prefixes replaced: 2"
+      "known local-path prefixes replaced: 6"
     ]
   },
   {
@@ -3552,19 +3550,19 @@
   {
     "source_relative": "analysis/memory_release/package.py",
     "public_relative": "code/analysis/memory_release/package.py",
-    "source_sha256": "08e66de29f02ecf55fc95f86fa8cbd2a36b615f3df16d388f7560e09cb4e9a51",
-    "public_sha256": "08e66de29f02ecf55fc95f86fa8cbd2a36b615f3df16d388f7560e09cb4e9a51",
-    "source_bytes": 7255,
-    "public_bytes": 7255,
+    "source_sha256": "faa30cfada9b1a4552e082d6434da03cb6386fc2a3c4ab605c6ef5f6b9620d8f",
+    "public_sha256": "faa30cfada9b1a4552e082d6434da03cb6386fc2a3c4ab605c6ef5f6b9620d8f",
+    "source_bytes": 11387,
+    "public_bytes": 11387,
     "operations": []
   },
   {
     "source_relative": "analysis/memory_release/pdfcheck.py",
     "public_relative": "code/analysis/memory_release/pdfcheck.py",
-    "source_sha256": "e75596f147f6b5c63411e58b736631eb2fceca39fc909173b474734c60989921",
-    "public_sha256": "e75596f147f6b5c63411e58b736631eb2fceca39fc909173b474734c60989921",
-    "source_bytes": 2872,
-    "public_bytes": 2872,
+    "source_sha256": "9bd2e409597856c58a0f261cf7341f71ccde97ef45b45ef291b38aff5da67467",
+    "public_sha256": "9bd2e409597856c58a0f261cf7341f71ccde97ef45b45ef291b38aff5da67467",
+    "source_bytes": 3033,
+    "public_bytes": 3033,
     "operations": []
   },
   {
@@ -3574,6 +3572,15 @@
     "public_sha256": "d570e5e21f0d0ca91323f1b826e97b0f1db8cac843c54fcc97e5871ed7c25860",
     "source_bytes": 4798,
     "public_bytes": 4798,
+    "operations": []
+  },
+  {
+    "source_relative": "analysis/memory_release/publication.py",
+    "public_relative": "code/analysis/memory_release/publication.py",
+    "source_sha256": "194124786298f44e220e5bc8b9afe55d3de1151f2f143c8135d4d594dc486564",
+    "public_sha256": "194124786298f44e220e5bc8b9afe55d3de1151f2f143c8135d4d594dc486564",
+    "source_bytes": 5126,
+    "public_bytes": 5126,
     "operations": []
   },
   {
@@ -3817,10 +3824,10 @@
   {
     "source_relative": "docs/SPEC.md",
     "public_relative": "code/docs/SPEC.md",
-    "source_sha256": "68be19125a0a01c77a14c3fa18e391afab55d0ca668a8c8a5a1461dcb5cad839",
-    "public_sha256": "68be19125a0a01c77a14c3fa18e391afab55d0ca668a8c8a5a1461dcb5cad839",
-    "source_bytes": 62882,
-    "public_bytes": 62882,
+    "source_sha256": "cc75cda769034a7a8edc56b0968eaad3f6fb8d6615132f94d727e246782fe92f",
+    "public_sha256": "cc75cda769034a7a8edc56b0968eaad3f6fb8d6615132f94d727e246782fe92f",
+    "source_bytes": 63649,
+    "public_bytes": 63649,
     "operations": []
   },
   {
@@ -5803,12 +5810,12 @@
   {
     "source_relative": "tests/test_memory_release.py",
     "public_relative": "code/tests/test_memory_release.py",
-    "source_sha256": "8369f422bb1a98bc8f99c00c0ea3698b10b0cce8d62f40171c218370ace6e36e",
-    "public_sha256": "dc706f749023d1377e91d2cb3ca7a78b7d2a929aeaf30b15c3f4c594222b81e3",
-    "source_bytes": 3832,
-    "public_bytes": 3820,
+    "source_sha256": "0850b16ed6859475ff36925439c0815c18c02a6ae3461254ec6ed657d17c3e0a",
+    "public_sha256": "b47b56d4967b108e76a437eba35fc2d390d99a61ac816922aca97623ae230996",
+    "source_bytes": 4095,
+    "public_bytes": 4071,
     "operations": [
-      "known local-path prefixes replaced: 1"
+      "known local-path prefixes replaced: 3"
     ]
   },
   {

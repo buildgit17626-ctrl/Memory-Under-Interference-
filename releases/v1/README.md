@@ -1,7 +1,8 @@
 # Memory Under Interference -- Version 1.0
 
-Local scientific release candidate, 24 November 2026. Not peer reviewed. External
-publication requires owner approval. Start with manuscript/main.pdf, FINDINGS_FINAL.md,
+Final Version 1 artifacts, 24 November 2026. Not peer reviewed. Main repository push
+is authorized; Zenodo publication/GitHub final-artifact updates require owner approval.
+Start with manuscript/main.pdf, FINDINGS_FINAL.md,
 CLAIMS_AND_EVIDENCE.md, REVIEWER_RESPONSE.md and DATA_AVAILABILITY.md.
 
 ## Reproduce without inference
@@ -57,7 +58,10 @@ The separate source archive retains manuscript/ and figures/ relative paths. No
 conference template/acceptance is implied. Version 2 work is in VERSION_2_ROADMAP.md.
 Original report/data CC BY 4.0, original code MIT, third-party exceptions retained.
 
-The rc2 revision adds an evidence-linked worked example, exact selected prompt
+The final revision includes an evidence-linked worked example, exact selected prompt
 strings, E5 registered primary contrasts and clearer common-scale policy figures.
 See checks/portable-environment.json for the tested installation and filesystem/
 network restrictions; these verify saved-data reanalysis, not inference regeneration.
+
+
+Version 1 identifier: **10.5281/zenodo.24500468** (reserved; registration/public accessibility not confirmed), https://doi.org/10.5281/zenodo.24500468. Designated GitHub release: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0. An existing public GitHub release points to the earlier audit; final-artifact upload/retargeting and Zenodo publication are not performed by this preparation.

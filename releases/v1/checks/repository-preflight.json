@@ -1,0 +1,17 @@
+{
+  "checked": "2026-11-24",
+  "repository": "buildgit17626-ctrl/Memory-Under-Interference-",
+  "visibility": "PUBLIC",
+  "default_branch": "main",
+  "github_actions_workflows": 0,
+  "preparation_remote_main": "51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16",
+  "existing_remote_v1.0.0": "51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16",
+  "tag_ready_for_final_release": false,
+  "action": "Existing tag preserved; final target commit will be reported; retarget requires explicit approval",
+  "zenodo_record_published_by_agent": false,
+  "github_release_published_by_agent": false,
+  "existing_github_release_public": true,
+  "existing_github_release_published_at": "2026-11-24T12:38:12Z",
+  "existing_github_release_uploaded_assets": 0,
+  "final_artifact_upload_performed": false
+}

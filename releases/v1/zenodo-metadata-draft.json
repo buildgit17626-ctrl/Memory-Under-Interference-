@@ -4,13 +4,14 @@
   "publication_type": "preprint",
   "publication_date": "2026-11-24",
   "version": "1.0.0",
+  "doi": "10.5281/zenodo.24500468",
   "creators": [
     {
       "name": "Brahmbhatt, Dhruv",
       "affiliation": "Independent researcher; IIT Madras student (no institutional endorsement)"
     }
   ],
-  "description": "Independent empirical preprint on context/specification utilization in two small local code models. Posthoc and measurement limitations are explicit. Not peer reviewed. MemoryGraph is a separate prototype, not an evaluated integrated intervention. No DOI or external deposit yet.",
+  "description": "Independent empirical preprint on context/specification utilization in two small local code models. Posthoc and measurement limitations are explicit. Not peer reviewed. MemoryGraph is a separate prototype, not an evaluated integrated intervention. DOI reserved; release-record publication and public accessibility are not confirmed. Final-artifact upload to the existing GitHub release is pending approval.",
   "license": "cc-by-4.0",
   "access_right": "open",
   "keywords": [
@@ -21,5 +22,12 @@
     "CPU package energy",
     "memory retrieval"
   ],
-  "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; third-party notices retained. External publication requires author approval."
+  "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; third-party notices retained. DOI is reserved, not confirmed registered or accessible. Zenodo publication/GitHub release updates require author approval.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
 }

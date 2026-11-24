@@ -47,3 +47,6 @@ Every numerical figure also has a CSV in tables/. The following macros are gener
 Other displayed values: cap bounds come from tables/cross-specification-sensitivities.json; M1 K=6 from data/audit/paired-effects.json family M1_matched_filler_posthoc_8; R1 correctness from R1_primary_6; M2 other_three from M2_primary_6. E5 rates are literal counts in e5-joint-outcomes.csv. E4 counts/matched repeats are in inventory.json and e4-partial-paired.json. Tables retain pilot/main and model distinctions.
 
 Allowed: dataset-specific associations and measured descriptive costs, with uncertainty. Not allowed: internal cognition/capacity, intentional failures, universal optimality, equivalent accuracy from null tests, first-discovery claims, carbon/cloud/GPU claims, or an integrated MemoryGraph benefit. M1 independence and E5 semantic adherence are not supplied by the statistical code.
+
+
+Version 1 identifier: **10.5281/zenodo.24500468** (reserved; registration/public accessibility not confirmed), https://doi.org/10.5281/zenodo.24500468. Designated GitHub release: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0. An existing public GitHub release points to the earlier audit; final-artifact upload/retargeting and Zenodo publication are not performed by this preparation.

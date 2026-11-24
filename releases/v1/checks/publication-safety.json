@@ -1,0 +1,30 @@
+{
+  "doi": "10.5281/zenodo.24500468",
+  "doi_status": "Reserved; registration/public accessibility not confirmed",
+  "planned_release_url": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0",
+  "numerical_tables_identical_to_rc2": [
+    "releases/v1/tables/cross-specification-sensitivities.csv",
+    "releases/v1/tables/cross-specification-sensitivities.json",
+    "releases/v1/tables/cross_outcomes.csv",
+    "releases/v1/tables/interference_matrix.csv",
+    "releases/v1/tables/m1.csv",
+    "releases/v1/tables/manuscript-inventory.json",
+    "releases/v1/tables/memorygraph-audit.json",
+    "releases/v1/tables/paired_effects.csv",
+    "releases/v1/tables/pareto.csv",
+    "releases/v1/tables/r1_policies.csv",
+    "releases/v1/tables/source-counts.csv",
+    "releases/v1/tables/source-counts.json"
+  ],
+  "scientific_abstract_results_interpretation_identical_to_rc2": true,
+  "public_text_files_scanned": 642,
+  "credentials_or_local_account_path_flags": [],
+  "original_input_preservation": "Separately verified by scientific-quality.json",
+  "licences": "Owner-selected MIT/CC BY 4.0 plus retained upstream notices; permission-audit.json",
+  "prior_public_history": "Preserved; historical audit CSVs/host notes/runners contain owner account-directory provenance. New derivatives redact it; history is preserved.",
+  "manuscript_sha256": "848fc98bf1ca80760c5971531b289caa1ffacad58ae15831dcdd22d4b22dee25",
+  "new_inference": 0,
+  "zenodo_record_published_by_agent": false,
+  "final_artifacts_uploaded_to_github_release": false,
+  "existing_github_release": "Public earlier-audit release; tag/record left unchanged"
+}

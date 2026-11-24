@@ -33,4 +33,4 @@
     ParserElement.enablePackrat()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-494 passed, 14 warnings in 80.90s (0:01:20)
+494 passed, 14 warnings in 104.88s (0:01:44)

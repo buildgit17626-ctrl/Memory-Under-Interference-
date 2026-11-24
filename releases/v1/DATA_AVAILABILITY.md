@@ -1,6 +1,6 @@
 # Data availability and transformations
 
-This local Version 1 candidate contains 5,528 main
+The final Version 1 archive contains 5,528 main
 logical requests plus separate pilots and partial diagnostics. `data/raw/results/utilisation/`
 contains transformed raw call/start/response/scoring/block/validation records, benchmark
 and tokenizer artifacts. `data/audit/` contains source-linked derived analysis. Preserved
@@ -38,5 +38,10 @@ Original report/data: CC BY 4.0; original code: MIT, as owner-approved. HumanEva
 and HumanEval+/EvalPlus Apache-2.0 notices remain applicable. No model/tool binaries
 or publisher HTML/PDF caches are distributed. See THIRD_PARTY_NOTICES.md.
 
-No Zenodo/TechRxiv upload or DOI exists as part of preparation. Archive hashes and local
-version tag identify the prepared bytes; public availability requires owner approval.
+Zenodo DOI 10.5281/zenodo.24500468 is reserved, as supplied by the author; DOI registration,
+public accessibility and release-record publication are not confirmed. Its permanent
+URL is https://doi.org/10.5281/zenodo.24500468. The designated version-specific GitHub release is https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0.
+An existing public GitHub v1.0.0 release/tag points at the earlier audit commit;
+these final artifacts have not been uploaded there by this preparation.
+Main-branch file publication is authorized; Zenodo publication or GitHub release updates require
+separate owner approval. Archive hashes identify the final prepared bytes.
