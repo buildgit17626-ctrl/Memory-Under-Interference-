@@ -40,8 +40,7 @@ or publisher HTML/PDF caches are distributed. See THIRD_PARTY_NOTICES.md.
 
 Zenodo DOI 10.5281/zenodo.24500468 is reserved, as supplied by the author; DOI registration,
 public accessibility and release-record publication are not confirmed. Its permanent
-URL is https://doi.org/10.5281/zenodo.24500468. The designated version-specific GitHub release is https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0.
-An existing public GitHub v1.0.0 release/tag points at the earlier audit commit;
-these final artifacts have not been uploaded there by this preparation.
-Main-branch file publication is authorized; Zenodo publication or GitHub release updates require
-separate owner approval. Archive hashes identify the final prepared bytes.
+URL is https://doi.org/10.5281/zenodo.24500468. The designated version-specific GitHub release is https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1.
+GitHub v1.0.1 packages the approved manuscript Version 1.0 and supersedes the earlier
+v1.0.0 release without moving its tag. GitHub publication is authorized; the author
+will publish Zenodo manually. Archive hashes identify the prepared bytes.

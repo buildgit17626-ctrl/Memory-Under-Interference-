@@ -1,8 +1,9 @@
 # Version 1.0 final artifact release notes
 
 Date: 24 November 2026. Final artifacts verified; not peer reviewed.
-Repository main publication is authorized. Zenodo publication and final-artifact upload
-to the existing GitHub release remain pending approval.
+GitHub packaging release v1.0.1 publishes the approved research manuscript Version 1.0.
+It supersedes v1.0.0 while preserving that tag and history. Scientific findings are unchanged
+from verified commit 723cf5d139144f914023d0fa65b74d340cbcc943. Zenodo remains manual.
 
 - Frozen completed main scope: E0, M1, initial M3, revised M3/R2, M2, R1, E5.
 - Diagnostic pilots separate; revised E4 76/400 and older feasibility versions separate.
@@ -27,7 +28,7 @@ to the existing GitHub release remain pending approval.
 
 The reserved DOI and designated release URL appear below. Reserving an identifier is not
 confirmation of registration, public accessibility or publication. The main push is
-authorized; publishing the Zenodo record, GitHub release or release tag remains unapproved.
+authorized for GitHub v1.0.1. Zenodo publication is not authorized and is left to the author.
 
 
-Version 1 identifier: **10.5281/zenodo.24500468** (reserved; registration/public accessibility not confirmed), https://doi.org/10.5281/zenodo.24500468. Designated GitHub release: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0. An existing public GitHub release points to the earlier audit; final-artifact upload/retargeting and Zenodo publication are not performed by this preparation.
+Version 1 identifier: **10.5281/zenodo.24500468** (reserved; registration/public accessibility not confirmed), https://doi.org/10.5281/zenodo.24500468. Designated GitHub release: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1. GitHub v1.0.1 supersedes the older v1.0.0 package without moving its tag. The research manuscript remains Version 1.0. Zenodo publication is manual.

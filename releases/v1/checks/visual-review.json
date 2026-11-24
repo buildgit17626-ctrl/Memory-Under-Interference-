@@ -16,9 +16,9 @@
     12,
     13
   ],
-  "render_dpi": 85,
-  "pdf_sha256": "848fc98bf1ca80760c5971531b289caa1ffacad58ae15831dcdd22d4b22dee25",
-  "method": "All 13 final pages rendered/inspected; detailed DOI/disclosure/reference and two-column prompt appendix checks",
-  "findings": "No clipping, overlap, orphaned prompt heading or missing glyphs observed. Former whitespace on pages 10/14 removed by flowing references and compact two-column prompt appendix. Main text still spans 10 pages.",
-  "reviewer": "AI-assisted visual audit"
+  "render_dpi": 65,
+  "pdf_sha256": "14b74089f68df65003c80df77b586a902167f419b874a40ca72909acdeb8c12a",
+  "method": "All 13 pages rendered/inspected; publication-link change only; prior layout retained",
+  "findings": "All 13 pages reviewed after approved first-person edits and byline/contribution removals. No clipping/overlap. Version 1.0 research and v1.0.1 GitHub link agree.",
+  "reviewer": "AI-assisted visual audit; scientific content approved by author"
 }

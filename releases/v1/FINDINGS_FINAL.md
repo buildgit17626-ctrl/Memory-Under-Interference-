@@ -1,6 +1,6 @@
 # Version 1 findings
 
-Final Version 1 artifacts, with Zenodo publication/GitHub final-artifact update awaiting author approval. This document records evidence-supported wording, not approval of an internal mechanism or a peer-reviewed claim.
+Final Version 1 scientific content is approved for GitHub v1.0.1 publication. Zenodo publication is reserved for the author. This document records evidence-supported wording, not approval of an internal mechanism or a peer-reviewed claim.
 
 Main-study logical requests verified directly from calls.jsonl: **5,528**. Pilots remain separate; E4 full is partial (76/400), E3/U-family/MG1 unrun.
 
@@ -54,4 +54,4 @@ Pinned MemoryGraph c569143ec6be1c767a2c56c59c936f85bd1fc1cb: 600 labelled pairs,
 Alternative/oracle/extraction mistakes; cap assumptions; independent bundle replication; human semantic adherence annotations; different task populations; validated energy calibration and end-to-end retrieval overhead. Current findings do not measure internal memory, recognition, giving up or learned representations.
 
 
-Version 1 identifier: **10.5281/zenodo.24500468** (reserved; registration/public accessibility not confirmed), https://doi.org/10.5281/zenodo.24500468. Designated GitHub release: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0. An existing public GitHub release points to the earlier audit; final-artifact upload/retargeting and Zenodo publication are not performed by this preparation.
+Version 1 identifier: **10.5281/zenodo.24500468** (reserved; registration/public accessibility not confirmed), https://doi.org/10.5281/zenodo.24500468. Designated GitHub release: https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1. GitHub v1.0.1 supersedes the older v1.0.0 package without moving its tag. The research manuscript remains Version 1.0. Zenodo publication is manual.

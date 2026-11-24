@@ -3,7 +3,7 @@
   "upload_type": "publication",
   "publication_type": "preprint",
   "publication_date": "2026-11-24",
-  "version": "1.0.0",
+  "version": "1.0",
   "doi": "10.5281/zenodo.24500468",
   "creators": [
     {
@@ -11,7 +11,7 @@
       "affiliation": "Independent researcher; IIT Madras student (no institutional endorsement)"
     }
   ],
-  "description": "Independent empirical preprint on context/specification utilization in two small local code models. Posthoc and measurement limitations are explicit. Not peer reviewed. MemoryGraph is a separate prototype, not an evaluated integrated intervention. DOI reserved; release-record publication and public accessibility are not confirmed. Final-artifact upload to the existing GitHub release is pending approval.",
+  "description": "Independent empirical preprint on context/specification utilization in two small local code models. Posthoc and measurement limitations are explicit. Not peer reviewed. MemoryGraph is a separate prototype, not an evaluated integrated intervention. DOI reserved; release-record publication and public accessibility are not confirmed. GitHub packaging release v1.0.1 contains the unchanged approved manuscript Version 1.0.",
   "license": "cc-by-4.0",
   "access_right": "open",
   "keywords": [
@@ -22,10 +22,10 @@
     "CPU package energy",
     "memory retrieval"
   ],
-  "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; third-party notices retained. DOI is reserved, not confirmed registered or accessible. Zenodo publication/GitHub release updates require author approval.",
+  "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; third-party notices retained. DOI is reserved, not confirmed registered or accessible. Zenodo will be published manually by the author. GitHub v1.0.1 publication is authorized.",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.0",
+      "identifier": "https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1",
       "relation": "isSupplementTo",
       "scheme": "url"
     }

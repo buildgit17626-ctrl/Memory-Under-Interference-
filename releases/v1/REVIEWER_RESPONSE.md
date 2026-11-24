@@ -18,5 +18,5 @@
 |Authorship/affiliation inflated|Owner-confirmed name, student status, independent work and contributions; AI help disclosed|Final author review required; no institutional endorsement|
 
 Disposition: final Version 1 is scientifically supportable only with these limitations.
-Zenodo/GitHub release publication remains unapproved; the main repository push is authorized.
+GitHub v1.0.1 publication is authorized; Zenodo publication remains manual and unperformed.
 Final build and archive checks are recorded separately.
