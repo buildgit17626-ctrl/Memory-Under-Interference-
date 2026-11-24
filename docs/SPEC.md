@@ -807,3 +807,21 @@ Keep global PAUSE until explicit owner resume with live500ms sensor log, AC and
 Best performance. No elapsed-time cutoff; quality/safety stops and five retries
 remain. Maximum1000 new measured calls beyond340 currently remaining R2 calls;
 E4 setup/priming overhead is additional. Failed gates halt later stages.
+
+## Approved E4 workload amendment (2026-11-24)
+
+The original E4 v4 pilot correctly stopped after10 calls: a0.5B warm4000-prefix
+request returned19 tokens at native done_reason=stop rather than the required64.
+Input/cache/residency and energy checks passed. Preserve the failed feasibility
+pilot and frozen artifacts. Owner explicitly approved a fresh constrained E4
+scope then the unchanged E3 diagnostic, after reviewing the concrete proposal.
+
+New E4-schema-v5 asks for a1000-integer JSON array with the same native format
+schema in both arms. Keep64 output, native cache verification and every safety
+gate. Both arms receive identical one-token grammar setup with a distinct raw
+prefix before warm-only priming; all controls logged outside measured energy.
+New20-call pilot then400 fresh full calls only if validity passes. No old pilot
+pooling or weakened gate. Limit inference to the constrained synthetic workload,
+including sampling/grammar costs. No end-to-end energy claim. Completed R2/M2
+are audited/skipped; no requests repeated. Full E3 remains unauthorized. New
+source/config/registration hashes chain to unchanged v4; commit before inference.

@@ -1,0 +1,5 @@
+{
+  "prompt": "SCHEMA_SETUP_ONLY\nOutput a JSON array of exactly 1000 integers.",
+  "output_budget": 1,
+  "both_conditions": true
+}

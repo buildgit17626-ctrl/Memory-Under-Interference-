@@ -519,3 +519,40 @@ Owner supplied fresh ver11_hwf.CSV. Preflight00:49 IST observed AC1/Best
 performance,500ms cadence,0.202s sensor age and148.91GiB free. PAUSE remains
 active during preparation; first real request must follow commit/hash checks
 and the existing stable idle baseline gate. Never reuse changed-layout ver10.
+
+## E4 workload verification and owner-approved amendment - 2026-11-24
+
+Verified original E4 pilot10/20:9 requests reached64 output tokens; one0.5B
+warm4000-prefix request returned19 at native done_reason=stop, HTTP200, no
+transport error. Input4055 and cached4030 matched the frozen schedule and
+independently tokenized common prefix. Selected CPU residency and energy
+verified. Recomputing outcome reproduced short_fixed_workload and the halt;
+6 relevant existing tests passed and both frozen execution chains verified.
+Original raw response included unrelated Python code; its cause is unknown.
+This is workload feasibility evidence, not a cache-failure conclusion.
+
+Owner reviewed a concrete draft and explicitly approved "revised E4, then E3."
+New scope e4-schema-v5 uses the same JSON-array1000-integer constraint in both
+measured arms. Retain64 output and every original cache/measurement/safety
+gate. Both receive matching one-token schema setup with an unrelated raw
+prefix before warm-only priming, with native residency checks and setup logs.
+Fresh20-call pilot before400 fresh full measured requests; old10 never pooled.
+New schema/request/setup and incomplete-array-prefix checks supplement the
+unchanged exact64 workload gate. No dependency, backend or model change.
+
+Both new phases are frozen separately. New worker preserves v4 retry/measurement
+function exactly, importing only the new scoped validity functions. New driver
+audits/skips completed R2/M2 and chains to unchanged frozen E3 diagnostic only
+after E4 passes. Original v3/v4 source/config/registrations/results unchanged;
+all10 original pilot files sealed with raw byte lengths and SHA256 checksums.
+Schema/sampler overhead limits generalization to this constrained synthetic
+workload; setup/priming energy remains outside resident measured requests.
+No ordinary-coding or end-to-end energy-saving claim follows from it.
+
+Pre-launch amendment checks: full suite474 passed with14 existing dependency
+warnings; Ruff clean. All21 new checks passed, including byte-preservation of
+the old pilot, identical scored pair requests/schema, setup parity, pilot/full
+separation and unchanged retry/measurement function AST. Prepared20/400 unique
+new schedules; largest input4058 plus64 reserved output fits16384 context.
+Ver11 preflight observed AC1/Best performance,500ms cadence and0.343s age.
+No schema-constrained inference preceded the new commit/hash verification.

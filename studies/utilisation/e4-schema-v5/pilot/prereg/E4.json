@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-24",
+  "hypotheses": "Unchanged owner E4 question: prefix reuse may change latency and CPU energy.",
+  "competing_predictions": "No savings; overhead; opposite effects; unchanged causal limits.",
+  "conditions": [
+    "cold",
+    "warm"
+  ],
+  "outcomes": "Resident request timings/tokens/cache count and qualified package energy.",
+  "analysis": "AMENDMENT.md; paired repeat differences and condition totals; pilot excluded.",
+  "exclusions": "No early-ending replacement, no missing-energy imputation, no old pilot pooling.",
+  "interpretation_changers": "Cache mismatch, grammar setup/sampling cost, drift, workload failures.",
+  "inference_boundary": "Two CPU models and one schema-constrained synthetic probe on one laptop.",
+  "config_hash": "afb6830b04e438b339d155c0760634a779d04a3c427472c894465c2efbd2ba2f",
+  "stimuli_hash": "d0a49acf1c70fb05d38b034a05929242601a49878c6c869e1718c14812d5f607",
+  "schedule_hash": "6e41b9a4e576f3893d8f3c6e83e52a57ddcf73013811a44ae8c8a801a4cd146c",
+  "call_count": 20,
+  "retains_output_budget": 64,
+  "schema_setup_in_both_arms": true
+}
