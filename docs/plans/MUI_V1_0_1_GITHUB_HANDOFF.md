@@ -30,3 +30,8 @@ PDF/source compilation, archive and principal reproduction pass; public download
 match final local bytes; old tag remains 51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16.
 Assumptions: owner approval and DOI reservation remain valid; no arXiv/Zenodo
 publication is implied by a GitHub release.
+
+Owner's subsequent PDF comments: remove the title-page name, affiliation and date,
+and remove the selected author-contribution paragraph. Retain the AI-assistance
+disclosure and preprint/Version 1.0 status label. This is a PDF presentation change;
+scientific content/results remain frozen. Rebuild all four assets before upload.

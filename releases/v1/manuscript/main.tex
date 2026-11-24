@@ -28,8 +28,8 @@
 \setlength{\headheight}{14pt}
 \input{numbers.tex}
 \title{\vspace{-1cm}Memory Under Interference:\\Context Utilization, Specification Confusion, and Inference Efficiency in Small Code Language Models}
-\author{Dhruv Brahmbhatt\\\normalsize IIT Madras student; independent researcher\thanks{This independent study is not presented as sponsored, supervised or endorsed by IIT Madras.}}
-\date{24 November 2026\\[3pt]\small Preprint -- Version 1.0 -- Not peer reviewed}
+\author{}
+\date{\small Preprint -- Version 1.0 -- Not peer reviewed}
 
 \begin{document}
 \maketitle
@@ -140,9 +140,9 @@ GraphRAG builds graph indexes and community summaries for corpus-level
 questions \citep{graphrag}; Mem0 studies a more integrated persistent-memory
 system \citep{mem0}. Our companion MemoryGraph implements far less. Its small
 entity graph and synthetic retrieval results motivate a future bridge, not a
-claim of equivalent architecture or evaluated user benefit. The release's
-related-work table records each publication's design, overlap and the limited
-distinction supported here. This is a focused review, not an exhaustive search
+claim of equivalent architecture or evaluated user benefit. Our related-work
+table records each publication's design, overlap and the limited distinction
+supported here. This is a focused review, not an exhaustive search
 or proof of priority.
 
 \section{Evaluation Framework}
@@ -212,7 +212,7 @@ no-filler outcomes; the sample used for selection is never the isolation
 comparator. Its model-selected populations and weaker renamed-specification
 distractors remain separate from the revised designs.
 
-The later studies use the original fixed 40-task roster for both models. They
+In our later studies, we use the original fixed 40-task roster for both models. We
 use temperature 0 and one generation per task-condition-model. Context is
 32,768 for task bundles, 16,384 for retention/revised interference/interruptions,
 and 8,192 for preferences. Output budgets are 2,048 except that active bundles
@@ -264,7 +264,7 @@ uses four posthoc tests. These corrections do not control every analysis ever
 examined in the project. Intervals are pointwise, not simultaneous family
 intervals. Null tests do not establish equivalent accuracy.
 
-The audit preserves failed requests and capped generations. Caps are nonpasses
+We preserve failed requests and capped generations. Caps are nonpasses
 for bounded correctness endpoints but unknown for the uncensored cross-pass
 taxonomy. API, input or evaluator-infrastructure failures are missing for
 valid-input accuracy and separately reduce operational yield. We report cap
@@ -525,7 +525,7 @@ of the experiment.
 
 \section{MemoryGraph Companion Prototype}
 \subsection{From Oracle Retention to Practical Memory Retrieval}
-The existing MemoryGraph implementation is audited at commit
+We audited our existing MemoryGraph implementation at commit
 \texttt{c569143ec6be1c767a2c56c59c936f85bd1fc1cb}. It stores editable local
 plain-text memories; TF-IDF and pretrained sentence embeddings rank candidates.
 A NetworkX bipartite graph links memories to a small fixed entity vocabulary.
@@ -548,7 +548,7 @@ separate saved synthetic benchmark evaluates ranking only; MG1 remains unrun.}
 \label{fig:mg}
 \end{figure*}
 
-Its saved synthetic evaluation contains 600 labelled query--memory pairs,
+Our saved synthetic evaluation contains 600 labelled query--memory pairs,
 24 fictional profiles and 120 queries with five candidate memories each.
 Exactly one candidate is labelled relevant. Recomputed embedding MRR is
 \EmbeddingMRR{}, versus \LexicalMRR{} for TF-IDF, using the saved scores and
@@ -567,7 +567,7 @@ the memory-enabled response begins with \texttt{import unittest}. Both
 successful API responses reach the 128-token output budget, and correctness
 and energy were not scored. A preceding failed demonstration run is retained separately. This is a concrete example of availability without the intended
 surface behavior, not a controlled integrated benefit or failure-rate estimate.
-The HumanEval+ study and this synthetic benchmark are never pooled. An
+We do not pool our HumanEval+ study with this synthetic benchmark. An
 integrated MG1 comparison remains Version 2 work.
 
 \section{Discussion}
@@ -614,7 +614,7 @@ instructions, with a validated adherence rubric, rather than assume that more
 retained context or a reminder must help.
 
 \section{Limitations}
-The results concern two small quantized models, one code benchmark and one CPU
+Our results concern two small quantized models, one code benchmark and one CPU
 laptop. Training-set exposure is unknown; benchmark familiarity is neither ruled
 out nor inferred from a pass. Fixed task rosters, noisy eligibility selection,
 one structural generation per cell and only three isolated stochastic samples
@@ -622,7 +622,7 @@ limit generalization. Shared functions connect M1 bundles and prevent robust
 component-level intervals. The smaller-model effects need not predict larger
 models, other quantizations, GPUs or cloud deployments.
 
-The study is revised and partly exploratory. Registrations and dated amendments
+Our study is revised and partly exploratory. Registrations and dated amendments
 are preserved, but the final synthesis and cross-specification audit are
 posthoc. Local Git hashes support provenance, not independent public
 timestamping. Family correction does not erase prior exploration. The separate
@@ -663,7 +663,7 @@ and the designated version-specific GitHub release URL:
 \url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1}.
 The DOI is reserved; its registration and public accessibility have not been
 confirmed. GitHub packaging release v1.0.1 distributes this approved manuscript Version 1.0.
-The author will complete Zenodo publication separately. The artifacts supply code,
+We will complete Zenodo publication separately. The artifacts supply code,
 frozen designs, transformed raw journals,
 per-task scores, numerical power/time samples, analysis tables and source/hash
 mappings. Original raw evidence remains unchanged locally. Unnecessary local
@@ -672,16 +672,12 @@ original/public hashes distinguish them. Full multi-sensor CSV mirrors are not
 redistributed; the numerical CPU-package/time exports reproduce the included
 energy integrations. They do not calibrate the sensor or reconstruct other
 hardware channels. The archive is an analysis release, not a claim that its
-sanitized files can resume the original frozen supervisor. Zenodo publication
-is left to the author and is not performed by this GitHub handoff.
+sanitized files can resume the original frozen supervisor. We will complete Zenodo publication separately; this GitHub handoff does not publish it.
 
-\section{Author Contributions and AI-Assistance Disclosure}
-Dhruv Brahmbhatt contributed the research questions, design decisions, experiment
-oversight and interpretation review. He is an IIT Madras student conducting
-this work independently; institutional supervision, sponsorship and endorsement
-are not claimed. AI assistance supported setup, autonomous Ollama execution,
+\section{AI-Assistance Disclosure}
+We used AI assistance for setup, autonomous Ollama execution,
 harness and analysis coding, distractor construction, auditing, literature
-organization and manuscript drafting. AI-generated constructions were subject
+organization and manuscript drafting. We subjected AI-generated constructions
 to the recorded reference/witness checks; AI assistance is not independent
 scientific validation. Original report/data are licensed under CC BY 4.0 and original code
 under MIT, with third-party notices retained.
@@ -703,7 +699,7 @@ Energy readings are approximate post-load CPU-package observations. The revised
 interference study has one missing energy window in addition to its API failure.
 Pilot and partial-diagnostic counts remain separate in the archive.
 
-Internal IDs are retained here to connect the narrative to frozen protocols.
+We retain internal IDs here to connect our narrative to the frozen protocols.
 E0 is the isolated strategy comparison; initial M3 is selected-task context
 load; M1 is task bundling; revised M3/R2 is semantic interference; M2 is static
 return-to-task interference; R1 is retention; E5 is preference placement.
@@ -717,14 +713,14 @@ equivalence. M1's diagnostic/exploratory comparisons and E5 secondary
 correctness contrasts are supplied in the archive rather than relabelled primary.
 \small\input{primary_table.tex}\normalsize
 
-The broad starting claims about load, replay and a possible recognition--generation
-gap motivated the project but are not all tested by this release. Load contrasts
+Our broad starting claims about load, replay and a possible recognition--generation
+gap motivated this project, but we do not test all of them in this release. Load contrasts
 do not establish internal capacity; the revised retention design does not test
 the original replay-rate phase diagram; and the unrun recognition/hint studies
 cannot establish a know--do gap. Frozen hypotheses and amendments remain intact.
 
 \section{Scoring, Censoring and Oracle Audit}
-The audit re-extracts saved outputs using the frozen extractor and checks native
+We re-extract saved outputs using the frozen extractor and check native
 request/response measurements. Separate sandbox records cross-score 1,029
 uncensored revised-interference outputs on their alternative suites, including
 isolation and controls. Sixty capped per-function candidates and one merged
@@ -732,7 +728,7 @@ complete-fence candidate are scored separately; none changes the audited target
 correctness outcome. This does not prove the extractor is optimal or justify
 removing caps from the registered endpoint.
 
-HumanEval/32's original oracle anomaly is retained, with an exclusion
+We retain HumanEval/32's original oracle anomaly and report an exclusion
 sensitivity. Caps-as-missing and optimistic cap-pass scenarios preserve their
 different denominators. Held-out eligibility sensitivity excludes the selecting
 P1 sample0 from isolated-strategy comparison outcomes. The original all-task
@@ -746,7 +742,7 @@ point estimate and significance are sensitive to that assignment. No claim of
 missing-at-random censoring is made. Zero both-pass cells remain explicit.
 
 \section{Energy Robustness and the Partial Cache Diagnostic}
-Original block baselines, drift flags and time/power windows remain in the
+We retain the original block baselines, drift flags and time/power windows in our
 export. Start, end and midpoint subtraction are reported separately. Excluding
 drift or short windows changes the retained task population; paired cost-ratio
 sensitivities require covered observations in both arms. Undefined ratio draws
@@ -766,7 +762,7 @@ is outside measured requests. A setup-only paused intent is not a completed
 measured generation. No full E3 or U-family outcome is substituted.
 
 \section{Companion Implementation and Reproduction Boundaries}
-The pinned MemoryGraph source snapshot includes local CRUD, ranking, a fixed
+Our pinned MemoryGraph source snapshot includes local CRUD, ranking, a fixed
 alias graph, two narrow conflict categories and approval-gated optional Ollama
 comparison. The archived synthetic dataset, per-pair scores and per-query
 rankings permit MRR recalculation without embedding inference. Classifier
@@ -783,7 +779,7 @@ sanitized archive bytes have their own checksums.
 
 \twocolumn
 \section{Representative Rendered Prompts}\label{app:prompts}
-These examples are selected saved requests for HumanEval/0 on 0.5B, not new
+We selected these saved requests for HumanEval/0 on 0.5B; they are not new
 prompt variants. The system message is \texttt{You are a helpful coding assistant.}
 The public \texttt{examples/} directory supplies the exact UTF-8 prompt strings,
 full call keys, native token counts, decoding options and SHA256 values; those

@@ -17,6 +17,7 @@ from analysis.memory_release.common import (
     ROOT,
 )
 from analysis.memory_release.package import include
+from analysis.memory_release.voice import first_person
 
 
 def main() -> None:
@@ -52,7 +53,7 @@ def main() -> None:
             "\\section{Data and Code Availability}", 1
         )[0]
 
-    if scientific_text(old) != scientific_text(new):
+    if scientific_text(first_person(old)) != scientific_text(new):
         raise ValueError(
             "Scientific abstract/results/interpretation changed during publication prep"
         )
@@ -111,7 +112,7 @@ def main() -> None:
         "planned_release_url": RELEASE_URL,
         "verified_base_commit": reference,
         "numerical_tables_identical_to_verified_base": unchanged,
-        "scientific_abstract_results_interpretation_identical_to_verified_base": True,
+        "science_unchanged_except_approved_first_person_edits": True,
         "public_text_files_scanned": checked,
         "credentials_or_local_account_path_flags": flags,
         "original_input_preservation": "Separately verified by scientific-quality.json",

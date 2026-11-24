@@ -28,6 +28,10 @@ def main():
         "50.20",
     ]
     absent = [value for value in expected if value not in text]
+    # Owner's PDF review removed the byline, affiliation/date and contribution paragraph.
+    byline_hits = [
+        value for value in ("Dhruv Brahmbhatt", "IIT Madras", "24 November 2026") if value in text
+    ]
     log = (BASE / "manuscript/main.log").read_text(encoding="utf-8")
     tex = (BASE / "manuscript/main.tex").read_text(encoding="utf-8")
     citations = set()
@@ -58,6 +62,8 @@ def main():
         "main_text_pages": int(end_page.group(1)) if end_page else references_page - 1,
         "references_start_page": references_page,
         "missing_key_numbers": absent,
+        "removed_byline_text_hits": byline_hits,
+        "pdf_author_metadata": reader.metadata.get("/Author"),
         "missing_bibliography_entries": sorted(citations - entries),
         "cited_entries": len(citations),
         "verified_publications": len(entries),
@@ -74,6 +80,7 @@ def main():
     print(json.dumps(status))
     if (
         absent
+        or byline_hits
         or citations - entries
         or status["undefined_reference_warnings"]
         or bounds
