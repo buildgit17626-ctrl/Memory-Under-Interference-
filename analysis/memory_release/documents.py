@@ -370,6 +370,8 @@ Use Python 3.13 in a new environment; install requirements-reanalysis.txt for
 offline analysis. The historical full experiment lock remains in code/requirements-lock.txt.
 requirements-reanalysis-lock.txt records every installed package in the fresh
 Windows verification environment; it can be used instead of the shorter direct list.
+The demonstrated environment is Windows 11/Python 3.13. Historical analysis imports
+still require Windows modules; Linux/macOS portability has not been demonstrated.
 Then:
 
 ```powershell

@@ -89,8 +89,8 @@ compilation and clean-environment verification are recorded under
 
 **Data availability:** the public archive supplies sanitized raw-response
 journals, exact prompts/configurations, per-task scores, numerical CPU power/time
-samples, analysis code and integrity manifests. Its portable script reproduces
-saved-data analyses without Ollama, embeddings or original data paths. See
+samples, analysis code and integrity manifests. Its Windows/Python 3.13 script
+reproduces saved-data analyses without Ollama, embeddings or original data paths. See
 [the tested environment](releases/v1/checks/portable-environment.json) for the
 actual verification and its boundaries. Original approximately 11 GB overlapping
 multi-channel sensor mirrors are excluded; their deduplicated CPU power/time
