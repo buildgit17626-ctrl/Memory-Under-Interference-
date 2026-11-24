@@ -1,5 +1,24 @@
 # SPEC: The cost of a correct answer
 
+## Authorized Memory Under Interference evidence audit (2026-11-24)
+
+Owner requests Phases 1–4 of a final empirical audit before interpreting or
+drafting a preprint. Generation stays paused. Read-only analysis code is in
+`analysis/memory_audit`; outputs are isolated in
+`artifacts/memory-audit/2026-11-24-v1`. Preserve original journals, scores,
+hypotheses and frozen configurations. New sandboxed cross-scoring and extraction
+checks are explicitly posthoc, recorded separately. Reproduce registered contrasts
+without relabeling the entire audit as preregistered. State task/bundle dependencies,
+all denominators, missingness, model-specific uncertainty and energy sensitivities.
+Plan and learning record have the name `MEMORY_FINAL_AUDIT_2026_11_24.md`.
+
+Actual collected scopes supersede the original broad experimental wish list:
+E0, initial selected-population M3, full M1, five-policy R1, semantic revised
+M3/R2, static length-matched M2, preference-placement E5 and partial constrained
+E4. Pilots stay separate. E3/U-family and MemoryGraph interventions are unrun.
+No new inference, literature novelty claim, manuscript or submission is added by
+this milestone. Interpretations remain provisional pending owner review.
+
 Publication follow-up (2026-10-28): owner authorizes pushing necessary study
 materials to the existing GitHub repository and making it public. The
 `artifacts/` export includes reports, all 840 scored rows, saved response bodies,
