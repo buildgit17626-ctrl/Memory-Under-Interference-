@@ -1,5 +1,12 @@
 # SPEC: The cost of a correct answer
 
+GitHub publication authorization (2026-11-24): publish v1.1.0 using the exact
+approved assets from 43ab2a71ab1436ce397d44f528645254943e6a9e. Repository-facing
+publication metadata may be updated; preserve all manuscript/archive bytes and
+prior release history. Verify public downloads, commit identity and SHA-256.
+DOI 10.5281/zenodo.24500468 remains reserved; Zenodo is manual and not authorized.
+No experiments or manuscript revisions. Plan: docs/plans/MUI_V1_1_0_PUBLICATION.md.
+
 Final formatting authorization (2026-11-24): installed/embedded Times New Roman,
 accurate PDF metadata, concise terminology/abstract/availability corrections and
 final local v1.1.0 preparation. Preserve approved science and prior public releases;

@@ -1,0 +1,30 @@
+{
+  "approved_commit": "43ab2a71ab1436ce397d44f528645254943e6a9e",
+  "manuscript_version": "1.1",
+  "release_tag": "v1.1.0",
+  "doi": "10.5281/zenodo.24500468",
+  "doi_status": "Reserved; publication not confirmed",
+  "assets": [
+    {
+      "name": "Memory_Under_Interference_v1.pdf",
+      "bytes": 288662,
+      "sha256": "b75aa98f96847d72115dd26cc687bb1ccf88ab26adcf34d361da5e5469953ece"
+    },
+    {
+      "name": "Memory_Under_Interference_v1_source.zip",
+      "bytes": 455051,
+      "sha256": "bb4fdb67b94cefa80def2280fe44fd33c6a1805d1a79cc9bd080eedf5e5b95dd"
+    },
+    {
+      "name": "Memory_Under_Interference_v1_reproducibility.zip",
+      "bytes": 34682741,
+      "sha256": "ec84da2d6d05ac02802eb96db916a38a8e2c2c5ed662894d60cb473a269afd3b"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 323,
+      "sha256": "cd8e728a7b5ae1d7ec61af05152cf3f7313daf8a56c3c5434322434eab83acdf"
+    }
+  ],
+  "approved_bytes_preserved": true
+}

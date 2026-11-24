@@ -1,0 +1,63 @@
+{
+  "previous_releases": {
+    "v1.0.0": {
+      "tag": {
+        "object_sha": "51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16",
+        "commit_sha": "51a95541e9f9c94ef8c2ca35a743bd3dfd41dc16"
+      },
+      "release": {
+        "id": 456742975,
+        "tag_name": "v1.0.0",
+        "name": "[Superseded] Memory Under Interference \u00e2\u20ac\u201d Research Release v1.0.0",
+        "target_commitish": "main",
+        "draft": false,
+        "prerelease": false,
+        "body_sha256": "07a01368f85f82aae875d868894f8216736a3d163c0f952cb7666d71300a809b",
+        "assets": []
+      }
+    },
+    "v1.0.1": {
+      "tag": {
+        "object_sha": "fda89d9d9c04cf14c3dad2748a14c62f146116cb",
+        "commit_sha": "e91f2f55cda2f5c90f190feec9944958f66e3a42"
+      },
+      "release": {
+        "id": 456800391,
+        "tag_name": "v1.0.1",
+        "name": "Memory Under Interference \u00e2\u20ac\u201d Manuscript Version 1.0 (package v1.0.1)",
+        "target_commitish": "e91f2f55cda2f5c90f190feec9944958f66e3a42",
+        "draft": false,
+        "prerelease": false,
+        "body_sha256": "9c7c6eebd6b5c8ba187e77ab87c005bca3e0806866652f957d6bacdd4fde3590",
+        "assets": [
+          {
+            "id": 787309273,
+            "name": "Memory_Under_Interference_v1.pdf",
+            "size": 260706,
+            "digest": "sha256:14b74089f68df65003c80df77b586a902167f419b874a40ca72909acdeb8c12a"
+          },
+          {
+            "id": 787309269,
+            "name": "Memory_Under_Interference_v1_reproducibility.zip",
+            "size": 34599350,
+            "digest": "sha256:c3c46df1d3176f60c41457c9ab26fb0e7dd8ac5fcfd2fde5dfb5eb6e685c45dc"
+          },
+          {
+            "id": 787309271,
+            "name": "Memory_Under_Interference_v1_source.zip",
+            "size": 161835,
+            "digest": "sha256:659975c5206321e2ef1c31c0c777e12b87da4e8e42731663fa0294f29e3f2cbc"
+          },
+          {
+            "id": 787309268,
+            "name": "SHA256SUMS.txt",
+            "size": 320,
+            "digest": "sha256:adc7c136f9565d18860288a311df557c10436108fd1d18c594028bb4a66fb893"
+          }
+        ]
+      }
+    }
+  },
+  "hooks": [],
+  "workflow_count": 0
+}

@@ -10,27 +10,34 @@ test-suite correctness, token use, latency and estimated CPU-package energy.
 The study measures observable behavior and computation. It does not measure
 internal memory capacity, inspect cognition or establish intentional giving up.
 
-## Version 1 final preprint artifacts
+## Version 1.1 research release
 
-Final Version 1 artifacts, 24 November 2026; not peer reviewed. Generation is paused.
-The reserved Zenodo DOI is **10.5281/zenodo.24500468**:
-[permanent DOI URL](https://doi.org/10.5281/zenodo.24500468).
-Reservation does not confirm DOI registration, publication or public accessibility.
-The designated version-specific GitHub release is
-[v1.0.1](https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1).
-GitHub packaging release **v1.0.1** contains the approved research manuscript
-**Version 1.0**, unchanged scientifically from verified commit
-`723cf5d139144f914023d0fa65b74d340cbcc943`. It supersedes the older v1.0.0
-release while preserving its tag and history. Zenodo publication remains manual;
-this handoff does not publish the reserved Zenodo record.
+Manuscript **Version 1.1**, GitHub package **v1.1.0**, 24 November 2026; not peer reviewed.
+[Version-specific release and four research assets](https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.1.0).
+The final manuscript has 13 pages with embedded Times New Roman. This editorial
+and typography revision preserves the approved scientific findings and evidence.
 
-- [Manuscript PDF](releases/v1/Memory_Under_Interference_v1.pdf)
-- [Manuscript source bundle](releases/v1/Memory_Under_Interference_v1_source.zip)
-- [Sanitized public reproducibility archive](releases/v1/Memory_Under_Interference_v1_reproducibility.zip)
-- [Findings and uncertainty](releases/v1/FINDINGS_FINAL.md)
-- [Publication-readiness report](releases/v1/PUBLICATION_READINESS.md)
-- [Claim-to-evidence mapping](releases/v1/CLAIMS_AND_EVIDENCE.md)
-- [Reproduction instructions and boundaries](releases/v1/README.md)
+Reserved Zenodo DOI: **10.5281/zenodo.24500468**
+([permanent identifier](https://doi.org/10.5281/zenodo.24500468)).
+The DOI is reserved; Zenodo publication/registration and public accessibility
+are not confirmed. The author will complete Zenodo manually; this GitHub release
+does not publish the Zenodo record.
+
+- [Final manuscript PDF](releases/v1.1/Memory_Under_Interference_v1.pdf)
+- [Manuscript source bundle](releases/v1.1/Memory_Under_Interference_v1_source.zip)
+- [Sanitized reproducibility archive](releases/v1.1/Memory_Under_Interference_v1_reproducibility.zip)
+- [SHA-256 manifest](releases/v1.1/SHA256SUMS.txt)
+- [Reproduction instructions and boundaries](releases/v1.1/README.md)
+- [Source compilation and licensed font requirements](releases/v1.1/BUILDING.md)
+- [Findings and uncertainty](releases/v1.1/FINDINGS_FINAL.md)
+- [Publication handoff and verification](docs/publication/v1.1.0/README.md)
+
+The exact approved assets come from commit
+`43ab2a71ab1436ce397d44f528645254943e6a9e`; the publication commit changes only
+repository-facing metadata/documentation. Preparation-time reports inside the
+immutable archives describe their pre-publication snapshot. Current publication
+verification is recorded separately. Existing v1.0.0 and v1.0.1 tags, releases
+and assets are preserved.
 
 The manuscript reports seven completed studies and **5,528 main logical requests,
 including documented failures**. Its posthoc cross-specification analysis finds
@@ -92,13 +99,13 @@ The original evidence audit verified 625 local files unchanged. The release
 adds source-linked numerical checks, a worked target/distractor example, exact
 selected prompts and an offline public-data reproduction path. Current tests,
 compilation and clean-environment verification are recorded under
-[release checks](releases/v1/checks).
+[release checks](releases/v1.1/checks).
 
 **Data availability:** the public archive supplies sanitized raw-response
 journals, exact prompts/configurations, per-task scores, numerical CPU power/time
 samples, analysis code and integrity manifests. Its Windows/Python 3.13 script
 reproduces saved-data analyses without Ollama, embeddings or original data paths. See
-[the tested environment](releases/v1/checks/portable-environment.json) for the
+[the tested environment](releases/v1.1/checks/final-clean-environment.json) for the
 actual verification and its boundaries. Original approximately 11 GB overlapping
 multi-channel sensor mirrors are excluded; their deduplicated CPU power/time
 streams reproduce the included available integrals. Other sensor channels,
@@ -140,6 +147,6 @@ their existing notices; see the release's THIRD_PARTY_NOTICES.md. HumanEval and
 HumanEval+/EvalPlus are not relicensed by that grant.
 
 Final upload files and instructions are in
-[the upload guide](releases/v1/UPLOAD_GUIDE.md). The outer SHA-256 manifest is
-[SHA256SUMS.txt](releases/v1/SHA256SUMS.txt); the archive also contains an internal
+[the publication handoff](docs/publication/v1.1.0/README.md). The outer SHA-256 manifest is
+[SHA256SUMS.txt](releases/v1.1/SHA256SUMS.txt); the archive also contains an internal
 file manifest. The reserved DOI is not evidence that a release record is public.
