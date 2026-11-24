@@ -41,6 +41,7 @@ def main() -> None:
             "examples",
             "supplement",
             "environment",
+            "cross",
             "robustness",
             "report",
             "all",
@@ -130,6 +131,10 @@ def main() -> None:
         from analysis.memory_audit.environment import environment_audit
 
         environment_audit(DESTINATION)
+    if args.step == "cross":
+        import pandas as pd
+
+        cross_audit(pd.read_csv(DESTINATION / "calls-with-adherence.csv"), DESTINATION)
     if args.step in {"report", "all"}:
         write_report(DESTINATION)
         from analysis.memory_audit.review import write_review

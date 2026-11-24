@@ -328,9 +328,15 @@ def cross_audit(frame: pd.DataFrame, destination: Path) -> None:
         )
     cross = pd.DataFrame(rows)
     cross.to_csv(destination / "cross-pass-per-response.csv", index=False)
-    cross.groupby(["model", "condition", "cell"]).size().rename("count").to_csv(
-        destination / "cross-pass-counts.csv"
+    # Explicit zeros distinguish an absent outcome from an unmeasured/missing cell.
+    cells = ["target_only", "distractor_only", "both_pass", "both_fail", "invalid_or_censored"]
+    grid = pd.MultiIndex.from_product(
+        [sorted(cross.model.unique()), sorted(cross.condition.unique()), cells],
+        names=["model", "condition", "cell"],
     )
+    cross.groupby(["model", "condition", "cell"]).size().reindex(grid, fill_value=0).rename(
+        "count"
+    ).to_csv(destination / "cross-pass-counts.csv")
     effects = []
     for model, g in cross.groupby("model"):
         a = (
