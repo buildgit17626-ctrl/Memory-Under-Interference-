@@ -1,0 +1,45 @@
+{
+  "original_mirrors": 240,
+  "deduplicated_groups": 12,
+  "windows": 12481,
+  "available_recorded_windows": 12479,
+  "disagreements": [],
+  "unavailable_windows": [
+    {
+      "key": "e0dd0ee729ace942c5702cc1806cc7b2b83e176c941c4865eb1b991c2e8de109",
+      "kind": "post_load",
+      "sensor_group": "power-002",
+      "start": 1795396507.29446,
+      "end": 1795396533.020264,
+      "seconds": 25.7258038520813,
+      "raw_wh": null,
+      "adjusted_wh": null,
+      "flags": [
+        "sensor_gap"
+      ],
+      "recomputed_wh": null,
+      "difference_wh": null,
+      "agrees_within_1e_8_wh": null,
+      "unavailable_reason": "sensor gap >1s"
+    },
+    {
+      "key": "e0dd0ee729ace942c5702cc1806cc7b2b83e176c941c4865eb1b991c2e8de109",
+      "kind": "total",
+      "sensor_group": "power-002",
+      "start": 1795396505.892037,
+      "end": 1795396533.020264,
+      "seconds": 27.12822699546814,
+      "raw_wh": null,
+      "adjusted_wh": null,
+      "flags": [
+        "sensor_gap"
+      ],
+      "recomputed_wh": null,
+      "difference_wh": null,
+      "agrees_within_1e_8_wh": null,
+      "unavailable_reason": "sensor gap >1s"
+    }
+  ],
+  "max_abs_error_wh": 2.7440549832391525e-13,
+  "note": "Numeric integration reproducibility, not sensor calibration."
+}

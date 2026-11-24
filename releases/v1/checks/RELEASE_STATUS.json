@@ -1,0 +1,27 @@
+{
+  "title": "Memory Under Interference: Context Utilization, Specification Confusion, and Inference Efficiency in Small Code Language Models",
+  "version": "1.0.0",
+  "candidate_tag": "v1.0.0-rc1",
+  "source_commit": "88dbf772c1140680251dca399fdc4e1da48dbb4f",
+  "memorygraph_commit": "c569143ec6be1c767a2c56c59c936f85bd1fc1cb",
+  "readiness": "READY WITH DISCLOSED LIMITATIONS",
+  "main_text_pages": 9,
+  "total_pdf_pages": 12,
+  "main_logical_requests": 5528,
+  "pytest_passed": 492,
+  "ruff": "passed",
+  "pdf_compiled_and_rendered": true,
+  "new_model_or_embedding_inference": 0,
+  "external_publication": false,
+  "scientific_blockers": [],
+  "release_gate": "Final author interpretation/upload approval",
+  "limitations": [
+    "Posthoc cross-pass finding sensitive to adverse censoring",
+    "M1 overlapping fixed bundles; no robust component CI",
+    "R1 oracle/length/position/instruction/output confounding",
+    "E5 strict-metric floor; no human semantic annotation",
+    "CPU-package estimates uncalibrated; E4 incomplete",
+    "Synthetic MemoryGraph rankings are not integrated MG1 evidence",
+    "Two quantized models, one benchmark and one CPU"
+  ]
+}

@@ -1,0 +1,1326 @@
+{
+  "commit": "c569143ec6be1c767a2c56c59c936f85bd1fc1cb",
+  "pairs": 600,
+  "fictional_users": 24,
+  "queries": 120,
+  "source_files": {
+    ".gitignore": "eea4467fce5c62fa19cb89420063c2a255abe4661aa8a651eabadfe8370e42a7",
+    "README.md": "61e9412792a04f1111092cd673945b1cc8ec181da3496a98255e1df125d0f371",
+    "app.py": "5256dd6fa6b1c55bf83b8bada95c85007a851e20c562002a1d4b00754890baeb",
+    "docs/REFERENCES.md": "adf2aee1c089ac67492a42826a03e86d260aff1aef70ecd6364077469f516661",
+    "docs/SAFETY.md": "1acb3e33c929aa2e7e095354e669a797dad6eed088a5c7ce522482ac79443de8",
+    "docs/SPEC.md": "dccad009f7ca42edf215937d223d7c315151b1d85702bce8530e0d0fa4141f1c",
+    "docs/learning/P1.md": "111b5913268dc61eb4ff4f109544757772d035b252cfbbdc0915a75d69b353f7",
+    "docs/learning/P2.md": "eaef9213491550d9fae2d134bc23bdce13d7d1c878e4ee6d8411447718d37460",
+    "docs/plans/P1.md": "ab99dc8bb0d911d82e9eec8d6755e5cfb5601e56d0aa10702f5b4539e1d3351a",
+    "docs/plans/P2.md": "21998fa668e0d0af51b9499a73766f3e1e899661128c05b78a9bb42657d37b7b",
+    "experiments/__init__.py": "9d5fa76a8bfdb409ac7991bc45438a4e38a0ba0db593379c935690b39f23ae9d",
+    "experiments/config.py": "45c6ab2b25dbe994bfdba93751ca384f5c996fa4a19186d7050afd84b45f77b6",
+    "experiments/plot_results.py": "90a133a37400a3a6e044593c2ee9407c18d007f5798afc3706895768f4995b78",
+    "experiments/prepare_model.py": "b37715d9b8008fde2a7d8527be3091d98462a7319babee12f9e76d9be2c2ef0d",
+    "experiments/run_baselines.py": "13dea6e8498420f906aba73121889015cd045e93e89332bda9196aea40f157b8",
+    "experiments/run_inference_demo.py": "f59b5ebcb057a58ac947dca141e54393a68ab93529d74644d2572fbd3fd949b6",
+    "experiments/run_semantic.py": "e21ad8d9bc3de42c16262892996420b2f7fa8ef0c6ea52ea8a0d5cf8822b53ec",
+    "pyproject.toml": "1279f4e1f5dc8f4ab4b91a9394cd34a12b38af412b470dcefc39fd6285477285",
+    "requirements.txt": "da0df29031a05b508e15aa65b393caecd483027cbf7f7a8156b426a04c50c1f6",
+    "src/memorygraph/__init__.py": "664dd2a9de6d1e4d8c3fe559105f35f273bd09e1e1e72acb582f4e6dba7beeec",
+    "src/memorygraph/conflicts.py": "b1fa78a7d13bb84961469e9331c10ecd2b2eb093078b02258626048a3cefc0a0",
+    "src/memorygraph/data.py": "795cc90b0cbc5aee8d64ff8c50eb0c4c29e22fb2f43c9db4d5571824b4f453e5",
+    "src/memorygraph/inference.py": "bc50f13ade682dfb0e48dd687274c91382818f7e734b7bcf5b28fd9d626a29d9",
+    "src/memorygraph/metrics.py": "4560294ec637126f46fab7e19d706f9530e5f4df8733f5f58c78d76ed9705832",
+    "src/memorygraph/retrieval.py": "90e326aa4f6adbfe618e59440db224ec9a727ce2191201bddefe8decf89a8081",
+    "src/memorygraph/store.py": "111753cf99fe3d128a6b7b2a69df24f7d97fdcdd2fdf5f20a304adbfd38f5b13",
+    "tests/test_conflicts.py": "26b8511cd536c2181213d38e6dfb309a043c095c178cb443b7dec1731d5f8cb5",
+    "tests/test_data.py": "6036ee1fc1b170a72b9d397acc37fa752f2817e98539c0d5b8f222e73854e936",
+    "tests/test_inference.py": "3c83962b00339841766c98b3453df79b2908cfd6b171a37c92781c860d03309f",
+    "tests/test_metrics.py": "67409ce9eb21d0d50a3c5ddae6f01b0d2faa87adba7ba0dc36bd1ce5621ade26",
+    "tests/test_retrieval.py": "984ebda3aa2baa763ee803ca2f306f05d0893673f72a0da0ea528eefaed45cd9",
+    "tests/test_store.py": "89b65c6b618deb9c8641a99141a8b0523819770c985fafbd61b3bf4f3c4d666f"
+  },
+  "recorded_data": [
+    {
+      "source_relative": "results/semantic_predictions.csv",
+      "public_file": "semantic_predictions.csv",
+      "sha256": "7c7483fc9132c15b75a1b54b9b3bdc06339f88efdbdb33c5d9595cb44b7890fa"
+    },
+    {
+      "source_relative": "results/semantic_metrics.json",
+      "public_file": "semantic_metrics.json",
+      "sha256": "92e33ce952e1d33e4219fce14137b0235077e930c1510eca5fbb9a8fd8e78425"
+    },
+    {
+      "source_relative": "results/predictions.csv",
+      "public_file": "predictions.csv",
+      "sha256": "5223dcac0c1da8b529473348e936c5f1f794421e9b19f0a3212b6b0abd47f297"
+    },
+    {
+      "source_relative": "results/baseline_metrics.json",
+      "public_file": "baseline_metrics.json",
+      "sha256": "33aa96bf6d51f8ecc9282c37ba597aec2a64b61c5be3ff39cbbd55ac18a7380c"
+    },
+    {
+      "source_relative": "data/generated/synthetic_relevance.csv",
+      "public_file": "synthetic_relevance.csv",
+      "sha256": "ae0f084acf60b163692f02a6d611cc65353c6997c510133a1e616fd44c9317d0"
+    }
+  ],
+  "new_inference": 0,
+  "methods": {
+    "semantic": {
+      "queries": 120,
+      "mrr": 0.736388888888889,
+      "precision_at_3": 0.28055555555555556,
+      "per_query": [
+        {
+          "query_id": "synthetic_user_000_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_000_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_000_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_000_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_000_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_001_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_003_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_003_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_003_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_003_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_003_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_004_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_004_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_004_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_004_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_004_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_005_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_007_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_007_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_007_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_007_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_007_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_008_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_008_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_010_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_011_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_011_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_011_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_011_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_011_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_012_editor",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_012_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_012_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_012_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_012_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_editor",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_013_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_editor",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_016_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_016_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_019_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_020_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_020_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_020_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_020_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_020_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_editor",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_testing",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_023_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_performance",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_documentation",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        }
+      ]
+    },
+    "tfidf": {
+      "queries": 120,
+      "mrr": 0.51625,
+      "precision_at_3": 0.19722222222222222,
+      "per_query": [
+        {
+          "query_id": "synthetic_user_000_editor",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_000_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_000_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_000_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_000_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_001_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_001_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_001_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_002_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_002_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_002_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_003_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_003_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_003_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_003_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_003_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_004_editor",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_004_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_004_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_004_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_004_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_005_editor",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_005_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_005_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_006_editor",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_006_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_performance",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_006_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_007_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_007_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_007_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_007_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_007_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_008_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_008_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_009_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_009_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_009_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_009_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_010_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_performance",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_010_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_011_editor",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_011_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_011_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_011_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_011_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_012_editor",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_012_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_012_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_012_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_012_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_013_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_performance",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_013_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_014_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_performance",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_014_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_015_editor",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_015_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_015_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_015_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_016_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_016_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_017_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_017_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_performance",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_017_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_018_editor",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_018_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_performance",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_018_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_019_editor",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_019_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_019_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_020_editor",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_020_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_020_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_020_performance",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_020_documentation",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_editor",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_021_testing",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_021_performance",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_021_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_022_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_testing",
+          "rr": 0.2,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_022_language",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_performance",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_022_documentation",
+          "rr": 0.25,
+          "p3": 0.0
+        },
+        {
+          "query_id": "synthetic_user_023_editor",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_testing",
+          "rr": 1.0,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_language",
+          "rr": 0.5,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_performance",
+          "rr": 0.3333333333333333,
+          "p3": 0.3333333333333333
+        },
+        {
+          "query_id": "synthetic_user_023_documentation",
+          "rr": 0.2,
+          "p3": 0.0
+        }
+      ]
+    }
+  },
+  "local_demonstrations": [
+    {
+      "source": "inference_demo_20261119T144351300427Z.jsonl",
+      "variant": "no_memory",
+      "prompt_tokens": null,
+      "output_tokens": null,
+      "capped": false,
+      "mentions_unittest": false,
+      "correctness": "not scored",
+      "energy": "not measured"
+    },
+    {
+      "source": "inference_demo_20261119T144351300427Z.jsonl",
+      "variant": "with_memory",
+      "prompt_tokens": null,
+      "output_tokens": null,
+      "capped": false,
+      "mentions_unittest": false,
+      "correctness": "not scored",
+      "energy": "not measured"
+    },
+    {
+      "source": "inference_demo_20261119T144420913872Z.jsonl",
+      "variant": "no_memory",
+      "prompt_tokens": 46,
+      "output_tokens": 128,
+      "capped": true,
+      "mentions_unittest": false,
+      "correctness": "not scored",
+      "energy": "not measured"
+    },
+    {
+      "source": "inference_demo_20261119T144420913872Z.jsonl",
+      "variant": "with_memory",
+      "prompt_tokens": 63,
+      "output_tokens": 128,
+      "capped": true,
+      "mentions_unittest": true,
+      "correctness": "not scored",
+      "energy": "not measured"
+    }
+  ]
+}

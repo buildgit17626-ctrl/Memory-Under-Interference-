@@ -1,0 +1,187 @@
+{
+  "MainRequests": {
+    "rendered": "5,528",
+    "source": "tables/source-counts.json",
+    "field": "completed_main_logical_requests"
+  },
+  "SmallCross": {
+    "rendered": "3.12",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:0.5b/complete_case/near-minus-irrelevant/estimate"
+  },
+  "SmallCrossCI": {
+    "rendered": "[-3.12, 11.25]",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:0.5b/complete_case/ci95"
+  },
+  "SmallCrossN": {
+    "rendered": "40",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:0.5b/complete_case/n_units"
+  },
+  "SmallCrossP": {
+    "rendered": "1",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:0.5b/complete_case/holm_family4_p"
+  },
+  "SmallFullEnergy": {
+    "rendered": "325.38",
+    "source": "data/audit/conditions.json",
+    "field": "R1/qwen2.5-coder:0.5b/full_history/net_wh_per_correct_covered/estimate"
+  },
+  "SmallOracleEnergy": {
+    "rendered": "76.39",
+    "source": "data/audit/conditions.json",
+    "field": "R1/qwen2.5-coder:0.5b/oracle_selective/net_wh_per_correct_covered/estimate"
+  },
+  "SmallEnergyDiff": {
+    "rendered": "-249.00",
+    "source": "data/audit/energy-per-correct-differences.json",
+    "field": "R1/qwen2.5-coder:0.5b/net_wh/primary/difference"
+  },
+  "SmallEnergyCI": {
+    "rendered": "[-529.62, -127.49]",
+    "source": "data/audit/energy-per-correct-differences.json",
+    "field": "R1/qwen2.5-coder:0.5b/net_wh/primary/ci95"
+  },
+  "SmallPromptDiff": {
+    "rendered": "-2.25",
+    "source": "data/audit/paired-effects.json",
+    "field": "E0/qwen2.5-coder:0.5b/E0_primary_2/estimate"
+  },
+  "SmallPromptCI": {
+    "rendered": "[-7.77, 2.86]",
+    "source": "data/audit/paired-effects.json",
+    "field": "E0/qwen2.5-coder:0.5b/E0_primary_2/ci95"
+  },
+  "SmallPromptP": {
+    "rendered": "0.44696",
+    "source": "data/audit/paired-effects.json",
+    "field": "E0/qwen2.5-coder:0.5b/E0_primary_2/holm_p"
+  },
+  "SmallInitialDiff": {
+    "rendered": "-27.50",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3_initial/qwen2.5-coder:0.5b/M3_initial_primary_2/estimate"
+  },
+  "SmallInitialCI": {
+    "rendered": "[-45.00, -10.00]",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3_initial/qwen2.5-coder:0.5b/M3_initial_primary_2/ci95"
+  },
+  "SmallInitialP": {
+    "rendered": "0.033691",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3_initial/qwen2.5-coder:0.5b/M3_initial_primary_2/holm_p"
+  },
+  "SmallTargetDiff": {
+    "rendered": "-11.25",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3R2/qwen2.5-coder:0.5b/M3R2_primary_2/estimate"
+  },
+  "SmallTargetCI": {
+    "rendered": "[-20.62, -2.50]",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3R2/qwen2.5-coder:0.5b/M3R2_primary_2/ci95"
+  },
+  "SmallTargetP": {
+    "rendered": "0.056396",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3R2/qwen2.5-coder:0.5b/M3R2_primary_2/holm_p"
+  },
+  "LargeCross": {
+    "rendered": "8.97",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:1.5b/complete_case/near-minus-irrelevant/estimate"
+  },
+  "LargeCrossCI": {
+    "rendered": "[3.21, 16.67]",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:1.5b/complete_case/ci95"
+  },
+  "LargeCrossN": {
+    "rendered": "39",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:1.5b/complete_case/n_units"
+  },
+  "LargeCrossP": {
+    "rendered": "0.03125",
+    "source": "tables/cross-specification-sensitivities.json",
+    "field": "qwen2.5-coder:1.5b/complete_case/holm_family4_p"
+  },
+  "LargeFullEnergy": {
+    "rendered": "154.16",
+    "source": "data/audit/conditions.json",
+    "field": "R1/qwen2.5-coder:1.5b/full_history/net_wh_per_correct_covered/estimate"
+  },
+  "LargeOracleEnergy": {
+    "rendered": "50.20",
+    "source": "data/audit/conditions.json",
+    "field": "R1/qwen2.5-coder:1.5b/oracle_selective/net_wh_per_correct_covered/estimate"
+  },
+  "LargeEnergyDiff": {
+    "rendered": "-103.96",
+    "source": "data/audit/energy-per-correct-differences.json",
+    "field": "R1/qwen2.5-coder:1.5b/net_wh/primary/difference"
+  },
+  "LargeEnergyCI": {
+    "rendered": "[-152.30, -77.58]",
+    "source": "data/audit/energy-per-correct-differences.json",
+    "field": "R1/qwen2.5-coder:1.5b/net_wh/primary/ci95"
+  },
+  "LargePromptDiff": {
+    "rendered": "2.64",
+    "source": "data/audit/paired-effects.json",
+    "field": "E0/qwen2.5-coder:1.5b/E0_primary_2/estimate"
+  },
+  "LargePromptCI": {
+    "rendered": "[-1.22, 6.30]",
+    "source": "data/audit/paired-effects.json",
+    "field": "E0/qwen2.5-coder:1.5b/E0_primary_2/ci95"
+  },
+  "LargePromptP": {
+    "rendered": "0.44156",
+    "source": "data/audit/paired-effects.json",
+    "field": "E0/qwen2.5-coder:1.5b/E0_primary_2/holm_p"
+  },
+  "LargeInitialDiff": {
+    "rendered": "-2.50",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3_initial/qwen2.5-coder:1.5b/M3_initial_primary_2/estimate"
+  },
+  "LargeInitialCI": {
+    "rendered": "[-17.50, 12.50]",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3_initial/qwen2.5-coder:1.5b/M3_initial_primary_2/ci95"
+  },
+  "LargeInitialP": {
+    "rendered": "1",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3_initial/qwen2.5-coder:1.5b/M3_initial_primary_2/holm_p"
+  },
+  "LargeTargetDiff": {
+    "rendered": "-2.50",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3R2/qwen2.5-coder:1.5b/M3R2_primary_2/estimate"
+  },
+  "LargeTargetCI": {
+    "rendered": "[-10.00, 4.39]",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3R2/qwen2.5-coder:1.5b/M3R2_primary_2/ci95"
+  },
+  "LargeTargetP": {
+    "rendered": "0.63525",
+    "source": "data/audit/paired-effects.json",
+    "field": "M3R2/qwen2.5-coder:1.5b/M3R2_primary_2/holm_p"
+  },
+  "EmbeddingMRR": {
+    "rendered": "0.7364",
+    "source": "tables/memorygraph-audit.json",
+    "field": "methods/semantic/mrr"
+  },
+  "LexicalMRR": {
+    "rendered": "0.5163",
+    "source": "tables/memorygraph-audit.json",
+    "field": "methods/tfidf/mrr"
+  }
+}

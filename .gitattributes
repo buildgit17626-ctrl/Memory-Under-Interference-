@@ -1,3 +1,8 @@
 # Public evidence hashes must survive checkout on Windows and other platforms.
 artifacts/** -text
+
+# Versioned release checksums cover exact bytes, including upstream notices.
+releases/v1/** -text whitespace=cr-at-eol
+# Preserve verbatim third-party licence whitespace rather than editing notices.
+releases/v1/licenses/** -whitespace
 data/HumanEval.jsonl.gz binary

@@ -1,0 +1,28 @@
+[
+  {
+    "file": "Memory_Under_Interference_v1_source.zip",
+    "bytes": 150600,
+    "sha256": "ac574d919d6f6605184a5df63a3e12be3076d8a7108abd2787b183c3963d2fc1",
+    "members": 21,
+    "extracted_checksum_verification": "passed",
+    "extracted_compilation": "passed"
+  },
+  {
+    "file": "Memory_Under_Interference_v1_reproducibility.zip",
+    "bytes": 34467439,
+    "sha256": "f55899b77be4aee81aedd60e4b757ec58eae9325f280406dfbc92c235a2db95e",
+    "members": 700,
+    "extracted_checksum_verification": "passed",
+    "extracted_offline_reproduction": {
+      "logical_calls_checked_against_raw": 6006,
+      "main_logical_requests": 5528,
+      "cross_pass_effects_reproduced": 4,
+      "new_model_inference": 0
+    },
+    "extracted_energy_verification": {
+      "available_windows_verified": 12479,
+      "unavailable_windows": 2
+    },
+    "full_offline_reanalysis_effects_verified_before_packaging": 976
+  }
+]

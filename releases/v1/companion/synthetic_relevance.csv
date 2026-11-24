@@ -1,0 +1,601 @@
+user_id,query_id,query_category,query_text,memory_id,memory_category,memory_text,relevant
+synthetic_user_000,synthetic_user_000_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_000_editor,editor,The user uses VS Code.,1
+synthetic_user_000,synthetic_user_000_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_000_testing,testing,The user prefers pytest.,0
+synthetic_user_000,synthetic_user_000_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_000_language,language,The user writes TypeScript.,0
+synthetic_user_000,synthetic_user_000_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_000_performance,performance,The user prioritizes low latency.,0
+synthetic_user_000,synthetic_user_000_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_000_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_000,synthetic_user_000_testing,testing,What test style should the coding assistant follow?,synthetic_user_000_editor,editor,The user uses VS Code.,0
+synthetic_user_000,synthetic_user_000_testing,testing,What test style should the coding assistant follow?,synthetic_user_000_testing,testing,The user prefers pytest.,1
+synthetic_user_000,synthetic_user_000_testing,testing,What test style should the coding assistant follow?,synthetic_user_000_language,language,The user writes TypeScript.,0
+synthetic_user_000,synthetic_user_000_testing,testing,What test style should the coding assistant follow?,synthetic_user_000_performance,performance,The user prioritizes low latency.,0
+synthetic_user_000,synthetic_user_000_testing,testing,What test style should the coding assistant follow?,synthetic_user_000_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_000,synthetic_user_000_language,language,Which programming language does this user prefer?,synthetic_user_000_editor,editor,The user uses VS Code.,0
+synthetic_user_000,synthetic_user_000_language,language,Which programming language does this user prefer?,synthetic_user_000_testing,testing,The user prefers pytest.,0
+synthetic_user_000,synthetic_user_000_language,language,Which programming language does this user prefer?,synthetic_user_000_language,language,The user writes TypeScript.,1
+synthetic_user_000,synthetic_user_000_language,language,Which programming language does this user prefer?,synthetic_user_000_performance,performance,The user prioritizes low latency.,0
+synthetic_user_000,synthetic_user_000_language,language,Which programming language does this user prefer?,synthetic_user_000_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_000,synthetic_user_000_performance,performance,What performance constraint matters to this user?,synthetic_user_000_editor,editor,The user uses VS Code.,0
+synthetic_user_000,synthetic_user_000_performance,performance,What performance constraint matters to this user?,synthetic_user_000_testing,testing,The user prefers pytest.,0
+synthetic_user_000,synthetic_user_000_performance,performance,What performance constraint matters to this user?,synthetic_user_000_language,language,The user writes TypeScript.,0
+synthetic_user_000,synthetic_user_000_performance,performance,What performance constraint matters to this user?,synthetic_user_000_performance,performance,The user prioritizes low latency.,1
+synthetic_user_000,synthetic_user_000_performance,performance,What performance constraint matters to this user?,synthetic_user_000_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_000,synthetic_user_000_documentation,documentation,How should I document this code for the user?,synthetic_user_000_editor,editor,The user uses VS Code.,0
+synthetic_user_000,synthetic_user_000_documentation,documentation,How should I document this code for the user?,synthetic_user_000_testing,testing,The user prefers pytest.,0
+synthetic_user_000,synthetic_user_000_documentation,documentation,How should I document this code for the user?,synthetic_user_000_language,language,The user writes TypeScript.,0
+synthetic_user_000,synthetic_user_000_documentation,documentation,How should I document this code for the user?,synthetic_user_000_performance,performance,The user prioritizes low latency.,0
+synthetic_user_000,synthetic_user_000_documentation,documentation,How should I document this code for the user?,synthetic_user_000_documentation,documentation,The user prefers short docstrings.,1
+synthetic_user_001,synthetic_user_001_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_001_editor,editor,The user prefers Vim keybindings.,1
+synthetic_user_001,synthetic_user_001_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_001_testing,testing,The user prefers pytest.,0
+synthetic_user_001,synthetic_user_001_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_001_language,language,The user writes Python.,0
+synthetic_user_001,synthetic_user_001_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_001_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_001,synthetic_user_001_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_001_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_001,synthetic_user_001_testing,testing,What test style should the coding assistant follow?,synthetic_user_001_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_001,synthetic_user_001_testing,testing,What test style should the coding assistant follow?,synthetic_user_001_testing,testing,The user prefers pytest.,1
+synthetic_user_001,synthetic_user_001_testing,testing,What test style should the coding assistant follow?,synthetic_user_001_language,language,The user writes Python.,0
+synthetic_user_001,synthetic_user_001_testing,testing,What test style should the coding assistant follow?,synthetic_user_001_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_001,synthetic_user_001_testing,testing,What test style should the coding assistant follow?,synthetic_user_001_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_001,synthetic_user_001_language,language,Which programming language does this user prefer?,synthetic_user_001_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_001,synthetic_user_001_language,language,Which programming language does this user prefer?,synthetic_user_001_testing,testing,The user prefers pytest.,0
+synthetic_user_001,synthetic_user_001_language,language,Which programming language does this user prefer?,synthetic_user_001_language,language,The user writes Python.,1
+synthetic_user_001,synthetic_user_001_language,language,Which programming language does this user prefer?,synthetic_user_001_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_001,synthetic_user_001_language,language,Which programming language does this user prefer?,synthetic_user_001_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_001,synthetic_user_001_performance,performance,What performance constraint matters to this user?,synthetic_user_001_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_001,synthetic_user_001_performance,performance,What performance constraint matters to this user?,synthetic_user_001_testing,testing,The user prefers pytest.,0
+synthetic_user_001,synthetic_user_001_performance,performance,What performance constraint matters to this user?,synthetic_user_001_language,language,The user writes Python.,0
+synthetic_user_001,synthetic_user_001_performance,performance,What performance constraint matters to this user?,synthetic_user_001_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_001,synthetic_user_001_performance,performance,What performance constraint matters to this user?,synthetic_user_001_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_001,synthetic_user_001_documentation,documentation,How should I document this code for the user?,synthetic_user_001_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_001,synthetic_user_001_documentation,documentation,How should I document this code for the user?,synthetic_user_001_testing,testing,The user prefers pytest.,0
+synthetic_user_001,synthetic_user_001_documentation,documentation,How should I document this code for the user?,synthetic_user_001_language,language,The user writes Python.,0
+synthetic_user_001,synthetic_user_001_documentation,documentation,How should I document this code for the user?,synthetic_user_001_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_001,synthetic_user_001_documentation,documentation,How should I document this code for the user?,synthetic_user_001_documentation,documentation,The user prefers short docstrings.,1
+synthetic_user_002,synthetic_user_002_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_002_editor,editor,The user prefers Vim keybindings.,1
+synthetic_user_002,synthetic_user_002_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_002_testing,testing,The user uses unittest.,0
+synthetic_user_002,synthetic_user_002_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_002_language,language,The user writes C++.,0
+synthetic_user_002,synthetic_user_002_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_002_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_002,synthetic_user_002_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_002_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_002,synthetic_user_002_testing,testing,What test style should the coding assistant follow?,synthetic_user_002_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_002,synthetic_user_002_testing,testing,What test style should the coding assistant follow?,synthetic_user_002_testing,testing,The user uses unittest.,1
+synthetic_user_002,synthetic_user_002_testing,testing,What test style should the coding assistant follow?,synthetic_user_002_language,language,The user writes C++.,0
+synthetic_user_002,synthetic_user_002_testing,testing,What test style should the coding assistant follow?,synthetic_user_002_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_002,synthetic_user_002_testing,testing,What test style should the coding assistant follow?,synthetic_user_002_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_002,synthetic_user_002_language,language,Which programming language does this user prefer?,synthetic_user_002_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_002,synthetic_user_002_language,language,Which programming language does this user prefer?,synthetic_user_002_testing,testing,The user uses unittest.,0
+synthetic_user_002,synthetic_user_002_language,language,Which programming language does this user prefer?,synthetic_user_002_language,language,The user writes C++.,1
+synthetic_user_002,synthetic_user_002_language,language,Which programming language does this user prefer?,synthetic_user_002_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_002,synthetic_user_002_language,language,Which programming language does this user prefer?,synthetic_user_002_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_002,synthetic_user_002_performance,performance,What performance constraint matters to this user?,synthetic_user_002_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_002,synthetic_user_002_performance,performance,What performance constraint matters to this user?,synthetic_user_002_testing,testing,The user uses unittest.,0
+synthetic_user_002,synthetic_user_002_performance,performance,What performance constraint matters to this user?,synthetic_user_002_language,language,The user writes C++.,0
+synthetic_user_002,synthetic_user_002_performance,performance,What performance constraint matters to this user?,synthetic_user_002_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_002,synthetic_user_002_performance,performance,What performance constraint matters to this user?,synthetic_user_002_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_002,synthetic_user_002_documentation,documentation,How should I document this code for the user?,synthetic_user_002_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_002,synthetic_user_002_documentation,documentation,How should I document this code for the user?,synthetic_user_002_testing,testing,The user uses unittest.,0
+synthetic_user_002,synthetic_user_002_documentation,documentation,How should I document this code for the user?,synthetic_user_002_language,language,The user writes C++.,0
+synthetic_user_002,synthetic_user_002_documentation,documentation,How should I document this code for the user?,synthetic_user_002_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_002,synthetic_user_002_documentation,documentation,How should I document this code for the user?,synthetic_user_002_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_003,synthetic_user_003_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_003_editor,editor,The user works in PyCharm.,1
+synthetic_user_003,synthetic_user_003_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_003_testing,testing,The user prefers pytest.,0
+synthetic_user_003,synthetic_user_003_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_003_language,language,The user writes TypeScript.,0
+synthetic_user_003,synthetic_user_003_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_003_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_003,synthetic_user_003_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_003_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_003,synthetic_user_003_testing,testing,What test style should the coding assistant follow?,synthetic_user_003_editor,editor,The user works in PyCharm.,0
+synthetic_user_003,synthetic_user_003_testing,testing,What test style should the coding assistant follow?,synthetic_user_003_testing,testing,The user prefers pytest.,1
+synthetic_user_003,synthetic_user_003_testing,testing,What test style should the coding assistant follow?,synthetic_user_003_language,language,The user writes TypeScript.,0
+synthetic_user_003,synthetic_user_003_testing,testing,What test style should the coding assistant follow?,synthetic_user_003_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_003,synthetic_user_003_testing,testing,What test style should the coding assistant follow?,synthetic_user_003_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_003,synthetic_user_003_language,language,Which programming language does this user prefer?,synthetic_user_003_editor,editor,The user works in PyCharm.,0
+synthetic_user_003,synthetic_user_003_language,language,Which programming language does this user prefer?,synthetic_user_003_testing,testing,The user prefers pytest.,0
+synthetic_user_003,synthetic_user_003_language,language,Which programming language does this user prefer?,synthetic_user_003_language,language,The user writes TypeScript.,1
+synthetic_user_003,synthetic_user_003_language,language,Which programming language does this user prefer?,synthetic_user_003_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_003,synthetic_user_003_language,language,Which programming language does this user prefer?,synthetic_user_003_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_003,synthetic_user_003_performance,performance,What performance constraint matters to this user?,synthetic_user_003_editor,editor,The user works in PyCharm.,0
+synthetic_user_003,synthetic_user_003_performance,performance,What performance constraint matters to this user?,synthetic_user_003_testing,testing,The user prefers pytest.,0
+synthetic_user_003,synthetic_user_003_performance,performance,What performance constraint matters to this user?,synthetic_user_003_language,language,The user writes TypeScript.,0
+synthetic_user_003,synthetic_user_003_performance,performance,What performance constraint matters to this user?,synthetic_user_003_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_003,synthetic_user_003_performance,performance,What performance constraint matters to this user?,synthetic_user_003_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_003,synthetic_user_003_documentation,documentation,How should I document this code for the user?,synthetic_user_003_editor,editor,The user works in PyCharm.,0
+synthetic_user_003,synthetic_user_003_documentation,documentation,How should I document this code for the user?,synthetic_user_003_testing,testing,The user prefers pytest.,0
+synthetic_user_003,synthetic_user_003_documentation,documentation,How should I document this code for the user?,synthetic_user_003_language,language,The user writes TypeScript.,0
+synthetic_user_003,synthetic_user_003_documentation,documentation,How should I document this code for the user?,synthetic_user_003_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_003,synthetic_user_003_documentation,documentation,How should I document this code for the user?,synthetic_user_003_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_004,synthetic_user_004_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_004_editor,editor,The user works in PyCharm.,1
+synthetic_user_004,synthetic_user_004_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_004_testing,testing,The user prefers pytest.,0
+synthetic_user_004,synthetic_user_004_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_004_language,language,The user writes Python.,0
+synthetic_user_004,synthetic_user_004_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_004_performance,performance,The user prefers low memory use.,0
+synthetic_user_004,synthetic_user_004_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_004_documentation,documentation,The user likes worked examples.,0
+synthetic_user_004,synthetic_user_004_testing,testing,What test style should the coding assistant follow?,synthetic_user_004_editor,editor,The user works in PyCharm.,0
+synthetic_user_004,synthetic_user_004_testing,testing,What test style should the coding assistant follow?,synthetic_user_004_testing,testing,The user prefers pytest.,1
+synthetic_user_004,synthetic_user_004_testing,testing,What test style should the coding assistant follow?,synthetic_user_004_language,language,The user writes Python.,0
+synthetic_user_004,synthetic_user_004_testing,testing,What test style should the coding assistant follow?,synthetic_user_004_performance,performance,The user prefers low memory use.,0
+synthetic_user_004,synthetic_user_004_testing,testing,What test style should the coding assistant follow?,synthetic_user_004_documentation,documentation,The user likes worked examples.,0
+synthetic_user_004,synthetic_user_004_language,language,Which programming language does this user prefer?,synthetic_user_004_editor,editor,The user works in PyCharm.,0
+synthetic_user_004,synthetic_user_004_language,language,Which programming language does this user prefer?,synthetic_user_004_testing,testing,The user prefers pytest.,0
+synthetic_user_004,synthetic_user_004_language,language,Which programming language does this user prefer?,synthetic_user_004_language,language,The user writes Python.,1
+synthetic_user_004,synthetic_user_004_language,language,Which programming language does this user prefer?,synthetic_user_004_performance,performance,The user prefers low memory use.,0
+synthetic_user_004,synthetic_user_004_language,language,Which programming language does this user prefer?,synthetic_user_004_documentation,documentation,The user likes worked examples.,0
+synthetic_user_004,synthetic_user_004_performance,performance,What performance constraint matters to this user?,synthetic_user_004_editor,editor,The user works in PyCharm.,0
+synthetic_user_004,synthetic_user_004_performance,performance,What performance constraint matters to this user?,synthetic_user_004_testing,testing,The user prefers pytest.,0
+synthetic_user_004,synthetic_user_004_performance,performance,What performance constraint matters to this user?,synthetic_user_004_language,language,The user writes Python.,0
+synthetic_user_004,synthetic_user_004_performance,performance,What performance constraint matters to this user?,synthetic_user_004_performance,performance,The user prefers low memory use.,1
+synthetic_user_004,synthetic_user_004_performance,performance,What performance constraint matters to this user?,synthetic_user_004_documentation,documentation,The user likes worked examples.,0
+synthetic_user_004,synthetic_user_004_documentation,documentation,How should I document this code for the user?,synthetic_user_004_editor,editor,The user works in PyCharm.,0
+synthetic_user_004,synthetic_user_004_documentation,documentation,How should I document this code for the user?,synthetic_user_004_testing,testing,The user prefers pytest.,0
+synthetic_user_004,synthetic_user_004_documentation,documentation,How should I document this code for the user?,synthetic_user_004_language,language,The user writes Python.,0
+synthetic_user_004,synthetic_user_004_documentation,documentation,How should I document this code for the user?,synthetic_user_004_performance,performance,The user prefers low memory use.,0
+synthetic_user_004,synthetic_user_004_documentation,documentation,How should I document this code for the user?,synthetic_user_004_documentation,documentation,The user likes worked examples.,1
+synthetic_user_005,synthetic_user_005_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_005_editor,editor,The user works in PyCharm.,1
+synthetic_user_005,synthetic_user_005_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_005_testing,testing,The user uses unittest.,0
+synthetic_user_005,synthetic_user_005_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_005_language,language,The user writes Python.,0
+synthetic_user_005,synthetic_user_005_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_005_performance,performance,The user prefers low memory use.,0
+synthetic_user_005,synthetic_user_005_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_005_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_005,synthetic_user_005_testing,testing,What test style should the coding assistant follow?,synthetic_user_005_editor,editor,The user works in PyCharm.,0
+synthetic_user_005,synthetic_user_005_testing,testing,What test style should the coding assistant follow?,synthetic_user_005_testing,testing,The user uses unittest.,1
+synthetic_user_005,synthetic_user_005_testing,testing,What test style should the coding assistant follow?,synthetic_user_005_language,language,The user writes Python.,0
+synthetic_user_005,synthetic_user_005_testing,testing,What test style should the coding assistant follow?,synthetic_user_005_performance,performance,The user prefers low memory use.,0
+synthetic_user_005,synthetic_user_005_testing,testing,What test style should the coding assistant follow?,synthetic_user_005_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_005,synthetic_user_005_language,language,Which programming language does this user prefer?,synthetic_user_005_editor,editor,The user works in PyCharm.,0
+synthetic_user_005,synthetic_user_005_language,language,Which programming language does this user prefer?,synthetic_user_005_testing,testing,The user uses unittest.,0
+synthetic_user_005,synthetic_user_005_language,language,Which programming language does this user prefer?,synthetic_user_005_language,language,The user writes Python.,1
+synthetic_user_005,synthetic_user_005_language,language,Which programming language does this user prefer?,synthetic_user_005_performance,performance,The user prefers low memory use.,0
+synthetic_user_005,synthetic_user_005_language,language,Which programming language does this user prefer?,synthetic_user_005_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_005,synthetic_user_005_performance,performance,What performance constraint matters to this user?,synthetic_user_005_editor,editor,The user works in PyCharm.,0
+synthetic_user_005,synthetic_user_005_performance,performance,What performance constraint matters to this user?,synthetic_user_005_testing,testing,The user uses unittest.,0
+synthetic_user_005,synthetic_user_005_performance,performance,What performance constraint matters to this user?,synthetic_user_005_language,language,The user writes Python.,0
+synthetic_user_005,synthetic_user_005_performance,performance,What performance constraint matters to this user?,synthetic_user_005_performance,performance,The user prefers low memory use.,1
+synthetic_user_005,synthetic_user_005_performance,performance,What performance constraint matters to this user?,synthetic_user_005_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_005,synthetic_user_005_documentation,documentation,How should I document this code for the user?,synthetic_user_005_editor,editor,The user works in PyCharm.,0
+synthetic_user_005,synthetic_user_005_documentation,documentation,How should I document this code for the user?,synthetic_user_005_testing,testing,The user uses unittest.,0
+synthetic_user_005,synthetic_user_005_documentation,documentation,How should I document this code for the user?,synthetic_user_005_language,language,The user writes Python.,0
+synthetic_user_005,synthetic_user_005_documentation,documentation,How should I document this code for the user?,synthetic_user_005_performance,performance,The user prefers low memory use.,0
+synthetic_user_005,synthetic_user_005_documentation,documentation,How should I document this code for the user?,synthetic_user_005_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_006,synthetic_user_006_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_006_editor,editor,The user uses VS Code.,1
+synthetic_user_006,synthetic_user_006_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_006_testing,testing,The user writes property-based tests.,0
+synthetic_user_006,synthetic_user_006_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_006_language,language,The user writes TypeScript.,0
+synthetic_user_006,synthetic_user_006_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_006_performance,performance,The user prioritizes low latency.,0
+synthetic_user_006,synthetic_user_006_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_006_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_006,synthetic_user_006_testing,testing,What test style should the coding assistant follow?,synthetic_user_006_editor,editor,The user uses VS Code.,0
+synthetic_user_006,synthetic_user_006_testing,testing,What test style should the coding assistant follow?,synthetic_user_006_testing,testing,The user writes property-based tests.,1
+synthetic_user_006,synthetic_user_006_testing,testing,What test style should the coding assistant follow?,synthetic_user_006_language,language,The user writes TypeScript.,0
+synthetic_user_006,synthetic_user_006_testing,testing,What test style should the coding assistant follow?,synthetic_user_006_performance,performance,The user prioritizes low latency.,0
+synthetic_user_006,synthetic_user_006_testing,testing,What test style should the coding assistant follow?,synthetic_user_006_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_006,synthetic_user_006_language,language,Which programming language does this user prefer?,synthetic_user_006_editor,editor,The user uses VS Code.,0
+synthetic_user_006,synthetic_user_006_language,language,Which programming language does this user prefer?,synthetic_user_006_testing,testing,The user writes property-based tests.,0
+synthetic_user_006,synthetic_user_006_language,language,Which programming language does this user prefer?,synthetic_user_006_language,language,The user writes TypeScript.,1
+synthetic_user_006,synthetic_user_006_language,language,Which programming language does this user prefer?,synthetic_user_006_performance,performance,The user prioritizes low latency.,0
+synthetic_user_006,synthetic_user_006_language,language,Which programming language does this user prefer?,synthetic_user_006_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_006,synthetic_user_006_performance,performance,What performance constraint matters to this user?,synthetic_user_006_editor,editor,The user uses VS Code.,0
+synthetic_user_006,synthetic_user_006_performance,performance,What performance constraint matters to this user?,synthetic_user_006_testing,testing,The user writes property-based tests.,0
+synthetic_user_006,synthetic_user_006_performance,performance,What performance constraint matters to this user?,synthetic_user_006_language,language,The user writes TypeScript.,0
+synthetic_user_006,synthetic_user_006_performance,performance,What performance constraint matters to this user?,synthetic_user_006_performance,performance,The user prioritizes low latency.,1
+synthetic_user_006,synthetic_user_006_performance,performance,What performance constraint matters to this user?,synthetic_user_006_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_006,synthetic_user_006_documentation,documentation,How should I document this code for the user?,synthetic_user_006_editor,editor,The user uses VS Code.,0
+synthetic_user_006,synthetic_user_006_documentation,documentation,How should I document this code for the user?,synthetic_user_006_testing,testing,The user writes property-based tests.,0
+synthetic_user_006,synthetic_user_006_documentation,documentation,How should I document this code for the user?,synthetic_user_006_language,language,The user writes TypeScript.,0
+synthetic_user_006,synthetic_user_006_documentation,documentation,How should I document this code for the user?,synthetic_user_006_performance,performance,The user prioritizes low latency.,0
+synthetic_user_006,synthetic_user_006_documentation,documentation,How should I document this code for the user?,synthetic_user_006_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_007,synthetic_user_007_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_007_editor,editor,The user uses VS Code.,1
+synthetic_user_007,synthetic_user_007_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_007_testing,testing,The user writes property-based tests.,0
+synthetic_user_007,synthetic_user_007_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_007_language,language,The user writes TypeScript.,0
+synthetic_user_007,synthetic_user_007_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_007_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_007,synthetic_user_007_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_007_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_007,synthetic_user_007_testing,testing,What test style should the coding assistant follow?,synthetic_user_007_editor,editor,The user uses VS Code.,0
+synthetic_user_007,synthetic_user_007_testing,testing,What test style should the coding assistant follow?,synthetic_user_007_testing,testing,The user writes property-based tests.,1
+synthetic_user_007,synthetic_user_007_testing,testing,What test style should the coding assistant follow?,synthetic_user_007_language,language,The user writes TypeScript.,0
+synthetic_user_007,synthetic_user_007_testing,testing,What test style should the coding assistant follow?,synthetic_user_007_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_007,synthetic_user_007_testing,testing,What test style should the coding assistant follow?,synthetic_user_007_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_007,synthetic_user_007_language,language,Which programming language does this user prefer?,synthetic_user_007_editor,editor,The user uses VS Code.,0
+synthetic_user_007,synthetic_user_007_language,language,Which programming language does this user prefer?,synthetic_user_007_testing,testing,The user writes property-based tests.,0
+synthetic_user_007,synthetic_user_007_language,language,Which programming language does this user prefer?,synthetic_user_007_language,language,The user writes TypeScript.,1
+synthetic_user_007,synthetic_user_007_language,language,Which programming language does this user prefer?,synthetic_user_007_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_007,synthetic_user_007_language,language,Which programming language does this user prefer?,synthetic_user_007_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_007,synthetic_user_007_performance,performance,What performance constraint matters to this user?,synthetic_user_007_editor,editor,The user uses VS Code.,0
+synthetic_user_007,synthetic_user_007_performance,performance,What performance constraint matters to this user?,synthetic_user_007_testing,testing,The user writes property-based tests.,0
+synthetic_user_007,synthetic_user_007_performance,performance,What performance constraint matters to this user?,synthetic_user_007_language,language,The user writes TypeScript.,0
+synthetic_user_007,synthetic_user_007_performance,performance,What performance constraint matters to this user?,synthetic_user_007_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_007,synthetic_user_007_performance,performance,What performance constraint matters to this user?,synthetic_user_007_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_007,synthetic_user_007_documentation,documentation,How should I document this code for the user?,synthetic_user_007_editor,editor,The user uses VS Code.,0
+synthetic_user_007,synthetic_user_007_documentation,documentation,How should I document this code for the user?,synthetic_user_007_testing,testing,The user writes property-based tests.,0
+synthetic_user_007,synthetic_user_007_documentation,documentation,How should I document this code for the user?,synthetic_user_007_language,language,The user writes TypeScript.,0
+synthetic_user_007,synthetic_user_007_documentation,documentation,How should I document this code for the user?,synthetic_user_007_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_007,synthetic_user_007_documentation,documentation,How should I document this code for the user?,synthetic_user_007_documentation,documentation,The user prefers short docstrings.,1
+synthetic_user_008,synthetic_user_008_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_008_editor,editor,The user prefers Vim keybindings.,1
+synthetic_user_008,synthetic_user_008_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_008_testing,testing,The user prefers pytest.,0
+synthetic_user_008,synthetic_user_008_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_008_language,language,The user writes C++.,0
+synthetic_user_008,synthetic_user_008_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_008_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_008,synthetic_user_008_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_008_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_008,synthetic_user_008_testing,testing,What test style should the coding assistant follow?,synthetic_user_008_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_008,synthetic_user_008_testing,testing,What test style should the coding assistant follow?,synthetic_user_008_testing,testing,The user prefers pytest.,1
+synthetic_user_008,synthetic_user_008_testing,testing,What test style should the coding assistant follow?,synthetic_user_008_language,language,The user writes C++.,0
+synthetic_user_008,synthetic_user_008_testing,testing,What test style should the coding assistant follow?,synthetic_user_008_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_008,synthetic_user_008_testing,testing,What test style should the coding assistant follow?,synthetic_user_008_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_008,synthetic_user_008_language,language,Which programming language does this user prefer?,synthetic_user_008_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_008,synthetic_user_008_language,language,Which programming language does this user prefer?,synthetic_user_008_testing,testing,The user prefers pytest.,0
+synthetic_user_008,synthetic_user_008_language,language,Which programming language does this user prefer?,synthetic_user_008_language,language,The user writes C++.,1
+synthetic_user_008,synthetic_user_008_language,language,Which programming language does this user prefer?,synthetic_user_008_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_008,synthetic_user_008_language,language,Which programming language does this user prefer?,synthetic_user_008_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_008,synthetic_user_008_performance,performance,What performance constraint matters to this user?,synthetic_user_008_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_008,synthetic_user_008_performance,performance,What performance constraint matters to this user?,synthetic_user_008_testing,testing,The user prefers pytest.,0
+synthetic_user_008,synthetic_user_008_performance,performance,What performance constraint matters to this user?,synthetic_user_008_language,language,The user writes C++.,0
+synthetic_user_008,synthetic_user_008_performance,performance,What performance constraint matters to this user?,synthetic_user_008_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_008,synthetic_user_008_performance,performance,What performance constraint matters to this user?,synthetic_user_008_documentation,documentation,The user prefers short docstrings.,0
+synthetic_user_008,synthetic_user_008_documentation,documentation,How should I document this code for the user?,synthetic_user_008_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_008,synthetic_user_008_documentation,documentation,How should I document this code for the user?,synthetic_user_008_testing,testing,The user prefers pytest.,0
+synthetic_user_008,synthetic_user_008_documentation,documentation,How should I document this code for the user?,synthetic_user_008_language,language,The user writes C++.,0
+synthetic_user_008,synthetic_user_008_documentation,documentation,How should I document this code for the user?,synthetic_user_008_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_008,synthetic_user_008_documentation,documentation,How should I document this code for the user?,synthetic_user_008_documentation,documentation,The user prefers short docstrings.,1
+synthetic_user_009,synthetic_user_009_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_009_editor,editor,The user uses VS Code.,1
+synthetic_user_009,synthetic_user_009_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_009_testing,testing,The user uses unittest.,0
+synthetic_user_009,synthetic_user_009_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_009_language,language,The user writes C++.,0
+synthetic_user_009,synthetic_user_009_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_009_performance,performance,The user prioritizes low latency.,0
+synthetic_user_009,synthetic_user_009_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_009_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_009,synthetic_user_009_testing,testing,What test style should the coding assistant follow?,synthetic_user_009_editor,editor,The user uses VS Code.,0
+synthetic_user_009,synthetic_user_009_testing,testing,What test style should the coding assistant follow?,synthetic_user_009_testing,testing,The user uses unittest.,1
+synthetic_user_009,synthetic_user_009_testing,testing,What test style should the coding assistant follow?,synthetic_user_009_language,language,The user writes C++.,0
+synthetic_user_009,synthetic_user_009_testing,testing,What test style should the coding assistant follow?,synthetic_user_009_performance,performance,The user prioritizes low latency.,0
+synthetic_user_009,synthetic_user_009_testing,testing,What test style should the coding assistant follow?,synthetic_user_009_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_009,synthetic_user_009_language,language,Which programming language does this user prefer?,synthetic_user_009_editor,editor,The user uses VS Code.,0
+synthetic_user_009,synthetic_user_009_language,language,Which programming language does this user prefer?,synthetic_user_009_testing,testing,The user uses unittest.,0
+synthetic_user_009,synthetic_user_009_language,language,Which programming language does this user prefer?,synthetic_user_009_language,language,The user writes C++.,1
+synthetic_user_009,synthetic_user_009_language,language,Which programming language does this user prefer?,synthetic_user_009_performance,performance,The user prioritizes low latency.,0
+synthetic_user_009,synthetic_user_009_language,language,Which programming language does this user prefer?,synthetic_user_009_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_009,synthetic_user_009_performance,performance,What performance constraint matters to this user?,synthetic_user_009_editor,editor,The user uses VS Code.,0
+synthetic_user_009,synthetic_user_009_performance,performance,What performance constraint matters to this user?,synthetic_user_009_testing,testing,The user uses unittest.,0
+synthetic_user_009,synthetic_user_009_performance,performance,What performance constraint matters to this user?,synthetic_user_009_language,language,The user writes C++.,0
+synthetic_user_009,synthetic_user_009_performance,performance,What performance constraint matters to this user?,synthetic_user_009_performance,performance,The user prioritizes low latency.,1
+synthetic_user_009,synthetic_user_009_performance,performance,What performance constraint matters to this user?,synthetic_user_009_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_009,synthetic_user_009_documentation,documentation,How should I document this code for the user?,synthetic_user_009_editor,editor,The user uses VS Code.,0
+synthetic_user_009,synthetic_user_009_documentation,documentation,How should I document this code for the user?,synthetic_user_009_testing,testing,The user uses unittest.,0
+synthetic_user_009,synthetic_user_009_documentation,documentation,How should I document this code for the user?,synthetic_user_009_language,language,The user writes C++.,0
+synthetic_user_009,synthetic_user_009_documentation,documentation,How should I document this code for the user?,synthetic_user_009_performance,performance,The user prioritizes low latency.,0
+synthetic_user_009,synthetic_user_009_documentation,documentation,How should I document this code for the user?,synthetic_user_009_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_010,synthetic_user_010_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_010_editor,editor,The user prefers Vim keybindings.,1
+synthetic_user_010,synthetic_user_010_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_010_testing,testing,The user prefers pytest.,0
+synthetic_user_010,synthetic_user_010_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_010_language,language,The user writes Python.,0
+synthetic_user_010,synthetic_user_010_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_010_performance,performance,The user prioritizes low latency.,0
+synthetic_user_010,synthetic_user_010_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_010_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_010,synthetic_user_010_testing,testing,What test style should the coding assistant follow?,synthetic_user_010_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_010,synthetic_user_010_testing,testing,What test style should the coding assistant follow?,synthetic_user_010_testing,testing,The user prefers pytest.,1
+synthetic_user_010,synthetic_user_010_testing,testing,What test style should the coding assistant follow?,synthetic_user_010_language,language,The user writes Python.,0
+synthetic_user_010,synthetic_user_010_testing,testing,What test style should the coding assistant follow?,synthetic_user_010_performance,performance,The user prioritizes low latency.,0
+synthetic_user_010,synthetic_user_010_testing,testing,What test style should the coding assistant follow?,synthetic_user_010_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_010,synthetic_user_010_language,language,Which programming language does this user prefer?,synthetic_user_010_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_010,synthetic_user_010_language,language,Which programming language does this user prefer?,synthetic_user_010_testing,testing,The user prefers pytest.,0
+synthetic_user_010,synthetic_user_010_language,language,Which programming language does this user prefer?,synthetic_user_010_language,language,The user writes Python.,1
+synthetic_user_010,synthetic_user_010_language,language,Which programming language does this user prefer?,synthetic_user_010_performance,performance,The user prioritizes low latency.,0
+synthetic_user_010,synthetic_user_010_language,language,Which programming language does this user prefer?,synthetic_user_010_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_010,synthetic_user_010_performance,performance,What performance constraint matters to this user?,synthetic_user_010_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_010,synthetic_user_010_performance,performance,What performance constraint matters to this user?,synthetic_user_010_testing,testing,The user prefers pytest.,0
+synthetic_user_010,synthetic_user_010_performance,performance,What performance constraint matters to this user?,synthetic_user_010_language,language,The user writes Python.,0
+synthetic_user_010,synthetic_user_010_performance,performance,What performance constraint matters to this user?,synthetic_user_010_performance,performance,The user prioritizes low latency.,1
+synthetic_user_010,synthetic_user_010_performance,performance,What performance constraint matters to this user?,synthetic_user_010_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_010,synthetic_user_010_documentation,documentation,How should I document this code for the user?,synthetic_user_010_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_010,synthetic_user_010_documentation,documentation,How should I document this code for the user?,synthetic_user_010_testing,testing,The user prefers pytest.,0
+synthetic_user_010,synthetic_user_010_documentation,documentation,How should I document this code for the user?,synthetic_user_010_language,language,The user writes Python.,0
+synthetic_user_010,synthetic_user_010_documentation,documentation,How should I document this code for the user?,synthetic_user_010_performance,performance,The user prioritizes low latency.,0
+synthetic_user_010,synthetic_user_010_documentation,documentation,How should I document this code for the user?,synthetic_user_010_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_011,synthetic_user_011_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_011_editor,editor,The user uses VS Code.,1
+synthetic_user_011,synthetic_user_011_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_011_testing,testing,The user prefers pytest.,0
+synthetic_user_011,synthetic_user_011_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_011_language,language,The user writes C++.,0
+synthetic_user_011,synthetic_user_011_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_011_performance,performance,The user prefers low memory use.,0
+synthetic_user_011,synthetic_user_011_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_011_documentation,documentation,The user likes worked examples.,0
+synthetic_user_011,synthetic_user_011_testing,testing,What test style should the coding assistant follow?,synthetic_user_011_editor,editor,The user uses VS Code.,0
+synthetic_user_011,synthetic_user_011_testing,testing,What test style should the coding assistant follow?,synthetic_user_011_testing,testing,The user prefers pytest.,1
+synthetic_user_011,synthetic_user_011_testing,testing,What test style should the coding assistant follow?,synthetic_user_011_language,language,The user writes C++.,0
+synthetic_user_011,synthetic_user_011_testing,testing,What test style should the coding assistant follow?,synthetic_user_011_performance,performance,The user prefers low memory use.,0
+synthetic_user_011,synthetic_user_011_testing,testing,What test style should the coding assistant follow?,synthetic_user_011_documentation,documentation,The user likes worked examples.,0
+synthetic_user_011,synthetic_user_011_language,language,Which programming language does this user prefer?,synthetic_user_011_editor,editor,The user uses VS Code.,0
+synthetic_user_011,synthetic_user_011_language,language,Which programming language does this user prefer?,synthetic_user_011_testing,testing,The user prefers pytest.,0
+synthetic_user_011,synthetic_user_011_language,language,Which programming language does this user prefer?,synthetic_user_011_language,language,The user writes C++.,1
+synthetic_user_011,synthetic_user_011_language,language,Which programming language does this user prefer?,synthetic_user_011_performance,performance,The user prefers low memory use.,0
+synthetic_user_011,synthetic_user_011_language,language,Which programming language does this user prefer?,synthetic_user_011_documentation,documentation,The user likes worked examples.,0
+synthetic_user_011,synthetic_user_011_performance,performance,What performance constraint matters to this user?,synthetic_user_011_editor,editor,The user uses VS Code.,0
+synthetic_user_011,synthetic_user_011_performance,performance,What performance constraint matters to this user?,synthetic_user_011_testing,testing,The user prefers pytest.,0
+synthetic_user_011,synthetic_user_011_performance,performance,What performance constraint matters to this user?,synthetic_user_011_language,language,The user writes C++.,0
+synthetic_user_011,synthetic_user_011_performance,performance,What performance constraint matters to this user?,synthetic_user_011_performance,performance,The user prefers low memory use.,1
+synthetic_user_011,synthetic_user_011_performance,performance,What performance constraint matters to this user?,synthetic_user_011_documentation,documentation,The user likes worked examples.,0
+synthetic_user_011,synthetic_user_011_documentation,documentation,How should I document this code for the user?,synthetic_user_011_editor,editor,The user uses VS Code.,0
+synthetic_user_011,synthetic_user_011_documentation,documentation,How should I document this code for the user?,synthetic_user_011_testing,testing,The user prefers pytest.,0
+synthetic_user_011,synthetic_user_011_documentation,documentation,How should I document this code for the user?,synthetic_user_011_language,language,The user writes C++.,0
+synthetic_user_011,synthetic_user_011_documentation,documentation,How should I document this code for the user?,synthetic_user_011_performance,performance,The user prefers low memory use.,0
+synthetic_user_011,synthetic_user_011_documentation,documentation,How should I document this code for the user?,synthetic_user_011_documentation,documentation,The user likes worked examples.,1
+synthetic_user_012,synthetic_user_012_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_012_editor,editor,The user works in PyCharm.,1
+synthetic_user_012,synthetic_user_012_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_012_testing,testing,The user prefers pytest.,0
+synthetic_user_012,synthetic_user_012_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_012_language,language,The user writes TypeScript.,0
+synthetic_user_012,synthetic_user_012_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_012_performance,performance,The user prefers low memory use.,0
+synthetic_user_012,synthetic_user_012_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_012_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_012,synthetic_user_012_testing,testing,What test style should the coding assistant follow?,synthetic_user_012_editor,editor,The user works in PyCharm.,0
+synthetic_user_012,synthetic_user_012_testing,testing,What test style should the coding assistant follow?,synthetic_user_012_testing,testing,The user prefers pytest.,1
+synthetic_user_012,synthetic_user_012_testing,testing,What test style should the coding assistant follow?,synthetic_user_012_language,language,The user writes TypeScript.,0
+synthetic_user_012,synthetic_user_012_testing,testing,What test style should the coding assistant follow?,synthetic_user_012_performance,performance,The user prefers low memory use.,0
+synthetic_user_012,synthetic_user_012_testing,testing,What test style should the coding assistant follow?,synthetic_user_012_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_012,synthetic_user_012_language,language,Which programming language does this user prefer?,synthetic_user_012_editor,editor,The user works in PyCharm.,0
+synthetic_user_012,synthetic_user_012_language,language,Which programming language does this user prefer?,synthetic_user_012_testing,testing,The user prefers pytest.,0
+synthetic_user_012,synthetic_user_012_language,language,Which programming language does this user prefer?,synthetic_user_012_language,language,The user writes TypeScript.,1
+synthetic_user_012,synthetic_user_012_language,language,Which programming language does this user prefer?,synthetic_user_012_performance,performance,The user prefers low memory use.,0
+synthetic_user_012,synthetic_user_012_language,language,Which programming language does this user prefer?,synthetic_user_012_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_012,synthetic_user_012_performance,performance,What performance constraint matters to this user?,synthetic_user_012_editor,editor,The user works in PyCharm.,0
+synthetic_user_012,synthetic_user_012_performance,performance,What performance constraint matters to this user?,synthetic_user_012_testing,testing,The user prefers pytest.,0
+synthetic_user_012,synthetic_user_012_performance,performance,What performance constraint matters to this user?,synthetic_user_012_language,language,The user writes TypeScript.,0
+synthetic_user_012,synthetic_user_012_performance,performance,What performance constraint matters to this user?,synthetic_user_012_performance,performance,The user prefers low memory use.,1
+synthetic_user_012,synthetic_user_012_performance,performance,What performance constraint matters to this user?,synthetic_user_012_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_012,synthetic_user_012_documentation,documentation,How should I document this code for the user?,synthetic_user_012_editor,editor,The user works in PyCharm.,0
+synthetic_user_012,synthetic_user_012_documentation,documentation,How should I document this code for the user?,synthetic_user_012_testing,testing,The user prefers pytest.,0
+synthetic_user_012,synthetic_user_012_documentation,documentation,How should I document this code for the user?,synthetic_user_012_language,language,The user writes TypeScript.,0
+synthetic_user_012,synthetic_user_012_documentation,documentation,How should I document this code for the user?,synthetic_user_012_performance,performance,The user prefers low memory use.,0
+synthetic_user_012,synthetic_user_012_documentation,documentation,How should I document this code for the user?,synthetic_user_012_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_013,synthetic_user_013_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_013_editor,editor,The user works in PyCharm.,1
+synthetic_user_013,synthetic_user_013_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_013_testing,testing,The user prefers pytest.,0
+synthetic_user_013,synthetic_user_013_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_013_language,language,The user writes Python.,0
+synthetic_user_013,synthetic_user_013_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_013_performance,performance,The user prioritizes low latency.,0
+synthetic_user_013,synthetic_user_013_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_013_documentation,documentation,The user likes worked examples.,0
+synthetic_user_013,synthetic_user_013_testing,testing,What test style should the coding assistant follow?,synthetic_user_013_editor,editor,The user works in PyCharm.,0
+synthetic_user_013,synthetic_user_013_testing,testing,What test style should the coding assistant follow?,synthetic_user_013_testing,testing,The user prefers pytest.,1
+synthetic_user_013,synthetic_user_013_testing,testing,What test style should the coding assistant follow?,synthetic_user_013_language,language,The user writes Python.,0
+synthetic_user_013,synthetic_user_013_testing,testing,What test style should the coding assistant follow?,synthetic_user_013_performance,performance,The user prioritizes low latency.,0
+synthetic_user_013,synthetic_user_013_testing,testing,What test style should the coding assistant follow?,synthetic_user_013_documentation,documentation,The user likes worked examples.,0
+synthetic_user_013,synthetic_user_013_language,language,Which programming language does this user prefer?,synthetic_user_013_editor,editor,The user works in PyCharm.,0
+synthetic_user_013,synthetic_user_013_language,language,Which programming language does this user prefer?,synthetic_user_013_testing,testing,The user prefers pytest.,0
+synthetic_user_013,synthetic_user_013_language,language,Which programming language does this user prefer?,synthetic_user_013_language,language,The user writes Python.,1
+synthetic_user_013,synthetic_user_013_language,language,Which programming language does this user prefer?,synthetic_user_013_performance,performance,The user prioritizes low latency.,0
+synthetic_user_013,synthetic_user_013_language,language,Which programming language does this user prefer?,synthetic_user_013_documentation,documentation,The user likes worked examples.,0
+synthetic_user_013,synthetic_user_013_performance,performance,What performance constraint matters to this user?,synthetic_user_013_editor,editor,The user works in PyCharm.,0
+synthetic_user_013,synthetic_user_013_performance,performance,What performance constraint matters to this user?,synthetic_user_013_testing,testing,The user prefers pytest.,0
+synthetic_user_013,synthetic_user_013_performance,performance,What performance constraint matters to this user?,synthetic_user_013_language,language,The user writes Python.,0
+synthetic_user_013,synthetic_user_013_performance,performance,What performance constraint matters to this user?,synthetic_user_013_performance,performance,The user prioritizes low latency.,1
+synthetic_user_013,synthetic_user_013_performance,performance,What performance constraint matters to this user?,synthetic_user_013_documentation,documentation,The user likes worked examples.,0
+synthetic_user_013,synthetic_user_013_documentation,documentation,How should I document this code for the user?,synthetic_user_013_editor,editor,The user works in PyCharm.,0
+synthetic_user_013,synthetic_user_013_documentation,documentation,How should I document this code for the user?,synthetic_user_013_testing,testing,The user prefers pytest.,0
+synthetic_user_013,synthetic_user_013_documentation,documentation,How should I document this code for the user?,synthetic_user_013_language,language,The user writes Python.,0
+synthetic_user_013,synthetic_user_013_documentation,documentation,How should I document this code for the user?,synthetic_user_013_performance,performance,The user prioritizes low latency.,0
+synthetic_user_013,synthetic_user_013_documentation,documentation,How should I document this code for the user?,synthetic_user_013_documentation,documentation,The user likes worked examples.,1
+synthetic_user_014,synthetic_user_014_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_014_editor,editor,The user works in PyCharm.,1
+synthetic_user_014,synthetic_user_014_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_014_testing,testing,The user uses unittest.,0
+synthetic_user_014,synthetic_user_014_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_014_language,language,The user writes C++.,0
+synthetic_user_014,synthetic_user_014_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_014_performance,performance,The user prioritizes low latency.,0
+synthetic_user_014,synthetic_user_014_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_014_documentation,documentation,The user likes worked examples.,0
+synthetic_user_014,synthetic_user_014_testing,testing,What test style should the coding assistant follow?,synthetic_user_014_editor,editor,The user works in PyCharm.,0
+synthetic_user_014,synthetic_user_014_testing,testing,What test style should the coding assistant follow?,synthetic_user_014_testing,testing,The user uses unittest.,1
+synthetic_user_014,synthetic_user_014_testing,testing,What test style should the coding assistant follow?,synthetic_user_014_language,language,The user writes C++.,0
+synthetic_user_014,synthetic_user_014_testing,testing,What test style should the coding assistant follow?,synthetic_user_014_performance,performance,The user prioritizes low latency.,0
+synthetic_user_014,synthetic_user_014_testing,testing,What test style should the coding assistant follow?,synthetic_user_014_documentation,documentation,The user likes worked examples.,0
+synthetic_user_014,synthetic_user_014_language,language,Which programming language does this user prefer?,synthetic_user_014_editor,editor,The user works in PyCharm.,0
+synthetic_user_014,synthetic_user_014_language,language,Which programming language does this user prefer?,synthetic_user_014_testing,testing,The user uses unittest.,0
+synthetic_user_014,synthetic_user_014_language,language,Which programming language does this user prefer?,synthetic_user_014_language,language,The user writes C++.,1
+synthetic_user_014,synthetic_user_014_language,language,Which programming language does this user prefer?,synthetic_user_014_performance,performance,The user prioritizes low latency.,0
+synthetic_user_014,synthetic_user_014_language,language,Which programming language does this user prefer?,synthetic_user_014_documentation,documentation,The user likes worked examples.,0
+synthetic_user_014,synthetic_user_014_performance,performance,What performance constraint matters to this user?,synthetic_user_014_editor,editor,The user works in PyCharm.,0
+synthetic_user_014,synthetic_user_014_performance,performance,What performance constraint matters to this user?,synthetic_user_014_testing,testing,The user uses unittest.,0
+synthetic_user_014,synthetic_user_014_performance,performance,What performance constraint matters to this user?,synthetic_user_014_language,language,The user writes C++.,0
+synthetic_user_014,synthetic_user_014_performance,performance,What performance constraint matters to this user?,synthetic_user_014_performance,performance,The user prioritizes low latency.,1
+synthetic_user_014,synthetic_user_014_performance,performance,What performance constraint matters to this user?,synthetic_user_014_documentation,documentation,The user likes worked examples.,0
+synthetic_user_014,synthetic_user_014_documentation,documentation,How should I document this code for the user?,synthetic_user_014_editor,editor,The user works in PyCharm.,0
+synthetic_user_014,synthetic_user_014_documentation,documentation,How should I document this code for the user?,synthetic_user_014_testing,testing,The user uses unittest.,0
+synthetic_user_014,synthetic_user_014_documentation,documentation,How should I document this code for the user?,synthetic_user_014_language,language,The user writes C++.,0
+synthetic_user_014,synthetic_user_014_documentation,documentation,How should I document this code for the user?,synthetic_user_014_performance,performance,The user prioritizes low latency.,0
+synthetic_user_014,synthetic_user_014_documentation,documentation,How should I document this code for the user?,synthetic_user_014_documentation,documentation,The user likes worked examples.,1
+synthetic_user_015,synthetic_user_015_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_015_editor,editor,The user uses VS Code.,1
+synthetic_user_015,synthetic_user_015_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_015_testing,testing,The user writes property-based tests.,0
+synthetic_user_015,synthetic_user_015_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_015_language,language,The user writes TypeScript.,0
+synthetic_user_015,synthetic_user_015_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_015_performance,performance,The user prefers low memory use.,0
+synthetic_user_015,synthetic_user_015_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_015_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_015,synthetic_user_015_testing,testing,What test style should the coding assistant follow?,synthetic_user_015_editor,editor,The user uses VS Code.,0
+synthetic_user_015,synthetic_user_015_testing,testing,What test style should the coding assistant follow?,synthetic_user_015_testing,testing,The user writes property-based tests.,1
+synthetic_user_015,synthetic_user_015_testing,testing,What test style should the coding assistant follow?,synthetic_user_015_language,language,The user writes TypeScript.,0
+synthetic_user_015,synthetic_user_015_testing,testing,What test style should the coding assistant follow?,synthetic_user_015_performance,performance,The user prefers low memory use.,0
+synthetic_user_015,synthetic_user_015_testing,testing,What test style should the coding assistant follow?,synthetic_user_015_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_015,synthetic_user_015_language,language,Which programming language does this user prefer?,synthetic_user_015_editor,editor,The user uses VS Code.,0
+synthetic_user_015,synthetic_user_015_language,language,Which programming language does this user prefer?,synthetic_user_015_testing,testing,The user writes property-based tests.,0
+synthetic_user_015,synthetic_user_015_language,language,Which programming language does this user prefer?,synthetic_user_015_language,language,The user writes TypeScript.,1
+synthetic_user_015,synthetic_user_015_language,language,Which programming language does this user prefer?,synthetic_user_015_performance,performance,The user prefers low memory use.,0
+synthetic_user_015,synthetic_user_015_language,language,Which programming language does this user prefer?,synthetic_user_015_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_015,synthetic_user_015_performance,performance,What performance constraint matters to this user?,synthetic_user_015_editor,editor,The user uses VS Code.,0
+synthetic_user_015,synthetic_user_015_performance,performance,What performance constraint matters to this user?,synthetic_user_015_testing,testing,The user writes property-based tests.,0
+synthetic_user_015,synthetic_user_015_performance,performance,What performance constraint matters to this user?,synthetic_user_015_language,language,The user writes TypeScript.,0
+synthetic_user_015,synthetic_user_015_performance,performance,What performance constraint matters to this user?,synthetic_user_015_performance,performance,The user prefers low memory use.,1
+synthetic_user_015,synthetic_user_015_performance,performance,What performance constraint matters to this user?,synthetic_user_015_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_015,synthetic_user_015_documentation,documentation,How should I document this code for the user?,synthetic_user_015_editor,editor,The user uses VS Code.,0
+synthetic_user_015,synthetic_user_015_documentation,documentation,How should I document this code for the user?,synthetic_user_015_testing,testing,The user writes property-based tests.,0
+synthetic_user_015,synthetic_user_015_documentation,documentation,How should I document this code for the user?,synthetic_user_015_language,language,The user writes TypeScript.,0
+synthetic_user_015,synthetic_user_015_documentation,documentation,How should I document this code for the user?,synthetic_user_015_performance,performance,The user prefers low memory use.,0
+synthetic_user_015,synthetic_user_015_documentation,documentation,How should I document this code for the user?,synthetic_user_015_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_016,synthetic_user_016_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_016_editor,editor,The user works in PyCharm.,1
+synthetic_user_016,synthetic_user_016_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_016_testing,testing,The user prefers pytest.,0
+synthetic_user_016,synthetic_user_016_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_016_language,language,The user writes TypeScript.,0
+synthetic_user_016,synthetic_user_016_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_016_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_016,synthetic_user_016_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_016_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_016,synthetic_user_016_testing,testing,What test style should the coding assistant follow?,synthetic_user_016_editor,editor,The user works in PyCharm.,0
+synthetic_user_016,synthetic_user_016_testing,testing,What test style should the coding assistant follow?,synthetic_user_016_testing,testing,The user prefers pytest.,1
+synthetic_user_016,synthetic_user_016_testing,testing,What test style should the coding assistant follow?,synthetic_user_016_language,language,The user writes TypeScript.,0
+synthetic_user_016,synthetic_user_016_testing,testing,What test style should the coding assistant follow?,synthetic_user_016_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_016,synthetic_user_016_testing,testing,What test style should the coding assistant follow?,synthetic_user_016_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_016,synthetic_user_016_language,language,Which programming language does this user prefer?,synthetic_user_016_editor,editor,The user works in PyCharm.,0
+synthetic_user_016,synthetic_user_016_language,language,Which programming language does this user prefer?,synthetic_user_016_testing,testing,The user prefers pytest.,0
+synthetic_user_016,synthetic_user_016_language,language,Which programming language does this user prefer?,synthetic_user_016_language,language,The user writes TypeScript.,1
+synthetic_user_016,synthetic_user_016_language,language,Which programming language does this user prefer?,synthetic_user_016_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_016,synthetic_user_016_language,language,Which programming language does this user prefer?,synthetic_user_016_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_016,synthetic_user_016_performance,performance,What performance constraint matters to this user?,synthetic_user_016_editor,editor,The user works in PyCharm.,0
+synthetic_user_016,synthetic_user_016_performance,performance,What performance constraint matters to this user?,synthetic_user_016_testing,testing,The user prefers pytest.,0
+synthetic_user_016,synthetic_user_016_performance,performance,What performance constraint matters to this user?,synthetic_user_016_language,language,The user writes TypeScript.,0
+synthetic_user_016,synthetic_user_016_performance,performance,What performance constraint matters to this user?,synthetic_user_016_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_016,synthetic_user_016_performance,performance,What performance constraint matters to this user?,synthetic_user_016_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_016,synthetic_user_016_documentation,documentation,How should I document this code for the user?,synthetic_user_016_editor,editor,The user works in PyCharm.,0
+synthetic_user_016,synthetic_user_016_documentation,documentation,How should I document this code for the user?,synthetic_user_016_testing,testing,The user prefers pytest.,0
+synthetic_user_016,synthetic_user_016_documentation,documentation,How should I document this code for the user?,synthetic_user_016_language,language,The user writes TypeScript.,0
+synthetic_user_016,synthetic_user_016_documentation,documentation,How should I document this code for the user?,synthetic_user_016_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_016,synthetic_user_016_documentation,documentation,How should I document this code for the user?,synthetic_user_016_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_017,synthetic_user_017_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_017_editor,editor,The user prefers Vim keybindings.,1
+synthetic_user_017,synthetic_user_017_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_017_testing,testing,The user writes property-based tests.,0
+synthetic_user_017,synthetic_user_017_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_017_language,language,The user writes TypeScript.,0
+synthetic_user_017,synthetic_user_017_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_017_performance,performance,The user prioritizes low latency.,0
+synthetic_user_017,synthetic_user_017_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_017_documentation,documentation,The user likes worked examples.,0
+synthetic_user_017,synthetic_user_017_testing,testing,What test style should the coding assistant follow?,synthetic_user_017_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_017,synthetic_user_017_testing,testing,What test style should the coding assistant follow?,synthetic_user_017_testing,testing,The user writes property-based tests.,1
+synthetic_user_017,synthetic_user_017_testing,testing,What test style should the coding assistant follow?,synthetic_user_017_language,language,The user writes TypeScript.,0
+synthetic_user_017,synthetic_user_017_testing,testing,What test style should the coding assistant follow?,synthetic_user_017_performance,performance,The user prioritizes low latency.,0
+synthetic_user_017,synthetic_user_017_testing,testing,What test style should the coding assistant follow?,synthetic_user_017_documentation,documentation,The user likes worked examples.,0
+synthetic_user_017,synthetic_user_017_language,language,Which programming language does this user prefer?,synthetic_user_017_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_017,synthetic_user_017_language,language,Which programming language does this user prefer?,synthetic_user_017_testing,testing,The user writes property-based tests.,0
+synthetic_user_017,synthetic_user_017_language,language,Which programming language does this user prefer?,synthetic_user_017_language,language,The user writes TypeScript.,1
+synthetic_user_017,synthetic_user_017_language,language,Which programming language does this user prefer?,synthetic_user_017_performance,performance,The user prioritizes low latency.,0
+synthetic_user_017,synthetic_user_017_language,language,Which programming language does this user prefer?,synthetic_user_017_documentation,documentation,The user likes worked examples.,0
+synthetic_user_017,synthetic_user_017_performance,performance,What performance constraint matters to this user?,synthetic_user_017_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_017,synthetic_user_017_performance,performance,What performance constraint matters to this user?,synthetic_user_017_testing,testing,The user writes property-based tests.,0
+synthetic_user_017,synthetic_user_017_performance,performance,What performance constraint matters to this user?,synthetic_user_017_language,language,The user writes TypeScript.,0
+synthetic_user_017,synthetic_user_017_performance,performance,What performance constraint matters to this user?,synthetic_user_017_performance,performance,The user prioritizes low latency.,1
+synthetic_user_017,synthetic_user_017_performance,performance,What performance constraint matters to this user?,synthetic_user_017_documentation,documentation,The user likes worked examples.,0
+synthetic_user_017,synthetic_user_017_documentation,documentation,How should I document this code for the user?,synthetic_user_017_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_017,synthetic_user_017_documentation,documentation,How should I document this code for the user?,synthetic_user_017_testing,testing,The user writes property-based tests.,0
+synthetic_user_017,synthetic_user_017_documentation,documentation,How should I document this code for the user?,synthetic_user_017_language,language,The user writes TypeScript.,0
+synthetic_user_017,synthetic_user_017_documentation,documentation,How should I document this code for the user?,synthetic_user_017_performance,performance,The user prioritizes low latency.,0
+synthetic_user_017,synthetic_user_017_documentation,documentation,How should I document this code for the user?,synthetic_user_017_documentation,documentation,The user likes worked examples.,1
+synthetic_user_018,synthetic_user_018_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_018_editor,editor,The user uses VS Code.,1
+synthetic_user_018,synthetic_user_018_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_018_testing,testing,The user writes property-based tests.,0
+synthetic_user_018,synthetic_user_018_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_018_language,language,The user writes Python.,0
+synthetic_user_018,synthetic_user_018_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_018_performance,performance,The user prioritizes low latency.,0
+synthetic_user_018,synthetic_user_018_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_018_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_018,synthetic_user_018_testing,testing,What test style should the coding assistant follow?,synthetic_user_018_editor,editor,The user uses VS Code.,0
+synthetic_user_018,synthetic_user_018_testing,testing,What test style should the coding assistant follow?,synthetic_user_018_testing,testing,The user writes property-based tests.,1
+synthetic_user_018,synthetic_user_018_testing,testing,What test style should the coding assistant follow?,synthetic_user_018_language,language,The user writes Python.,0
+synthetic_user_018,synthetic_user_018_testing,testing,What test style should the coding assistant follow?,synthetic_user_018_performance,performance,The user prioritizes low latency.,0
+synthetic_user_018,synthetic_user_018_testing,testing,What test style should the coding assistant follow?,synthetic_user_018_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_018,synthetic_user_018_language,language,Which programming language does this user prefer?,synthetic_user_018_editor,editor,The user uses VS Code.,0
+synthetic_user_018,synthetic_user_018_language,language,Which programming language does this user prefer?,synthetic_user_018_testing,testing,The user writes property-based tests.,0
+synthetic_user_018,synthetic_user_018_language,language,Which programming language does this user prefer?,synthetic_user_018_language,language,The user writes Python.,1
+synthetic_user_018,synthetic_user_018_language,language,Which programming language does this user prefer?,synthetic_user_018_performance,performance,The user prioritizes low latency.,0
+synthetic_user_018,synthetic_user_018_language,language,Which programming language does this user prefer?,synthetic_user_018_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_018,synthetic_user_018_performance,performance,What performance constraint matters to this user?,synthetic_user_018_editor,editor,The user uses VS Code.,0
+synthetic_user_018,synthetic_user_018_performance,performance,What performance constraint matters to this user?,synthetic_user_018_testing,testing,The user writes property-based tests.,0
+synthetic_user_018,synthetic_user_018_performance,performance,What performance constraint matters to this user?,synthetic_user_018_language,language,The user writes Python.,0
+synthetic_user_018,synthetic_user_018_performance,performance,What performance constraint matters to this user?,synthetic_user_018_performance,performance,The user prioritizes low latency.,1
+synthetic_user_018,synthetic_user_018_performance,performance,What performance constraint matters to this user?,synthetic_user_018_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_018,synthetic_user_018_documentation,documentation,How should I document this code for the user?,synthetic_user_018_editor,editor,The user uses VS Code.,0
+synthetic_user_018,synthetic_user_018_documentation,documentation,How should I document this code for the user?,synthetic_user_018_testing,testing,The user writes property-based tests.,0
+synthetic_user_018,synthetic_user_018_documentation,documentation,How should I document this code for the user?,synthetic_user_018_language,language,The user writes Python.,0
+synthetic_user_018,synthetic_user_018_documentation,documentation,How should I document this code for the user?,synthetic_user_018_performance,performance,The user prioritizes low latency.,0
+synthetic_user_018,synthetic_user_018_documentation,documentation,How should I document this code for the user?,synthetic_user_018_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_019,synthetic_user_019_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_019_editor,editor,The user works in PyCharm.,1
+synthetic_user_019,synthetic_user_019_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_019_testing,testing,The user uses unittest.,0
+synthetic_user_019,synthetic_user_019_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_019_language,language,The user writes C++.,0
+synthetic_user_019,synthetic_user_019_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_019_performance,performance,The user prefers low memory use.,0
+synthetic_user_019,synthetic_user_019_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_019_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_019,synthetic_user_019_testing,testing,What test style should the coding assistant follow?,synthetic_user_019_editor,editor,The user works in PyCharm.,0
+synthetic_user_019,synthetic_user_019_testing,testing,What test style should the coding assistant follow?,synthetic_user_019_testing,testing,The user uses unittest.,1
+synthetic_user_019,synthetic_user_019_testing,testing,What test style should the coding assistant follow?,synthetic_user_019_language,language,The user writes C++.,0
+synthetic_user_019,synthetic_user_019_testing,testing,What test style should the coding assistant follow?,synthetic_user_019_performance,performance,The user prefers low memory use.,0
+synthetic_user_019,synthetic_user_019_testing,testing,What test style should the coding assistant follow?,synthetic_user_019_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_019,synthetic_user_019_language,language,Which programming language does this user prefer?,synthetic_user_019_editor,editor,The user works in PyCharm.,0
+synthetic_user_019,synthetic_user_019_language,language,Which programming language does this user prefer?,synthetic_user_019_testing,testing,The user uses unittest.,0
+synthetic_user_019,synthetic_user_019_language,language,Which programming language does this user prefer?,synthetic_user_019_language,language,The user writes C++.,1
+synthetic_user_019,synthetic_user_019_language,language,Which programming language does this user prefer?,synthetic_user_019_performance,performance,The user prefers low memory use.,0
+synthetic_user_019,synthetic_user_019_language,language,Which programming language does this user prefer?,synthetic_user_019_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_019,synthetic_user_019_performance,performance,What performance constraint matters to this user?,synthetic_user_019_editor,editor,The user works in PyCharm.,0
+synthetic_user_019,synthetic_user_019_performance,performance,What performance constraint matters to this user?,synthetic_user_019_testing,testing,The user uses unittest.,0
+synthetic_user_019,synthetic_user_019_performance,performance,What performance constraint matters to this user?,synthetic_user_019_language,language,The user writes C++.,0
+synthetic_user_019,synthetic_user_019_performance,performance,What performance constraint matters to this user?,synthetic_user_019_performance,performance,The user prefers low memory use.,1
+synthetic_user_019,synthetic_user_019_performance,performance,What performance constraint matters to this user?,synthetic_user_019_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_019,synthetic_user_019_documentation,documentation,How should I document this code for the user?,synthetic_user_019_editor,editor,The user works in PyCharm.,0
+synthetic_user_019,synthetic_user_019_documentation,documentation,How should I document this code for the user?,synthetic_user_019_testing,testing,The user uses unittest.,0
+synthetic_user_019,synthetic_user_019_documentation,documentation,How should I document this code for the user?,synthetic_user_019_language,language,The user writes C++.,0
+synthetic_user_019,synthetic_user_019_documentation,documentation,How should I document this code for the user?,synthetic_user_019_performance,performance,The user prefers low memory use.,0
+synthetic_user_019,synthetic_user_019_documentation,documentation,How should I document this code for the user?,synthetic_user_019_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_020,synthetic_user_020_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_020_editor,editor,The user works in PyCharm.,1
+synthetic_user_020,synthetic_user_020_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_020_testing,testing,The user writes property-based tests.,0
+synthetic_user_020,synthetic_user_020_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_020_language,language,The user writes Python.,0
+synthetic_user_020,synthetic_user_020_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_020_performance,performance,The user prefers low memory use.,0
+synthetic_user_020,synthetic_user_020_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_020_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_020,synthetic_user_020_testing,testing,What test style should the coding assistant follow?,synthetic_user_020_editor,editor,The user works in PyCharm.,0
+synthetic_user_020,synthetic_user_020_testing,testing,What test style should the coding assistant follow?,synthetic_user_020_testing,testing,The user writes property-based tests.,1
+synthetic_user_020,synthetic_user_020_testing,testing,What test style should the coding assistant follow?,synthetic_user_020_language,language,The user writes Python.,0
+synthetic_user_020,synthetic_user_020_testing,testing,What test style should the coding assistant follow?,synthetic_user_020_performance,performance,The user prefers low memory use.,0
+synthetic_user_020,synthetic_user_020_testing,testing,What test style should the coding assistant follow?,synthetic_user_020_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_020,synthetic_user_020_language,language,Which programming language does this user prefer?,synthetic_user_020_editor,editor,The user works in PyCharm.,0
+synthetic_user_020,synthetic_user_020_language,language,Which programming language does this user prefer?,synthetic_user_020_testing,testing,The user writes property-based tests.,0
+synthetic_user_020,synthetic_user_020_language,language,Which programming language does this user prefer?,synthetic_user_020_language,language,The user writes Python.,1
+synthetic_user_020,synthetic_user_020_language,language,Which programming language does this user prefer?,synthetic_user_020_performance,performance,The user prefers low memory use.,0
+synthetic_user_020,synthetic_user_020_language,language,Which programming language does this user prefer?,synthetic_user_020_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_020,synthetic_user_020_performance,performance,What performance constraint matters to this user?,synthetic_user_020_editor,editor,The user works in PyCharm.,0
+synthetic_user_020,synthetic_user_020_performance,performance,What performance constraint matters to this user?,synthetic_user_020_testing,testing,The user writes property-based tests.,0
+synthetic_user_020,synthetic_user_020_performance,performance,What performance constraint matters to this user?,synthetic_user_020_language,language,The user writes Python.,0
+synthetic_user_020,synthetic_user_020_performance,performance,What performance constraint matters to this user?,synthetic_user_020_performance,performance,The user prefers low memory use.,1
+synthetic_user_020,synthetic_user_020_performance,performance,What performance constraint matters to this user?,synthetic_user_020_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_020,synthetic_user_020_documentation,documentation,How should I document this code for the user?,synthetic_user_020_editor,editor,The user works in PyCharm.,0
+synthetic_user_020,synthetic_user_020_documentation,documentation,How should I document this code for the user?,synthetic_user_020_testing,testing,The user writes property-based tests.,0
+synthetic_user_020,synthetic_user_020_documentation,documentation,How should I document this code for the user?,synthetic_user_020_language,language,The user writes Python.,0
+synthetic_user_020,synthetic_user_020_documentation,documentation,How should I document this code for the user?,synthetic_user_020_performance,performance,The user prefers low memory use.,0
+synthetic_user_020,synthetic_user_020_documentation,documentation,How should I document this code for the user?,synthetic_user_020_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_021,synthetic_user_021_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_021_editor,editor,The user uses VS Code.,1
+synthetic_user_021,synthetic_user_021_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_021_testing,testing,The user uses unittest.,0
+synthetic_user_021,synthetic_user_021_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_021_language,language,The user writes TypeScript.,0
+synthetic_user_021,synthetic_user_021_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_021_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_021,synthetic_user_021_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_021_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_021,synthetic_user_021_testing,testing,What test style should the coding assistant follow?,synthetic_user_021_editor,editor,The user uses VS Code.,0
+synthetic_user_021,synthetic_user_021_testing,testing,What test style should the coding assistant follow?,synthetic_user_021_testing,testing,The user uses unittest.,1
+synthetic_user_021,synthetic_user_021_testing,testing,What test style should the coding assistant follow?,synthetic_user_021_language,language,The user writes TypeScript.,0
+synthetic_user_021,synthetic_user_021_testing,testing,What test style should the coding assistant follow?,synthetic_user_021_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_021,synthetic_user_021_testing,testing,What test style should the coding assistant follow?,synthetic_user_021_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_021,synthetic_user_021_language,language,Which programming language does this user prefer?,synthetic_user_021_editor,editor,The user uses VS Code.,0
+synthetic_user_021,synthetic_user_021_language,language,Which programming language does this user prefer?,synthetic_user_021_testing,testing,The user uses unittest.,0
+synthetic_user_021,synthetic_user_021_language,language,Which programming language does this user prefer?,synthetic_user_021_language,language,The user writes TypeScript.,1
+synthetic_user_021,synthetic_user_021_language,language,Which programming language does this user prefer?,synthetic_user_021_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_021,synthetic_user_021_language,language,Which programming language does this user prefer?,synthetic_user_021_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_021,synthetic_user_021_performance,performance,What performance constraint matters to this user?,synthetic_user_021_editor,editor,The user uses VS Code.,0
+synthetic_user_021,synthetic_user_021_performance,performance,What performance constraint matters to this user?,synthetic_user_021_testing,testing,The user uses unittest.,0
+synthetic_user_021,synthetic_user_021_performance,performance,What performance constraint matters to this user?,synthetic_user_021_language,language,The user writes TypeScript.,0
+synthetic_user_021,synthetic_user_021_performance,performance,What performance constraint matters to this user?,synthetic_user_021_performance,performance,The user profiles CPU hotspots.,1
+synthetic_user_021,synthetic_user_021_performance,performance,What performance constraint matters to this user?,synthetic_user_021_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_021,synthetic_user_021_documentation,documentation,How should I document this code for the user?,synthetic_user_021_editor,editor,The user uses VS Code.,0
+synthetic_user_021,synthetic_user_021_documentation,documentation,How should I document this code for the user?,synthetic_user_021_testing,testing,The user uses unittest.,0
+synthetic_user_021,synthetic_user_021_documentation,documentation,How should I document this code for the user?,synthetic_user_021_language,language,The user writes TypeScript.,0
+synthetic_user_021,synthetic_user_021_documentation,documentation,How should I document this code for the user?,synthetic_user_021_performance,performance,The user profiles CPU hotspots.,0
+synthetic_user_021,synthetic_user_021_documentation,documentation,How should I document this code for the user?,synthetic_user_021_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_022,synthetic_user_022_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_022_editor,editor,The user works in PyCharm.,1
+synthetic_user_022,synthetic_user_022_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_022_testing,testing,The user writes property-based tests.,0
+synthetic_user_022,synthetic_user_022_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_022_language,language,The user writes Python.,0
+synthetic_user_022,synthetic_user_022_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_022_performance,performance,The user prioritizes low latency.,0
+synthetic_user_022,synthetic_user_022_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_022_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_022,synthetic_user_022_testing,testing,What test style should the coding assistant follow?,synthetic_user_022_editor,editor,The user works in PyCharm.,0
+synthetic_user_022,synthetic_user_022_testing,testing,What test style should the coding assistant follow?,synthetic_user_022_testing,testing,The user writes property-based tests.,1
+synthetic_user_022,synthetic_user_022_testing,testing,What test style should the coding assistant follow?,synthetic_user_022_language,language,The user writes Python.,0
+synthetic_user_022,synthetic_user_022_testing,testing,What test style should the coding assistant follow?,synthetic_user_022_performance,performance,The user prioritizes low latency.,0
+synthetic_user_022,synthetic_user_022_testing,testing,What test style should the coding assistant follow?,synthetic_user_022_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_022,synthetic_user_022_language,language,Which programming language does this user prefer?,synthetic_user_022_editor,editor,The user works in PyCharm.,0
+synthetic_user_022,synthetic_user_022_language,language,Which programming language does this user prefer?,synthetic_user_022_testing,testing,The user writes property-based tests.,0
+synthetic_user_022,synthetic_user_022_language,language,Which programming language does this user prefer?,synthetic_user_022_language,language,The user writes Python.,1
+synthetic_user_022,synthetic_user_022_language,language,Which programming language does this user prefer?,synthetic_user_022_performance,performance,The user prioritizes low latency.,0
+synthetic_user_022,synthetic_user_022_language,language,Which programming language does this user prefer?,synthetic_user_022_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_022,synthetic_user_022_performance,performance,What performance constraint matters to this user?,synthetic_user_022_editor,editor,The user works in PyCharm.,0
+synthetic_user_022,synthetic_user_022_performance,performance,What performance constraint matters to this user?,synthetic_user_022_testing,testing,The user writes property-based tests.,0
+synthetic_user_022,synthetic_user_022_performance,performance,What performance constraint matters to this user?,synthetic_user_022_language,language,The user writes Python.,0
+synthetic_user_022,synthetic_user_022_performance,performance,What performance constraint matters to this user?,synthetic_user_022_performance,performance,The user prioritizes low latency.,1
+synthetic_user_022,synthetic_user_022_performance,performance,What performance constraint matters to this user?,synthetic_user_022_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_022,synthetic_user_022_documentation,documentation,How should I document this code for the user?,synthetic_user_022_editor,editor,The user works in PyCharm.,0
+synthetic_user_022,synthetic_user_022_documentation,documentation,How should I document this code for the user?,synthetic_user_022_testing,testing,The user writes property-based tests.,0
+synthetic_user_022,synthetic_user_022_documentation,documentation,How should I document this code for the user?,synthetic_user_022_language,language,The user writes Python.,0
+synthetic_user_022,synthetic_user_022_documentation,documentation,How should I document this code for the user?,synthetic_user_022_performance,performance,The user prioritizes low latency.,0
+synthetic_user_022,synthetic_user_022_documentation,documentation,How should I document this code for the user?,synthetic_user_022_documentation,documentation,The user maintains detailed README files.,1
+synthetic_user_023,synthetic_user_023_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_023_editor,editor,The user prefers Vim keybindings.,1
+synthetic_user_023,synthetic_user_023_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_023_testing,testing,The user prefers pytest.,0
+synthetic_user_023,synthetic_user_023_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_023_language,language,The user writes Python.,0
+synthetic_user_023,synthetic_user_023_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_023_performance,performance,The user prioritizes low latency.,0
+synthetic_user_023,synthetic_user_023_editor,editor,Which editor preference should I use for this coding session?,synthetic_user_023_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_023,synthetic_user_023_testing,testing,What test style should the coding assistant follow?,synthetic_user_023_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_023,synthetic_user_023_testing,testing,What test style should the coding assistant follow?,synthetic_user_023_testing,testing,The user prefers pytest.,1
+synthetic_user_023,synthetic_user_023_testing,testing,What test style should the coding assistant follow?,synthetic_user_023_language,language,The user writes Python.,0
+synthetic_user_023,synthetic_user_023_testing,testing,What test style should the coding assistant follow?,synthetic_user_023_performance,performance,The user prioritizes low latency.,0
+synthetic_user_023,synthetic_user_023_testing,testing,What test style should the coding assistant follow?,synthetic_user_023_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_023,synthetic_user_023_language,language,Which programming language does this user prefer?,synthetic_user_023_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_023,synthetic_user_023_language,language,Which programming language does this user prefer?,synthetic_user_023_testing,testing,The user prefers pytest.,0
+synthetic_user_023,synthetic_user_023_language,language,Which programming language does this user prefer?,synthetic_user_023_language,language,The user writes Python.,1
+synthetic_user_023,synthetic_user_023_language,language,Which programming language does this user prefer?,synthetic_user_023_performance,performance,The user prioritizes low latency.,0
+synthetic_user_023,synthetic_user_023_language,language,Which programming language does this user prefer?,synthetic_user_023_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_023,synthetic_user_023_performance,performance,What performance constraint matters to this user?,synthetic_user_023_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_023,synthetic_user_023_performance,performance,What performance constraint matters to this user?,synthetic_user_023_testing,testing,The user prefers pytest.,0
+synthetic_user_023,synthetic_user_023_performance,performance,What performance constraint matters to this user?,synthetic_user_023_language,language,The user writes Python.,0
+synthetic_user_023,synthetic_user_023_performance,performance,What performance constraint matters to this user?,synthetic_user_023_performance,performance,The user prioritizes low latency.,1
+synthetic_user_023,synthetic_user_023_performance,performance,What performance constraint matters to this user?,synthetic_user_023_documentation,documentation,The user maintains detailed README files.,0
+synthetic_user_023,synthetic_user_023_documentation,documentation,How should I document this code for the user?,synthetic_user_023_editor,editor,The user prefers Vim keybindings.,0
+synthetic_user_023,synthetic_user_023_documentation,documentation,How should I document this code for the user?,synthetic_user_023_testing,testing,The user prefers pytest.,0
+synthetic_user_023,synthetic_user_023_documentation,documentation,How should I document this code for the user?,synthetic_user_023_language,language,The user writes Python.,0
+synthetic_user_023,synthetic_user_023_documentation,documentation,How should I document this code for the user?,synthetic_user_023_performance,performance,The user prioritizes low latency.,0
+synthetic_user_023,synthetic_user_023_documentation,documentation,How should I document this code for the user?,synthetic_user_023_documentation,documentation,The user maintains detailed README files.,1

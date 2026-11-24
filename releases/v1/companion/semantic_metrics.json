@@ -1,0 +1,19 @@
+{
+  "dataset": "synthetic fictional coding preferences; no real users",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "embedding_weights_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+  "sentence_transformers_version": "6.3.0",
+  "python": "3.12.14",
+  "dataset_sha256": "ae0f084acf60b163692f02a6d611cc65353c6997c510133a1e616fd44c9317d0",
+  "semantic": {
+    "precision_at_k": 0.28055555555555556,
+    "mrr": 0.736388888888889
+  },
+  "tfidf": {
+    "precision_at_k": 0.19722222222222222,
+    "mrr": 0.51625
+  },
+  "energy": "not measured",
+  "note": "Retrieval metrics on templated synthetic data are not real-user performance."
+}

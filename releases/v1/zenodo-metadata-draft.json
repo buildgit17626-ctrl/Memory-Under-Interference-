@@ -1,0 +1,25 @@
+{
+  "title": "Memory Under Interference: Context Utilization, Specification Confusion, and Inference Efficiency in Small Code Language Models",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-11-24",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Brahmbhatt, Dhruv",
+      "affiliation": "Independent researcher; IIT Madras student (no institutional endorsement)"
+    }
+  ],
+  "description": "Independent empirical preprint on context/specification utilization in two small local code models. Posthoc and measurement limitations are explicit. Not peer reviewed. MemoryGraph is a separate prototype, not an evaluated integrated intervention. No DOI or external deposit yet.",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "code language models",
+    "context utilization",
+    "specification interference",
+    "inference efficiency",
+    "CPU package energy",
+    "memory retrieval"
+  ],
+  "notes": "DRAFT metadata: review against deposit form before upload. Original code MIT; third-party notices retained. External publication requires author approval."
+}
