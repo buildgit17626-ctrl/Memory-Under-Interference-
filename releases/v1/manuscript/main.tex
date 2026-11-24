@@ -7,6 +7,9 @@
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{caption,fancyhdr,float}
 \usepackage{dblfloatfix}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,
+  keepspaces=true,showstringspaces=false,frame=single,aboveskip=5pt,belowskip=5pt}
 \setcounter{dbltopnumber}{2}
 \renewcommand{\dbltopfraction}{.9}
 \renewcommand{\textfraction}{.05}
@@ -31,60 +34,72 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Having relevant information in a prompt does not establish that a model uses it
-successfully. We study this distinction through code-generation tests with two
+Relevant information can be present in a language model's context while its
+generated code follows a competing requirement. We investigate this gap in two
 small quantized Qwen2.5-Coder models on one CPU laptop. Seven completed studies
-contain \MainRequests{} main-study logical requests; diagnostic pilots and an
-incomplete cache study are kept separate. We vary additional task descriptions,
-semantically competing specifications, static interruptions, retention policies
-and a code-only preference. A posthoc cross-scoring analysis finds more
-alternative-consistent failures under competing rather than irrelevant context
-for the 1.5B model: \LargeCross{} percentage points, task-bootstrap 95\% interval
-\LargeCrossCI{}, over \LargeCrossN{} matched tasks. The corresponding 0.5B
-estimate is inconclusive, and the 1.5B finding weakens under adverse coding of
-censored outcomes. Oracle context retention has lower observed estimated
-CPU-package energy per correct solution than full history, but accuracy
-differences remain uncertain and length, position and output changes are
-confounded. A registered preference-adherence metric reaches an observed floor;
-a separate format audit shows why it should not be read as a general failure
-to retain preferences. We document a companion retrieval prototype without
-claiming an integrated benefit. The contribution is a narrow, auditable
-behavioral study, including negative results and measurement limitations,
-rather than a measurement of internal memory or cognition.
+contain \MainRequests{} main-study logical requests, including documented
+failures; pilots and an incomplete cache study remain separate. Controlled
+contexts vary task load, competing specifications, static interruptions,
+retention policies and a code-only preference. Cross-specification evaluation
+tests saved programs against both target and alternative requirements. In a
+posthoc paired analysis, the 1.5B model has \LargeCross{} percentage points more
+alternative-consistent failures under competing than irrelevant context
+(95\% task-bootstrap interval \LargeCrossCI{}; \LargeCrossN{} matched tasks).
+The 0.5B result is inconclusive, and adverse coding of censored outcomes weakens
+the 1.5B finding. Relative to full history, oracle retention has observed
+estimated net CPU-package energy-per-correct-solution reductions of
+\SmallEnergyReduction\% and \LargeEnergyReduction\% for 0.5B and 1.5B.
+Accuracy preservation is uncertain; length, position, instructions and output
+work differ, so these reductions cannot be attributed exclusively to retention.
+A registered preference metric reaches a floor that a separate format audit
+helps explain. MemoryGraph is a companion retrieval prototype with a separate
+synthetic evaluation, not an evaluated intervention in these studies. Together,
+the results motivate testing what retrieved context makes a system do, alongside
+what it retrieves and what inference costs.
 \end{abstract}
 
 \section{Introduction}
-Longer prompts make more information available to a language model, but they
-also introduce material that may be irrelevant or incompatible with the current
-request. An assistant can have a correct task specification in view and still
-produce code that does not satisfy it. The practical question is therefore not
-only how much context a runtime accepts, but which specification the generated
-program satisfies and what the attempt costs.
+Memory-management systems decide which past instructions, preferences and task
+descriptions to put in a model's next prompt. More context can preserve useful
+information, but it can also keep obsolete or competing requirements in view.
+For a coding assistant, the consequence may be a program that is sensible for
+the wrong specification. A useful evaluation must therefore connect context
+selection to executable behavior and computational cost, rather than judge
+success from the presence of relevant text alone.
 
 Prior work already shows position-sensitive context use, conversational task
 interference, and difficulty following user preferences
 \citep{lost,interference,prefeval}. Multi-task inference can also help some
 tasks \citep{multitask}; degradation is not a universal consequence of bundling.
-We do not claim to discover these phenomena. Instead, we examine their
-manifestations in two small local code models with execution-based outcomes,
-carefully qualified CPU-package estimates and inspectable saved responses.
+We examine these established concerns in two small local code models, using
+execution-based outcomes and CPU-package measurements on consumer hardware.
 
-Three questions organize the report. First, are additional task descriptions
-associated with different target outcomes from equally long neutral filler?
-Second, do computationally competing descriptions increase responses that pass
-an alternative specification's tests while failing the target's tests? Third,
-how do retained context and preference instructions relate to correctness and
-inference cost? These questions are deliberately behavioral. A failing output
-does not reveal whether a model recognized a fact, deliberately ignored it, or
-reached an internal capacity limit.
+Three research questions organize the report. \textbf{RQ1:} How does task-bearing
+context compare with length-matched neutral material? \textbf{RQ2:} Are target
+failures more often consistent with a competing specification when that
+specification appears in context? \textbf{RQ3:} How do retention and preference
+policies relate to correctness and inference cost? These are questions about
+observable programs, not internal memory capacity or cognitive states.
 
-The study grew from an earlier Prompt-Energy experiment into several revised
-designs. Version 1 freezes completed observations and audits their actual
-scope. It contributes paired code-task comparisons, a posthoc cross-specification
-error analysis, an explicit account of cost-per-correct uncertainty, and a
-documented scoring failure that limits the preference result. The original
-broader plan included experiments not completed here; their absence is reported
-rather than filled with predicted results.
+\paragraph{Contributions.}
+We provide (1) a controlled contextual-interference evaluation with paired
+code tasks, matched controls and distinct task-load/interruption constructions;
+(2) a cross-specification failure diagnosis that separates target-only,
+alternative-only, both-pass and neither-pass outcomes, with isolation
+cross-scoring and posthoc censoring analyses; and (3) an evaluation of
+context-retention correctness and computational-efficiency trade-offs that
+includes failed-attempt cost and uncertainty in cost per correct solution.
+Sanitized journals, exact prompts and portable analysis accompany the report.
+
+The findings are mixed. Competing context changes the larger model's observed
+error distribution in the complete cases, but censoring weakens the inference.
+Oracle retention has lower observed estimated costs, without established
+accuracy preservation. A preference-scoring floor and several null comparisons
+show where the evidence is less informative. The seven-study collection grew
+from Prompt-Energy through dated design revisions; registered comparisons and
+posthoc analyses remain distinguished throughout. The separate MemoryGraph
+prototype connects these questions to practical retrieval without supplying
+an integrated performance claim.
 
 \section{Related Work}
 \paragraph{Context and instruction interference.}
@@ -327,11 +342,45 @@ large change in its overall target pass rate.
 
 Figure~\ref{fig:cross} includes every scheduled response, whereas complete-case
 inference requires all paired cells. No response passes both suites in this
-dataset. Deterministically selected code examples support the operational
-labels: one 0.5B response uses an inclusive comparison where the target is
-strict; a 1.5B response reverses parenthesis-group order as specified by the
-alternative. Separate authored distinguishing cases agree with these labels.
-The examples are an audit sample, not estimates of a latent reasoning process.
+dataset. Figure~\ref{fig:worked} makes one alternative-only outcome concrete.
+The target specification is present and marked as the only function to implement,
+yet the saved body uses the competing inclusive boundary. A second audited
+1.5B response reverses parenthesis-group order as required by its alternative.
+These selected examples illustrate the test categories; they do not estimate
+their prevalence or reveal why the model produced those programs.
+
+\begin{figure*}[t]
+\begin{minipage}[t]{.48\linewidth}
+\small\textbf{Actual pair: HumanEval/0.}
+The target requirement reads: ``Check if in given list of numbers, are any two
+numbers closer to each other than given threshold.'' Its reference uses a
+strict inequality. The background alternative reads: ``Return whether two
+distinct list positions have absolute difference less than OR EQUAL TO threshold.
+Equality is included.''
+
+\textbf{Validated distinguishing input:}
+\texttt{numbers=[1.0, 2.0], threshold=1.0}.
+The target expects \texttt{False}; the alternative expects \texttt{True}.
+The archived generated program fails the target suite and passes the alternative
+suite; separate saved witness checks reproduce that classification.
+
+\textbf{Source:} 0.5B, competing 1k/start condition; saved call key begins
+\texttt{34303c8e4927}. Full key, prompt, original code, test outcomes and hashes
+are in \texttt{examples/provenance.json}. No new execution was used for this figure.
+\end{minipage}\hfill
+\begin{minipage}[t]{.49\linewidth}
+\vspace{0pt}
+\lstinputlisting[language=Python,basicstyle=\ttfamily\scriptsize]{../examples/generated-code-excerpt.txt}
+\small The executable text is unchanged; only the function docstring is omitted
+from this listing. The complete saved response retains the original target
+docstring, making the mismatch between stated requirement and body inspectable.
+\end{minipage}
+\caption{Worked cross-specification diagnosis from existing audited evidence.
+The model saw the alternative description, not its implementation or hidden
+tests. The construction repeats that description to reach its filler budget;
+this repetition is part of the tested context (Appendix~\ref{app:prompts}).}
+\label{fig:worked}
+\end{figure*}
 
 \begin{figure*}[t]
 \centering\includegraphics[width=.98\linewidth]{cross_outcomes.pdf}
@@ -400,7 +449,11 @@ intervals and paired contrasts are reported separately.}
 The measured cost contrast is much larger than the uncertain accuracy contrast.
 Estimated net energy per correct solution is \SmallFullEnergy{} mWh for full
 history and \SmallOracleEnergy{} for oracle retention on 0.5B; corresponding
-1.5B values are \LargeFullEnergy{} and \LargeOracleEnergy{} mWh. Paired
+1.5B values are \LargeFullEnergy{} and \LargeOracleEnergy{} mWh. These ratios
+correspond to observed estimated-cost reductions of \SmallEnergyReduction\%
+and \LargeEnergyReduction\%, computed as $100(1-C_{\rm oracle}/C_{\rm full})$.
+They are descriptive reductions, without an established accuracy-preservation
+guarantee. Paired
 oracle-minus-full ratio differences are \SmallEnergyDiff{} mWh, interval
 \SmallEnergyCI{}, and \LargeEnergyDiff{} mWh, interval \LargeEnergyCI{}.
 These intervals resample complete paired task clusters and recompute both
@@ -411,7 +464,8 @@ ratios; they are not intervals on the energy of successful requests alone.
 \caption{R1 correctness and estimated net CPU-package energy per correct
 solution, with pointwise task-bootstrap intervals. A shorter retained prompt
 does not isolate memory-policy quality: instructions, input position and output
-length also differ. Ratios include every covered attempt's energy.}
+length also differ. Ratios include every covered attempt's energy. Model panels
+use common scales within each row; target/query omits the code-only preference.}
 \label{fig:r1}
 \end{figure*}
 
@@ -438,7 +492,8 @@ population-optimal frontier or proof of accuracy-preserving energy savings.
 \caption{Descriptive R1 accuracy--energy plots, separately by model, 40 tasks
 per policy. Energy is HWiNFO estimated net CPU-package mWh/correct. Horizontal
 and vertical whiskers are marginal bootstrap intervals, not joint confidence
-regions. The dotted frontier uses sample point estimates only.}
+regions. Both model panels share the same axes. The dotted frontier uses
+sample point estimates only.}
 \label{fig:pareto}
 \end{figure*}
 
@@ -516,26 +571,47 @@ The HumanEval+ study and this synthetic benchmark are never pooled. An
 integrated MG1 comparison remains Version 2 work.
 
 \section{Discussion}
-The most defensible positive observation concerns an error distribution rather
-than a universal accuracy gain or loss. Alternative-suite testing can identify
-outputs that would otherwise be recorded only as target failures. Isolation
-cross-scoring matters because some programs already implement the alternative
-without competing context. The larger model's complete-case association and
-its cap sensitivity should be reported together.
+\paragraph{Diagnosing what went wrong.}
+A target pass/fail score collapses several different outcomes. Cross-specification
+testing adds a useful distinction: some failures satisfy a known competing
+requirement, while others satisfy neither tested contract. Isolation cross-scoring
+checks how often alternative-consistent behavior already occurs without competing
+context. The larger model's complete-case difference supports this diagnosis as
+a useful behavioral endpoint; its censoring sensitivity limits the strength of
+the empirical association. Recency, repeated exposure, pattern completion and
+ordinary boundary errors are possible explanations, not mechanisms identified
+by this experiment.
 
-The retention results separate another pair of questions. Reduced context can
-have lower observed computational cost without an established accuracy benefit,
-but that does not validate a deployed memory policy. A real retriever must
-select useful text, handle conflicts and pay its own indexing/retrieval costs.
-Privileged retention provides a reference point for that future evaluation,
-not evidence that MemoryGraph already closes the gap.
+\paragraph{Retrieval is an intermediate outcome.}
+A practical memory system needs relevant text to be selected, its conflicts and
+priority to be resolved, and the generated answer to satisfy the current task.
+Retrieval success evaluates the selection step. It does not establish that the
+model applies the selected requirement: Figure~\ref{fig:worked} has the target
+in view, and MemoryGraph's recorded demonstration has the pytest preference in
+view but emits unittest. The latter is a capped illustration, not a population
+estimate. A future integrated evaluation should report retrieval relevance,
+target correctness, preference adherence and total cost separately, so that
+good ranking cannot hide a downstream utilization failure.
 
-Negative findings improve the interpretation. Replay is not consistently
-beneficial in the registered comparisons; static interruptions are inconclusive
-after correction; and a strict preference metric cannot support its intended
-claim when every response fails that definition. Preserving these outcomes is
-more informative than presenting only a significant cell or the most favorable
-posthoc scoring rule.
+\paragraph{Retention is also a computational decision.}
+The observed oracle/full-history cost gap makes selective context management a
+useful practical question, but it does not isolate the benefit of selecting
+relevant memories. Shorter input changes prefill work; position and instructions
+can change the response; output length and failed attempts change decode cost
+and cost per correct solution. Privileged relevance information and omitted
+retrieval/indexing overhead further separate the oracle from a deployed system.
+Length- and instruction-matched interventions with end-to-end overhead would be
+needed to attribute savings to retrieval policy itself. Our uncertain accuracy
+differences do not establish a safe compression or retention rule.
+
+\paragraph{What the null results contribute.}
+Replay is not consistently beneficial in the registered comparisons, static
+interruptions are inconclusive after correction, and E5's strict score reaches
+a floor partly explained by its treatment of fences. These outcomes argue for
+validating the measurement before choosing a memory policy. They also narrow
+the next research step: test retrieval and generation together under matched
+instructions, with a validated adherence rubric, rather than assume that more
+retained context or a reminder must help.
 
 \section{Limitations}
 The results concern two small quantized models, one code benchmark and one CPU
@@ -567,16 +643,17 @@ requests are particularly difficult at 500 ms resolution. The incomplete
 registered cache experiment prevents a completed primary energy claim.
 
 \section{Conclusion}
-This independent study provides a limited but inspectable record of how small
-code models behave with competing context. The 1.5B complete-case outputs show
-more alternative-consistent failures under competing specifications, while
-adverse cap assignments weaken that result. Reduced oracle context has lower
-observed estimated energy per correct solution, but the experiment does not
-establish equivalent or improved accuracy, identify an internal memory
-mechanism, or validate a practical retriever. One clear negative finding is that
-the registered strict preference score reaches a floor and cannot carry the
-intended retention interpretation. Version 1 reports these limits alongside the
-effects; Version 2 can evaluate retrieval and generation together.
+Across seven studies, the useful distinction is between supplying information
+and obtaining code that uses it as intended. Cross-specification testing makes
+one class of failure visible: the 1.5B complete cases show more
+alternative-consistent outputs under competing context, although adverse
+censoring weakens the finding. Oracle retention has lower observed estimated
+energy per correct solution, while accuracy preservation remains unresolved
+and policy effects are confounded. E5 supplies an equally important negative
+lesson: a preference metric at its observed floor cannot support the intended
+retention claim. These results support evaluating memory selection, generated
+behavior and total computation together. They do not establish an internal
+memory mechanism or an integrated MemoryGraph benefit.
 
 \section{Data and Code Availability}
 The public repository is \url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-}.
@@ -609,7 +686,7 @@ under MIT, with third-party notices retained.
 \clearpage
 \onecolumn
 \appendix
-\section{Complete Primary Contrast Register}
+\section{Registered Primary Contrasts and Request Inventory}
 \begin{center}\small\input{inventory_table.tex}\end{center}
 These are scheduled logical requests, not retry counts. Caps are bounded-outcome
 nonpasses; API failures remain separately missing for valid-input accuracy.
@@ -624,6 +701,11 @@ return-to-task interference; R1 is retention; E5 is preference placement.
 The table reproduces specified primary contrasts; it does not relabel the
 posthoc synthesis as a confirmatory study. Full intervals, transition IDs and
 sensitivity populations are in the machine-readable archive.
+E5 rows use its original strict-adherence endpoint and four-test Holm family,
+not the secondary fence-tolerant metric. All-zero paired differences yield
+degenerate empirical bootstrap intervals; these are not proof of population
+equivalence. M1's diagnostic/exploratory comparisons and E5 secondary
+correctness contrasts are supplied in the archive rather than relabelled primary.
 \small\input{primary_table.tex}\normalsize
 
 The broad starting claims about load, replay and a possible recognition--generation
@@ -689,5 +771,37 @@ full audit rebuild uses the supplied analysis code and dependencies. Offline
 verification does not launch Ollama or regenerate embeddings. Original frozen
 commit identifiers and transformation mappings remain provenance references;
 sanitized archive bytes have their own checksums.
+
+\section{Representative Rendered Prompts}\label{app:prompts}
+These examples are selected saved requests for HumanEval/0 on 0.5B, not new
+prompt variants. The system message is \texttt{You are a helpful coding assistant.}
+The public \texttt{examples/} directory supplies the exact UTF-8 prompt strings,
+full call keys, native token counts, decoding options and SHA256 values; those
+strings also occur in the archived call journals. The R1 examples below are
+complete. The longer R2 and E5 layouts explicitly mark editorial omissions;
+their complete unabridged strings remain in the supplement.
+
+\subsection{Oracle-retained target, preference and query (complete)}
+\lstinputlisting[basicstyle=\ttfamily\small]{../examples/r1-oracle.txt}
+
+\subsection{Target and query without the preference (complete)}
+\lstinputlisting[basicstyle=\ttfamily\small]{../examples/r1-target-query.txt}
+The difference is an actual instruction difference in the collected policies,
+not a length-only intervention. It helps explain why an oracle/no-history
+comparison cannot isolate relevance selection.
+
+\clearpage
+\subsection{Competing-context request used in the worked example (abridged)}
+\lstinputlisting[basicstyle=\ttfamily\small]{../examples/r2-layout-excerpt.txt}
+Only repeated copies are elided here; the exact archived request contains all
+of them. They are task descriptions without implementation bodies or hidden
+tests. Repetition to fill the budget, task position and explicit distractor
+labelling are part of the construction and constrain its interpretation.
+
+\subsection{Immediate preference in the placement study (abridged)}
+\lstinputlisting[basicstyle=\ttfamily\small]{../examples/e5-layout-excerpt.txt}
+The omitted region contains the fixed earlier-task descriptions. The wording
+asks for code without explanation and does not explicitly ban Markdown fences;
+the registered strict score nevertheless rejects fenced responses.
 
 \end{document}

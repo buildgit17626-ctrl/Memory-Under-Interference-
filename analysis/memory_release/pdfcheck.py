@@ -15,7 +15,18 @@ def main():
     reader = PdfReader(path)
     texts = [p.extract_text() for p in reader.pages]
     text = "\n".join(texts)
-    expected = ["5,528", "8.97", "0.7364", "0.5163", "325.38", "76.39", "154.16", "50.20"]
+    expected = [
+        "5,528",
+        "8.97",
+        "76.5%",
+        "67.4%",
+        "0.7364",
+        "0.5163",
+        "325.38",
+        "76.39",
+        "154.16",
+        "50.20",
+    ]
     absent = [value for value in expected if value not in text]
     log = (BASE / "manuscript/main.log").read_text(encoding="utf-8")
     tex = (BASE / "manuscript/main.tex").read_text(encoding="utf-8")

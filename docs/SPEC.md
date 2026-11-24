@@ -2,6 +2,13 @@
 
 ## Authorized Version 1 scientific release preparation (2026-11-24)
 
+Final revision authorization: improve scientific communication, add existing
+audited worked examples/rendered prompts and E5 registered contrasts, verify
+descriptive retention-cost reductions, align comparison figures, and test the
+sanitized portable release independently of original data paths. Preserve rc1;
+prepare a local rc2 candidate only. Plan: docs/plans/MUI_V1_FINAL_REVISION.md.
+No new inference, MemoryGraph features or external publication is authorized.
+
 Owner requests offline research synthesis, primary-source literature review,
 MemoryGraph source/record audit at c569143ec6be1c767a2c56c59c936f85bd1fc1cb,
 a neutral scientific manuscript/PDF, figures and a redacted reproducibility

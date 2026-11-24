@@ -193,6 +193,10 @@ def main():
 |Energy is overstated|CPU-package tool/mode identified, missing/short/drift windows preserved; E4 incomplete explicitly|No physical calibration or whole-system/process isolation|
 |E5 changed scoring after seeing failure|Original 0/400 metric preserved; secondary syntax features and joint outcomes separate|No human semantic annotation; floor cannot establish preference retention|
 |Only positive results are shown|M2, E0, replay and cap reversals included|Statistical power and fixed-roster generalization limited|
+|The narrative reads like an internal audit|Motivation, explicit research questions/contributions and practical interpretation reorganized around behavior and cost|Underlying revised/posthoc design and methodological limits are preserved|
+|The diagnostic lacks a concrete example|Actual saved HumanEval/0 response, exact requirements, <= body and validated witness traced by full call key and hashes|Selected illustration is not a prevalence estimate or mechanism test|
+|Appendix omits E5 primary entries|All four registered strict-adherence contrasts added with intervals and Holm4 values|All-zero empirical intervals cannot establish population equivalence|
+|Public reproduction may depend on private local files|Fresh analysis-only environment and guarded release-only execution recorded|Saved-data reanalysis is not inference regeneration, universal portability or physical calibration|
 |MemoryGraph is advertised as GraphRAG or a tested solution|Pinned source, saved synthetic scores, explicit approval and narrow conflicts audited|MG1 unrun; no correctness/energy/usability/trust claim|
 |Related work already covers the idea|Fifteen primary publications verified, including recent direct overlap|No priority or exhaustive-review claim|
 |Archive changes raw evidence|Public copies only, original/public hash map and explicit metadata/path redactions|Sanitized export is not byte-identical inference-resume evidence|
@@ -291,6 +295,13 @@ Date: 24 November 2026. Status: prepared locally; not peer reviewed; not deposit
 - Original report/data CC BY 4.0; original code MIT, with third-party exceptions retained.
 - Local source/tag/build/verification hashes are in checks/RELEASE_STATUS.json and
   SHA256SUMS.json. No DOI/acceptance/endorsement is invented.
+- Final rc2 communication revision: explicit research questions/contributions,
+  verified 76.5%/67.4% descriptive energy-cost reductions, an actual saved
+  target/distractor/code/witness example, selected exact prompt strings, four
+  E5 strict-adherence primary rows, common model-comparison axes and clearer labels.
+- Analysis-only dependency specifications and a fresh-environment, network/file-
+  restricted verification harness distinguish saved-data reproduction from
+  regeneration, rescoring or physical energy calibration. See checks/portable-environment.json.
 
 External upload, publication, pushes and tag publication require owner approval.
 """,
@@ -347,7 +358,7 @@ External upload, publication, pushes and tag publication require owner approval.
     save_json(RELEASE / "zenodo-metadata-draft.json", metadata)
     write(
         "README.md",
-        """# Memory Under Interference -- Version 1.0
+        r"""# Memory Under Interference -- Version 1.0
 
 Local scientific release candidate, 24 November 2026. Not peer reviewed. External
 publication requires owner approval. Start with manuscript/main.pdf, FINDINGS_FINAL.md,
@@ -355,7 +366,21 @@ CLAIMS_AND_EVIDENCE.md, REVIEWER_RESPONSE.md and DATA_AVAILABILITY.md.
 
 ## Reproduce without inference
 
-Use Python 3.13 in a new environment; install code/requirements-lock.txt. Then:
+Use Python 3.13 in a new environment; install requirements-reanalysis.txt for
+offline analysis. The historical full experiment lock remains in code/requirements-lock.txt.
+requirements-reanalysis-lock.txt records every installed package in the fresh
+Windows verification environment; it can be used instead of the shorter direct list.
+Then:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-reanalysis-lock.txt
+.\.venv\Scripts\python.exe -I verify_public.py --full
+```
+
+The guarded verifier restricts this trusted analysis run to the public tree and
+Python/Windows runtime, and disables network and subprocess requests. It is not
+an OS security sandbox for untrusted code. The simpler unguarded command is:
 
 ```powershell
 python reproduce.py --full --energy --figures --output reproduced
@@ -389,6 +414,11 @@ An initial build may download standard TeX packages; manuscript/main.bbl is supp
 The separate source archive retains manuscript/ and figures/ relative paths. No
 conference template/acceptance is implied. Version 2 work is in VERSION_2_ROADMAP.md.
 Original report/data CC BY 4.0, original code MIT, third-party exceptions retained.
+
+The rc2 revision adds an evidence-linked worked example, exact selected prompt
+strings, E5 registered primary contrasts and clearer common-scale policy figures.
+See checks/portable-environment.json for the tested installation and filesystem/
+network restrictions; these verify saved-data reanalysis, not inference regeneration.
 """,
     )
     (RELEASE / "data/LICENSE.md").write_text(

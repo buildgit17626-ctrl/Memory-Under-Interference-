@@ -74,6 +74,18 @@ def main():
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
         ).strip(),
     }
+    portable = RELEASE / "checks/portable-environment.json"
+    if portable.exists():
+        fresh = json.loads(portable.read_text())
+        if (
+            not fresh["isolated_mode"]
+            or fresh["system_site_packages"]
+            or not fresh["original_data_probe_blocked"]
+            or fresh["network_attempts"]
+            or fresh["unexpected_blocked_file_accesses"]
+        ):
+            raise ValueError("Clean-environment public reproduction failed its isolation checks")
+        status["fresh_environment_public_reproduction"] = fresh
     save_json(RELEASE / "checks/scientific-quality.json", status)
     print(
         json.dumps({k: v for k, v in status.items() if k not in {"pdf", "source_commit"}}),

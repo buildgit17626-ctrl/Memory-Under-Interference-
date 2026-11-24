@@ -11,6 +11,13 @@ from analysis.memory_audit.statistics import holm, paired
 from analysis.memory_release.common import AUDIT, MODELS, RELEASE, directories
 
 
+def energy_reduction_percent(full: float, retained: float) -> float:
+    """Describe a ratio of observed estimated costs, without an accuracy/causal claim."""
+    if full <= 0:
+        raise ValueError("Positive full-history energy per correct solution required")
+    return 100 * (1 - retained / full)
+
+
 def cross_bounds(cross: pd.DataFrame) -> list[dict]:
     output = []
     for variant in ("complete_case", "unknown_lower_bound", "unknown_upper_bound"):

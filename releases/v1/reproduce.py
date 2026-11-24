@@ -4,6 +4,7 @@
 # ruff: noqa: E402
 
 import argparse
+import hashlib
 import json
 import math
 import shutil
@@ -20,6 +21,58 @@ from analysis.memory_audit.effects import summaries
 from analysis.memory_audit.mechanisms import cross_audit
 from analysis.memory_audit.records import indexed, save_json, scored_value
 from analysis.memory_audit.statistics import paired_ratio
+from analysis.memory_release.analytics import energy_reduction_percent
+from analysis.memory_release.companion import retrieval
+
+
+def verify_integrity():
+    manifest = json.loads((BASE / "SHA256SUMS.json").read_text())
+    for name, expected in manifest.items():
+        path = (BASE / name).resolve()
+        if not path.is_relative_to(BASE.resolve()):
+            raise ValueError("Manifest path escapes public release")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != expected["sha256"]:
+            raise ValueError("Release integrity mismatch: " + name)
+    return len(manifest)
+
+
+def principal_findings(frame, output):
+    """Recompute abstract/companion values from public per-request or per-pair rows."""
+    retention = []
+    for model, group in frame[frame.stage.eq("R1")].groupby("model"):
+        costs = {}
+        for policy in ("full_history", "oracle_selective"):
+            covered = group[
+                group.condition.eq(policy) & group.net_wh.notna() & group.passed.notna()
+            ]
+            successes = int(covered.passed.sum())
+            costs[policy] = covered.net_wh.sum() / successes
+            retention.append(
+                {
+                    "model": model,
+                    "policy": policy,
+                    "attempts": len(covered),
+                    "successes": successes,
+                    "total_net_wh": float(covered.net_wh.sum()),
+                    "net_mwh_per_correct": float(costs[policy] * 1000),
+                }
+            )
+        reduction = energy_reduction_percent(costs["full_history"], costs["oracle_selective"])
+        for row in retention:
+            if row["model"] == model:
+                row["oracle_relative_reduction_percent"] = reduction
+    e5 = frame[frame.stage.eq("E5")]
+    semantic = pd.read_csv(BASE / "companion/semantic_predictions.csv")
+    lexical = pd.read_csv(BASE / "companion/predictions.csv")
+    result = {
+        "retention": retention,
+        "e5_registered_strict_successes": int(e5.adherence.sum()),
+        "e5_registered_attempts": len(e5),
+        "synthetic_embedding_mrr": retrieval(semantic, "semantic_score")["mrr"],
+        "synthetic_tfidf_mrr": retrieval(lexical, "tfidf_score")["mrr"],
+    }
+    save_json(output / "principal-findings.json", result)
+    print(json.dumps(result), flush=True)
 
 
 def check_recorded_outcomes(frame):
@@ -57,6 +110,7 @@ def main():
     if output == BASE or output in (BASE / "data", BASE / "tables", BASE / "figures"):
         raise ValueError("Choose a new reproduction output directory")
     output.mkdir(parents=True, exist_ok=True)
+    hashes = verify_integrity()
     frame = pd.read_csv(BASE / "data/audit/calls-with-adherence.csv")
     checked = check_recorded_outcomes(frame)
     n = int(frame.phase.eq("main").sum())
@@ -80,6 +134,7 @@ def main():
         )
         ratios.append({"model": model, **result})
     save_json(output / "r1-paired-ratios.json", ratios)
+    principal_findings(frame, output)
     if args.full:
         from analysis.memory_audit import effects
         from analysis.memory_audit.mechanisms import bundle_audit
@@ -149,6 +204,8 @@ def main():
         "main_logical_requests": n,
         "cross_pass_effects_reproduced": len(observed),
         "new_model_inference": 0,
+        "integrity_files_verified": hashes,
+        "full_effects_verified": len(b) if args.full else None,
     }
     save_json(output / "REPRODUCED.json", status)
     print(json.dumps(status), flush=True)

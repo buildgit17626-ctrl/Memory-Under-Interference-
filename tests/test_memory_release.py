@@ -1,11 +1,27 @@
 """Release derivation must expose censoring, preserve text and retain ranking ties."""
 
 import pandas as pd
+import pytest
 
-from analysis.memory_release.analytics import cross_bounds
+from analysis.memory_release.analytics import cross_bounds, energy_reduction_percent
 from analysis.memory_release.common import MODELS
 from analysis.memory_release.companion import retrieval
+from analysis.memory_release.examples import omit_function_docstring
 from analysis.memory_release.export import sanitize_json, sanitize_text
+
+
+def test_cost_reduction_is_relative_to_full_history_and_requires_positive_baseline():
+    assert energy_reduction_percent(100, 25) == 75
+    assert energy_reduction_percent(25, 100) == -300
+    with pytest.raises(ValueError):
+        energy_reduction_percent(0, 25)
+
+
+def test_example_excerpt_removes_only_docstring_without_changing_comparator():
+    code = 'def f(a, b):\n    """strict intent"""\n    return a <= b\n'
+    excerpt = omit_function_docstring(code)
+    assert excerpt == "def f(a, b):\n    return a <= b\n"
+    assert omit_function_docstring(excerpt) == excerpt
 
 
 def test_public_redaction_preserves_generated_content_and_numbers():

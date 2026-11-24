@@ -10,19 +10,29 @@ test-suite correctness, token use, latency and estimated CPU-package energy.
 The study measures observable behavior and computation. It does not measure
 internal memory capacity, inspect cognition or establish intentional giving up.
 
-## Start here
+## Version 1 preprint candidate
 
-- [Skeptical review and provisional interpretations](artifacts/memory-audit/2026-11-24-v1/REVIEWER_AUDIT.md)
-- [Phases 1–4 audit and paired-effect tables](artifacts/memory-audit/2026-11-24-v1/PHASES_1_4_REPORT.md)
-- [Methods, settings and populations](artifacts/memory-audit/2026-11-24-v1/METHODS_AND_POPULATIONS.md)
-- [Per-condition results](artifacts/memory-audit/2026-11-24-v1/CONDITION_TABLES.md)
-- [Audit code and reproduction commands](analysis/memory_audit/README.md)
-- [Representative code and distinguishing cases](artifacts/memory-audit/2026-11-24-v1/REPRESENTATIVE_CODE_AUDIT.md)
+Prepared locally on 24 November 2026; not peer reviewed or deposited. Final
+interpretation and external publication approval remain with the author.
+Generation is paused. The rc1 candidate is preserved; the final revision is
+prepared as `v1.0.0-rc2` on the local review branch.
 
-**Status, 24 November 2026:** Phases 1–4 of the evidence audit are complete for
-available records. Scientific interpretations await owner review. This is a
-research repository and provisional report, not a submitted or peer-reviewed
-publication. Generation is paused.
+- [Manuscript PDF](releases/v1/Memory_Under_Interference_v1.pdf)
+- [Manuscript source bundle](releases/v1/Memory_Under_Interference_v1_source.zip)
+- [Sanitized public reproducibility archive](releases/v1/Memory_Under_Interference_v1_reproducibility.zip)
+- [Findings and uncertainty](releases/v1/FINDINGS_FINAL.md)
+- [Publication-readiness report](releases/v1/PUBLICATION_READINESS.md)
+- [Claim-to-evidence mapping](releases/v1/CLAIMS_AND_EVIDENCE.md)
+- [Reproduction instructions and boundaries](releases/v1/README.md)
+
+The manuscript reports seven completed studies and **5,528 main logical requests,
+including documented failures**. Its posthoc cross-specification analysis finds
+an 8.97 percentage-point alternative-consistent failure difference on 1.5B
+(95% task-bootstrap interval [3.21, 16.67], 39 complete paired tasks); adverse
+censoring weakens this result. Oracle retention has lower observed estimated
+CPU-package cost per correct solution, but accuracy preservation is uncertain
+and input length, position, instructions and output work are confounded.
+MemoryGraph is a separate companion prototype, with no integrated MG1 result.
 
 ## Collected main-study evidence
 
@@ -71,17 +81,23 @@ posthoc. No claim of a universal optimal memory policy is made.
   [project specification](docs/SPEC.md),
   [sources and third-party notices](docs/REFERENCES.md).
 
-The audit verified 625 original local evidence files unchanged and reported
-489 passing tests with Ruff clean. Exact revision, file hashes and check records
-are in [AUDIT_STATUS.json](artifacts/memory-audit/2026-11-24-v1/AUDIT_STATUS.json).
-It made no new model-generation requests.
+The original evidence audit verified 625 local files unchanged. The release
+adds source-linked numerical checks, a worked target/distractor example, exact
+selected prompts and an offline public-data reproduction path. Current tests,
+compilation and clean-environment verification are recorded under
+[release checks](releases/v1/checks).
 
-**Data availability:** derived audit evidence is included. The complete original
-journals and approximately 11 GB of sensor mirrors remain local and git-ignored;
-this repository alone is not yet a complete public reproduction archive.
-Full audit regeneration requires those inputs at the registered paths.
-Historical local paths and commit identifiers are retained as provenance, not
-presented as downloadable data. A complete archive remains future release work.
+**Data availability:** the public archive supplies sanitized raw-response
+journals, exact prompts/configurations, per-task scores, numerical CPU power/time
+samples, analysis code and integrity manifests. Its portable script reproduces
+saved-data analyses without Ollama, embeddings or original data paths. See
+[the tested environment](releases/v1/checks/portable-environment.json) for the
+actual verification and its boundaries. Original approximately 11 GB overlapping
+multi-channel sensor mirrors are excluded; their deduplicated CPU power/time
+streams reproduce the included available integrals. Other sensor channels,
+physical calibration, inference regeneration and unrestricted program rescoring
+are outside that demonstrated reproduction. This is not a universal or
+byte-identical inference-resume claim.
 
 For local verification after dependency setup:
 
@@ -99,13 +115,17 @@ accepted evidence.
 
 The harness grew from [Prompt-Energy](https://github.com/buildgit17626-ctrl/Prompt-Energy).
 Its earlier reports and source history remain available for provenance.
-MemoryGraph is a separate retrieval project; it is not evaluated here.
+MemoryGraph is a separate retrieval project. Its saved synthetic ranking results
+are described separately; integrated correctness/energy evaluation is unrun.
 
 AI assistance was used in experiment setup, autonomous Ollama execution,
 engineering, distractor construction and this audit's coding and drafting.
 Frozen validation records, raw-output provenance and explicit limitations
 support review; AI assistance is not independent scientific validation.
-No author affiliation, contribution allocation or publication acceptance is claimed.
+Dhruv Brahmbhatt is an IIT Madras student conducting this work independently.
+Confirmed contributions are research questions/design decisions, experiment
+oversight and interpretation review; no institutional supervision or endorsement
+is implied. The manuscript discloses AI-assisted analysis and drafting as well.
 
 For the Version 1 release candidate, the owner selected MIT for original code
 and CC BY 4.0 for original report/data. Third-party datasets and software retain

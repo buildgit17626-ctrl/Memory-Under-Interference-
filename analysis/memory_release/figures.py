@@ -19,7 +19,13 @@ POLICIES = [
     "lossless_compaction",
     "oracle_selective",
 ]
-NAMES = ["Full history", "Target/query", "Replay", "Compaction", "Oracle"]
+NAMES = [
+    "Full history",
+    "Target/query\n(no preference)",
+    "Target replay",
+    "Lossless\ncompaction",
+    "Oracle\nretention",
+]
 COLORS = ["#334e68", "#c56b29", "#387c6d", "#88619a", "#b44f61"]
 
 
@@ -177,6 +183,7 @@ def main():
             xticks=np.arange(3),
             xticklabels=["Isolation\nN=40", "Irrelevant\nN=160", "Competing\nN=160"],
             title=model.split(":")[-1],
+            ylim=(0, 100),
         )
     axes[0].set_ylabel("Share of saved requests (%)")
     axes[1].legend(bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=9)
@@ -222,7 +229,7 @@ def main():
     fig.colorbar(im, ax=axes, label="Target pass rate (%)", fraction=0.03, pad=0.02)
     save(fig, "interference_matrix", rows)
 
-    fig, axes = plt.subplots(2, 2, figsize=(10, 6))
+    fig, axes = plt.subplots(2, 2, figsize=(10, 6.6), sharey="row")
     rows = []
     for j, model in enumerate(MODELS):
         selected = [
@@ -252,12 +259,14 @@ def main():
             axes[i, j].set(xticks=x, xticklabels=NAMES)
             axes[i, j].tick_params(axis="x", labelrotation=25, labelsize=9)
             axes[i, j].set_ylabel(ylabel, fontsize=9)
+            if i == 0:
+                axes[i, j].set_ylim(0, 103)
         axes[0, j].set_title(model.split(":")[-1] + "; 40 tasks/policy")
         rows.extend(selected)
     fig.tight_layout()
     save(fig, "r1_policies", rows)
 
-    fig, axes = plt.subplots(1, 2, figsize=(10, 3.5), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(10, 3.7), sharey=True, sharex=True)
     for ax, model in zip(axes, MODELS, strict=True):
         selected = [r for r in rows if r["model"] == model]
         points = []
@@ -275,11 +284,11 @@ def main():
                 alpha=0.8,
             )
             offsets = {
-                "Oracle": (7, 14),
-                "Compaction": (7, -14),
+                "Oracle\nretention": (7, 14),
+                "Lossless\ncompaction": (7, -18),
                 "Full history": (6, -14),
-                "Replay": (6, 12),
-                "Target/query": (6, 7),
+                "Target replay": (6, 12),
+                "Target/query\n(no preference)": (6, 7),
             }
             ax.annotate(
                 name,

@@ -53,15 +53,23 @@ def main():
         raise ValueError("Passing full tests and Ruff logs required")
     if not (RELEASE / "checks/visual-review.json").exists():
         raise ValueError("Rendered-page review record required")
-    if not json.loads((RELEASE / "checks/visual-review.json").read_text())["passed"]:
+    visual = json.loads((RELEASE / "checks/visual-review.json").read_text())
+    if not visual["passed"]:
         raise ValueError("Rendered PDF review not passed")
+    if (
+        visual["pdf_sha256"]
+        != hashlib.sha256((RELEASE / "manuscript/main.pdf").read_bytes()).hexdigest()
+    ):
+        raise ValueError("Visual review does not describe the current PDF")
+    if "fresh_environment_public_reproduction" not in quality:
+        raise ValueError("Final revision requires the recorded fresh-environment reproduction")
     source_commit = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
     ).strip()
     status = {
         "title": TITLE,
         "version": "1.0.0",
-        "candidate_tag": "v1.0.0-rc1",
+        "candidate_tag": "v1.0.0-rc2",
         "source_commit": source_commit,
         "memorygraph_commit": MG_COMMIT,
         "readiness": "READY WITH DISCLOSED LIMITATIONS",
@@ -125,6 +133,7 @@ def main():
         for p in files
         if (p.parent.name == "manuscript" and p.suffix in {".tex", ".bib", ".bbl"})
         or (p.parent.name == "figures" and p.suffix == ".pdf")
+        or p.parent.name == "examples"
         or p.parent.name == "licenses"
     ]
     with zipfile.ZipFile(RELEASE / ARCHIVES[0], "w") as archive:

@@ -6,6 +6,7 @@ from decimal import ROUND_HALF_UP, Decimal
 import pandas as pd
 
 from analysis.memory_audit.records import save_json
+from analysis.memory_release.analytics import energy_reduction_percent
 from analysis.memory_release.common import AUDIT, MODELS, RELEASE, directories
 
 
@@ -74,6 +75,17 @@ def main():
                 "data/audit/conditions.json",
                 f"R1/{model}/{policy}/net_wh_per_correct_covered/estimate",
             )
+        costs = {
+            row["condition"]: row["net_wh_per_correct_covered"]["estimate"]
+            for row in conditions
+            if row["stage"] == "R1" and row["model"] == model
+        }
+        add(
+            label + "EnergyReduction",
+            f"{energy_reduction_percent(costs['full_history'], costs['oracle_selective']):.1f}",
+            "data/audit/conditions.json",
+            f"R1/{model}/100*(1-oracle_selective/full_history) net_wh_per_correct_covered",
+        )
         r = next(
             r
             for r in ratios
@@ -187,9 +199,12 @@ def main():
             "M3R2_primary_2",
             "M2_primary_6",
             "R1_primary_6",
+            "E5_adherence_primary_4",
         }:
             continue
         name = r["name"].replace("_", r"\_")
+        if r["stage"] == "E5":
+            name += " (strict adherence)"
         stage = "Initial M3" if r["stage"] == "M3_initial" else r["stage"].replace("_", r"\_")
         lines.append(
             f"{stage} & {r['model'].split(':')[-1].upper()} & {name} & {r['n_units']} & "
