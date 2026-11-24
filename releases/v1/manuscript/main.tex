@@ -29,7 +29,7 @@
 \input{numbers.tex}
 \title{\vspace{-1cm}Memory Under Interference:\\Context Utilization, Specification Confusion, and Inference Efficiency in Small Code Language Models}
 \author{}
-\date{\small Preprint -- Version 1.0 -- Not peer reviewed}
+\date{}
 
 \begin{document}
 \maketitle
@@ -656,11 +656,13 @@ behavior and total computation together. They do not establish an internal
 memory mechanism or an integrated MemoryGraph benefit.
 
 \section{Data and Code Availability}
-The repository is \url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-}.
+\begingroup\raggedright
+Our code is available in the
+\href{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-}{GitHub repository}.
 The final Version 1 artifacts are associated with the reserved Zenodo DOI
 \href{https://doi.org/10.5281/zenodo.24500468}{10.5281/zenodo.24500468}
-and the designated version-specific GitHub release URL:
-\url{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1}.
+and the designated
+\href{https://github.com/buildgit17626-ctrl/Memory-Under-Interference-/releases/tag/v1.0.1}{v1.0.1 GitHub release}.
 The DOI is reserved; its registration and public accessibility have not been
 confirmed. GitHub packaging release v1.0.1 distributes this approved manuscript Version 1.0.
 We will complete Zenodo publication separately. The artifacts supply code,
@@ -673,6 +675,7 @@ redistributed; the numerical CPU-package/time exports reproduce the included
 energy integrations. They do not calibrate the sensor or reconstruct other
 hardware channels. The archive is an analysis release, not a claim that its
 sanitized files can resume the original frozen supervisor. We will complete Zenodo publication separately; this GitHub handoff does not publish it.
+\par\endgroup
 
 \section{AI-Assistance Disclosure}
 We used AI assistance for setup, autonomous Ollama execution,
@@ -778,7 +781,7 @@ commit identifiers and transformation mappings remain provenance references;
 sanitized archive bytes have their own checksums.
 
 \twocolumn
-\section{Representative Rendered Prompts}\label{app:prompts}
+\section[Representative Rendered Prompts]{\raggedright Representative Rendered Prompts}\label{app:prompts}
 We selected these saved requests for HumanEval/0 on 0.5B; they are not new
 prompt variants. The system message is \texttt{You are a helpful coding assistant.}
 The public \texttt{examples/} directory supplies the exact UTF-8 prompt strings,

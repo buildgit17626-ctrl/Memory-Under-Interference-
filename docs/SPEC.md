@@ -1,5 +1,9 @@
 # SPEC: The cost of a correct answer
 
+Current PDF presentation follow-up: remove the selected first-page status line,
+fix stretched heading/availability spacing, and rebuild local artifacts only.
+Published v1.0.1 assets/tag stay unchanged. Plan: docs/plans/MUI_PDF_SPACING.md.
+
 ## Authorized GitHub v1.0.1 publication handoff (2026-11-24)
 
 Owner approves final science and authorizes GitHub release v1.0.1 from verified
