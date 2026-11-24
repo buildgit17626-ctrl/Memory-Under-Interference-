@@ -1,38 +1,14 @@
 [
   {
     "file": "Memory_Under_Interference_v1_source.zip",
-    "bytes": 161835,
-    "sha256": "659975c5206321e2ef1c31c0c777e12b87da4e8e42731663fa0294f29e3f2cbc",
-    "members": 31,
-    "extracted_crc_and_integrity": "passed",
-    "standalone_compilation": "passed"
+    "bytes": 161855,
+    "sha256": "b8a94b9f1f6e885adc73398b492fb7a3a0dbc94eb0d6822f149ae4366e8d2d38",
+    "members": 31
   },
   {
     "file": "Memory_Under_Interference_v1_reproducibility.zip",
-    "bytes": 34599350,
-    "sha256": "c3c46df1d3176f60c41457c9ab26fb0e7dd8ac5fcfd2fde5dfb5eb6e685c45dc",
-    "members": 723,
-    "extracted_crc_and_integrity": "passed",
-    "standalone_guarded_reproduction": {
-      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
-      "platform": "Windows-11-10.0.26300-SP0",
-      "isolated_mode": true,
-      "system_site_packages": false,
-      "blocked_file_accesses": 1,
-      "network_attempts": 0,
-      "subprocess_attempts": 0,
-      "original_data_probe_blocked": true,
-      "unexpected_blocked_file_accesses": 0,
-      "guard_boundary": "Public tree plus venv, Python standard library and Windows runtime",
-      "limitation": "Python audit hooks verify this trusted run; not an OS security sandbox",
-      "reproduction": {
-        "logical_calls_checked_against_raw": 6006,
-        "main_logical_requests": 5528,
-        "cross_pass_effects_reproduced": 4,
-        "new_model_inference": 0,
-        "integrity_files_verified": 722,
-        "full_effects_verified": null
-      }
-    }
+    "bytes": 34598412,
+    "sha256": "d7739e3d4b6d7cd65d1789096ee8c105e6ec53a765e28f812882f9d3be6530e3",
+    "members": 724
   }
 ]

@@ -11,6 +11,6 @@
   "undefined_reference_warnings": false,
   "overfull_boxes": 0,
   "page_bounds_flags": [],
-  "underfull_layout_warnings": 51,
+  "underfull_layout_warnings": 42,
   "note": "Text/bounds checks complement, not replace, rendered page inspection."
 }

@@ -16,9 +16,9 @@
     12,
     13
   ],
-  "render_dpi": 65,
-  "pdf_sha256": "14b74089f68df65003c80df77b586a902167f419b874a40ca72909acdeb8c12a",
+  "render_dpi": 80,
+  "pdf_sha256": "a1915de7bf053ca1c3ad8eab0d58642db61f690f89d660dfe9dff67e822dc051",
   "method": "All 13 pages rendered/inspected; publication-link change only; prior layout retained",
-  "findings": "All 13 pages reviewed after approved first-person edits and byline/contribution removals. No clipping/overlap. Version 1.0 research and v1.0.1 GitHub link agree.",
+  "findings": "All 13 pages inspected. Title-page status line removed; appendix heading uses normal word spacing; availability links use compact labels and ragged-right text. No clipping or overlap.",
   "reviewer": "AI-assisted visual audit; scientific content approved by author"
 }

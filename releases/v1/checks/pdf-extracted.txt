@@ -1,7 +1,6 @@
 Memory Under Interference:
 Context Utilization, Speciﬁcation Confusion, and Inference Eﬃciency
 in Small Code Language Models
-Preprint – Version 1.0 – Not peer reviewed
 Abstract
 Relevant information can be present in a language
 model’s context while its generated code follows a com-
@@ -92,12 +91,12 @@ Context and instruction interference. Lost in
 the Middle studies relevant-information position in
 question answering and retrieval [ 7]. Gupta et al. ex-
 amine task switches in conversation history [ 4]; our
-1
-Memory Under Interference Preprint – Version 1.0
 static interruption study is closely related, but does not
 contain actual preceding model task execution. Son et
 al. ﬁnd that multi-task inference can improve perfor-
 mance and speed on their benchmark [ 11]. Our much
+1
+Memory Under Interference Preprint – Version 1.0
 smaller code models and diﬀerent tasks do not contra-
 dict that result merely because some bundled condi-
 tions perform worse. Instruction Hierarchy addresses
@@ -205,6 +204,9 @@ manEval+ tasks, comparing P1 and P3_1 with
 three temperature-0.2 samples per task/model, context
 8,192 and output budget 2,048. The strategies diﬀer in
 both instructions and an external example, so this is
+not a pure example-eﬀect contrast. Initial context load
+uses 20 held-out-eligible tasks per model, with fresh
+temperature-0 no-ﬁller outcomes; the sample used for
 2
 Memory Under Interference Preprint – Version 1.0
 Task specification
@@ -221,9 +223,6 @@ tokens / latency
 CPU-package estimates
 Figure 1: Observed-data framework. Target and context text are frozen before generation. Scoring is separate and
 restricted. The additional alternative-suite analysis uses saved outputs; it does not generate new answers.
-not a pure example-eﬀect contrast. Initial context load
-uses 20 held-out-eligible tasks per model, with fresh
-temperature-0 no-ﬁller outcomes; the sample used for
 selection is never the isolation comparator. Its model-
 selected populations and weaker renamed-speciﬁcation
 distractors remain separate from the revised designs.
@@ -307,11 +306,11 @@ anomaly. The expanded-test adapter and sandbox re-
 strictions remain part of the operational outcome, not
 an infallible correctness oracle.
 HWiNFO CPU Package Power was logged at a nom-
-3
-Memory Under Interference Preprint – Version 1.0
 inal 500 ms interval. Gross energy uses trapezoidal
 integration; net estimates subtract the block-start idle
 baseline over the request window. Approximate post-
+3
+Memory Under Interference Preprint – Version 1.0
 load and total windows are both retained. End/mid-
 point subtraction, drift exclusions and short-window
 exclusions are secondary sensitivities. Per-condition
@@ -417,6 +416,9 @@ putational Eﬃciency
 All ﬁve policies are shown in Table 1 and Figure 7. Or-
 acle retention’s correctness diﬀerence from full history
 is +7.5 points on 0.5B, interval [−5, 22.5], and +2.5 on
+1.5B, interval [−10, 15]. All six registered replay/ora-
+cle/compaction accuracy contrasts have Holm p = 1 .
+Replay is not established to improve accuracy, and nei-
 4
 Memory Under Interference Preprint – Version 1.0
 2 3 4 6
@@ -460,9 +462,6 @@ Target pass rate (%)
 Figure 3: Revised M3/R2 target pass rates. Columns are ﬁller-token targets and target positions, not total input length.
 Cells contain 40 scheduled tasks; one related-context API failure leaves 39 valid outcomes in its cell. Caps are bounded-
 endpoint nonpasses. Per-cell denominators and intervals accompany the ﬁgure’s CSV source table.
-1.5B, interval [−10, 15]. All six registered replay/ora-
-cle/compaction accuracy contrasts have Holm p = 1 .
-Replay is not established to improve accuracy, and nei-
 ther is equivalent accuracy established by these wide
 intervals.
 The measured cost contrast is much larger than the
@@ -509,6 +508,9 @@ parseable Python deﬁning the target function. It
 scores zero out of 400 full-study responses, so both
 primary placement/reminder contrasts are at the ob-
 served ﬂoor. The instruction asks for code only but
+does not explicitly prohibit Markdown fences. Treat-
+ing this ﬂoor as evidence that the model forgot every
+preference would therefore overstate what the instru-
 5
 Memory Under Interference Preprint – Version 1.0
 Actual pair: HumanEval/0. The target requirement
@@ -571,9 +573,6 @@ Censored/invalid
 Figure 5: Descriptive cross-speciﬁcation cells. Isolation has 40 requests per model; loaded groups have 160. Cen-
 sored/invalid outcomes remain visible and both-pass counts are explicitly zero. These stacked shares are not independent
 request-level inferential estimates; paired eﬀects use task means.
-does not explicitly prohibit Markdown fences. Treat-
-ing this ﬂoor as evidence that the model forgot every
-preference would therefore overstate what the instru-
 ment measures.
 A separate posthoc audit preserves the original
 scores and records fences, outside prose, comments,
@@ -612,6 +611,11 @@ adds a bounded bonus to lexical scores for shared en-
 tities. This is not full GraphRAG, automatic memory
 extraction, or learned feedback adaptation. Logistic
 regression and random-forest pipelines are evaluation
+baselines, not a demonstrated learned online memory
+controller.
+The interface exposes selected text and requires ex-
+plicit approval before a local Ollama response compar-
+ison. Limited warnings detect explicit pytest versus
 6
 Memory Under Interference Preprint – Version 1.0
 −20 −10 0 10 20 30
@@ -645,11 +649,6 @@ Model Policy Correct/40 Input Output Net mWh/correct
 T able 1: R1 observed outcomes, 40 tasks per policy/model. Tokens are means. Energy is HWiNFO estimated net CPU-
 package mWh per correct solution, including failed-attempt energy. All 40 requests have readings in each row. Conﬁdence
 intervals and paired contrasts are reported separately.
-baselines, not a demonstrated learned online memory
-controller.
-The interface exposes selected text and requires ex-
-plicit approval before a local Ollama response compar-
-ison. Limited warnings detect explicit pytest versus
 unittest and VS Code versus PyCharm preference con-
 ﬂicts; they do not resolve arbitrary contradictions. No
 usability, trust, personalization or energy beneﬁt was
@@ -694,6 +693,10 @@ scoring checks how often alternative-consistent behav-
 ior already occurs without competing context. The
 larger model’s complete-case diﬀerence supports this
 diagnosis as a useful behavioral endpoint; its censoring
+sensitivity limits the strength of the empirical associ-
+ation. Recency, repeated exposure, pattern comple-
+tion and ordinary boundary errors are possible expla-
+nations, not mechanisms identiﬁed by this experiment.
 7
 Memory Under Interference Preprint – Version 1.0
 Full history Target/query
@@ -762,10 +765,6 @@ Observed point frontier
 Figure 8: Descriptive R1 accuracy–energy plots, separately by model, 40 tasks per policy. Energy is HWiNFO estimated
 net CPU-package mWh/correct. Horizontal and vertical whiskers are marginal bootstrap intervals, not joint conﬁdence
 regions. Both model panels share the same axes. The dotted frontier uses sample point estimates only.
-sensitivity limits the strength of the empirical associ-
-ation. Recency, repeated exposure, pattern comple-
-tion and ordinary boundary errors are possible expla-
-nations, not mechanisms identiﬁed by this experiment.
 Retrieval is an intermediate outcome. A practi-
 cal memory system needs relevant text to be selected,
 its conﬂicts and priority to be resolved, and the gen-
@@ -782,6 +781,11 @@ separately, so that good ranking cannot hide a down-
 stream utilization failure.
 Retention is also a computational decision.
 The observed oracle/full-history cost gap makes selec-
+tive context management a useful practical question,
+but it does not isolate the beneﬁt of selecting relevant
+memories. Shorter input changes preﬁll work; posi-
+tion and instructions can change the response; out-
+put length and failed attempts change decode cost and
 8
 Memory Under Interference Preprint – Version 1.0
 Local memory CRUD
@@ -800,11 +804,6 @@ Separate synthetic retrieval evaluation: no HumanEval+ pooling or energy claims
 Figure 9: Existing companion prototype, not an evaluated intervention in the main study. Candidate selection and
 approval precede optional inference. The separate saved synthetic benchmark evaluates ranking only; MG1 remains
 unrun.
-tive context management a useful practical question,
-but it does not isolate the beneﬁt of selecting relevant
-memories. Shorter input changes preﬁll work; posi-
-tion and instructions can change the response; out-
-put length and failed attempts change decode cost and
 cost per correct solution. Privileged relevance informa-
 tion and omitted retrieval/indexing overhead further
 separate the oracle from a deployed system. Length-
@@ -877,37 +876,32 @@ evaluating memory selection, generated behavior and
 total computation together. They do not establish an
 internal memory mechanism or an integrated Memory-
 Graph beneﬁt.
+12 Data and Code A vailability
+Our code is available in the GitHub repository . The
+ﬁnal Version 1 artifacts are associated with the
+reserved Zenodo DOI 10.5281/zenodo.24500468 and
 9
 Memory Under Interference Preprint – Version 1.0
-12 Data and Code A vailability
-The repository is https://
-github.com/buildgit17626-ctrl/
-Memory-Under-Interference- . The ﬁnal Ver-
-sion 1 artifacts are associated with the reserved
-Zenodo DOI 10.5281/zenodo.24500468 and the
-designated version-speciﬁc GitHub release URL:
-https://github.com/buildgit17626-ctrl/
-Memory-Under-Interference-/releases/tag/
-v1.0.1. The DOI is reserved; its registration and
-public accessibility have not been conﬁrmed. GitHub
-packaging release v1.0.1 distributes this approved
-manuscript Version 1.0. We will complete Zenodo
-publication separately. The artifacts supply code,
-frozen designs, transformed raw journals, per-task
-scores, numerical power/time samples, analysis tables
-and source/hash mappings. Original raw evidence
-remains unchanged locally. Unnecessary local paths
-and process/account metadata are removed only in
-public derivatives; original/public hashes distinguish
-them. Full multi-sensor CSV mirrors are not redis-
-tributed; the numerical CPU-package/time exports
-reproduce the included energy integrations. They
-do not calibrate the sensor or reconstruct other
-hardware channels. The archive is an analysis release,
-not a claim that its sanitized ﬁles can resume the
-original frozen supervisor. We will complete Zenodo
-publication separately; this GitHub handoﬀ does not
-publish it.
+the designated v1.0.1 GitHub release . The DOI is
+reserved; its registration and public accessibility have
+not been conﬁrmed. GitHub packaging release v1.0.1
+distributes this approved manuscript Version 1.0. We
+will complete Zenodo publication separately. The
+artifacts supply code, frozen designs, transformed raw
+journals, per-task scores, numerical power/time
+samples, analysis tables and source/hash mappings.
+Original raw evidence remains unchanged locally.
+Unnecessary local paths and process/account
+metadata are removed only in public derivatives;
+original/public hashes distinguish them. Full
+multi-sensor CSV mirrors are not redistributed; the
+numerical CPU-package/time exports reproduce the
+included energy integrations. They do not calibrate
+the sensor or reconstruct other hardware channels.
+The archive is an analysis release, not a claim that its
+sanitized ﬁles can resume the original frozen
+supervisor. We will complete Zenodo publication
+separately; this GitHub handoﬀ does not publish it.
 13 AI-Assistance Disclosure
 We used AI assistance for setup, autonomous Ol-
 lama execution, harness and analysis coding, distrac-
